@@ -1,4 +1,10 @@
-﻿Imports Microsoft.Win32
+﻿'
+'   NOTE:
+'
+'   HUGELY UNFINISHED, RELIABLE, NOT WORKING, USE WITH CAUTION ETC ETC
+'
+
+Imports Microsoft.Win32
 Imports IniFile.IniFile
 Imports System.IO
 
