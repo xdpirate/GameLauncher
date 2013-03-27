@@ -80,11 +80,13 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="IniFile">
-      <HintPath>..\..\..\..\..\Downloads\IniFile\IniFile\IniFile\bin\IniFile.dll</HintPath>
+    <Reference Include="IniFile, Version=1.0.1479.22636, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\IniFile.dll</HintPath>
     </Reference>
-    <Reference Include="MCLHotkey">
-      <HintPath>..\..\..\..\..\Downloads\MCLHotkeyNet\MCLHotkeyNet\bin\MCLHotkey.dll</HintPath>
+    <Reference Include="MCLHotkey, Version=1.1.4526.6476, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\MCLHotkey.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
