@@ -152,7 +152,6 @@
     <Compile Include="GLOptions.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LanguageSupport.vb" />
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>

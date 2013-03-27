@@ -319,10 +319,7 @@ Public Class MainForm
     Private Sub MainForm_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         AddHandler My.Application.StartupNextInstance, AddressOf CallingNewInstance
 
-        Dim langSupport As New LanguageSupport
-        langSupport.InitializeLanguage()
-
-        'TrayIcon.Text = 
+        TrayIcon.Text = "Game Launcher is loading, please wait..."
 
         Me.Visible = False
         Me.Hide()
