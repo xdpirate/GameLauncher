@@ -191,7 +191,7 @@ Public Class AddNewGameForm
     End Sub
 
     Private Sub okayButton_MouseEnter(sender As System.Object, e As System.EventArgs) Handles okayButton.MouseEnter
-        setHelp("Click this button when you are done filling out the details of the game to be added.")
+        setHelp(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormOKHelp"))
     End Sub
 
     Private Sub cancelAddGameButton_MouseEnter(sender As System.Object, e As System.EventArgs) Handles cancelAddGameButton.MouseEnter

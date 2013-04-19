@@ -68,8 +68,7 @@ Namespace My.Resources
         '''  Looks up a localized string similar to Game Launcher
         '''© 2012-2013 xdpirate
         '''Betatesting av Kurithas.
-        '''Mange takk til Lisa for hennes støtte.
-        '''Takk for at du bruker programmet mitt!.
+        '''Mange takk til Lisa for hennes støtte..
         '''</summary>
         Friend Shared ReadOnly Property AboutFormAuthorNote() As String
             Get
@@ -168,7 +167,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Trykk denne knappen for å velge programmet som kjører spille. Dette er som regel en .exe-fil..
+        '''  Looks up a localized string similar to Trykk denne knappen for å velge programmet som kjører spillet. Dette er som regel en .exe-fil..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormBrowseExeHelpText() As String
             Get
@@ -470,6 +469,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property AddNewGameFormOKButton() As String
             Get
                 Return ResourceManager.GetString("AddNewGameFormOKButton", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Trykk denne knappen når du er ferdig å fylle ut detaljene for spillet som skal legges til..
+        '''</summary>
+        Friend Shared ReadOnly Property AddNewGameFormOKHelp() As String
+            Get
+                Return ResourceManager.GetString("AddNewGameFormOKHelp", resourceCulture)
             End Get
         End Property
         
@@ -1001,6 +1009,114 @@ Namespace My.Resources
         Friend Shared ReadOnly Property MainFormTimeSecondSingular() As String
             Get
                 Return ResourceManager.GetString("MainFormTimeSecondSingular", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Vis informasjon om programmet og de som har bidratt til det..
+        '''</summary>
+        Friend Shared ReadOnly Property MainMenuAboutTooltip() As String
+            Get
+                Return ResourceManager.GetString("MainMenuAboutTooltip", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Legg til et spill i listen. Du kan også dobbelklikke ikonet ved klokken for å legge til spill kjapt ved å dra og slippe programmer eller snarveier..
+        '''</summary>
+        Friend Shared ReadOnly Property MainMenuAddGameTooltip() As String
+            Get
+                Return ResourceManager.GetString("MainMenuAddGameTooltip", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Slett alle spillene i listen. Denne handligen kan ikke angres.undone!.
+        '''</summary>
+        Friend Shared ReadOnly Property MainMenuClearGameListTooltip() As String
+            Get
+                Return ResourceManager.GetString("MainMenuClearGameListTooltip", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &amp;Innstillinger.
+        '''</summary>
+        Friend Shared ReadOnly Property MainMenuOptions() As String
+            Get
+                Return ResourceManager.GetString("MainMenuOptions", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to About &amp;Game Launcher.
+        '''</summary>
+        Friend Shared ReadOnly Property MainMenuOptionsAbout() As String
+            Get
+                Return ResourceManager.GetString("MainMenuOptionsAbout", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &amp;Legg til spill....
+        '''</summary>
+        Friend Shared ReadOnly Property MainMenuOptionsAddGame() As String
+            Get
+                Return ResourceManager.GetString("MainMenuOptionsAddGame", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &amp;Tøm spilliste....
+        '''</summary>
+        Friend Shared ReadOnly Property MainMenuOptionsClearGameList() As String
+            Get
+                Return ResourceManager.GetString("MainMenuOptionsClearGameList", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &amp;Innstillinger.
+        '''</summary>
+        Friend Shared ReadOnly Property MainMenuOptionsPreferences() As String
+            Get
+                Return ResourceManager.GetString("MainMenuOptionsPreferences", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &amp;Fjern spill....
+        '''</summary>
+        Friend Shared ReadOnly Property MainMenuOptionsRemoveGames() As String
+            Get
+                Return ResourceManager.GetString("MainMenuOptionsRemoveGames", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &amp;Statistikk.
+        '''</summary>
+        Friend Shared ReadOnly Property MainMenuOptionsStatistics() As String
+            Get
+                Return ResourceManager.GetString("MainMenuOptionsStatistics", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &amp;Avslutt.
+        '''</summary>
+        Friend Shared ReadOnly Property MainMenuQuit() As String
+            Get
+                Return ResourceManager.GetString("MainMenuQuit", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Fjern ett eller flere spill fra listen..
+        '''</summary>
+        Friend Shared ReadOnly Property MainMenuRemoveGamesTooltip() As String
+            Get
+                Return ResourceManager.GetString("MainMenuRemoveGamesTooltip", resourceCulture)
             End Get
         End Property
         

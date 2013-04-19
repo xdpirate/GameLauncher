@@ -338,6 +338,21 @@ Public Class MainForm
             End Select
         End If
 
+        ' Multi-language stuff
+        QuitToolStripMenuItem.Text = CURRENT_LANGUAGE_RESOURCE.GetString("MainMenuQuit")
+        OptionsMenuItem.Text = CURRENT_LANGUAGE_RESOURCE.GetString("MainMenuOptions")
+        AddGameMenuItem.Text = CURRENT_LANGUAGE_RESOURCE.GetString("MainMenuOptionsAddGame")
+        RemoveGameMenuItem.Text = CURRENT_LANGUAGE_RESOURCE.GetString("MainMenuOptionsRemoveGames")
+        ClearGameListMenuItem.Text = CURRENT_LANGUAGE_RESOURCE.GetString("MainMenuOptionsClearGameList")
+        PreferencesToolStripMenuItem.Text = CURRENT_LANGUAGE_RESOURCE.GetString("MainMenuOptionsPreferences")
+        StatisticsToolStripMenuItem.Text = CURRENT_LANGUAGE_RESOURCE.GetString("MainMenuOptionsStatistics")
+        AboutGameLauncherToolStripMenuItem.Text = CURRENT_LANGUAGE_RESOURCE.GetString("MainMenuOptionsAbout")
+
+        AddGameMenuItem.ToolTipText = CURRENT_LANGUAGE_RESOURCE.GetString("MainMenuAddGameTooltip")
+        RemoveGameMenuItem.ToolTipText = CURRENT_LANGUAGE_RESOURCE.GetString("MainMenuRemoveGamesTooltip")
+        ClearGameListMenuItem.ToolTipText = CURRENT_LANGUAGE_RESOURCE.GetString("MainMenuClearGameListTooltip")
+        AboutGameLauncherToolStripMenuItem.ToolTipText = CURRENT_LANGUAGE_RESOURCE.GetString("MainMenuAboutTooltip")
+
         TrayIcon.Text = CURRENT_LANGUAGE_RESOURCE.GetString("MainFormLoadingMessage")
 
         Me.Visible = False
@@ -990,8 +1005,7 @@ Public Class MainForm
         Dim buffer As New Collection
 
         For Each element As Object In MainContextMenu.Items
-            If element.Text = CURRENT_LANGUAGE_RESOURCE.GetString("MainFormOptionsItem") Or element.Text = CURRENT_LANGUAGE_RESOURCE.GetString("MainFormQuitItem") Then
-
+            If element.Text = CURRENT_LANGUAGE_RESOURCE.GetString("MainMenuQuit") Or element.Text = CURRENT_LANGUAGE_RESOURCE.GetString("MainMenuOptions") Then
             Else
                 buffer.Add(element.Text)
             End If

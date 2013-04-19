@@ -42,6 +42,7 @@ Public Class GLOptions
         playTimeInSkypeNotificationsCheckBox.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("GLOptionsFormPlayTimeInSkypeNotificationsCheckBox")
         autoUpdateCheckBox.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("GLOptionsFormAutoUpdateCheckBox")
         GTFOButton.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("GLOptionsFormGTFOButton")
+        InfoLabel.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("GLOptionsFormInfoLabel")
     End Sub
 
     Private Sub runOnStartUpCheckBox_Click(sender As Object, e As System.EventArgs) Handles runOnStartUpCheckBox.Click

@@ -51,7 +51,7 @@ Partial Class AboutForm
         Me.AuthorNoteLabel.Size = New System.Drawing.Size(233, 68)
         Me.AuthorNoteLabel.TabIndex = 2
         Me.AuthorNoteLabel.Text = "Game Launcher" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "© 2012-2013 xdpirate" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Beta testing by Kurithas." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Special thanks to" & _
-    " Lisa for support." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Thanks for using my application!"
+    " Lisa for support."
         '
         'WebsiteLink
         '
