@@ -335,6 +335,8 @@ Public Class MainForm
                     CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsEnglish.ResourceManager
                 Case "Norwegian"
                     CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsNorwegian.ResourceManager
+                Case "German"
+                    CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsGerman.ResourceManager
             End Select
         End If
 

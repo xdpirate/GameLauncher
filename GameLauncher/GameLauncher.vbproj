@@ -152,6 +152,11 @@
     <Compile Include="GLOptions.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Languages\mlsGerman.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mlsGerman.resx</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +223,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GLOptions.resx">
       <DependentUpon>GLOptions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Languages\mlsGerman.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>mlsGerman.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
