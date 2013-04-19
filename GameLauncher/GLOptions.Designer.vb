@@ -29,10 +29,10 @@ Partial Class GLOptions
         Me.GTFOButton = New System.Windows.Forms.Button()
         Me.InfoLabel = New System.Windows.Forms.Label()
         Me.PreferencesGroupBox = New System.Windows.Forms.GroupBox()
+        Me.LanguagePicker = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.autoUpdateCheckBox = New System.Windows.Forms.CheckBox()
         Me.integrateWithExplorerCheckBox = New System.Windows.Forms.CheckBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.LanguagePicker = New System.Windows.Forms.ComboBox()
         Me.PreferencesGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -101,6 +101,25 @@ Partial Class GLOptions
         Me.PreferencesGroupBox.TabStop = False
         Me.PreferencesGroupBox.Text = "Preferences"
         '
+        'LanguagePicker
+        '
+        Me.LanguagePicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.LanguagePicker.FormattingEnabled = True
+        Me.LanguagePicker.Items.AddRange(New Object() {"English", "Norwegian"})
+        Me.LanguagePicker.Location = New System.Drawing.Point(179, 128)
+        Me.LanguagePicker.Name = "LanguagePicker"
+        Me.LanguagePicker.Size = New System.Drawing.Size(121, 21)
+        Me.LanguagePicker.TabIndex = 6
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(8, 131)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(165, 13)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Language (Need restart to apply):"
+        '
         'autoUpdateCheckBox
         '
         Me.autoUpdateCheckBox.AutoSize = True
@@ -120,24 +139,6 @@ Partial Class GLOptions
         Me.integrateWithExplorerCheckBox.TabIndex = 3
         Me.integrateWithExplorerCheckBox.Text = "Integrate with Windows Explorer"
         Me.integrateWithExplorerCheckBox.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(8, 131)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(165, 13)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Language (Need restart to apply):"
-        '
-        'LanguagePicker
-        '
-        Me.LanguagePicker.FormattingEnabled = True
-        Me.LanguagePicker.Items.AddRange(New Object() {"English", "Norwegian"})
-        Me.LanguagePicker.Location = New System.Drawing.Point(179, 128)
-        Me.LanguagePicker.Name = "LanguagePicker"
-        Me.LanguagePicker.Size = New System.Drawing.Size(121, 21)
-        Me.LanguagePicker.TabIndex = 6
         '
         'GLOptions
         '
