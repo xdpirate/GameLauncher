@@ -141,7 +141,7 @@ Mange takk til Lisa for hennes støtte.</value>
     <comment>Second part of new version available message</comment>
   </data>
   <data name="AboutFormUpdateCheckButtonText" xml:space="preserve">
-    <value>Sjekk etter &amp;oppdateringer</value>
+    <value>&amp;Oppdater GL</value>
     <comment>Text shown on the button that checks for a new update; The ampersand signifes a keyboard shortcut</comment>
   </data>
   <data name="AboutFormUpdateError1" xml:space="preserve">
@@ -649,7 +649,7 @@ Mange takk til Lisa for hennes støtte.</value>
     <comment>Tooltip for a main menu item.</comment>
   </data>
   <data name="MainMenuClearGameListTooltip" xml:space="preserve">
-    <value>Slett alle spillene i listen. Denne handligen kan ikke angres.undone!</value>
+    <value>Slett alle spillene i listen. Denne handligen kan ikke angres!</value>
     <comment>Tooltip for a main menu item.</comment>
   </data>
   <data name="MainMenuOptions" xml:space="preserve">
@@ -657,7 +657,7 @@ Mange takk til Lisa for hennes støtte.</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainMenuOptionsAbout" xml:space="preserve">
-    <value>About &amp;Game Launcher</value>
+    <value>Om &amp;Game Launcher</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainMenuOptionsAddGame" xml:space="preserve">

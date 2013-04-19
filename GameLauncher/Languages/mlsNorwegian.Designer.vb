@@ -113,7 +113,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Sjekk etter &amp;oppdateringer.
+        '''  Looks up a localized string similar to &amp;Oppdater GL.
         '''</summary>
         Friend Shared ReadOnly Property AboutFormUpdateCheckButtonText() As String
             Get
@@ -1031,7 +1031,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Slett alle spillene i listen. Denne handligen kan ikke angres.undone!.
+        '''  Looks up a localized string similar to Slett alle spillene i listen. Denne handligen kan ikke angres!.
         '''</summary>
         Friend Shared ReadOnly Property MainMenuClearGameListTooltip() As String
             Get
@@ -1049,7 +1049,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to About &amp;Game Launcher.
+        '''  Looks up a localized string similar to Om &amp;Game Launcher.
         '''</summary>
         Friend Shared ReadOnly Property MainMenuOptionsAbout() As String
             Get
