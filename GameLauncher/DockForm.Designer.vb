@@ -25,10 +25,10 @@ Partial Class DockForm
         Me.components = New System.ComponentModel.Container()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.DockContextMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.AlwaysOnTopToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChangeOpacityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.CloseTheDockToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AlwaysOnTopToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DockContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -53,6 +53,14 @@ Partial Class DockForm
         Me.DockContextMenu.Name = "DockContextMenu"
         Me.DockContextMenu.Size = New System.Drawing.Size(158, 98)
         '
+        'AlwaysOnTopToolStripMenuItem
+        '
+        Me.AlwaysOnTopToolStripMenuItem.Checked = True
+        Me.AlwaysOnTopToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.AlwaysOnTopToolStripMenuItem.Name = "AlwaysOnTopToolStripMenuItem"
+        Me.AlwaysOnTopToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
+        Me.AlwaysOnTopToolStripMenuItem.Text = "Always on top"
+        '
         'ChangeOpacityToolStripMenuItem
         '
         Me.ChangeOpacityToolStripMenuItem.Name = "ChangeOpacityToolStripMenuItem"
@@ -69,14 +77,6 @@ Partial Class DockForm
         Me.CloseTheDockToolStripMenuItem.Name = "CloseTheDockToolStripMenuItem"
         Me.CloseTheDockToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
         Me.CloseTheDockToolStripMenuItem.Text = "&Close the dock"
-        '
-        'AlwaysOnTopToolStripMenuItem
-        '
-        Me.AlwaysOnTopToolStripMenuItem.Checked = True
-        Me.AlwaysOnTopToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.AlwaysOnTopToolStripMenuItem.Name = "AlwaysOnTopToolStripMenuItem"
-        Me.AlwaysOnTopToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
-        Me.AlwaysOnTopToolStripMenuItem.Text = "Always on top"
         '
         'DockForm
         '

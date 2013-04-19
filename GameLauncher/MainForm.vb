@@ -15,6 +15,8 @@ Public Class MainForm
     Public WithEvents oSkype As New SKYPE4COMLib.Skype
 
     Public GL_VERSION As Integer = getNumericVersion()
+    Public CURRENT_LANGUAGE_RESOURCE As Resources.ResourceManager = My.Resources.mlsEnglish.ResourceManager
+
 
     Public PathContainer As New SortedDictionary(Of String, String)
     Public ArgsContainer As New SortedDictionary(Of String, String)
@@ -292,8 +294,8 @@ Public Class MainForm
                 End Select
 
                 If errorMsg <> "Success" Then
-                    MessageBox.Show("Something went wrong! .NET Framework said:" & vbNewLine & errorMsg & vbNewLine & vbNewLine & _
-                                    "If you believe this is a bug, or the error message persists, please send an e-mail to the author (retrocrew.djarz@gmail.com)", _
+                    MessageBox.Show(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormAddGameFailed1") & vbNewLine & errorMsg & vbNewLine & vbNewLine & _
+                                    CURRENT_LANGUAGE_RESOURCE.GetString("MainFormAddGameFailed2"), _
                                     My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
                     populateDock()
@@ -319,7 +321,24 @@ Public Class MainForm
     Private Sub MainForm_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         AddHandler My.Application.StartupNextInstance, AddressOf CallingNewInstance
 
-        TrayIcon.Text = "Game Launcher is loading, please wait..."
+        'Get or set language
+        Dim languageKey As RegistryKey = My.Computer.Registry.CurrentUser.CreateSubKey("Software\GameLauncher", RegistryKeyPermissionCheck.ReadWriteSubTree)
+        Dim currentLanguage As String = languageKey.GetValue("currentLanguage", Nothing)
+
+        If currentLanguage Is Nothing Then
+            'Defaults to English
+            languageKey.SetValue("currentLanguage", "English")
+            CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsEnglish.ResourceManager
+        Else
+            Select Case currentLanguage
+                Case "English"
+                    CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsEnglish.ResourceManager
+                Case "Norwegian"
+                    CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsNorwegian.ResourceManager
+            End Select
+        End If
+
+        TrayIcon.Text = CURRENT_LANGUAGE_RESOURCE.GetString("MainFormLoadingMessage")
 
         Me.Visible = False
         Me.Hide()
@@ -407,20 +426,24 @@ Public Class MainForm
         Dim difference As TimeSpan = timeNow - timeThen
         Dim returnValue As String = Nothing
 
-        Dim plural As String = "s"
         Dim hourString, minuteString, secondString As String
-        hourString = "hour"
-        minuteString = "minute"
-        secondString = "second"
+        Dim hourPluralString, minutePluralString, secondPluralString As String
+
+        hourString = CURRENT_LANGUAGE_RESOURCE.GetString("MainFormTimeHourSingular")
+        minuteString = CURRENT_LANGUAGE_RESOURCE.GetString("MainFormTimeMinuteSingular")
+        secondString = CURRENT_LANGUAGE_RESOURCE.GetString("MainFormTimeSecondSingular")
+        hourPluralString = CURRENT_LANGUAGE_RESOURCE.GetString("MainFormTimeHourPlural")
+        minutePluralString = CURRENT_LANGUAGE_RESOURCE.GetString("MainFormTimeMinutePlural")
+        secondPluralString = CURRENT_LANGUAGE_RESOURCE.GetString("MainFormTimeSecondPlural")
 
         Dim h, m, s As Integer
         h = difference.Hours
         m = difference.Minutes
         s = difference.Seconds
 
-        If h > 1 Then hourString &= plural
-        If m > 1 Then minuteString &= plural
-        If s > 1 Then secondString &= plural
+        If h > 1 Then hourString = hourPluralString
+        If m > 1 Then minuteString = minutePluralString
+        If s > 1 Then secondString = secondPluralString
 
         If h < 1 And m < 1 Then returnValue = s & " " & secondString 'If under an hour and under a minute, return seconds only
         If h < 1 And m > 0 Then returnValue = m & " " & minuteString & ", " & s & " " & secondString 'If under an hour but over a minute, return minutes and seconds
@@ -537,8 +560,8 @@ Public Class MainForm
     Public Sub showBalloonTip()
         With TrayIcon
             .BalloonTipIcon = ToolTipIcon.Info
-            .BalloonTipTitle = My.Application.Info.ProductName & " v" & My.Application.Info.Version.ToString & " loaded!"
-            .BalloonTipText = "Right-click this icon or press Windows+G to open the list"
+            .BalloonTipTitle = String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormBalloonTipLoadedMessageTitle"), My.Application.Info.Version.ToString)
+            .BalloonTipText = CURRENT_LANGUAGE_RESOURCE.GetString("MainFormBalloonTipLoadedMessageText")
             .ShowBalloonTip(10000)
         End With
     End Sub
@@ -551,16 +574,15 @@ Public Class MainForm
                 If CInt(webVersion) > GL_VERSION Then
                     skipUpdateThisSession = True
                     UpdateChecker.Enabled = False
-                    If MessageBox.Show("There is a new version of " & My.Application.Info.ProductName & " is available (v" & newVersion.ToString & ")!" & vbNewLine & _
-                                       "Would you like to download it now?" & vbNewLine & vbNewLine & "If you decide not to update at this point, checking for new updates " & _
-                                       "will be disabled for this session.", _
+                    If MessageBox.Show(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormNewVersionAvailable1") & vbNewLine & vbNewLine & _
+                                       CURRENT_LANGUAGE_RESOURCE.GetString("MainFormNewVersionAvailable2"), _
                                         My.Application.Info.AssemblyName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, _
                                         MessageBoxDefaultButton.Button1) = Windows.Forms.DialogResult.Yes Then
                         System.Diagnostics.Process.Start("http://code.google.com/p/game-launcher/downloads/detail?name=GameLauncher-v" & newVersion.ToString & ".rar")
                     End If
                 End If
             Catch ex As Exception
-                'An error occured while checking for updates. Ignore it and continue checking for updates every half hour.
+                'An error occured while checking for updates. Ignore it and continue checking for updates.
             End Try
         End If
     End Sub
@@ -652,8 +674,8 @@ Public Class MainForm
             End Select
 
             If errorMsg <> "Success" Then
-                MessageBox.Show("Something went wrong! .NET Framework said:" & vbNewLine & errorMsg & vbNewLine & vbNewLine & _
-                                "If you believe this is a bug, or the error message persists, please send an e-mail to the author (retrocrew.djarz@gmail.com)", _
+                MessageBox.Show(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormAddGameFailed1") & vbNewLine & errorMsg & vbNewLine & vbNewLine & _
+                                CURRENT_LANGUAGE_RESOURCE.GetString("MainFormAddGameFailed2"), _
                                 My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
                 populateDock()
@@ -709,7 +731,7 @@ Public Class MainForm
     End Sub
 
     Sub quit()
-        If MessageBox.Show("Are you sure you want to quit " & My.Application.Info.AssemblyName & "?", My.Application.Info.AssemblyName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes Then
+        If MessageBox.Show(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormQuitApplication"), My.Application.Info.AssemblyName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes Then
             Dim dockShown As RegistryKey = My.Computer.Registry.CurrentUser.CreateSubKey("Software\GameLauncher", RegistryKeyPermissionCheck.ReadWriteSubTree)
 
             If DockForm.Visible Then
@@ -855,7 +877,7 @@ Public Class MainForm
                     With ofd
                         .Filter = "Icons (*.ico, *.exe)|*.ico;*.exe"
                         .InitialDirectory = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(getSteamExe()), "steam\games\")
-                        .Title = "Select icon for """ & gameName & """"
+                        .Title = String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSelectIconText"), gameName)
                     End With
 
                     If ofd.ShowDialog = Windows.Forms.DialogResult.OK Then
@@ -922,9 +944,9 @@ Public Class MainForm
     Sub stoppedPlaying()
         If sendSkypeNotification Then
             If isProcessRunning("skype") Then
-                Dim moodText As String = "Stopped Playing: " & currentRunningGame
+                Dim moodText As String = String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypePlayStopped"), currentRunningGame)
                 If playTimeInSkypeNotifications Then
-                    moodText &= " (Played: " & calculateTime() & ")"
+                    moodText &= String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypePlayTimeStopped"), calculateTime())
                 End If
                 oSkype.Profile("Mood_Text") = moodText
             End If
@@ -948,7 +970,7 @@ Public Class MainForm
     End Sub
 
     Private Sub ClearGameListMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ClearGameListMenuItem.Click
-        If MessageBox.Show("Are you sure you want to remove all items in the list? This action CANNOT be undone!", My.Application.Info.AssemblyName, MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes Then
+        If MessageBox.Show(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormClearGameList"), My.Application.Info.AssemblyName, MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes Then
             My.Computer.FileSystem.DeleteDirectory(steamIconPath, FileIO.DeleteDirectoryOption.DeleteAllContents)
             My.Computer.FileSystem.CreateDirectory(Path.Combine(My.Application.Info.DirectoryPath, "steamicons"))
 
@@ -968,7 +990,7 @@ Public Class MainForm
         Dim buffer As New Collection
 
         For Each element As Object In MainContextMenu.Items
-            If element.Text = "&Options" Or element.Text = "&Quit" Then
+            If element.Text = CURRENT_LANGUAGE_RESOURCE.GetString("MainFormOptionsItem") Or element.Text = CURRENT_LANGUAGE_RESOURCE.GetString("MainFormQuitItem") Then
 
             Else
                 buffer.Add(element.Text)
@@ -998,10 +1020,10 @@ Public Class MainForm
             Dim editGameItem As ToolStripMenuItem
             tsi.Text = element
             tsi.Image = getIcon(PathContainer(element), True, element)
-            editGameItem = tsi.DropDownItems.Add("Edit &game...")
-            editGameItem.ToolTipText = "Edit the properties of this game"
-            removeItem = tsi.DropDownItems.Add("Re&move...")
-            removeItem.ToolTipText = "Remove this game from the list"
+            editGameItem = tsi.DropDownItems.Add(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormEditGameItem"))
+            editGameItem.ToolTipText = CURRENT_LANGUAGE_RESOURCE.GetString("MainFormEditGameItemTooltip")
+            removeItem = tsi.DropDownItems.Add(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormRemoveGameItem"))
+            removeItem.ToolTipText = CURRENT_LANGUAGE_RESOURCE.GetString("MainFormRemoveGameItemTooltip")
 
             MainContextMenu.Items.Add(tsi)
 
@@ -1014,7 +1036,7 @@ Public Class MainForm
     Public Sub delCmdLineArgs(sender As Object, e As System.EventArgs)
         Dim daddy As ToolStripMenuItem = sender.OwnerItem
 
-        If MessageBox.Show(String.Format("Are you sure you want to remove all command-line arguments for {0}?", daddy.Text), _
+        If MessageBox.Show(String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormRemoveCmdArgs"), daddy.Text), _
                            My.Application.Info.ProductName, _
                            MessageBoxButtons.YesNo, _
                            MessageBoxIcon.Question, _
@@ -1175,8 +1197,8 @@ Public Class MainForm
             End Select
 
             If errorMsg <> "Success" Then
-                MessageBox.Show("Something went wrong! .NET Framework said:" & vbNewLine & errorMsg & vbNewLine & vbNewLine & _
-                                "If you believe this is a bug, or the error message persists, please send an e-mail to the author (retrocrew.djarz@gmail.com)", _
+                MessageBox.Show(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormAddGameFailed1") & vbNewLine & errorMsg & vbNewLine & vbNewLine & _
+                                CURRENT_LANGUAGE_RESOURCE.GetString("MainFormAddGameFailed2"), _
                                 My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
                 populateDock()
@@ -1191,7 +1213,7 @@ Public Class MainForm
 
     Public Sub removeGame(ByVal sender As Object, e As System.EventArgs)
         Dim daddy As ToolStripMenuItem = sender.OwnerItem
-        If MessageBox.Show("Are you sure you want to remove " & daddy.Text & " from the list?", "Remove game", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes Then
+        If MessageBox.Show(String.Format("Are you sure you want to remove {0} from the list?", daddy.Text), "Game Launcher", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes Then
             Dim name As String = daddy.Text
             MainContextMenu.Items.Remove(daddy)
             daddy.Dispose()
@@ -1497,8 +1519,8 @@ Public Class MainForm
                             End Select
 
                             If errorMsg <> "Success" Then
-                                MessageBox.Show("Something went wrong! .NET Framework said:" & vbNewLine & errorMsg & vbNewLine & vbNewLine & _
-                                                "If you believe this is a bug, or the error message persists, please send an e-mail to the author (retrocrew.djarz@gmail.com)", _
+                                MessageBox.Show(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormAddGameFailed1") & vbNewLine & errorMsg & vbNewLine & vbNewLine & _
+                                                CURRENT_LANGUAGE_RESOURCE.GetString("MainFormAddGameFailed2"), _
                                                 My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Error)
                             Else
                                 populateDock()
@@ -1608,9 +1630,9 @@ Public Class MainForm
                 oSkype.Attach(8, True)
                 If oSkype.AttachmentStatus() = SKYPE4COMLib.TAttachmentStatus.apiAttachSuccess Then
                     If PathContainer(currentRunningGame).StartsWith("steam") Then
-                        oSkype.Profile("Mood_Text") = "Now Playing: " & currentRunningGame.Replace("&&", "&") & " (Steam)"
+                        oSkype.Profile("Mood_Text") = String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypeNowPlayingSteam"), currentRunningGame.Replace("&&", "&"))
                     Else
-                        oSkype.Profile("Mood_Text") = "Now Playing: " & currentRunningGame.Replace("&&", "&")
+                        oSkype.Profile("Mood_Text") = String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypeNowPlaying"), currentRunningGame.Replace("&&", "&"))
                     End If
                 End If
             End If
@@ -1698,4 +1720,3 @@ Public Class MainForm
     End Sub
 
 End Class
-

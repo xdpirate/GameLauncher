@@ -24,12 +24,12 @@ Partial Class AboutForm
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AboutForm))
         Me.CloseButton = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.AuthorNoteLabel = New System.Windows.Forms.Label()
         Me.WebsiteLink = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.ContactLink = New System.Windows.Forms.LinkLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.UpdateCheckButton = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -44,13 +44,13 @@ Partial Class AboutForm
         Me.CloseButton.Text = "&Close"
         Me.CloseButton.UseVisualStyleBackColor = True
         '
-        'Label1
+        'AuthorNoteLabel
         '
-        Me.Label1.Location = New System.Drawing.Point(85, 12)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(233, 68)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Game Launcher" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "© 2012-2013 xdpirate" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Beta testing by Kurithas." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Special thanks to" & _
+        Me.AuthorNoteLabel.Location = New System.Drawing.Point(85, 12)
+        Me.AuthorNoteLabel.Name = "AuthorNoteLabel"
+        Me.AuthorNoteLabel.Size = New System.Drawing.Size(233, 68)
+        Me.AuthorNoteLabel.TabIndex = 2
+        Me.AuthorNoteLabel.Text = "Game Launcher" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "© 2012-2013 xdpirate" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Beta testing by Kurithas." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Special thanks to" & _
     " Lisa for support." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Thanks for using my application!"
         '
         'WebsiteLink
@@ -64,16 +64,16 @@ Partial Class AboutForm
         Me.WebsiteLink.TabStop = True
         Me.WebsiteLink.Text = "Website"
         '
-        'LinkLabel1
+        'ContactLink
         '
-        Me.LinkLabel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(274, 301)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(44, 13)
-        Me.LinkLabel1.TabIndex = 4
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Contact"
+        Me.ContactLink.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ContactLink.AutoSize = True
+        Me.ContactLink.Location = New System.Drawing.Point(274, 301)
+        Me.ContactLink.Name = "ContactLink"
+        Me.ContactLink.Size = New System.Drawing.Size(44, 13)
+        Me.ContactLink.TabIndex = 4
+        Me.ContactLink.TabStop = True
+        Me.ContactLink.Text = "Contact"
         '
         'PictureBox1
         '
@@ -97,14 +97,14 @@ Partial Class AboutForm
         Me.RichTextBox1.TabIndex = 5
         Me.RichTextBox1.Text = ""
         '
-        'Button1
+        'UpdateCheckButton
         '
-        Me.Button1.Location = New System.Drawing.Point(208, 7)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(110, 23)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Check for &updates"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.UpdateCheckButton.Location = New System.Drawing.Point(208, 7)
+        Me.UpdateCheckButton.Name = "UpdateCheckButton"
+        Me.UpdateCheckButton.Size = New System.Drawing.Size(110, 23)
+        Me.UpdateCheckButton.TabIndex = 6
+        Me.UpdateCheckButton.Text = "Check for &updates"
+        Me.UpdateCheckButton.UseVisualStyleBackColor = True
         '
         'AboutForm
         '
@@ -113,11 +113,11 @@ Partial Class AboutForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.CloseButton
         Me.ClientSize = New System.Drawing.Size(330, 331)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.UpdateCheckButton)
         Me.Controls.Add(Me.RichTextBox1)
-        Me.Controls.Add(Me.LinkLabel1)
+        Me.Controls.Add(Me.ContactLink)
         Me.Controls.Add(Me.WebsiteLink)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.AuthorNoteLabel)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.CloseButton)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -134,9 +134,9 @@ Partial Class AboutForm
     End Sub
     Friend WithEvents CloseButton As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents AuthorNoteLabel As System.Windows.Forms.Label
     Friend WithEvents WebsiteLink As System.Windows.Forms.LinkLabel
-    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents ContactLink As System.Windows.Forms.LinkLabel
     Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents UpdateCheckButton As System.Windows.Forms.Button
 End Class

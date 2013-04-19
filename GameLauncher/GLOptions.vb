@@ -22,6 +22,26 @@ Public Class GLOptions
             'AutoUpdate is disabled
             autoUpdateCheckBox.Checked = False
         End If
+
+        'Get or set language
+        Dim languageKey As RegistryKey = My.Computer.Registry.CurrentUser.CreateSubKey("Software\GameLauncher", RegistryKeyPermissionCheck.ReadWriteSubTree)
+        Dim currentLanguage As String = languageKey.GetValue("currentLanguage", Nothing)
+
+        If currentLanguage Is Nothing Then
+            LanguagePicker.SelectedItem = "English"
+        Else
+            LanguagePicker.SelectedItem = currentLanguage
+        End If
+
+        ' Multi-language stuff
+        Me.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("GLOptionsFormTitleBar")
+        PreferencesGroupBox.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("GLOptionsFormPreferencesGroupBox")
+        integrateWithExplorerCheckBox.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("GLOptionsFormIntegrateWithExplorerCheckBox")
+        runOnStartUpCheckBox.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("GLOptionsFormStartOnLoginCheckBox")
+        sendSkypeNotificationsCheckBox.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("GLOptionsFormSkypeNotificationsCheckBox")
+        playTimeInSkypeNotificationsCheckBox.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("GLOptionsFormPlayTimeInSkypeNotificationsCheckBox")
+        autoUpdateCheckBox.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("GLOptionsFormAutoUpdateCheckBox")
+        GTFOButton.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("GLOptionsFormGTFOButton")
     End Sub
 
     Private Sub runOnStartUpCheckBox_Click(sender As Object, e As System.EventArgs) Handles runOnStartUpCheckBox.Click
@@ -37,7 +57,7 @@ Public Class GLOptions
         playTimeInSkypeNotificationsCheckBox.Checked = MainForm.togglePlayTimeInSkypeNotifications(MainForm.playTimeToggleType.toggle)
     End Sub
 
-    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles GTFOButton.Click
         Me.Close()
     End Sub
 
@@ -52,7 +72,7 @@ Public Class GLOptions
         Dim jarKeyCommand As RegistryKey = My.Computer.Registry.ClassesRoot.CreateSubKey("jarfile\shell\addtogl\command", RegistryKeyPermissionCheck.ReadWriteSubTree)
         Dim cmdKeyCommand As RegistryKey = My.Computer.Registry.ClassesRoot.CreateSubKey("cmdfile\shell\addtogl\command", RegistryKeyPermissionCheck.ReadWriteSubTree)
 
-        Dim text As String = "Add to &Game Launcher"
+        Dim text As String = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("GLOptionsFormExplorerIntegrationText")
 
         exeKey.SetValue("", text, RegistryValueKind.String)
         batKey.SetValue("", text, RegistryValueKind.String)
@@ -122,5 +142,10 @@ Public Class GLOptions
         Else
             autoUpdateKey.SetValue("autoUpdate", 0, RegistryValueKind.DWord)
         End If
+    End Sub
+
+    Private Sub LanguagePicker_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles LanguagePicker.SelectedIndexChanged
+        Dim languageKey As RegistryKey = My.Computer.Registry.CurrentUser.CreateSubKey("Software\GameLauncher", RegistryKeyPermissionCheck.ReadWriteSubTree)
+        languageKey.SetValue("currentLanguage", LanguagePicker.SelectedItem)
     End Sub
 End Class

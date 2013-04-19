@@ -26,12 +26,14 @@ Partial Class GLOptions
         Me.runOnStartUpCheckBox = New System.Windows.Forms.CheckBox()
         Me.sendSkypeNotificationsCheckBox = New System.Windows.Forms.CheckBox()
         Me.playTimeInSkypeNotificationsCheckBox = New System.Windows.Forms.CheckBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.integrateWithExplorerCheckBox = New System.Windows.Forms.CheckBox()
+        Me.GTFOButton = New System.Windows.Forms.Button()
+        Me.InfoLabel = New System.Windows.Forms.Label()
+        Me.PreferencesGroupBox = New System.Windows.Forms.GroupBox()
         Me.autoUpdateCheckBox = New System.Windows.Forms.CheckBox()
-        Me.GroupBox1.SuspendLayout()
+        Me.integrateWithExplorerCheckBox = New System.Windows.Forms.CheckBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LanguagePicker = New System.Windows.Forms.ComboBox()
+        Me.PreferencesGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'runOnStartUpCheckBox
@@ -64,48 +66,40 @@ Partial Class GLOptions
         Me.playTimeInSkypeNotificationsCheckBox.Text = "Show time spent playing when exiting game"
         Me.playTimeInSkypeNotificationsCheckBox.UseVisualStyleBackColor = True
         '
-        'Button1
+        'GTFOButton
         '
-        Me.Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Button1.Location = New System.Drawing.Point(243, 150)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "&Close"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.GTFOButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.GTFOButton.Location = New System.Drawing.Point(243, 174)
+        Me.GTFOButton.Name = "GTFOButton"
+        Me.GTFOButton.Size = New System.Drawing.Size(75, 23)
+        Me.GTFOButton.TabIndex = 3
+        Me.GTFOButton.Text = "&Close"
+        Me.GTFOButton.UseVisualStyleBackColor = True
         '
-        'Label1
+        'InfoLabel
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 155)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(163, 13)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Changes take effect immediately."
+        Me.InfoLabel.AutoSize = True
+        Me.InfoLabel.Location = New System.Drawing.Point(9, 179)
+        Me.InfoLabel.Name = "InfoLabel"
+        Me.InfoLabel.Size = New System.Drawing.Size(163, 13)
+        Me.InfoLabel.TabIndex = 4
+        Me.InfoLabel.Text = "Changes take effect immediately."
         '
-        'GroupBox1
+        'PreferencesGroupBox
         '
-        Me.GroupBox1.Controls.Add(Me.autoUpdateCheckBox)
-        Me.GroupBox1.Controls.Add(Me.integrateWithExplorerCheckBox)
-        Me.GroupBox1.Controls.Add(Me.runOnStartUpCheckBox)
-        Me.GroupBox1.Controls.Add(Me.sendSkypeNotificationsCheckBox)
-        Me.GroupBox1.Controls.Add(Me.playTimeInSkypeNotificationsCheckBox)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(306, 135)
-        Me.GroupBox1.TabIndex = 5
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "General"
-        '
-        'integrateWithExplorerCheckBox
-        '
-        Me.integrateWithExplorerCheckBox.AutoSize = True
-        Me.integrateWithExplorerCheckBox.Location = New System.Drawing.Point(6, 19)
-        Me.integrateWithExplorerCheckBox.Name = "integrateWithExplorerCheckBox"
-        Me.integrateWithExplorerCheckBox.Size = New System.Drawing.Size(178, 17)
-        Me.integrateWithExplorerCheckBox.TabIndex = 3
-        Me.integrateWithExplorerCheckBox.Text = "Integrate with Windows Explorer"
-        Me.integrateWithExplorerCheckBox.UseVisualStyleBackColor = True
+        Me.PreferencesGroupBox.Controls.Add(Me.LanguagePicker)
+        Me.PreferencesGroupBox.Controls.Add(Me.Label1)
+        Me.PreferencesGroupBox.Controls.Add(Me.autoUpdateCheckBox)
+        Me.PreferencesGroupBox.Controls.Add(Me.integrateWithExplorerCheckBox)
+        Me.PreferencesGroupBox.Controls.Add(Me.runOnStartUpCheckBox)
+        Me.PreferencesGroupBox.Controls.Add(Me.sendSkypeNotificationsCheckBox)
+        Me.PreferencesGroupBox.Controls.Add(Me.playTimeInSkypeNotificationsCheckBox)
+        Me.PreferencesGroupBox.Location = New System.Drawing.Point(12, 12)
+        Me.PreferencesGroupBox.Name = "PreferencesGroupBox"
+        Me.PreferencesGroupBox.Size = New System.Drawing.Size(306, 156)
+        Me.PreferencesGroupBox.TabIndex = 5
+        Me.PreferencesGroupBox.TabStop = False
+        Me.PreferencesGroupBox.Text = "Preferences"
         '
         'autoUpdateCheckBox
         '
@@ -117,24 +111,52 @@ Partial Class GLOptions
         Me.autoUpdateCheckBox.Text = "Automatically check for updates"
         Me.autoUpdateCheckBox.UseVisualStyleBackColor = True
         '
+        'integrateWithExplorerCheckBox
+        '
+        Me.integrateWithExplorerCheckBox.AutoSize = True
+        Me.integrateWithExplorerCheckBox.Location = New System.Drawing.Point(6, 19)
+        Me.integrateWithExplorerCheckBox.Name = "integrateWithExplorerCheckBox"
+        Me.integrateWithExplorerCheckBox.Size = New System.Drawing.Size(178, 17)
+        Me.integrateWithExplorerCheckBox.TabIndex = 3
+        Me.integrateWithExplorerCheckBox.Text = "Integrate with Windows Explorer"
+        Me.integrateWithExplorerCheckBox.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(8, 131)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(165, 13)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Language (Need restart to apply):"
+        '
+        'LanguagePicker
+        '
+        Me.LanguagePicker.FormattingEnabled = True
+        Me.LanguagePicker.Items.AddRange(New Object() {"English", "Norwegian"})
+        Me.LanguagePicker.Location = New System.Drawing.Point(179, 128)
+        Me.LanguagePicker.Name = "LanguagePicker"
+        Me.LanguagePicker.Size = New System.Drawing.Size(121, 21)
+        Me.LanguagePicker.TabIndex = 6
+        '
         'GLOptions
         '
-        Me.AcceptButton = Me.Button1
+        Me.AcceptButton = Me.GTFOButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.CancelButton = Me.Button1
-        Me.ClientSize = New System.Drawing.Size(330, 181)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button1)
+        Me.CancelButton = Me.GTFOButton
+        Me.ClientSize = New System.Drawing.Size(330, 209)
+        Me.Controls.Add(Me.PreferencesGroupBox)
+        Me.Controls.Add(Me.InfoLabel)
+        Me.Controls.Add(Me.GTFOButton)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "GLOptions"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Game Launcher Preferences"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.PreferencesGroupBox.ResumeLayout(False)
+        Me.PreferencesGroupBox.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -142,9 +164,11 @@ Partial Class GLOptions
     Friend WithEvents runOnStartUpCheckBox As System.Windows.Forms.CheckBox
     Friend WithEvents sendSkypeNotificationsCheckBox As System.Windows.Forms.CheckBox
     Friend WithEvents playTimeInSkypeNotificationsCheckBox As System.Windows.Forms.CheckBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents GTFOButton As System.Windows.Forms.Button
+    Friend WithEvents InfoLabel As System.Windows.Forms.Label
+    Friend WithEvents PreferencesGroupBox As System.Windows.Forms.GroupBox
     Friend WithEvents integrateWithExplorerCheckBox As System.Windows.Forms.CheckBox
     Friend WithEvents autoUpdateCheckBox As System.Windows.Forms.CheckBox
+    Friend WithEvents LanguagePicker As System.Windows.Forms.ComboBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

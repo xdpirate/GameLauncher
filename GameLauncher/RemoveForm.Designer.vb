@@ -28,7 +28,7 @@ Partial Class RemoveForm
         Me.buttonOK = New System.Windows.Forms.Button()
         Me.buttonCancel = New System.Windows.Forms.Button()
         Me.Protip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.FlavorTextLabel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'ListBox1
@@ -59,13 +59,13 @@ Partial Class RemoveForm
         Me.buttonCancel.Text = "&Cancel"
         Me.buttonCancel.UseVisualStyleBackColor = True
         '
-        'Label1
+        'FlavorTextLabel
         '
-        Me.Label1.Location = New System.Drawing.Point(9, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(263, 30)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Please select the items you wish to remove. You can hold CTRL to select several i" & _
+        Me.FlavorTextLabel.Location = New System.Drawing.Point(9, 9)
+        Me.FlavorTextLabel.Name = "FlavorTextLabel"
+        Me.FlavorTextLabel.Size = New System.Drawing.Size(263, 30)
+        Me.FlavorTextLabel.TabIndex = 2
+        Me.FlavorTextLabel.Text = "Please select the items you wish to remove. You can hold CTRL to select several i" & _
     "tems at once."
         '
         'RemoveForm
@@ -75,7 +75,7 @@ Partial Class RemoveForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.buttonCancel
         Me.ClientSize = New System.Drawing.Size(284, 268)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.FlavorTextLabel)
         Me.Controls.Add(Me.buttonCancel)
         Me.Controls.Add(Me.buttonOK)
         Me.Controls.Add(Me.ListBox1)
@@ -93,5 +93,5 @@ Partial Class RemoveForm
     Friend WithEvents buttonOK As System.Windows.Forms.Button
     Friend WithEvents buttonCancel As System.Windows.Forms.Button
     Friend WithEvents Protip As System.Windows.Forms.ToolTip
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents FlavorTextLabel As System.Windows.Forms.Label
 End Class

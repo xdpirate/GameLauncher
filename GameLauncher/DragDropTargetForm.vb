@@ -38,4 +38,8 @@ Public Class DragDropTargetForm
     Private Sub DragDropTargetForm_MouseLeave(sender As Object, e As System.EventArgs) Handles Me.MouseLeave
         Me.BackColor = Color.Maroon
     End Sub
+
+    Private Sub DragDropTargetForm_Shown(sender As Object, e As System.EventArgs) Handles Me.Shown
+        Me.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("DragDropTargetFormTitleBar")
+    End Sub
 End Class

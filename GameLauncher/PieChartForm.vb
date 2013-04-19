@@ -22,11 +22,24 @@ Public Class PieChartForm
 
     Private Sub PieChartForm_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         InitializeChartForm()
+
+        ' Multi-language stuff
+        Me.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormTitleBar")
+        generateChartButton.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormGenerateChartButton")
+        clearDataLink.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormClearDataLinkText")
+        saveAsImageButton.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormSaveAsImageButton")
+        legendToggleCheckBox.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormShowLegendCheckBox")
+        pieCloseButton.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormCloseButtonText")
     End Sub
 
     Public Sub InitializeChartForm()
         Chart1.Series(0).Points.Clear()
         Chart1.Titles.Clear()
+
+        labelPicker.Items.Clear()
+        labelPicker.Items.Add(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormLabelPickerOutside"))
+        labelPicker.Items.Add(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormLabelPickerInside"))
+        labelPicker.Items.Add(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormLabelPickerNone"))
 
         labelPicker.SelectedIndex = 0
         palettePicker.SelectedItem = "Bright Pastel"
@@ -44,13 +57,20 @@ Public Class PieChartForm
         Array.Sort(values)
 
         If values.Length = 0 Then
-            MessageBox.Show("Oops! There doesn't seem to be any data recorded. Play some games, then come back!", "Delicious pie chart", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormNoData"), "Game Launcher", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Close()
         Else
             Dim value As Int64 = 0
             Dim total As Int64 = 0
             Dim dataPt As DataPoint = Nothing
             Dim days, hours, mins, secs As Integer
+            Dim shortD, shortH, shortM, shortS As String
+
+            shortD = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormTimeDayShorthand")
+            shortH = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormTimeHourShorthand")
+            shortM = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormTimeMinuteShorthand")
+            shortS = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormTimeSecondShorthand")
+
             For Each game As String In values
                 value = statsKey.GetValue(game, Nothing)
                 If value <> Nothing Then
@@ -60,20 +80,23 @@ Public Class PieChartForm
                     hours = TimeSpan.FromSeconds(value).Hours
                     mins = TimeSpan.FromSeconds(value).Minutes
                     secs = TimeSpan.FromSeconds(value).Seconds
-                    dataPt.Label = game.Replace("&&", "&") & vbNewLine & "(" & days & "d " & hours & "h " & mins & "m " & secs & "s, #PERCENT)"
+                    dataPt.Label = String.Format("({1}{0}({2}{3} {4}{5} {6}{7} {8}{9}, #PERCENT)", vbNewLine, game.Replace("&&", "&"), days, shortD, hours, shortH, mins, shortM, secs, shortS)
                 End If
             Next
-            Chart1.Titles.Add("Total playing time: " & CStr(TimeSpan.FromSeconds(CDbl(total)).Days) & "d " & _
-                                                       CStr(TimeSpan.FromSeconds(CDbl(total)).Hours) & "h " & _
-                                                       CStr(TimeSpan.FromSeconds(CDbl(total)).Minutes) & "m " & _
-                                                       CStr(TimeSpan.FromSeconds(CDbl(total)).Seconds) & "s")
+
+            Chart1.Titles.Add(String.Format("{8}: {0}{1} {2}{3} {4}{5} {6}{7}", _
+                                            CStr(TimeSpan.FromSeconds(CDbl(total)).Days), shortD, _
+                                            CStr(TimeSpan.FromSeconds(CDbl(total)).Hours), shortH, _
+                                            CStr(TimeSpan.FromSeconds(CDbl(total)).Minutes), shortM, _
+                                            CStr(TimeSpan.FromSeconds(CDbl(total)).Seconds), shortS, _
+                                            MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormTotalPlayingTime")))
         End If
     End Sub
 
     Private Sub saveAsImageButton_Click(sender As System.Object, e As System.EventArgs) Handles saveAsImageButton.Click
         Dim saveChartDialog As New SaveFileDialog
         With saveChartDialog
-            .Title = "Save pie chart as image"
+            .Title = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormSaveAsImageTitlebar")
             .AddExtension = True
             .InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures)
             .FileName = "chart"
@@ -97,9 +120,11 @@ Public Class PieChartForm
 
             Try
                 Chart1.SaveImage(saveChartDialog.FileName, Imaging.ImageFormat.Png)
-                MessageBox.Show("Your chart image was saved!", "Save chart as image", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormSaveAsImageSuccess"), _
+                                MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormSaveAsImageTitleBar"), _
+                                MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Something horrible has happened!" & vbNewLine & vbNewLine & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Error:" & vbNewLine & vbNewLine & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End If
     End Sub
@@ -203,10 +228,12 @@ Public Class PieChartForm
             valueNames(valueIndex) = valueNames(valueIndex) & " (" & CInt(days) & "d " & CInt(hours) & "h " & CInt(mins) & "m " & CInt(secs) & "s)"
         Next
 
-        arguments.Add("chtt", "Total playing time: " & CStr(TimeSpan.FromSeconds(CDbl(total)).Days) & "d " & _
-                                                       CStr(TimeSpan.FromSeconds(CDbl(total)).Hours) & "h " & _
-                                                       CStr(TimeSpan.FromSeconds(CDbl(total)).Minutes) & "m " & _
-                                                       CStr(TimeSpan.FromSeconds(CDbl(total)).Seconds) & "s") ' Chart Title
+        arguments.Add("chtt", String.Format("{8}: {0}{1} {2}{3} {4}{5} {6}{7}", _
+                                            CStr(TimeSpan.FromSeconds(CDbl(total)).Days), MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormTimeDayShorthand"), _
+                                            CStr(TimeSpan.FromSeconds(CDbl(total)).Hours), MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormTimeHourShorthand"), _
+                                            CStr(TimeSpan.FromSeconds(CDbl(total)).Minutes), MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormTimeMinuteShorthand"), _
+                                            CStr(TimeSpan.FromSeconds(CDbl(total)).Seconds), MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormTimeSecondShorthand"), _
+                                            MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormTotalPlayingTime"))) ' Chart Title
 
         Dim strColors As String = Nothing
         Dim colors As Color() = Chart1.PaletteCustomColors
@@ -254,15 +281,15 @@ Public Class PieChartForm
             currentLine = "0"
         End Try
 
-        EmbeddableChartForm.TextBox1.Text = currentLine
+        EmbeddableChartForm.LinkTextBox.Text = currentLine
         EmbeddableChartForm.ShowDialog()
     End Sub
 
     Private Sub generateChartButton_Click(sender As System.Object, e As System.EventArgs) Handles generateChartButton.Click
-        generateChartButton.Text = "Please wait"
+        generateChartButton.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormPleaseWait")
         generateChartButton.Enabled = False
         generateGoogleChartLink()
         generateChartButton.Enabled = True
-        generateChartButton.Text = "&Generate linkable chart"
+        generateChartButton.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormGenerateChartButton")
     End Sub
 End Class

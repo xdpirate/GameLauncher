@@ -22,93 +22,81 @@ Partial Class EmbeddableChartForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.btnCopy = New System.Windows.Forms.Button()
-        Me.btnVisitLink = New System.Windows.Forms.Button()
-        Me.btnCancel = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.isgdLinkLabel = New System.Windows.Forms.LinkLabel()
+        Me.LinkTextBox = New System.Windows.Forms.TextBox()
+        Me.CopyButton = New System.Windows.Forms.Button()
+        Me.VisitLinkButton = New System.Windows.Forms.Button()
+        Me.GTFOButton = New System.Windows.Forms.Button()
+        Me.FlavorTextLabel = New System.Windows.Forms.Label()
+        Me.CourtesyLabel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'LinkTextBox
         '
-        Me.TextBox1.Location = New System.Drawing.Point(15, 27)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(217, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.LinkTextBox.Location = New System.Drawing.Point(15, 27)
+        Me.LinkTextBox.Name = "LinkTextBox"
+        Me.LinkTextBox.ReadOnly = True
+        Me.LinkTextBox.Size = New System.Drawing.Size(217, 20)
+        Me.LinkTextBox.TabIndex = 0
         '
-        'btnCopy
+        'CopyButton
         '
-        Me.btnCopy.Location = New System.Drawing.Point(238, 25)
-        Me.btnCopy.Name = "btnCopy"
-        Me.btnCopy.Size = New System.Drawing.Size(92, 23)
-        Me.btnCopy.TabIndex = 1
-        Me.btnCopy.Text = "&Copy"
-        Me.btnCopy.UseVisualStyleBackColor = True
+        Me.CopyButton.Location = New System.Drawing.Point(238, 25)
+        Me.CopyButton.Name = "CopyButton"
+        Me.CopyButton.Size = New System.Drawing.Size(92, 23)
+        Me.CopyButton.TabIndex = 1
+        Me.CopyButton.Text = "&Copy"
+        Me.CopyButton.UseVisualStyleBackColor = True
         '
-        'btnVisitLink
+        'VisitLinkButton
         '
-        Me.btnVisitLink.Location = New System.Drawing.Point(238, 54)
-        Me.btnVisitLink.Name = "btnVisitLink"
-        Me.btnVisitLink.Size = New System.Drawing.Size(92, 23)
-        Me.btnVisitLink.TabIndex = 2
-        Me.btnVisitLink.Text = "&Visit link"
-        Me.btnVisitLink.UseVisualStyleBackColor = True
+        Me.VisitLinkButton.Location = New System.Drawing.Point(238, 54)
+        Me.VisitLinkButton.Name = "VisitLinkButton"
+        Me.VisitLinkButton.Size = New System.Drawing.Size(92, 23)
+        Me.VisitLinkButton.TabIndex = 2
+        Me.VisitLinkButton.Text = "&Visit link"
+        Me.VisitLinkButton.UseVisualStyleBackColor = True
         '
-        'btnCancel
+        'GTFOButton
         '
-        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Location = New System.Drawing.Point(238, 83)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(92, 23)
-        Me.btnCancel.TabIndex = 3
-        Me.btnCancel.Text = "&Close"
-        Me.btnCancel.UseVisualStyleBackColor = True
+        Me.GTFOButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.GTFOButton.Location = New System.Drawing.Point(238, 83)
+        Me.GTFOButton.Name = "GTFOButton"
+        Me.GTFOButton.Size = New System.Drawing.Size(92, 23)
+        Me.GTFOButton.TabIndex = 3
+        Me.GTFOButton.Text = "Clos&e"
+        Me.GTFOButton.UseVisualStyleBackColor = True
         '
-        'Label1
+        'FlavorTextLabel
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(295, 13)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Success! Send the link below to your friends and loved ones:"
+        Me.FlavorTextLabel.AutoSize = True
+        Me.FlavorTextLabel.Location = New System.Drawing.Point(12, 9)
+        Me.FlavorTextLabel.Name = "FlavorTextLabel"
+        Me.FlavorTextLabel.Size = New System.Drawing.Size(295, 13)
+        Me.FlavorTextLabel.TabIndex = 4
+        Me.FlavorTextLabel.Text = "Success! Send the link below to your friends and loved ones:"
         '
-        'Label2
+        'CourtesyLabel
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 96)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(108, 13)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Shortlinks courtesy of"
-        '
-        'isgdLinkLabel
-        '
-        Me.isgdLinkLabel.AutoSize = True
-        Me.isgdLinkLabel.Location = New System.Drawing.Point(118, 96)
-        Me.isgdLinkLabel.Name = "isgdLinkLabel"
-        Me.isgdLinkLabel.Size = New System.Drawing.Size(29, 13)
-        Me.isgdLinkLabel.TabIndex = 6
-        Me.isgdLinkLabel.TabStop = True
-        Me.isgdLinkLabel.Text = "is.gd"
+        Me.CourtesyLabel.AutoSize = True
+        Me.CourtesyLabel.Location = New System.Drawing.Point(12, 96)
+        Me.CourtesyLabel.Name = "CourtesyLabel"
+        Me.CourtesyLabel.Size = New System.Drawing.Size(133, 13)
+        Me.CourtesyLabel.TabIndex = 5
+        Me.CourtesyLabel.Text = "Shortlinks courtesy of is.gd"
         '
         'EmbeddableChartForm
         '
-        Me.AcceptButton = Me.btnCopy
+        Me.AcceptButton = Me.CopyButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.CancelButton = Me.btnCancel
+        Me.CancelButton = Me.GTFOButton
         Me.ClientSize = New System.Drawing.Size(342, 121)
-        Me.Controls.Add(Me.isgdLinkLabel)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnCancel)
-        Me.Controls.Add(Me.btnVisitLink)
-        Me.Controls.Add(Me.btnCopy)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.CourtesyLabel)
+        Me.Controls.Add(Me.FlavorTextLabel)
+        Me.Controls.Add(Me.GTFOButton)
+        Me.Controls.Add(Me.VisitLinkButton)
+        Me.Controls.Add(Me.CopyButton)
+        Me.Controls.Add(Me.LinkTextBox)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -121,11 +109,10 @@ Partial Class EmbeddableChartForm
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents btnCopy As System.Windows.Forms.Button
-    Friend WithEvents btnVisitLink As System.Windows.Forms.Button
-    Friend WithEvents btnCancel As System.Windows.Forms.Button
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents isgdLinkLabel As System.Windows.Forms.LinkLabel
+    Friend WithEvents LinkTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents CopyButton As System.Windows.Forms.Button
+    Friend WithEvents VisitLinkButton As System.Windows.Forms.Button
+    Friend WithEvents GTFOButton As System.Windows.Forms.Button
+    Friend WithEvents FlavorTextLabel As System.Windows.Forms.Label
+    Friend WithEvents CourtesyLabel As System.Windows.Forms.Label
 End Class

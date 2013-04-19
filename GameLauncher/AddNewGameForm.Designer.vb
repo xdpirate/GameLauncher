@@ -26,10 +26,10 @@ Partial Class AddNewGameForm
         Me.gamePathTextBox = New System.Windows.Forms.TextBox()
         Me.gameNameTextBox = New System.Windows.Forms.TextBox()
         Me.commandLineTextBox = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.GameNameLabel = New System.Windows.Forms.Label()
+        Me.CmdArgsLabel = New System.Windows.Forms.Label()
         Me.pathBrowseButton = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.IconGroupBox = New System.Windows.Forms.GroupBox()
         Me.keepCurrentIconRadio = New System.Windows.Forms.RadioButton()
         Me.customIconPathTextBox = New System.Windows.Forms.TextBox()
         Me.gameIconPreviewBox = New System.Windows.Forms.PictureBox()
@@ -43,7 +43,7 @@ Partial Class AddNewGameForm
         Me.normalGameRadio = New System.Windows.Forms.RadioButton()
         Me.steamGameRadio = New System.Windows.Forms.RadioButton()
         Me.steamAppIDTextBox = New System.Windows.Forms.TextBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.GamePathsGroupBox = New System.Windows.Forms.GroupBox()
         Me.specifySteamExeCheckBox = New System.Windows.Forms.CheckBox()
         Me.steamExePathTextBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -51,14 +51,14 @@ Partial Class AddNewGameForm
         Me.launcherBrowseButton = New System.Windows.Forms.Button()
         Me.launcherPathTextBox = New System.Windows.Forms.TextBox()
         Me.usesLauncherCheckBox = New System.Windows.Forms.CheckBox()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.GameInfoGroupBox = New System.Windows.Forms.GroupBox()
         Me.helpTextLabel = New System.Windows.Forms.Label()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox1.SuspendLayout()
+        Me.HelpGroupBox = New System.Windows.Forms.GroupBox()
+        Me.IconGroupBox.SuspendLayout()
         CType(Me.gameIconPreviewBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
+        Me.GamePathsGroupBox.SuspendLayout()
+        Me.GameInfoGroupBox.SuspendLayout()
+        Me.HelpGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'gamePathTextBox
@@ -89,23 +89,23 @@ Partial Class AddNewGameForm
         Me.commandLineTextBox.Size = New System.Drawing.Size(360, 20)
         Me.commandLineTextBox.TabIndex = 3
         '
-        'Label2
+        'GameNameLabel
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 16)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(38, 13)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Name:"
+        Me.GameNameLabel.AutoSize = True
+        Me.GameNameLabel.Location = New System.Drawing.Point(6, 16)
+        Me.GameNameLabel.Name = "GameNameLabel"
+        Me.GameNameLabel.Size = New System.Drawing.Size(38, 13)
+        Me.GameNameLabel.TabIndex = 0
+        Me.GameNameLabel.Text = "Name:"
         '
-        'Label3
+        'CmdArgsLabel
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 55)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(128, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Command line arguments:"
+        Me.CmdArgsLabel.AutoSize = True
+        Me.CmdArgsLabel.Location = New System.Drawing.Point(6, 55)
+        Me.CmdArgsLabel.Name = "CmdArgsLabel"
+        Me.CmdArgsLabel.Size = New System.Drawing.Size(128, 13)
+        Me.CmdArgsLabel.TabIndex = 2
+        Me.CmdArgsLabel.Text = "Command line arguments:"
         '
         'pathBrowseButton
         '
@@ -117,22 +117,22 @@ Partial Class AddNewGameForm
         Me.pathBrowseButton.Text = "&Browse..."
         Me.pathBrowseButton.UseVisualStyleBackColor = True
         '
-        'GroupBox1
+        'IconGroupBox
         '
-        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.IconGroupBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.Controls.Add(Me.keepCurrentIconRadio)
-        Me.GroupBox1.Controls.Add(Me.customIconPathTextBox)
-        Me.GroupBox1.Controls.Add(Me.gameIconPreviewBox)
-        Me.GroupBox1.Controls.Add(Me.iconBrowseButton)
-        Me.GroupBox1.Controls.Add(Me.getFromOtherFileRadio)
-        Me.GroupBox1.Controls.Add(Me.getFromExeRadio)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 263)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(375, 91)
-        Me.GroupBox1.TabIndex = 2
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Icon"
+        Me.IconGroupBox.Controls.Add(Me.keepCurrentIconRadio)
+        Me.IconGroupBox.Controls.Add(Me.customIconPathTextBox)
+        Me.IconGroupBox.Controls.Add(Me.gameIconPreviewBox)
+        Me.IconGroupBox.Controls.Add(Me.iconBrowseButton)
+        Me.IconGroupBox.Controls.Add(Me.getFromOtherFileRadio)
+        Me.IconGroupBox.Controls.Add(Me.getFromExeRadio)
+        Me.IconGroupBox.Location = New System.Drawing.Point(12, 263)
+        Me.IconGroupBox.Name = "IconGroupBox"
+        Me.IconGroupBox.Size = New System.Drawing.Size(375, 91)
+        Me.IconGroupBox.TabIndex = 2
+        Me.IconGroupBox.TabStop = False
+        Me.IconGroupBox.Text = "Icon"
         '
         'keepCurrentIconRadio
         '
@@ -255,28 +255,28 @@ Partial Class AddNewGameForm
         Me.steamAppIDTextBox.Size = New System.Drawing.Size(139, 20)
         Me.steamAppIDTextBox.TabIndex = 8
         '
-        'GroupBox2
+        'GamePathsGroupBox
         '
-        Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.GamePathsGroupBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox2.Controls.Add(Me.specifySteamExeCheckBox)
-        Me.GroupBox2.Controls.Add(Me.steamExePathTextBox)
-        Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Controls.Add(Me.steamExeBrowseButton)
-        Me.GroupBox2.Controls.Add(Me.launcherBrowseButton)
-        Me.GroupBox2.Controls.Add(Me.launcherPathTextBox)
-        Me.GroupBox2.Controls.Add(Me.usesLauncherCheckBox)
-        Me.GroupBox2.Controls.Add(Me.steamAppIDTextBox)
-        Me.GroupBox2.Controls.Add(Me.gamePathTextBox)
-        Me.GroupBox2.Controls.Add(Me.steamGameRadio)
-        Me.GroupBox2.Controls.Add(Me.pathBrowseButton)
-        Me.GroupBox2.Controls.Add(Me.normalGameRadio)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 118)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(375, 139)
-        Me.GroupBox2.TabIndex = 1
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Game path/Steam app ID"
+        Me.GamePathsGroupBox.Controls.Add(Me.specifySteamExeCheckBox)
+        Me.GamePathsGroupBox.Controls.Add(Me.steamExePathTextBox)
+        Me.GamePathsGroupBox.Controls.Add(Me.Label1)
+        Me.GamePathsGroupBox.Controls.Add(Me.steamExeBrowseButton)
+        Me.GamePathsGroupBox.Controls.Add(Me.launcherBrowseButton)
+        Me.GamePathsGroupBox.Controls.Add(Me.launcherPathTextBox)
+        Me.GamePathsGroupBox.Controls.Add(Me.usesLauncherCheckBox)
+        Me.GamePathsGroupBox.Controls.Add(Me.steamAppIDTextBox)
+        Me.GamePathsGroupBox.Controls.Add(Me.gamePathTextBox)
+        Me.GamePathsGroupBox.Controls.Add(Me.steamGameRadio)
+        Me.GamePathsGroupBox.Controls.Add(Me.pathBrowseButton)
+        Me.GamePathsGroupBox.Controls.Add(Me.normalGameRadio)
+        Me.GamePathsGroupBox.Location = New System.Drawing.Point(12, 118)
+        Me.GamePathsGroupBox.Name = "GamePathsGroupBox"
+        Me.GamePathsGroupBox.Size = New System.Drawing.Size(375, 139)
+        Me.GamePathsGroupBox.TabIndex = 1
+        Me.GamePathsGroupBox.TabStop = False
+        Me.GamePathsGroupBox.Text = "Game path/Steam app ID"
         '
         'specifySteamExeCheckBox
         '
@@ -343,20 +343,20 @@ Partial Class AddNewGameForm
         Me.usesLauncherCheckBox.Text = "Uses a launcher"
         Me.usesLauncherCheckBox.UseVisualStyleBackColor = True
         '
-        'GroupBox3
+        'GameInfoGroupBox
         '
-        Me.GroupBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.GameInfoGroupBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox3.Controls.Add(Me.Label2)
-        Me.GroupBox3.Controls.Add(Me.gameNameTextBox)
-        Me.GroupBox3.Controls.Add(Me.Label3)
-        Me.GroupBox3.Controls.Add(Me.commandLineTextBox)
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 12)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(375, 100)
-        Me.GroupBox3.TabIndex = 0
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Game information"
+        Me.GameInfoGroupBox.Controls.Add(Me.GameNameLabel)
+        Me.GameInfoGroupBox.Controls.Add(Me.gameNameTextBox)
+        Me.GameInfoGroupBox.Controls.Add(Me.CmdArgsLabel)
+        Me.GameInfoGroupBox.Controls.Add(Me.commandLineTextBox)
+        Me.GameInfoGroupBox.Location = New System.Drawing.Point(12, 12)
+        Me.GameInfoGroupBox.Name = "GameInfoGroupBox"
+        Me.GameInfoGroupBox.Size = New System.Drawing.Size(375, 100)
+        Me.GameInfoGroupBox.TabIndex = 0
+        Me.GameInfoGroupBox.TabStop = False
+        Me.GameInfoGroupBox.Text = "Game information"
         '
         'helpTextLabel
         '
@@ -368,17 +368,17 @@ Partial Class AddNewGameForm
         Me.helpTextLabel.Name = "helpTextLabel"
         Me.helpTextLabel.Size = New System.Drawing.Size(358, 67)
         Me.helpTextLabel.TabIndex = 0
-        Me.helpTextLabel.Text = "Hover over an item to show help in this pane."
+        Me.helpTextLabel.Text = "Hover over an item to show help in this panel."
         '
-        'GroupBox4
+        'HelpGroupBox
         '
-        Me.GroupBox4.Controls.Add(Me.helpTextLabel)
-        Me.GroupBox4.Location = New System.Drawing.Point(12, 360)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(375, 86)
-        Me.GroupBox4.TabIndex = 3
-        Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Help"
+        Me.HelpGroupBox.Controls.Add(Me.helpTextLabel)
+        Me.HelpGroupBox.Location = New System.Drawing.Point(12, 360)
+        Me.HelpGroupBox.Name = "HelpGroupBox"
+        Me.HelpGroupBox.Size = New System.Drawing.Size(375, 86)
+        Me.HelpGroupBox.TabIndex = 3
+        Me.HelpGroupBox.TabStop = False
+        Me.HelpGroupBox.Text = "Help"
         '
         'AddNewGameForm
         '
@@ -387,36 +387,36 @@ Partial Class AddNewGameForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.cancelAddGameButton
         Me.ClientSize = New System.Drawing.Size(399, 490)
-        Me.Controls.Add(Me.GroupBox4)
-        Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.HelpGroupBox)
+        Me.Controls.Add(Me.GameInfoGroupBox)
+        Me.Controls.Add(Me.GamePathsGroupBox)
         Me.Controls.Add(Me.cancelAddGameButton)
         Me.Controls.Add(Me.okayButton)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.IconGroupBox)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "AddNewGameForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Add or edit game"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.IconGroupBox.ResumeLayout(False)
+        Me.IconGroupBox.PerformLayout()
         CType(Me.gameIconPreviewBox, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
-        Me.GroupBox4.ResumeLayout(False)
+        Me.GamePathsGroupBox.ResumeLayout(False)
+        Me.GamePathsGroupBox.PerformLayout()
+        Me.GameInfoGroupBox.ResumeLayout(False)
+        Me.GameInfoGroupBox.PerformLayout()
+        Me.HelpGroupBox.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents gamePathTextBox As System.Windows.Forms.TextBox
     Friend WithEvents gameNameTextBox As System.Windows.Forms.TextBox
     Friend WithEvents commandLineTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents GameNameLabel As System.Windows.Forms.Label
+    Friend WithEvents CmdArgsLabel As System.Windows.Forms.Label
     Friend WithEvents pathBrowseButton As System.Windows.Forms.Button
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents IconGroupBox As System.Windows.Forms.GroupBox
     Friend WithEvents iconBrowseButton As System.Windows.Forms.Button
     Friend WithEvents getFromOtherFileRadio As System.Windows.Forms.RadioButton
     Friend WithEvents getFromExeRadio As System.Windows.Forms.RadioButton
@@ -428,13 +428,13 @@ Partial Class AddNewGameForm
     Friend WithEvents normalGameRadio As System.Windows.Forms.RadioButton
     Friend WithEvents steamGameRadio As System.Windows.Forms.RadioButton
     Friend WithEvents steamAppIDTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents GamePathsGroupBox As System.Windows.Forms.GroupBox
+    Friend WithEvents GameInfoGroupBox As System.Windows.Forms.GroupBox
     Friend WithEvents launcherBrowseButton As System.Windows.Forms.Button
     Friend WithEvents launcherPathTextBox As System.Windows.Forms.TextBox
     Friend WithEvents usesLauncherCheckBox As System.Windows.Forms.CheckBox
     Friend WithEvents helpTextLabel As System.Windows.Forms.Label
-    Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
+    Friend WithEvents HelpGroupBox As System.Windows.Forms.GroupBox
     Friend WithEvents specifySteamExeCheckBox As System.Windows.Forms.CheckBox
     Friend WithEvents steamExePathTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label

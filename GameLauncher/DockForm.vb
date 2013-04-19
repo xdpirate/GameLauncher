@@ -247,6 +247,7 @@ Public Class DockForm
             dockTopMostKey.SetValue("dockTopMost", 1, RegistryValueKind.DWord)
         End If
     End Sub
+
 End Class
 
 

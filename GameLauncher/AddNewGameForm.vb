@@ -28,7 +28,7 @@ Public Class AddNewGameForm
 
     Sub resetHelp()
         helpTextLabel.ForeColor = Color.DarkGray
-        helpTextLabel.Text = "Hover over an item to show help in this panel."
+        helpTextLabel.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormDefaultHelpText")
     End Sub
 
     Private Sub AddNewGameForm_FormClosing(sender As Object, e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
@@ -45,53 +45,76 @@ Public Class AddNewGameForm
         For Each helpControl As Control In controls
             AddHandler helpControl.MouseLeave, AddressOf resetHelp
         Next
+
+        ' Multi-language stuff
+        Me.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormTitleBar")
+        GameInfoGroupBox.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormGameInfoGroupBox")
+        GameNameLabel.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormGameNameLabel")
+        CmdArgsLabel.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormCmdArgsLabel")
+        GamePathsGroupBox.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormGamePathsGroupBox")
+        normalGameRadio.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormNormalGameRadio")
+        usesLauncherCheckBox.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormUsesLauncherCheckBox")
+        steamGameRadio.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormSteamGameRadio")
+        specifySteamExeCheckBox.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormSpecifySteamExeCheckBox")
+        IconGroupBox.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormIconGroupBox")
+        getFromExeRadio.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormGetFromExeRadio")
+        getFromOtherFileRadio.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormGetFromOtherFileRadio")
+        keepCurrentIconRadio.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormKeepIconRadio")
+        HelpGroupBox.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormHelpGroupBox")
+        okayButton.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormOKButton")
+        cancelAddGameButton.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormCancelButton")
+        helpTextLabel.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormDefaultHelpText")
+
+        'Browse buttons
+        pathBrowseButton.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormBrowseButtons")
+        launcherBrowseButton.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormBrowseButtons")
+        steamExeBrowseButton.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormBrowseButtons")
+        iconBrowseButton.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormBrowseButtons")
+
     End Sub
 
     Private Sub gameNameTextBox_MouseEnter(sender As System.Object, e As System.EventArgs) Handles gameNameTextBox.MouseEnter
-        setHelp("Enter the name of the game to be added here. It can be named anything, but equals signs (=) will be replaced with dashes (-) due to technical limitations.")
+        setHelp(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormGameNameHelpText"))
     End Sub
 
     Private Sub commandLineTextBox_MouseEnter(sender As System.Object, e As System.EventArgs) Handles commandLineTextBox.MouseEnter
-        setHelp("Enter the command-line arguments to be used when launching the game. If you don't know what this is, you can leave it empty.")
+        setHelp(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormCmdArgsHelpText"))
     End Sub
 
     Private Sub getFromExeRadio_MouseEnter(sender As System.Object, e As System.EventArgs) Handles getFromExeRadio.MouseEnter
-        setHelp("Select this option if you want Game Launcher to get the game icon from the chosen game executable.")
+        setHelp(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormGetFromExeHelpText"))
     End Sub
 
     Private Sub getFromOtherFileRadio_MouseEnter(sender As System.Object, e As System.EventArgs) Handles getFromOtherFileRadio.MouseEnter
-        setHelp("Select this option if you want to specify an icon yourself.")
+        setHelp(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormGetFromOtherFileHelpText"))
     End Sub
 
     Private Sub iconBrowseButton_MouseEnter(sender As System.Object, e As System.EventArgs) Handles iconBrowseButton.MouseEnter
-        setHelp("Click this button to select a custom icon. It must be a BMP, PNG, GIF, JPG or ICO image, and will be resized to 16x16. " & _
-                "You can also specify an EXE-file to extract its main icon and use it. The image will have its aspect ratio preserved.")
+        setHelp(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormCustomIconHelpText"))
     End Sub
 
     Private Sub normalGameRadio_MouseEnter(sender As System.Object, e As System.EventArgs) Handles normalGameRadio.MouseEnter
-        setHelp("Select this option if this is a normal game (i.e. it does not use Steam).")
+        setHelp(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormNormalGameHelpText"))
     End Sub
 
     Private Sub pathBrowseButton_MouseEnter(sender As System.Object, e As System.EventArgs) Handles pathBrowseButton.MouseEnter
-        setHelp("Click this button to select the executable used to run the game. This is typically an .exe-file.")
+        setHelp(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormBrowseExeHelpText"))
     End Sub
 
     Private Sub usesLauncherCheckBox_MouseEnter(sender As System.Object, e As System.EventArgs) Handles usesLauncherCheckBox.MouseEnter
-        setHelp("Check this box if the game you are adding uses a launcher. A launcher is an executable that will in turn launch the main game. Enabling this " & _
-                "will enable playtime tracking for games that require being launched with a launcher.")
+        setHelp(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormUsesLauncherHelpText"))
     End Sub
 
     Private Sub launcherBrowseButton_MouseEnter(sender As System.Object, e As System.EventArgs) Handles launcherBrowseButton.MouseEnter
-        setHelp("Click this button to select the launcher used to launch the main game executable.")
+        setHelp(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormLauncherBrowseHelpText"))
     End Sub
 
     Private Sub steamGameRadio_MouseEnter(sender As System.Object, e As System.EventArgs) Handles steamGameRadio.MouseEnter
-        setHelp("Select this option if this is a game that must be launched through Steam.")
+        setHelp(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormSteamHelpText"))
     End Sub
 
     Private Sub TextBox1_MouseEnter(sender As System.Object, e As System.EventArgs) Handles steamAppIDTextBox.MouseEnter
-        setHelp("Enter the Steam App ID here. To find the ID, locate the game in the Steam Store, and copy the ID from the last " & _
-                "part of the URL (e.g. http://store.steampowered.com/app/24980/ -> The ID here is 24980)")
+        setHelp(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormSteamAppIdHelpText"))
     End Sub
 
     Private Sub cancelAddGameButton_Click(sender As System.Object, e As System.EventArgs) Handles cancelAddGameButton.Click
@@ -100,8 +123,7 @@ Public Class AddNewGameForm
     End Sub
 
     Private Sub gameIconPreviewBox_MouseEnter(sender As System.Object, e As System.EventArgs) Handles gameIconPreviewBox.MouseEnter
-        setHelp("This shows a preview of the icon that will be used. If Game Launcher is set to retrieve the icon from the executable " & _
-                "for the game, you must specify the executable before this preview will update.")
+        setHelp(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormIconHelpText"))
     End Sub
 
     Private Sub getFromOtherFileRadio_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles getFromOtherFileRadio.CheckedChanged
@@ -173,17 +195,15 @@ Public Class AddNewGameForm
     End Sub
 
     Private Sub cancelAddGameButton_MouseEnter(sender As System.Object, e As System.EventArgs) Handles cancelAddGameButton.MouseEnter
-        setHelp("Click this button if you wish to cancel adding this game. If you have more games queued up to be added " & _
-                "(e.g. if using the drop window or right-clicking items in Explorer), you will need to cancel them all. ")
+        setHelp(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormCancelHelpText"))
     End Sub
 
     Private Sub specifySteamExeCheckBox_MouseEnter(sender As System.Object, e As System.EventArgs) Handles specifySteamExeCheckBox.MouseEnter
-        setHelp("Check this box if you want to select the executable Steam uses to run the game. Enabling this will enable playtime tracking for " & _
-                "Steam games. If the game uses a launcher, you do not need to select it, simply select the main executable the game runs from.")
+        setHelp(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormSpecifySteamExeHelpText"))
     End Sub
 
     Private Sub steamExeBrowseButton_MouseEnter(sender As System.Object, e As System.EventArgs) Handles steamExeBrowseButton.MouseEnter
-        setHelp("Click here to browse for the main executable Steam uses to run the game.")
+        setHelp(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormSteamExeBrowseHelpText"))
     End Sub
 
     Private Sub usesLauncherCheckBox_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles usesLauncherCheckBox.CheckedChanged
@@ -322,36 +342,36 @@ Public Class AddNewGameForm
 
         'Validate the form
         If gameName = "" Then
-            MessageBox.Show("You must specify a name for the game.", My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormErrorNoName"), My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Information)
             gameNameTextBox.Focus()
         ElseIf normalGameRadio.Checked And gamePath = "" Then
-            MessageBox.Show("You must specify a path for the main executable.", My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormErrorNoMainPath"), My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Information)
             gamePathTextBox.Focus()
         ElseIf normalGameRadio.Checked And usesLauncherCheckBox.Checked And launcherPath = "" Then
-            MessageBox.Show("You must specify a path to the launcher.", My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormErrorNoLauncherPath"), My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Information)
             launcherPathTextBox.Focus()
         ElseIf steamGameRadio.Checked And steamAppID = "" Then
-            MessageBox.Show("You must enter the Steam App ID for the game.", My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormErrorNoAppId"), My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Information)
             steamAppIDTextBox.Focus()
         ElseIf steamGameRadio.Checked And specifySteamExeCheckBox.Checked And steamExePath = "" Then
-            MessageBox.Show("You must specify a path to the executable Steam uses to launch the game.", My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormErrorNoSteamExePath"), My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Information)
             steamExePathTextBox.Focus()
         ElseIf steamGameRadio.Checked And getFromExeRadio.Checked And specifySteamExeCheckBox.Checked = False Then
-            MessageBox.Show("You cannot select ""Get from executable"" for the icon if you haven't specified an executable for a Steam game.", My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormErrorNoSteamExePathClickedGetFromExecutable"), My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Information)
         ElseIf steamGameRadio.Checked And getFromOtherFileRadio.Checked And customIconPathTextBox.Text = "" Then
-            MessageBox.Show("You must specify an icon for this Steam game.", My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormErrorNoSteamIcon"), My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Information)
             customIconPathTextBox.Focus()
         ElseIf normalGameRadio.Checked And getFromOtherFileRadio.Checked And customIconPathTextBox.Text = "" Then
-            MessageBox.Show("You must specify an icon if ""Get from other file"" is selected.", My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormGetFromOtherFileNoIcon"), My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Information)
             customIconPathTextBox.Focus()
         Else
             'Everything seems to be in order, now check the validity of the specified exes, if any
             If normalGameRadio.Checked And File.Exists(gamePath) = False Then
-                MessageBox.Show("The main game executable could not be found: " & vbNewLine & gamePath, My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormErrorMainExeNotFound") & vbNewLine & gamePath, My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Warning)
             ElseIf normalGameRadio.Checked And usesLauncherCheckBox.Checked And File.Exists(launcherPath) = False Then
-                MessageBox.Show("The launcher executable could not be found: " & vbNewLine & launcherPath, My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormErrorLauncherExeNotFound") & vbNewLine & launcherPath, My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Warning)
             ElseIf steamGameRadio.Checked And specifySteamExeCheckBox.Checked And File.Exists(steamExePath) = False Then
-                MessageBox.Show("The specified executable for the Steam game could not be found: " & vbNewLine & steamExePath, My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AddNewGameFormErrorSteamExeNotFound") & vbNewLine & steamExePath, My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
                 'EXEs exist, all systems are go!
                 Me.DialogResult = Windows.Forms.DialogResult.OK

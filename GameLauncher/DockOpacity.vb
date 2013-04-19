@@ -43,5 +43,11 @@ Public Class DockOpacity
 
         NormalOpacityLabel.Text = CStr(NormalOpacityBar.Value)
         HoverOpacityLabel.Text = CStr(HoverOpacityBar.Value)
+
+        ' Multi-language stuff
+        Me.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("DockOpacityFormTitleBar")
+        NormalOpacityGroupBox.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("DockOpacityFormNormalOpacityGroupBox")
+        HoverOpacityGroupBox.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("DockOpacityFormHoverOpacityGroupBox")
+        buttonSave.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("DockOpacityFormSaveButton")
     End Sub
 End Class
