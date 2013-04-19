@@ -640,7 +640,15 @@ Special thanks to Lisa for support.</value>
     <value>Click this button when you are done filling out the details of the game to be added.</value>
     <comment>Shown in the Add New Game Form.</comment>
   </data>
+  <data name="AddNewGameFormOKHelp1" xml:space="preserve">
+    <value>Click this button when you're done entering the details for this game.</value>
+    <comment>Shown in the Add New Game Form.</comment>
+  </data>
   <data name="MainMenuAboutTooltip" xml:space="preserve">
+    <value>Show information about the application and its contributors.</value>
+    <comment>Tooltip for a main menu item.</comment>
+  </data>
+  <data name="MainMenuAboutTooltip1" xml:space="preserve">
     <value>Show information about the application and its contributors.</value>
     <comment>Tooltip for a main menu item.</comment>
   </data>
@@ -648,7 +656,15 @@ Special thanks to Lisa for support.</value>
     <value>Add a game to the list. You can also double click the tray icon to add games quickly by dragging and dropping shortcuts or executables.</value>
     <comment>Tooltip for a main menu item.</comment>
   </data>
+  <data name="MainMenuAddGameTooltip1" xml:space="preserve">
+    <value>Add a game to the list. You can also double click the tray icon to add games quickly by dragging and dropping shortcuts or executables.</value>
+    <comment>Tooltip for a main menu item.</comment>
+  </data>
   <data name="MainMenuClearGameListTooltip" xml:space="preserve">
+    <value>Delete every item in the game list. This action cannot be undone!</value>
+    <comment>Tooltip for a main menu item.</comment>
+  </data>
+  <data name="MainMenuClearGameListTooltip1" xml:space="preserve">
     <value>Delete every item in the game list. This action cannot be undone!</value>
     <comment>Tooltip for a main menu item.</comment>
   </data>
@@ -656,7 +672,15 @@ Special thanks to Lisa for support.</value>
     <value>&amp;Options</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
+  <data name="MainMenuOptions1" xml:space="preserve">
+    <value>&amp;Options</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
   <data name="MainMenuOptionsAbout" xml:space="preserve">
+    <value>About &amp;Game Launcher</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsAbout1" xml:space="preserve">
     <value>About &amp;Game Launcher</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
@@ -664,7 +688,15 @@ Special thanks to Lisa for support.</value>
     <value>&amp;Add game...</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
+  <data name="MainMenuOptionsAddGame1" xml:space="preserve">
+    <value>&amp;Add game...</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
   <data name="MainMenuOptionsClearGameList" xml:space="preserve">
+    <value>&amp;Clear game list...</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsClearGameList1" xml:space="preserve">
     <value>&amp;Clear game list...</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
@@ -672,7 +704,15 @@ Special thanks to Lisa for support.</value>
     <value>&amp;Preferences</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
+  <data name="MainMenuOptionsPreferences1" xml:space="preserve">
+    <value>&amp;Preferences</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
   <data name="MainMenuOptionsRemoveGames" xml:space="preserve">
+    <value>&amp;Remove games...</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsRemoveGames1" xml:space="preserve">
     <value>&amp;Remove games...</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
@@ -680,11 +720,23 @@ Special thanks to Lisa for support.</value>
     <value>&amp;Statistics</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
+  <data name="MainMenuOptionsStatistics1" xml:space="preserve">
+    <value>&amp;Statistics</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
   <data name="MainMenuQuit" xml:space="preserve">
     <value>&amp;Quit</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
+  <data name="MainMenuQuit1" xml:space="preserve">
+    <value>&amp;Quit</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
   <data name="MainMenuRemoveGamesTooltip" xml:space="preserve">
+    <value>Remove one or more games from the list.</value>
+    <comment>Tooltip for a main menu item.</comment>
+  </data>
+  <data name="MainMenuRemoveGamesTooltip1" xml:space="preserve">
     <value>Remove one or more games from the list.</value>
     <comment>Tooltip for a main menu item.</comment>
   </data>
