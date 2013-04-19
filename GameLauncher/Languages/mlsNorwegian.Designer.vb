@@ -212,7 +212,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Trykk denne knappen for å velge et tilpasset ikon. Ikonet må være BMP, PNG, GIF, JPGeller ICO, og vil bli skalert til 16x16. Du kan også velge en EXE-fil for å bruke dets ikon. Forholdene i bildet vil bli bevart..
+        '''  Looks up a localized string similar to Trykk denne knappen for å velge et tilpasset ikon. Ikonet må være BMP, PNG, GIF, JPG eller ICO, og vil bli skalert til 16x16. Du kan også velge en EXE-fil for å bruke dets ikon. Forholdene i bildet vil bli bevart..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormCustomIconHelpText() As String
             Get
