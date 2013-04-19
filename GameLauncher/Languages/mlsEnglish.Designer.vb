@@ -68,8 +68,7 @@ Namespace My.Resources
         '''  Looks up a localized string similar to Game Launcher
         '''© 2012-2013 xdpirate
         '''Beta testing by Kurithas.
-        '''Special thanks to Lisa for support.
-        '''Thanks for using my application!.
+        '''Special thanks to Lisa for support..
         '''</summary>
         Friend Shared ReadOnly Property AboutFormAuthorNote() As String
             Get

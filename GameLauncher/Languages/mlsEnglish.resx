@@ -121,8 +121,7 @@
     <value>Game Launcher
 © 2012-2013 xdpirate
 Beta testing by Kurithas.
-Special thanks to Lisa for support.
-Thanks for using my application!</value>
+Special thanks to Lisa for support.</value>
     <comment>The note shown on the about window, copyright and thanks</comment>
   </data>
   <data name="AboutFormCloseButtonText" xml:space="preserve">

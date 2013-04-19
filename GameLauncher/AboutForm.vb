@@ -17,7 +17,7 @@
         RichTextBox1.Rtf = My.Resources.rtfInfo
 
         'Set multi-language values
-        AuthorNoteLabel.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AboutFormAuthorNote")
+        AuthorNoteLabel.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AboutFormAuthorNote") & vbNewLine & MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("TranslationAuthor")
         UpdateCheckButton.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AboutFormUpdateCheckButtonText")
         WebsiteLink.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AboutFormWebsiteLinkText")
         ContactLink.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AboutFormContactText")

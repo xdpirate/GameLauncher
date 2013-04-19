@@ -159,7 +159,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to &amp;Browse....
+        '''  Looks up a localized string similar to &amp;Søk....
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormBrowseButtons() As String
             Get
@@ -168,7 +168,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Click this button to select the executable used to run the game. This is typically an .exe-file..
+        '''  Looks up a localized string similar to Trykk denne knappen for å velge programmet som kjører spille. Dette er som regel en .exe-fil..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormBrowseExeHelpText() As String
             Get
@@ -177,7 +177,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to &amp;Cancel.
+        '''  Looks up a localized string similar to &amp;Avbryt.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormCancelButton() As String
             Get
@@ -186,7 +186,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Click this button if you wish to cancel adding this game. If you have more games queued up to be added (e.g. if using the drop window or right-clicking items in Explorer), you will need to cancel them all..
+        '''  Looks up a localized string similar to Trykk denne knappen om du vil avbryte. Om du har flere spill i kø for å bli lagt til, må du avbryte alle..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormCancelHelpText() As String
             Get
@@ -195,7 +195,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Enter the command-line arguments to be used when launching the game. If you don&apos;t know what this is, you can leave it empty..
+        '''  Looks up a localized string similar to Skriv inn kommandlineargumenter som brukes når du kjører spillet. Om du ikke vet hva dette er, kan du la feltet stå tomt..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormCmdArgsHelpText() As String
             Get
@@ -204,7 +204,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Command line arguments:.
+        '''  Looks up a localized string similar to Kommandolinjeargumenter:.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormCmdArgsLabel() As String
             Get
@@ -213,7 +213,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Click this button to select a custom icon. It must be a BMP, PNG, GIF, JPG or ICO image, and will be resized to 16x16. You can also specify an EXE-file to extract its main icon and use it. The image will have its aspect ratio preserved..
+        '''  Looks up a localized string similar to Trykk denne knappen for å velge et tilpasset ikon. Ikonet må være BMP, PNG, GIF, JPGeller ICO, og vil bli skalert til 16x16. Du kan også velge en EXE-fil for å bruke dets ikon. Forholdene i bildet vil bli bevart..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormCustomIconHelpText() As String
             Get
@@ -222,7 +222,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Hover over an item to show help in this panel..
+        '''  Looks up a localized string similar to Hold pekeren over et element for å vise hjelp i dette panelet..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormDefaultHelpText() As String
             Get
@@ -231,7 +231,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to You must specify an icon if &quot;Get from other file&quot; is selected..
+        '''  Looks up a localized string similar to Du må spesifisere et ikon hvis &quot;Hent fra annen fil&quot; er valgt..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormErrorGetFromOtherFileNoIcon() As String
             Get
@@ -240,7 +240,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to The launcher executable could not be found: .
+        '''  Looks up a localized string similar to Launcher-programmet ble ikke funnet: .
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormErrorLauncherExeNotFound() As String
             Get
@@ -249,7 +249,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to The main game executable could not be found: .
+        '''  Looks up a localized string similar to Hovedprogrammet ble ikke funnet:.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormErrorMainExeNotFound() As String
             Get
@@ -258,7 +258,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to You must enter the Steam App ID for the game..
+        '''  Looks up a localized string similar to Du må skrive inn Steam App ID for spillet..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormErrorNoAppId() As String
             Get
@@ -267,7 +267,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to You must specify a path to the launcher..
+        '''  Looks up a localized string similar to Du må spesifisere en sti for launcher-programmet..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormErrorNoLauncherPath() As String
             Get
@@ -276,7 +276,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to You must specify a path for the main executable..
+        '''  Looks up a localized string similar to Du må spesifisere en sti for hovedprogrammet. .
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormErrorNoMainPath() As String
             Get
@@ -285,7 +285,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to You must specify a name for the game..
+        '''  Looks up a localized string similar to Du må spesifisere et navn for spillet..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormErrorNoName() As String
             Get
@@ -294,7 +294,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to You must specify a path to the executable Steam uses to launch the game..
+        '''  Looks up a localized string similar to Du må spesifisere en sti til programmet Steam bruker for å kjøre spillet..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormErrorNoSteamExePath() As String
             Get
@@ -303,7 +303,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to You cannot select &quot;Get from executable&quot; for the icon if you haven&apos;t specified an executable for a Steam game..
+        '''  Looks up a localized string similar to Du kan ikke velge &quot;Hent fra program&quot; hvis du ikke har spesifisert et program for et Steam-spill..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormErrorNoSteamExePathClickedGetFromExecutable() As String
             Get
@@ -312,7 +312,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to You must specify an icon for this Steam game..
+        '''  Looks up a localized string similar to Du må spesifisere et ikon for dette Steam-spillet..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormErrorNoSteamIcon() As String
             Get
@@ -321,7 +321,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to The specified executable for the Steam game could not be found: .
+        '''  Looks up a localized string similar to Det spesifiserte programmet for Steam-spillet ble ikke funnet:.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormErrorSteamExeNotFound() As String
             Get
@@ -330,7 +330,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Game information.
+        '''  Looks up a localized string similar to Spillinformasjon.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormGameInfoGroupBox() As String
             Get
@@ -339,7 +339,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Enter the name of the game to be added here. It can be named anything, but equals signs (=) will be replaced with dashes (-) due to technical limitations..
+        '''  Looks up a localized string similar to Skriv in navnet på spillet her. Det kan hete hva som helst, men lik-tegnet (=) vil bli erstattet med bindestrek (-) pga. tekniske limitasjoner..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormGameNameHelpText() As String
             Get
@@ -348,7 +348,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Name:.
+        '''  Looks up a localized string similar to Navn:.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormGameNameLabel() As String
             Get
@@ -357,7 +357,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Game path/Steam app ID.
+        '''  Looks up a localized string similar to Stier til spillet/Steam App ID.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormGamePathsGroupBox() As String
             Get
@@ -366,7 +366,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Select this option if you want Game Launcher to get the game icon from the chosen game executable..
+        '''  Looks up a localized string similar to Velg dette valget om du vil at Game Launcher skal hente ikonet fra spillprogrammet..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormGetFromExeHelpText() As String
             Get
@@ -375,7 +375,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Get from executable.
+        '''  Looks up a localized string similar to Hent fra program.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormGetFromExeRadio() As String
             Get
@@ -384,7 +384,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Select this option if you want to specify an icon yourself..
+        '''  Looks up a localized string similar to Velg dette valget om du vil spesifisere ikonet selv..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormGetFromOtherFileHelpText() As String
             Get
@@ -393,7 +393,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Get from other file.
+        '''  Looks up a localized string similar to Hent fra annen fil.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormGetFromOtherFileRadio() As String
             Get
@@ -402,7 +402,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Help.
+        '''  Looks up a localized string similar to Hjelp.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormHelpGroupBox() As String
             Get
@@ -411,7 +411,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Icon.
+        '''  Looks up a localized string similar to Ikon.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormIconGroupBox() As String
             Get
@@ -420,7 +420,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to This shows a preview of the icon that will be used. If Game Launcher is set to retrieve the icon from the executable for the game, you must specify the executable before this preview will update..
+        '''  Looks up a localized string similar to Denne forhåndsviser ikonet som blir brukt. Om Game Launcher er satt til å hente ikonet fra spillprogrammet, må du spesifisere programmet før denne oppdaterer..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormIconHelpText() As String
             Get
@@ -429,7 +429,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Keep current icon.
+        '''  Looks up a localized string similar to Behold nåværende ikon.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormKeepIconRadio() As String
             Get
@@ -438,7 +438,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Click this button to select the launcher used to launch the main game executable..
+        '''  Looks up a localized string similar to Trykk denne knappen for å velge launcheren som brukes til å kjøre hovedspillprogrammet..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormLauncherBrowseHelpText() As String
             Get
@@ -447,7 +447,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Select this option if this is a normal game (i.e. it does not use Steam)..
+        '''  Looks up a localized string similar to Velg dette valget om dette er et vanlig spill (dvs. at det ikke bruker Steam)..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormNormalGameHelpText() As String
             Get
@@ -456,7 +456,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Normal game.
+        '''  Looks up a localized string similar to Vanlig spill.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormNormalGameRadio() As String
             Get
@@ -474,7 +474,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Specify executable.
+        '''  Looks up a localized string similar to Velg program.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormSpecifySteamExeCheckBox() As String
             Get
@@ -483,7 +483,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Check this box if you want to select the executable Steam uses to run the game. Enabling this will enable playtime tracking for Steam games. If the game uses a launcher, you do not need to select it, simply select the main executable the game runs from..
+        '''  Looks up a localized string similar to Trykk denne boksen om du vil velge programmet Steam bruker til å kjøre spillet, Game Launcher vil da føre statistikk over Steam-spillet. Om spillet bruker en launcher, trenger du ikke velge den, bare velg hovedprogrammet spillet kjører fra.from..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormSpecifySteamExeHelpText() As String
             Get
@@ -492,7 +492,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Enter the Steam App ID here. To find the ID, locate the game in the Steam Store, and copy the ID from the last part of the URL (e.g. http://store.steampowered.com/app/24980/ -&gt; The ID here is 24980).
+        '''  Looks up a localized string similar to Skriv inn Steam App ID her. For å finne IDen, finn spillet i Steam-butikken, og kopier IDen fra den siste delen av addressen (f.eks http://store.steampowered.com/app/24980/ -&gt; IDen her er 24980).
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormSteamAppIdHelpText() As String
             Get
@@ -501,7 +501,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Click here to browse for the main executable Steam uses to run the game..
+        '''  Looks up a localized string similar to Trykk her for å finne hovedprogrammet Steam bruker for å kjøre spillet..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormSteamExeBrowseHelpText() As String
             Get
@@ -510,7 +510,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Steam game.
+        '''  Looks up a localized string similar to Steam-spill.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormSteamGameRadio() As String
             Get
@@ -519,7 +519,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Select this option if this is a game that must be launched through Steam..
+        '''  Looks up a localized string similar to Velg dette valge om dette er et spill som må kjøres via Steam..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormSteamHelpText() As String
             Get
@@ -528,7 +528,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Add or edit game.
+        '''  Looks up a localized string similar to Legg til eller endre spill.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormTitleBar() As String
             Get
@@ -537,7 +537,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Uses a launcher.
+        '''  Looks up a localized string similar to Bruker en launcher.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormUsesLauncherCheckBox() As String
             Get
@@ -546,7 +546,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Check this box if the game you are adding uses a launcher. A launcher is an executable that will in turn launch the main game. Enabling this will enable playtime tracking for games that require being launched with a launcher..
+        '''  Looks up a localized string similar to Trykk denne boksen om spillet du legger til bruker en launcher. En launcher er et program som kreves for å så kjøre hovedprogrammet, Game Launcher vil da føre statistikk over spillet som trenger en launcher..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormUsesLauncherHelpText() As String
             Get
@@ -555,7 +555,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Dock opacity when in focus (mouse hovering over the dock).
+        '''  Looks up a localized string similar to Dockens gjennomsiktighet når i fokus (pekeren hviler over docken).
         '''</summary>
         Friend Shared ReadOnly Property DockOpacityFormHoverOpacityGroupBox() As String
             Get
@@ -564,7 +564,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Dock opacity when not in focus.
+        '''  Looks up a localized string similar to Dockens gjennomsiktighet når ikke i fokus.
         '''</summary>
         Friend Shared ReadOnly Property DockOpacityFormNormalOpacityGroupBox() As String
             Get
@@ -573,7 +573,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to &amp;Save.
+        '''  Looks up a localized string similar to &amp;Lagre.
         '''</summary>
         Friend Shared ReadOnly Property DockOpacityFormSaveButton() As String
             Get
@@ -582,7 +582,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Change opacity.
+        '''  Looks up a localized string similar to Endre gjennomsiktighet.
         '''</summary>
         Friend Shared ReadOnly Property DockOpacityFormTitleBar() As String
             Get
@@ -591,7 +591,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Drop a shortcut or executable here!.
+        '''  Looks up a localized string similar to Slipp snarvei eller program her!.
         '''</summary>
         Friend Shared ReadOnly Property DragDropTargetFormTitleBar() As String
             Get
@@ -600,7 +600,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Link copied to the clipboard!.
+        '''  Looks up a localized string similar to Lenke kopiert!.
         '''</summary>
         Friend Shared ReadOnly Property EmbeddableChartFormCopiedToClipBoardText() As String
             Get
@@ -609,7 +609,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to &amp;Copy.
+        '''  Looks up a localized string similar to &amp;Kopier.
         '''</summary>
         Friend Shared ReadOnly Property EmbeddableChartFormCopyButton() As String
             Get
@@ -618,7 +618,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Shortlinks courtesy of is.gd.
+        '''  Looks up a localized string similar to Takk til is.gd for korte lenker.
         '''</summary>
         Friend Shared ReadOnly Property EmbeddableChartFormCourtesyLabel() As String
             Get
@@ -627,7 +627,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Success! Send the link below to your friends and loved ones:.
+        '''  Looks up a localized string similar to Suksess! Send lenken under til dine venner og elskede:.
         '''</summary>
         Friend Shared ReadOnly Property EmbeddableChartFormFlavorTextLabel() As String
             Get
@@ -636,7 +636,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Clos&amp;e.
+        '''  Looks up a localized string similar to &amp;Lukk.
         '''</summary>
         Friend Shared ReadOnly Property EmbeddableChartFormGTFOButton() As String
             Get
@@ -645,7 +645,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Linkable chart.
+        '''  Looks up a localized string similar to Linkbart diagram.
         '''</summary>
         Friend Shared ReadOnly Property EmbeddableChartFormTitleBar() As String
             Get
@@ -654,7 +654,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to &amp;Visit link.
+        '''  Looks up a localized string similar to &amp;Besøk.
         '''</summary>
         Friend Shared ReadOnly Property EmbeddableChartFormVisitLinkButton() As String
             Get
@@ -663,7 +663,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Automatically check for updates.
+        '''  Looks up a localized string similar to Sjekk automatisk for oppdateringer.
         '''</summary>
         Friend Shared ReadOnly Property GLOptionsFormAutoUpdateCheckBox() As String
             Get
@@ -672,7 +672,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Add to &amp;Game Launcher.
+        '''  Looks up a localized string similar to Legg til i &amp;Game Launcher.
         '''</summary>
         Friend Shared ReadOnly Property GLOptionsFormExplorerIntegrationText() As String
             Get
@@ -681,7 +681,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to &amp;Close.
+        '''  Looks up a localized string similar to &amp;Lukk.
         '''</summary>
         Friend Shared ReadOnly Property GLOptionsFormGTFOButton() As String
             Get
@@ -690,7 +690,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Changes take effect immediately..
+        '''  Looks up a localized string similar to Endringer trer i kraft med en gang..
         '''</summary>
         Friend Shared ReadOnly Property GLOptionsFormInfoLabel() As String
             Get
@@ -699,7 +699,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Integrate with Windows Explorer.
+        '''  Looks up a localized string similar to Integrer med Windows Explorer.
         '''</summary>
         Friend Shared ReadOnly Property GLOptionsFormIntegrateWithExplorerCheckBox() As String
             Get
@@ -708,7 +708,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Show time spent playing when exiting game.
+        '''  Looks up a localized string similar to Vis tid spilt når du avslutter et spill.
         '''</summary>
         Friend Shared ReadOnly Property GLOptionsFormPlayTimeInSkypeNotificationsCheckBox() As String
             Get
@@ -717,7 +717,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Preferences.
+        '''  Looks up a localized string similar to Innstillinger.
         '''</summary>
         Friend Shared ReadOnly Property GLOptionsFormPreferencesGroupBox() As String
             Get
@@ -726,7 +726,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Send notifications to Skype when you start/stop playing.
+        '''  Looks up a localized string similar to Send notifikasjoner til Skype når du starter/slutter et spill.
         '''</summary>
         Friend Shared ReadOnly Property GLOptionsFormSkypeNotificationsCheckBox() As String
             Get
@@ -735,7 +735,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Start Game Launcher when you log in.
+        '''  Looks up a localized string similar to Start Game Launcher når du logger inn.
         '''</summary>
         Friend Shared ReadOnly Property GLOptionsFormStartOnLoginCheckBox() As String
             Get
@@ -744,7 +744,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Game Launcher Preferences.
+        '''  Looks up a localized string similar to Game Launcher-innstillinger.
         '''</summary>
         Friend Shared ReadOnly Property GLOptionsFormTitleBar() As String
             Get
@@ -753,7 +753,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Something went wrong! .NET Framework said:.
+        '''  Looks up a localized string similar to Noe gikk gærent! .NET Framework sier:.
         '''</summary>
         Friend Shared ReadOnly Property MainFormAddGameFailed1() As String
             Get
@@ -762,7 +762,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to If you believe this is a bug, or the error message persists, please contact the author..
+        '''  Looks up a localized string similar to Om du mener dette er en bug, eller om feilmeldingen ikke forsvinner, kontakt forfatteren..
         '''</summary>
         Friend Shared ReadOnly Property MainFormAddGameFailed2() As String
             Get
@@ -771,7 +771,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Right-click this icon or press Windows+G to open the list.
+        '''  Looks up a localized string similar to Høyreklikk dette ikonet eller trykk Windows+G for å åpne listen.
         '''</summary>
         Friend Shared ReadOnly Property MainFormBalloonTipLoadedMessageText() As String
             Get
@@ -780,7 +780,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Game Launcher v{0} loaded!.
+        '''  Looks up a localized string similar to Game Launcher v{0} lastet!.
         '''</summary>
         Friend Shared ReadOnly Property MainFormBalloonTipLoadedMessageTitle() As String
             Get
@@ -789,7 +789,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Are you sure you want to remove all items in the list? This action CANNOT be undone!.
+        '''  Looks up a localized string similar to Er du sikker på at du vil fjerne alle elementene i listen? Denne handlingen kan IKKE gjøres om!.
         '''</summary>
         Friend Shared ReadOnly Property MainFormClearGameList() As String
             Get
@@ -798,7 +798,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Edit &amp;game....
+        '''  Looks up a localized string similar to Endre &amp;spill....
         '''</summary>
         Friend Shared ReadOnly Property MainFormEditGameItem() As String
             Get
@@ -807,7 +807,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Edit the properties of this game.
+        '''  Looks up a localized string similar to Endre detaljene for dette spillet.
         '''</summary>
         Friend Shared ReadOnly Property MainFormEditGameItemTooltip() As String
             Get
@@ -816,7 +816,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Game Launcher is loading, please wait....
+        '''  Looks up a localized string similar to Game Launcher starter opp, vennligst vent....
         '''</summary>
         Friend Shared ReadOnly Property MainFormLoadingMessage() As String
             Get
@@ -825,7 +825,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to There is a new version of Game Launcher available (v{0})! Would you like to download it now?.
+        '''  Looks up a localized string similar to En oppdatering til Game Launcher er tilgjengelig (v{0})! Vil du laste ned oppdateringen nå?.
         '''</summary>
         Friend Shared ReadOnly Property MainFormNewVersionAvailable1() As String
             Get
@@ -834,7 +834,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to If you decide not to update at this point, checking for new updates will be disabled for this session..
+        '''  Looks up a localized string similar to Om du velger å ikke oppdatere nå, vil oppdateringssjekken bli suspendert for denne sesjonen..
         '''</summary>
         Friend Shared ReadOnly Property MainFormNewVersionAvailable2() As String
             Get
@@ -843,7 +843,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to &amp;Options.
+        '''  Looks up a localized string similar to &amp;Innstillinger.
         '''</summary>
         Friend Shared ReadOnly Property MainFormOptionsItem() As String
             Get
@@ -852,7 +852,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Are you sure you want to quit Game Launcher?.
+        '''  Looks up a localized string similar to Er du sikker på at du vil avslutte Game Launcher?.
         '''</summary>
         Friend Shared ReadOnly Property MainFormQuitApplication() As String
             Get
@@ -861,7 +861,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to &amp;Quit.
+        '''  Looks up a localized string similar to &amp;Avslutt.
         '''</summary>
         Friend Shared ReadOnly Property MainFormQuitItem() As String
             Get
@@ -870,7 +870,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Are you sure you want to remove all command-line arguments for {0}?.
+        '''  Looks up a localized string similar to Er du sikker på at du vil fjerne alle kommandolinjeargumenter for {0}?.
         '''</summary>
         Friend Shared ReadOnly Property MainFormRemoveCmdArgs() As String
             Get
@@ -879,7 +879,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Re&amp;move....
+        '''  Looks up a localized string similar to &amp;Fjern....
         '''</summary>
         Friend Shared ReadOnly Property MainFormRemoveGameItem() As String
             Get
@@ -888,7 +888,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Remove this game from the list.
+        '''  Looks up a localized string similar to Fjern dette spillet fra listen.
         '''</summary>
         Friend Shared ReadOnly Property MainFormRemoveGameItemTooltip() As String
             Get
@@ -897,7 +897,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Are you sure you want to remove {0} from the list?.
+        '''  Looks up a localized string similar to Er du sikker på at du vil fjerne {0} fra listen?.
         '''</summary>
         Friend Shared ReadOnly Property MainFormRemoveGameMsg() As String
             Get
@@ -906,7 +906,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Select icon for &quot;{0}&quot;.
+        '''  Looks up a localized string similar to Velg ikon for &quot;{0}&quot;.
         '''</summary>
         Friend Shared ReadOnly Property MainFormSelectIconText() As String
             Get
@@ -915,7 +915,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Now Playing: {0}.
+        '''  Looks up a localized string similar to Spiller nå: {0}.
         '''</summary>
         Friend Shared ReadOnly Property MainFormSkypeNowPlaying() As String
             Get
@@ -924,7 +924,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Now Playing: {0} (Steam).
+        '''  Looks up a localized string similar to Spiller nå: {0} (Steam).
         '''</summary>
         Friend Shared ReadOnly Property MainFormSkypeNowPlayingSteam() As String
             Get
@@ -933,7 +933,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Stopped Playing: {0}.
+        '''  Looks up a localized string similar to Stoppet spill: {0}.
         '''</summary>
         Friend Shared ReadOnly Property MainFormSkypePlayStopped() As String
             Get
@@ -942,7 +942,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to  (Played: {0}.
+        '''  Looks up a localized string similar to  (Spilte: {0}.
         '''</summary>
         Friend Shared ReadOnly Property MainFormSkypePlayTimeStopped() As String
             Get
@@ -951,7 +951,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to hours.
+        '''  Looks up a localized string similar to timer.
         '''</summary>
         Friend Shared ReadOnly Property MainFormTimeHourPlural() As String
             Get
@@ -960,7 +960,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to hour.
+        '''  Looks up a localized string similar to time.
         '''</summary>
         Friend Shared ReadOnly Property MainFormTimeHourSingular() As String
             Get
@@ -969,7 +969,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to minutes.
+        '''  Looks up a localized string similar to minutter.
         '''</summary>
         Friend Shared ReadOnly Property MainFormTimeMinutePlural() As String
             Get
@@ -978,7 +978,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to minute.
+        '''  Looks up a localized string similar to minutt.
         '''</summary>
         Friend Shared ReadOnly Property MainFormTimeMinuteSingular() As String
             Get
@@ -987,7 +987,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to seconds.
+        '''  Looks up a localized string similar to sekunder.
         '''</summary>
         Friend Shared ReadOnly Property MainFormTimeSecondPlural() As String
             Get
@@ -996,7 +996,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to second.
+        '''  Looks up a localized string similar to sekund.
         '''</summary>
         Friend Shared ReadOnly Property MainFormTimeSecondSingular() As String
             Get
@@ -1005,7 +1005,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Clear data....
+        '''  Looks up a localized string similar to Fjern data....
         '''</summary>
         Friend Shared ReadOnly Property PieChartFormClearDataLinkText() As String
             Get
@@ -1014,7 +1014,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to &amp;Close.
+        '''  Looks up a localized string similar to &amp;Lukk.
         '''</summary>
         Friend Shared ReadOnly Property PieChartFormCloseButtonText() As String
             Get
@@ -1023,7 +1023,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to &amp;Generate linkable chart.
+        '''  Looks up a localized string similar to &amp;Generate linkbart diagram.
         '''</summary>
         Friend Shared ReadOnly Property PieChartFormGenerateChartButton() As String
             Get
@@ -1032,7 +1032,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Labels inside.
+        '''  Looks up a localized string similar to Etiketter innenfor.
         '''</summary>
         Friend Shared ReadOnly Property PieChartFormLabelPickerInside() As String
             Get
@@ -1041,7 +1041,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to No labels.
+        '''  Looks up a localized string similar to Ingen etiketter.
         '''</summary>
         Friend Shared ReadOnly Property PieChartFormLabelPickerNone() As String
             Get
@@ -1050,7 +1050,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Labels outside.
+        '''  Looks up a localized string similar to Etiketter utenfor.
         '''</summary>
         Friend Shared ReadOnly Property PieChartFormLabelPickerOutside() As String
             Get
@@ -1059,7 +1059,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Oops! There doesn&apos;t seem to be any data recorded. Play some games, then come back!.
+        '''  Looks up a localized string similar to Oops! Det ser ikke ut til som om det finnes noe data å vise. Spill noen spill, og kom så tilbake!.
         '''</summary>
         Friend Shared ReadOnly Property PieChartFormNoData() As String
             Get
@@ -1068,7 +1068,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Please wait.
+        '''  Looks up a localized string similar to Vent.
         '''</summary>
         Friend Shared ReadOnly Property PieChartFormPleaseWait() As String
             Get
@@ -1077,7 +1077,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to &amp;Save as image....
+        '''  Looks up a localized string similar to &amp;Lagre som bilde....
         '''</summary>
         Friend Shared ReadOnly Property PieChartFormSaveAsImageButton() As String
             Get
@@ -1086,7 +1086,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Your chart image was saved!.
+        '''  Looks up a localized string similar to Diagrambildet ble lagret!.
         '''</summary>
         Friend Shared ReadOnly Property PieChartFormSaveAsImageSuccess() As String
             Get
@@ -1095,7 +1095,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Save pie chart as image.
+        '''  Looks up a localized string similar to Lagre diagram som bilde.
         '''</summary>
         Friend Shared ReadOnly Property PieChartFormSaveAsImageTitleBar() As String
             Get
@@ -1104,7 +1104,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Show legend.
+        '''  Looks up a localized string similar to Vis forklaring.
         '''</summary>
         Friend Shared ReadOnly Property PieChartFormShowLegendCheckBox() As String
             Get
@@ -1122,7 +1122,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to h.
+        '''  Looks up a localized string similar to t.
         '''</summary>
         Friend Shared ReadOnly Property PieChartFormTimeHourShorthand() As String
             Get
@@ -1149,7 +1149,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Game Launcher Playtime Statistics.
+        '''  Looks up a localized string similar to Game Launcher Statistikk.
         '''</summary>
         Friend Shared ReadOnly Property PieChartFormTitleBar() As String
             Get
@@ -1158,7 +1158,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Total playing time.
+        '''  Looks up a localized string similar to Total spilltid.
         '''</summary>
         Friend Shared ReadOnly Property PieChartFormTotalPlayingTime() As String
             Get
@@ -1167,7 +1167,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to &amp;Cancel.
+        '''  Looks up a localized string similar to &amp;Avbryt.
         '''</summary>
         Friend Shared ReadOnly Property RemoveFormCancelButton() As String
             Get
@@ -1176,7 +1176,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Are you sure you want to remove the selected item(s)?.
+        '''  Looks up a localized string similar to Er du sikker på at du vil fjerne de valgte elementene?.
         '''</summary>
         Friend Shared ReadOnly Property RemoveFormConfirmRemoval() As String
             Get
@@ -1185,7 +1185,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Please select the items you wish to remove. You can hold CTRL to select several items at once..
+        '''  Looks up a localized string similar to Vennligst velg elementene du vil fjerne. Du kan holde CTRL for å velge flere..
         '''</summary>
         Friend Shared ReadOnly Property RemoveFormFlavorTextLabel() As String
             Get
@@ -1194,7 +1194,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to No items selected..
+        '''  Looks up a localized string similar to Ingen elementer valgt..
         '''</summary>
         Friend Shared ReadOnly Property RemoveFormNoItemsSelected() As String
             Get
@@ -1203,7 +1203,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to &amp;Remove item(s).
+        '''  Looks up a localized string similar to &amp;Fjern elementer.
         '''</summary>
         Friend Shared ReadOnly Property RemoveFormRemoveItemsButton() As String
             Get
@@ -1212,7 +1212,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Remove item(s).
+        '''  Looks up a localized string similar to Fjern element(er).
         '''</summary>
         Friend Shared ReadOnly Property RemoveFormTitleBar() As String
             Get
