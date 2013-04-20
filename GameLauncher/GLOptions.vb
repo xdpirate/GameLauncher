@@ -2,6 +2,8 @@
 
 Public Class GLOptions
 
+    Private suppressRestart As Boolean = False
+
     Private Sub GLOptions_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         runOnStartUpCheckBox.Checked = MainForm.toggleRunOnStartup(True)
         sendSkypeNotificationsCheckBox.Checked = MainForm.toggleSkypeNotifications(True)
@@ -27,11 +29,13 @@ Public Class GLOptions
         Dim languageKey As RegistryKey = My.Computer.Registry.CurrentUser.CreateSubKey("Software\GameLauncher", RegistryKeyPermissionCheck.ReadWriteSubTree)
         Dim currentLanguage As String = languageKey.GetValue("currentLanguage", Nothing)
 
+        suppressRestart = True
         If currentLanguage Is Nothing Then
             LanguagePicker.SelectedItem = "English"
         Else
             LanguagePicker.SelectedItem = currentLanguage
         End If
+        suppressRestart = False
 
         ' Multi-language stuff
         Me.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("GLOptionsFormTitleBar")
@@ -148,5 +152,13 @@ Public Class GLOptions
     Private Sub LanguagePicker_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles LanguagePicker.SelectedIndexChanged
         Dim languageKey As RegistryKey = My.Computer.Registry.CurrentUser.CreateSubKey("Software\GameLauncher", RegistryKeyPermissionCheck.ReadWriteSubTree)
         languageKey.SetValue("currentLanguage", LanguagePicker.SelectedItem)
+
+        If suppressRestart = False Then
+            Dim restartResponse As DialogResult = MessageBox.Show("Language has changed. Restart now?", "Game Launcher", MessageBoxButtons.YesNo)
+            If restartResponse = Windows.Forms.DialogResult.Yes Then
+                Application.Restart()
+                Environment.Exit(0)
+            End If
+        End If
     End Sub
 End Class

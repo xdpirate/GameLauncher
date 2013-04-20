@@ -37,7 +37,7 @@ Partial Class AboutForm
         '
         Me.CloseButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.CloseButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.CloseButton.Location = New System.Drawing.Point(127, 367)
+        Me.CloseButton.Location = New System.Drawing.Point(161, 367)
         Me.CloseButton.Name = "CloseButton"
         Me.CloseButton.Size = New System.Drawing.Size(75, 23)
         Me.CloseButton.TabIndex = 0
@@ -49,7 +49,7 @@ Partial Class AboutForm
         Me.AuthorNoteLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AuthorNoteLabel.Location = New System.Drawing.Point(85, 12)
         Me.AuthorNoteLabel.Name = "AuthorNoteLabel"
-        Me.AuthorNoteLabel.Size = New System.Drawing.Size(233, 71)
+        Me.AuthorNoteLabel.Size = New System.Drawing.Size(302, 71)
         Me.AuthorNoteLabel.TabIndex = 2
         Me.AuthorNoteLabel.Text = "Game Launcher" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "© 2012-2013 xdpirate" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Beta testing by Kurithas." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Special thanks to" & _
     " Lisa for support." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "English translation by xdpirate."
@@ -69,7 +69,7 @@ Partial Class AboutForm
         '
         Me.ContactLink.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ContactLink.AutoSize = True
-        Me.ContactLink.Location = New System.Drawing.Point(274, 372)
+        Me.ContactLink.Location = New System.Drawing.Point(343, 372)
         Me.ContactLink.Name = "ContactLink"
         Me.ContactLink.Size = New System.Drawing.Size(44, 13)
         Me.ContactLink.TabIndex = 4
@@ -94,7 +94,7 @@ Partial Class AboutForm
         Me.RichTextBox1.Location = New System.Drawing.Point(15, 122)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(303, 239)
+        Me.RichTextBox1.Size = New System.Drawing.Size(372, 239)
         Me.RichTextBox1.TabIndex = 5
         Me.RichTextBox1.Text = ""
         '
@@ -102,7 +102,7 @@ Partial Class AboutForm
         '
         Me.UpdateCheckButton.Location = New System.Drawing.Point(15, 86)
         Me.UpdateCheckButton.Name = "UpdateCheckButton"
-        Me.UpdateCheckButton.Size = New System.Drawing.Size(303, 30)
+        Me.UpdateCheckButton.Size = New System.Drawing.Size(372, 30)
         Me.UpdateCheckButton.TabIndex = 6
         Me.UpdateCheckButton.Text = "Check for &updates"
         Me.UpdateCheckButton.UseVisualStyleBackColor = True
@@ -113,7 +113,7 @@ Partial Class AboutForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.CloseButton
-        Me.ClientSize = New System.Drawing.Size(330, 402)
+        Me.ClientSize = New System.Drawing.Size(399, 402)
         Me.Controls.Add(Me.UpdateCheckButton)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.ContactLink)
