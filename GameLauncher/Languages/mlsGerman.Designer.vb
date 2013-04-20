@@ -1337,7 +1337,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Deutsche Übersetzung von Marvin/Wind und Lukas Sander (Bamboori).
+        '''  Looks up a localized string similar to Deutsche Übersetzung von Marvin (Wind) und Lukas Sander (Bamboori).
         '''</summary>
         Friend Shared ReadOnly Property TranslationAuthor() As String
             Get

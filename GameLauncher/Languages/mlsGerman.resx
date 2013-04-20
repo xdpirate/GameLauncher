@@ -685,7 +685,7 @@ Special thanks to Lisa for support.</value>
     <comment>Shown in the title bar of the Remove window</comment>
   </data>
   <data name="TranslationAuthor" xml:space="preserve">
-    <value>Deutsche Übersetzung von Marvin/Wind und Lukas Sander (Bamboori)</value>
+    <value>Deutsche Übersetzung von Marvin (Wind) und Lukas Sander (Bamboori)</value>
     <comment>Provide translator's name or nickname here.</comment>
   </data>
 </root>
