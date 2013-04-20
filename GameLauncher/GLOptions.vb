@@ -154,7 +154,7 @@ Public Class GLOptions
         languageKey.SetValue("currentLanguage", LanguagePicker.SelectedItem)
 
         If suppressRestart = False Then
-            Dim restartResponse As DialogResult = MessageBox.Show("Language has changed. Restart now?", "Game Launcher", MessageBoxButtons.YesNo)
+            Dim restartResponse As DialogResult = MessageBox.Show("The display language has changed. You need to restart the application before this will take effect. Do you want to restart now?", "Game Launcher", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
             If restartResponse = Windows.Forms.DialogResult.Yes Then
                 Dim dockShown As RegistryKey = My.Computer.Registry.CurrentUser.CreateSubKey("Software\GameLauncher", RegistryKeyPermissionCheck.ReadWriteSubTree)
 
