@@ -156,6 +156,18 @@ Public Class GLOptions
         If suppressRestart = False Then
             Dim restartResponse As DialogResult = MessageBox.Show("Language has changed. Restart now?", "Game Launcher", MessageBoxButtons.YesNo)
             If restartResponse = Windows.Forms.DialogResult.Yes Then
+                Dim dockShown As RegistryKey = My.Computer.Registry.CurrentUser.CreateSubKey("Software\GameLauncher", RegistryKeyPermissionCheck.ReadWriteSubTree)
+
+                If DockForm.Visible Then
+                    dockShown.SetValue("dockShown", 1, RegistryValueKind.DWord)
+                Else
+                    dockShown.SetValue("dockShown", 0, RegistryValueKind.DWord)
+                End If
+
+                MainForm.commitChanges()
+                MainForm.TrayIcon.Dispose()
+                End
+
                 Application.Restart()
                 Environment.Exit(0)
             End If
