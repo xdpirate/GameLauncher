@@ -166,7 +166,6 @@ Public Class GLOptions
 
                 MainForm.commitChanges()
                 MainForm.TrayIcon.Dispose()
-                End
 
                 Application.Restart()
                 Environment.Exit(0)
