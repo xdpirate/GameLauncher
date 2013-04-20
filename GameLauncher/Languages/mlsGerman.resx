@@ -122,9 +122,10 @@
 © 2012-2013 xdpirate
 Beta testing by Kurithas.
 Special thanks to Lisa for support.</value>
+    <comment>The note shown on the about window, copyright and thanks</comment>
   </data>
   <data name="AboutFormCloseButtonText" xml:space="preserve">
-    <value>&amp;Close</value>
+    <value>&amp;Schliessen</value>
     <comment>Text shown on the button that closes the about window; The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="AboutFormContactText" xml:space="preserve">
@@ -136,11 +137,11 @@ Special thanks to Lisa for support.</value>
     <comment>First part of new version available message</comment>
   </data>
   <data name="AboutFormNewVersion2" xml:space="preserve">
-    <value>Möchten sie es jetzt downloaden?</value>
+    <value>Möchten Sie sie jetzt downloaden?</value>
     <comment>Second part of new version available message</comment>
   </data>
   <data name="AboutFormUpdateCheckButtonText" xml:space="preserve">
-    <value>Suchen nach &amp;updates</value>
+    <value>Suchen nach &amp;Updates</value>
     <comment>Text shown on the button that checks for a new update; The ampersand signifes a keyboard shortcut</comment>
   </data>
   <data name="AboutFormUpdateError1" xml:space="preserve">
@@ -148,11 +149,11 @@ Special thanks to Lisa for support.</value>
     <comment>Notifies the user that an error occured while checking for update, part 1 of error msg</comment>
   </data>
   <data name="AboutFormUpdateError2" xml:space="preserve">
-    <value>Bitte versuchen sie es später erneut, oder kontaktieren sie den Entwickler falls das Problem bestehen bleibt.</value>
+    <value>Bitte versuchen Sie es später erneut oder kontaktieren sie den Entwickler falls das Problem bestehen bleibt.</value>
     <comment>Asks to try again later if update failed, part 2 of error msg</comment>
   </data>
   <data name="AboutFormUpToDate" xml:space="preserve">
-    <value>Ihre Game Launcher version ist auf dem neuesten Stand!</value>
+    <value>Ihre Game Launcher Version ist auf dem neuesten Stand!</value>
     <comment>Notifies the user that the application is up to date</comment>
   </data>
   <data name="AboutFormWebsiteLinkText" xml:space="preserve">
@@ -160,7 +161,7 @@ Special thanks to Lisa for support.</value>
     <comment>Text shown on the link to the application's website</comment>
   </data>
   <data name="AddNewGameFormBrowseButtons" xml:space="preserve">
-    <value>&amp;Browse...</value>
+    <value>&amp;Suchen...</value>
     <comment>Common text for all Browse buttons on the form; The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="AddNewGameFormBrowseExeHelpText" xml:space="preserve">
@@ -168,15 +169,15 @@ Special thanks to Lisa for support.</value>
     <comment>Help text shown while hovering over the Browse button for Normal Game</comment>
   </data>
   <data name="AddNewGameFormCancelButton" xml:space="preserve">
-    <value>&amp;Cancel</value>
+    <value>&amp;Abbrechen</value>
     <comment>Flavor text for the button that cancels the game entry; The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="AddNewGameFormCancelHelpText" xml:space="preserve">
-    <value>Klicken sie diesen Knopf wenn sie das Hinzufügen des Spieles abbrechen möchten. Wenn sie mehrere Spiele gleichzeitig hinzugefügt haben (z.B. bei Nutzung des Drop-Fensters oder des Menüs im Explorer), werden alle Vorgänge abgebrochen.</value>
+    <value>Klicken Sie diesen Button, wenn sie das Hinzufügen des Spieles abbrechen möchten. Wenn sie mehrere Spiele gleichzeitig hinzugefügt haben (z.B. bei Nutzung des Drop-Fensters oder des Menüs im Explorer), werden alle Vorgänge abgebrochen.</value>
     <comment>Help text shown while hovering over the Cancel button</comment>
   </data>
   <data name="AddNewGameFormCmdArgsHelpText" xml:space="preserve">
-    <value>Geben sie die command-line arguments ein, die genutzt werden sollen um das Spiel zu starten. Falls sie nicht wissen was es ist, können sie es leer lassen.</value>
+    <value>Geben Sie die command-line arguments ein, die genutzt werden sollen um das Spiel zu starten. Falls Sie nicht wissen was das ist, können Sie es leer lassen.</value>
     <comment>Help text shown while hovering over the Command-Line Arguments text box</comment>
   </data>
   <data name="AddNewGameFormCmdArgsLabel" xml:space="preserve">
@@ -184,11 +185,11 @@ Special thanks to Lisa for support.</value>
     <comment>Label text for command line arguments</comment>
   </data>
   <data name="AddNewGameFormCustomIconHelpText" xml:space="preserve">
-    <value>Klicken sie diesen Button um ein benutzerspezifisches Icon festzulegen. Es muss ein BMP, PNG, GIF, JPG oder ICO Bild sein, und wird auf 16x16 verkleinert. Sie können außerdem eine EXE-Datei auswählen, von der das Icon dann extrahiert wird. Das Bild wird seine Auflösung beibehalten.</value>
+    <value>Klicken Sie diesen Button um ein benutzerspezifisches Icon festzulegen. Es muss ein BMP, PNG, GIF, JPG oder ICO Bild sein und wird auf 16x16 skaliert. Sie können auch eine EXE-Datei auswählen, von der das Icon extrahiert wird. Das Bild wird seine Seitenverhältnisse beibehalten.</value>
     <comment>Help text shown while hovering over the Browse button for Get From Other File</comment>
   </data>
   <data name="AddNewGameFormDefaultHelpText" xml:space="preserve">
-    <value>Bewegen sie den Mauszeiger über ein Objekt, um eine Hilfsleiste anzuzeigen.</value>
+    <value>Bewegen Sie den Mauszeiger über ein Objekt, um hier eine Hilfe anzuzeigen.</value>
     <comment>Text shown in the help pane when nothing else is hovered over.</comment>
   </data>
   <data name="AddNewGameFormErrorGetFromOtherFileNoIcon" xml:space="preserve">
@@ -240,7 +241,7 @@ Special thanks to Lisa for support.</value>
     <comment>Flavor text for the group box that contains controls for entering game information</comment>
   </data>
   <data name="AddNewGameFormGameNameHelpText" xml:space="preserve">
-    <value>Geben sie hier den Namen des Spiels ein. Es kann beliebig benannt werden, jedoch werden Gleichzeichen (=) durch Bindestriche (-) wegen technischer Schwierigkeiten ersetzt.</value>
+    <value>Geben Sie hier den Namen des Spiels ein. Es kann beliebig benannt werden, jedoch werden Gleichzeichen (=) durch Bindestriche (-) wegen technischer Schwierigkeiten ersetzt.</value>
     <comment>Help text shown while hovering over the Game Name text box</comment>
   </data>
   <data name="AddNewGameFormGameNameLabel" xml:space="preserve">
@@ -252,7 +253,7 @@ Special thanks to Lisa for support.</value>
     <comment>Flavor text for the group box that contains controls for entering game paths</comment>
   </data>
   <data name="AddNewGameFormGetFromExeHelpText" xml:space="preserve">
-    <value>Selektieren sie diese Option wenn sie möchten, dass der Game Launcher das Icon der ausgewählten Anwendung übernimmt.</value>
+    <value>Selektieren Sie diese Option wenn sie möchten, dass der Game Launcher das Icon der ausgewählten Anwendung übernimmt.</value>
     <comment>Help text shown while hovering over the Get From Exe radio button</comment>
   </data>
   <data name="AddNewGameFormGetFromExeRadio" xml:space="preserve">
@@ -260,7 +261,7 @@ Special thanks to Lisa for support.</value>
     <comment>Flavor text for the radio button that selects to get the icon from the chosen exe file</comment>
   </data>
   <data name="AddNewGameFormGetFromOtherFileHelpText" xml:space="preserve">
-    <value>Selektieren sie diese Option wenn sie das Icon selbst bestimmen wollen.</value>
+    <value>Selektieren Sie diese Option wenn Sie das Icon selbst bestimmen wollen.</value>
     <comment>Help text shown while hovering hover the Get From Other File radio button</comment>
   </data>
   <data name="AddNewGameFormGetFromOtherFileRadio" xml:space="preserve">
@@ -276,7 +277,7 @@ Special thanks to Lisa for support.</value>
     <comment>Flavor text for the group box that contains controls for modifying the game's icon</comment>
   </data>
   <data name="AddNewGameFormIconHelpText" xml:space="preserve">
-    <value>Zeigt eine Vorschau des gewählten Icons an. Wenn Game Launcher das Icon der .exe übernehmen soll, müssen sie diese .exe anwählen um die Vorschau zu erneuern.</value>
+    <value>Zeigt eine Vorschau des gewählten Icons an. Wenn Game Launcher das Icon der .exe übernehmen soll, müssen Sie diese .exe anwählen um die Vorschau zu erneuern.</value>
     <comment>Help text shown while hovering over the icon preview picturebox</comment>
   </data>
   <data name="AddNewGameFormKeepIconRadio" xml:space="preserve">
@@ -284,11 +285,11 @@ Special thanks to Lisa for support.</value>
     <comment>Flavor text for the radio button that selects to keep the current icon (if editing a game)</comment>
   </data>
   <data name="AddNewGameFormLauncherBrowseHelpText" xml:space="preserve">
-    <value>Klicken sie diesen Button um den Launcher auszuwählen, der die .exe starten soll.</value>
+    <value>Klicken Sie diesen Button um den Launcher auszuwählen, der die .exe starten soll.</value>
     <comment>Help text shown while hovering over the Browse button for the launcher</comment>
   </data>
   <data name="AddNewGameFormNormalGameHelpText" xml:space="preserve">
-    <value>Selektieren sie diese Option wenn dies ein normales Spiel ist (z.B. es läuft ohne Steam).</value>
+    <value>Selektieren Sie diese Option wenn dies ein normales Spiel ist (z.B. es läuft ohne Steam).</value>
     <comment>Help text shown while hovering over the Normal Game radio button</comment>
   </data>
   <data name="AddNewGameFormNormalGameRadio" xml:space="preserve">
@@ -300,7 +301,7 @@ Special thanks to Lisa for support.</value>
     <comment>Flavor text for the button that finalizes the game entry, the OK-button; The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="AddNewGameFormOKHelp" xml:space="preserve">
-    <value>Klicken sie diesen Button wenn sie damit fertig sind, die Details des hinzugefügten Spiels auszufüllen.</value>
+    <value>Klicken Sie diesen Button wenn Sie damit fertig sind, die Details des hinzugefügten Spiels auszufüllen.</value>
     <comment>Shown in the Add New Game Form.</comment>
   </data>
   <data name="AddNewGameFormSpecifySteamExeCheckBox" xml:space="preserve">
@@ -308,15 +309,15 @@ Special thanks to Lisa for support.</value>
     <comment>Flavor text for the check box that selects whether to specify an executable for a Steam game</comment>
   </data>
   <data name="AddNewGameFormSpecifySteamExeHelpText" xml:space="preserve">
-    <value>Klicken sie diese Box wenn sie die von Steam benutzte Anwendung übernehmen wollen. Dies auszuwählen wird die Zeitmessung bei Steam aktivieren. Falls das Spiel einen Launcher benutzt, müssen sie diesen nicht auswählen, wählen sie einfach nur die Anwendung aus, von der das Spiel normalerweise startet.</value>
+    <value>Klicken Sie diese Box wenn Sie die von Steam benutzte Anwendung übernehmen wollen. Dies auszuwählen wird die Zeitmessung bei Steam aktivieren. Falls das Spiel einen Launcher benutzt, müssen Sie diesen nicht auswählen, wählen Sie einfach nur die Anwendung aus, von der das Spiel normalerweise startet.</value>
     <comment>Help text shown while hovering over the Specify Steam Exe checkbox</comment>
   </data>
   <data name="AddNewGameFormSteamAppIdHelpText" xml:space="preserve">
-    <value>Geben sie hier die Steam App ID ein. Um die ID zu finden, müssen sie das Spiel im Steam-Store lokalisieren und den letzten Teil der URL kopieren (z.B.. http://store.steampowered.com/app/24980/ -&gt; Die ID hier ist 24980)</value>
+    <value>Geben Sie hier die Steam App ID ein. Um die ID zu finden, müssen Sie das Spiel im Steam-Store lokalisieren und den letzten Teil der URL kopieren (z.B.. http://store.steampowered.com/app/24980/ -&gt; Die ID hier ist 24980)</value>
     <comment>Help text shown while hovering over the Steam App Id text box</comment>
   </data>
   <data name="AddNewGameFormSteamExeBrowseHelpText" xml:space="preserve">
-    <value>Klicken sie hier um nach der .exe die Steam benutzt zu suchen.</value>
+    <value>Klicken Sie hier um nach der .exe die Steam benutzt zu suchen.</value>
     <comment>Help text shown while hovering over the Browse for Steam Exe button</comment>
   </data>
   <data name="AddNewGameFormSteamGameRadio" xml:space="preserve">
@@ -324,7 +325,7 @@ Special thanks to Lisa for support.</value>
     <comment>Flavor text for the radio button that selects the Steam game mode (As opposed to the normal game mode)</comment>
   </data>
   <data name="AddNewGameFormSteamHelpText" xml:space="preserve">
-    <value>Selektieren sie diese Option falls es sich um ein Spiel handelt, dass mit Steam gestartet werden muss.</value>
+    <value>Selektieren Sie diese Option falls es sich um ein Spiel handelt, dass mit Steam gestartet werden muss.</value>
     <comment>Help text shown while hovering over the Steam Game radio</comment>
   </data>
   <data name="AddNewGameFormTitleBar" xml:space="preserve">
@@ -336,15 +337,15 @@ Special thanks to Lisa for support.</value>
     <comment>Flavor text for the check box that selects whether the game uses a launcher exe</comment>
   </data>
   <data name="AddNewGameFormUsesLauncherHelpText" xml:space="preserve">
-    <value>Klicken sie diese Box falls das Spiel einen Launcher benutzt. Ein Launcher ist eine Anwendung die das Spiel startet.</value>
+    <value>Klicken Sie diese Box falls das Spiel einen Launcher benutzt. Ein Launcher ist eine Anwendung die das Spiel startet.</value>
     <comment>Help text shown while hovering over the Uses Launcher check box</comment>
   </data>
   <data name="DockOpacityFormHoverOpacityGroupBox" xml:space="preserve">
-    <value>Dock Mattheit falls fokusiert (Mauszeiger über dem Dock)</value>
+    <value>Dock Mattheit falls fokussiert (Mauszeiger über dem Dock)</value>
     <comment>Flavor text shown in the group box that contains controls to change the opacity when in focus</comment>
   </data>
   <data name="DockOpacityFormNormalOpacityGroupBox" xml:space="preserve">
-    <value>Dock Mattheit falls nicht fokusiert</value>
+    <value>Dock Mattheit falls nicht fokussiert</value>
     <comment>Flavor text shown in the group box that contains controls to change the opacity when not in focus</comment>
   </data>
   <data name="DockOpacityFormSaveButton" xml:space="preserve">
@@ -356,15 +357,15 @@ Special thanks to Lisa for support.</value>
     <comment>The text shown in the title bar of the Dock Opacity window</comment>
   </data>
   <data name="DragDropTargetFormTitleBar" xml:space="preserve">
-    <value>Legen sie hier eine Verknüpfung oder eine Anwendung ab!</value>
+    <value>Legen Sie hier eine Verknüpfung oder eine Anwendung ab.</value>
     <comment>Text shown in the drag-and-drop window's title bar</comment>
   </data>
   <data name="EmbeddableChartFormCopiedToClipBoardText" xml:space="preserve">
-    <value>Link auf die Ablage kopiert!</value>
+    <value>Link in die Zwischenablage kopiert.</value>
     <comment>Text shown in the message box when a user clicks the copy to clipboard button</comment>
   </data>
   <data name="EmbeddableChartFormCopyButton" xml:space="preserve">
-    <value>&amp;Copy</value>
+    <value>&amp;Kopieren</value>
     <comment>Text shown on the Copy button; The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="EmbeddableChartFormCourtesyLabel" xml:space="preserve">
@@ -372,11 +373,11 @@ Special thanks to Lisa for support.</value>
     <comment>Text shown on the courtesy label; is.gd is a website</comment>
   </data>
   <data name="EmbeddableChartFormFlavorTextLabel" xml:space="preserve">
-    <value>Erfolgreich! Senden sie den unteren Link an ihre Freunde und Verwandten, falls sie mit dem Programm zufrieden sind:</value>
+    <value>Erfolgreich! Senden Sie den unteren Link an ihre Freunde und Verwandten, falls sie mit dem Programm zufrieden sind:</value>
     <comment>Text shown in the label of the linkable chart window</comment>
   </data>
   <data name="EmbeddableChartFormGTFOButton" xml:space="preserve">
-    <value>Clos&amp;e</value>
+    <value>Schli&amp;essen</value>
     <comment>Text shown on the Close button; The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="EmbeddableChartFormTitleBar" xml:space="preserve">
@@ -384,7 +385,7 @@ Special thanks to Lisa for support.</value>
     <comment>Text shown in the title bar of the linkable chart window</comment>
   </data>
   <data name="EmbeddableChartFormVisitLinkButton" xml:space="preserve">
-    <value>&amp;Visit link</value>
+    <value>Link &amp;besuchen</value>
     <comment>Text shown on the Visit Link button; The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="GLOptionsFormAutoUpdateCheckBox" xml:space="preserve">
@@ -396,7 +397,7 @@ Special thanks to Lisa for support.</value>
     <comment>This text appears in Windows Explorer, when having right-clicked a supported file; The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="GLOptionsFormGTFOButton" xml:space="preserve">
-    <value>&amp;Close</value>
+    <value>&amp;Schliessen</value>
     <comment>Text shown on the Close button; The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="GLOptionsFormInfoLabel" xml:space="preserve">
@@ -412,7 +413,7 @@ Special thanks to Lisa for support.</value>
     <comment>Text shown on the 'Show time spent playing when exiting game' check box</comment>
   </data>
   <data name="GLOptionsFormPreferencesGroupBox" xml:space="preserve">
-    <value>Preferences</value>
+    <value>Einstellungen</value>
     <comment>Flavor text shown in the group box that houses the preferences, in the Preferences window</comment>
   </data>
   <data name="GLOptionsFormSkypeNotificationsCheckBox" xml:space="preserve">
@@ -424,7 +425,7 @@ Special thanks to Lisa for support.</value>
     <comment>Text shown on the 'Start Game Launcher on startup' check box</comment>
   </data>
   <data name="GLOptionsFormTitleBar" xml:space="preserve">
-    <value>Game Launcher Preferences</value>
+    <value>Game Launcher Einstellungen</value>
     <comment>This text appears in the title bar of the Preferences window</comment>
   </data>
   <data name="MainFormAddGameFailed1" xml:space="preserve">
@@ -432,11 +433,11 @@ Special thanks to Lisa for support.</value>
     <comment>First part of text shown when something went wrong adding a game</comment>
   </data>
   <data name="MainFormAddGameFailed2" xml:space="preserve">
-    <value>Wenn sie denken, es handelt sich um einen Fehler oder falls die Errormeldung weiterhin erscheint, suchen sie einen Entwickler auf.</value>
+    <value>Wenn Sie denken, es handelt sich um einen Fehler oder falls die Fehlermeldung weiterhin erscheint, suchen sie einen Entwickler auf.</value>
     <comment>Second part of text shown when something went wrong adding a game</comment>
   </data>
   <data name="MainFormBalloonTipLoadedMessageText" xml:space="preserve">
-    <value>Rechtsklicken sie das Icon oder drücken sie Windows+G um die Liste zu öffnen</value>
+    <value>Rechtsklicken Sie das Icon oder drücken Sie Windows+G um die Liste zu öffnen</value>
     <comment>Text appears in the balloon tip body when starting the application.</comment>
   </data>
   <data name="MainFormBalloonTipLoadedMessageTitle" xml:space="preserve">
@@ -444,11 +445,11 @@ Special thanks to Lisa for support.</value>
     <comment>Text appears in the balloon tip title when starting the application. {0} is the current version number.</comment>
   </data>
   <data name="MainFormClearGameList" xml:space="preserve">
-    <value>Wollen sie wirklich alle Spiele aus der Liste entfernen? Dies kann NICHT rückgängig gemacht werden!</value>
+    <value>Wollen Sie wirklich alle Spiele aus der Liste entfernen? Dies kann NICHT rückgängig gemacht werden!</value>
     <comment>Appears when the user chooses to clear all games.</comment>
   </data>
   <data name="MainFormEditGameItem" xml:space="preserve">
-    <value>Edit &amp;game...</value>
+    <value>Spiel &amp;editieren...</value>
     <comment>Shown in the main menu under every game. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainFormEditGameItemTooltip" xml:space="preserve">
@@ -456,15 +457,15 @@ Special thanks to Lisa for support.</value>
     <comment>The tooltip shown when hovering over the 'Edit game' menu item.</comment>
   </data>
   <data name="MainFormLoadingMessage" xml:space="preserve">
-    <value>Game Launcher lädt, bitte warten sie...</value>
+    <value>Game Launcher lädt, bitte warten...</value>
     <comment>Text shown when hovering over the tray icon whilst the application is loading</comment>
   </data>
   <data name="MainFormNewVersionAvailable1" xml:space="preserve">
-    <value>Eine neue Version des Game Launchers steht zum Download bereit (v{0})! Möchten sie es jetzt downloaden?</value>
+    <value>Eine neue Version des Game Launchers steht zum Download bereit (v{0})! Möchten Sie sie jetzt downloaden?</value>
     <comment>Text appears when auto-checking for updates, and an update was found. {0} is the new version number.</comment>
   </data>
   <data name="MainFormNewVersionAvailable2" xml:space="preserve">
-    <value>Falls sie sich entscheiden, die neue Version nicht zu installieren, wird die Suche nach neuen Updates für diese Session deaktiviert.</value>
+    <value>Falls Sie sich entscheiden, die neue Version nicht zu installieren, wird die Suche nach neuen Updates für diese Session deaktiviert.</value>
     <comment>Text appears when auto-checking for updates.</comment>
   </data>
   <data name="MainFormOptionsItem" xml:space="preserve">
@@ -472,19 +473,19 @@ Special thanks to Lisa for support.</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainFormQuitApplication" xml:space="preserve">
-    <value>Wollen sie den Game Launcher wirklich beenden?</value>
+    <value>Wollen Sie den Game Launcher wirklich beenden?</value>
     <comment>Appears when user chooses the 'Quit' menu item.</comment>
   </data>
   <data name="MainFormQuitItem" xml:space="preserve">
-    <value>&amp;Quit</value>
+    <value>&amp;Beenden</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainFormRemoveCmdArgs" xml:space="preserve">
-    <value>Wollen sie wirklich alle command-line arguments für {0} löschen?</value>
+    <value>Wollen Sie wirklich alle command-line arguments für {0} löschen?</value>
     <comment>Text shown when user clears command-line arguments. {0} is the name of the game chosen.</comment>
   </data>
   <data name="MainFormRemoveGameItem" xml:space="preserve">
-    <value>Re&amp;move...</value>
+    <value>&amp;Entfernen...</value>
     <comment>Shown in the main menu under every game. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainFormRemoveGameItemTooltip" xml:space="preserve">
@@ -492,7 +493,7 @@ Special thanks to Lisa for support.</value>
     <comment>The tooltip shown when hovering over the 'Remove game' menu item.</comment>
   </data>
   <data name="MainFormRemoveGameMsg" xml:space="preserve">
-    <value>Wollen sie wirklich {0} aus der Liste entfernen?</value>
+    <value>Wollen Sie wirklich {0} aus der Liste entfernen?</value>
     <comment>Shown when trying to remove a game. {0} is the name of the chosen game.</comment>
   </data>
   <data name="MainFormSelectIconText" xml:space="preserve">
@@ -500,19 +501,19 @@ Special thanks to Lisa for support.</value>
     <comment>{0} is the name of the game the user is selecting the icon for.</comment>
   </data>
   <data name="MainFormSkypeNowPlaying" xml:space="preserve">
-    <value>Now Playing: {0}</value>
+    <value>Spielt gerade: {0}</value>
     <comment>Shown in Skype when the user starts a non-Steam game.</comment>
   </data>
   <data name="MainFormSkypeNowPlayingSteam" xml:space="preserve">
-    <value>Now Playing: {0} (Steam)</value>
+    <value>Spielt gerade: {0} (Steam)</value>
     <comment>Shown in Skype when user starts a Steam game</comment>
   </data>
   <data name="MainFormSkypePlayStopped" xml:space="preserve">
-    <value>Stopped Playing: {0}</value>
+    <value>Hat aufgehört {0} zu spielen</value>
     <comment>Appears in Skype when finished playing a game. {0} is the name of the game.</comment>
   </data>
   <data name="MainFormSkypePlayTimeStopped" xml:space="preserve">
-    <value> (Played: {0}</value>
+    <value> (Spielte: {0}</value>
     <comment>Appears in Skype when finished playing a game and the user has chosen to display playing time. {0} is the amount of time played.</comment>
   </data>
   <data name="MainFormTimeHourPlural" xml:space="preserve">
@@ -544,11 +545,11 @@ Special thanks to Lisa for support.</value>
     <comment>Tooltip for a main menu item.</comment>
   </data>
   <data name="MainMenuAddGameTooltip" xml:space="preserve">
-    <value>Fügen sie ein Spiel hinzu. Sie können außerdem das Ordnersymbol anklicken, um ein Spiel schnell hinzuzufügen, indem sie die Anwendung oder die Verknüpfung in das Fenster ziehen.</value>
+    <value>Fügen Sie ein Spiel hinzu. Sie können außerdem das Ordnersymbol anklicken, um ein Spiel schnell hinzuzufügen, indem Sie die Anwendung oder die Verknüpfung in das Fenster ziehen.</value>
     <comment>Tooltip for a main menu item.</comment>
   </data>
   <data name="MainMenuClearGameListTooltip" xml:space="preserve">
-    <value>Entfernen sie alle Spiele aus der Liste. Diese Aktion kann NICHT rückgängig gemacht werden!</value>
+    <value>Entfernen Sie alle Spiele aus der Liste. Diese Aktion kann NICHT rückgängig gemacht werden!</value>
     <comment>Tooltip for a main menu item.</comment>
   </data>
   <data name="MainMenuOptions" xml:space="preserve">
@@ -556,35 +557,35 @@ Special thanks to Lisa for support.</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainMenuOptionsAbout" xml:space="preserve">
-    <value>About &amp;Game Launcher</value>
+    <value>Über &amp;Game Launcher</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainMenuOptionsAddGame" xml:space="preserve">
-    <value>&amp;Add game...</value>
+    <value>&amp;Spiel hinzufügen...</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainMenuOptionsClearGameList" xml:space="preserve">
-    <value>&amp;Clear game list...</value>
+    <value>S&amp;pieleliste löschen...</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainMenuOptionsPreferences" xml:space="preserve">
-    <value>&amp;Preferences</value>
+    <value>&amp;Einstellungen</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainMenuOptionsRemoveGames" xml:space="preserve">
-    <value>&amp;Remove games...</value>
+    <value>Sp&amp;iele entfernen...</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainMenuOptionsStatistics" xml:space="preserve">
-    <value>&amp;Statistik</value>
+    <value>S&amp;tatistik</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainMenuQuit" xml:space="preserve">
-    <value>&amp;Quit</value>
+    <value>&amp;Beenden</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainMenuRemoveGamesTooltip" xml:space="preserve">
-    <value>Entfernen sie eins oder mehrere Spiele aus der Liste.</value>
+    <value>Entfernen Sie ein oder mehrere Spiele aus der Liste.</value>
     <comment>Tooltip for a main menu item.</comment>
   </data>
   <data name="PieChartFormClearDataLinkText" xml:space="preserve">
@@ -592,35 +593,35 @@ Special thanks to Lisa for support.</value>
     <comment>Shown on the Pie Chart form</comment>
   </data>
   <data name="PieChartFormCloseButtonText" xml:space="preserve">
-    <value>&amp;Close</value>
+    <value>&amp;Schliessen</value>
     <comment>Shown on the button that closes the form. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="PieChartFormGenerateChartButton" xml:space="preserve">
-    <value>&amp;Generate linkable chart</value>
+    <value>Linkbare Tabelle &amp;generieren</value>
     <comment>Shown on the Generate Chart button. The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="PieChartFormLabelPickerInside" xml:space="preserve">
-    <value>Labels inside</value>
+    <value>Labels innen</value>
     <comment>Shown in the label picker box</comment>
   </data>
   <data name="PieChartFormLabelPickerNone" xml:space="preserve">
-    <value>No labels</value>
+    <value>keine Labels</value>
     <comment>Shown in the label picker box</comment>
   </data>
   <data name="PieChartFormLabelPickerOutside" xml:space="preserve">
-    <value>Labels outside</value>
+    <value>Labels aussen</value>
     <comment>Shown in the label picker box</comment>
   </data>
   <data name="PieChartFormNoData" xml:space="preserve">
-    <value>Oops! Anscheinend wurde noch kein Speicher aufgezeichnet. Spielen sie ein paar Spiele, dann können sie zurückkommen!</value>
+    <value>Ups! Anscheinend wurde noch kein Speicher aufgezeichnet. Spielen Sie ein paar Spiele, dann können sie zurückkommen!</value>
     <comment>Shown when there is no data for the form to display.</comment>
   </data>
   <data name="PieChartFormPleaseWait" xml:space="preserve">
-    <value>Bitte warten sie</value>
+    <value>Bitte warten</value>
     <comment>Shown when generating a linkable chart</comment>
   </data>
   <data name="PieChartFormSaveAsImageButton" xml:space="preserve">
-    <value>&amp;Save as image...</value>
+    <value>als &amp;Bild speichern...</value>
     <comment>Shown on the Save As Image button. The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="PieChartFormSaveAsImageSuccess" xml:space="preserve">
@@ -660,15 +661,15 @@ Special thanks to Lisa for support.</value>
     <comment>Shown on the top of the pie chart form</comment>
   </data>
   <data name="RemoveFormCancelButton" xml:space="preserve">
-    <value>&amp;Cancel</value>
+    <value>Abbre&amp;chen</value>
     <comment>Shown on the Cancel button. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="RemoveFormConfirmRemoval" xml:space="preserve">
-    <value>Wollen sie die gewählten Objekte wirklich entfernen?</value>
+    <value>Wollen Sie die gewählten Objekte wirklich entfernen?</value>
     <comment>Shows when the user tries to remove items</comment>
   </data>
   <data name="RemoveFormFlavorTextLabel" xml:space="preserve">
-    <value>Bitte wählen sie die Objekte, die sie entfernen wollen. Sie können STRG halten, um mehrere Objekte gleichzeitig auszuwählen.</value>
+    <value>Bitte wählen Sie die Objekte, die Sie entfernen wollen. Sie können STRG halten, um mehrere Objekte gleichzeitig auszuwählen.</value>
     <comment>Shown in the Remove window</comment>
   </data>
   <data name="RemoveFormNoItemsSelected" xml:space="preserve">
@@ -676,7 +677,7 @@ Special thanks to Lisa for support.</value>
     <comment>Shown in the remove window when the user tries to remove items without having selected any.</comment>
   </data>
   <data name="RemoveFormRemoveItemsButton" xml:space="preserve">
-    <value>&amp;Remove item(s)</value>
+    <value>Item(s) entfe&amp;rnen</value>
     <comment>Shown on the Remove Item(s) button. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="RemoveFormTitleBar" xml:space="preserve">
@@ -684,7 +685,7 @@ Special thanks to Lisa for support.</value>
     <comment>Shown in the title bar of the Remove window</comment>
   </data>
   <data name="TranslationAuthor" xml:space="preserve">
-    <value>German translation by Marvin</value>
+    <value>Deutsche Übersetzung von Marvin/Wind und Lukas Sander (Bamboori)</value>
     <comment>Provide translator's name or nickname here.</comment>
   </data>
 </root>
