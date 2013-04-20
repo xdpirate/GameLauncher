@@ -65,10 +65,10 @@ Partial Class AddNewGameForm
         '
         Me.gamePathTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.gamePathTextBox.Location = New System.Drawing.Point(131, 19)
+        Me.gamePathTextBox.Location = New System.Drawing.Point(166, 19)
         Me.gamePathTextBox.Name = "gamePathTextBox"
         Me.gamePathTextBox.ReadOnly = True
-        Me.gamePathTextBox.Size = New System.Drawing.Size(152, 20)
+        Me.gamePathTextBox.Size = New System.Drawing.Size(188, 20)
         Me.gamePathTextBox.TabIndex = 1
         '
         'gameNameTextBox
@@ -77,7 +77,7 @@ Partial Class AddNewGameForm
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.gameNameTextBox.Location = New System.Drawing.Point(9, 32)
         Me.gameNameTextBox.Name = "gameNameTextBox"
-        Me.gameNameTextBox.Size = New System.Drawing.Size(360, 20)
+        Me.gameNameTextBox.Size = New System.Drawing.Size(431, 20)
         Me.gameNameTextBox.TabIndex = 1
         '
         'commandLineTextBox
@@ -86,7 +86,7 @@ Partial Class AddNewGameForm
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.commandLineTextBox.Location = New System.Drawing.Point(9, 71)
         Me.commandLineTextBox.Name = "commandLineTextBox"
-        Me.commandLineTextBox.Size = New System.Drawing.Size(360, 20)
+        Me.commandLineTextBox.Size = New System.Drawing.Size(431, 20)
         Me.commandLineTextBox.TabIndex = 3
         '
         'GameNameLabel
@@ -110,7 +110,7 @@ Partial Class AddNewGameForm
         'pathBrowseButton
         '
         Me.pathBrowseButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pathBrowseButton.Location = New System.Drawing.Point(289, 16)
+        Me.pathBrowseButton.Location = New System.Drawing.Point(360, 16)
         Me.pathBrowseButton.Name = "pathBrowseButton"
         Me.pathBrowseButton.Size = New System.Drawing.Size(75, 23)
         Me.pathBrowseButton.TabIndex = 2
@@ -129,7 +129,7 @@ Partial Class AddNewGameForm
         Me.IconGroupBox.Controls.Add(Me.getFromExeRadio)
         Me.IconGroupBox.Location = New System.Drawing.Point(12, 263)
         Me.IconGroupBox.Name = "IconGroupBox"
-        Me.IconGroupBox.Size = New System.Drawing.Size(375, 91)
+        Me.IconGroupBox.Size = New System.Drawing.Size(446, 91)
         Me.IconGroupBox.TabIndex = 2
         Me.IconGroupBox.TabStop = False
         Me.IconGroupBox.Text = "Icon"
@@ -151,7 +151,7 @@ Partial Class AddNewGameForm
         Me.customIconPathTextBox.Location = New System.Drawing.Point(144, 42)
         Me.customIconPathTextBox.Name = "customIconPathTextBox"
         Me.customIconPathTextBox.ReadOnly = True
-        Me.customIconPathTextBox.Size = New System.Drawing.Size(139, 20)
+        Me.customIconPathTextBox.Size = New System.Drawing.Size(210, 20)
         Me.customIconPathTextBox.TabIndex = 2
         '
         'gameIconPreviewBox
@@ -159,7 +159,7 @@ Partial Class AddNewGameForm
         Me.gameIconPreviewBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.gameIconPreviewBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.gameIconPreviewBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.gameIconPreviewBox.Location = New System.Drawing.Point(340, 13)
+        Me.gameIconPreviewBox.Location = New System.Drawing.Point(411, 13)
         Me.gameIconPreviewBox.Name = "gameIconPreviewBox"
         Me.gameIconPreviewBox.Size = New System.Drawing.Size(24, 24)
         Me.gameIconPreviewBox.TabIndex = 3
@@ -168,7 +168,7 @@ Partial Class AddNewGameForm
         'iconBrowseButton
         '
         Me.iconBrowseButton.Enabled = False
-        Me.iconBrowseButton.Location = New System.Drawing.Point(289, 40)
+        Me.iconBrowseButton.Location = New System.Drawing.Point(360, 40)
         Me.iconBrowseButton.Name = "iconBrowseButton"
         Me.iconBrowseButton.Size = New System.Drawing.Size(75, 23)
         Me.iconBrowseButton.TabIndex = 3
@@ -200,7 +200,7 @@ Partial Class AddNewGameForm
         'okayButton
         '
         Me.okayButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.okayButton.Location = New System.Drawing.Point(231, 455)
+        Me.okayButton.Location = New System.Drawing.Point(302, 455)
         Me.okayButton.Name = "okayButton"
         Me.okayButton.Size = New System.Drawing.Size(75, 23)
         Me.okayButton.TabIndex = 4
@@ -211,7 +211,7 @@ Partial Class AddNewGameForm
         '
         Me.cancelAddGameButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cancelAddGameButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.cancelAddGameButton.Location = New System.Drawing.Point(312, 455)
+        Me.cancelAddGameButton.Location = New System.Drawing.Point(383, 455)
         Me.cancelAddGameButton.Name = "cancelAddGameButton"
         Me.cancelAddGameButton.Size = New System.Drawing.Size(75, 23)
         Me.cancelAddGameButton.TabIndex = 5
@@ -250,9 +250,9 @@ Partial Class AddNewGameForm
         '
         'steamAppIDTextBox
         '
-        Me.steamAppIDTextBox.Location = New System.Drawing.Point(144, 90)
+        Me.steamAppIDTextBox.Location = New System.Drawing.Point(166, 90)
         Me.steamAppIDTextBox.Name = "steamAppIDTextBox"
-        Me.steamAppIDTextBox.Size = New System.Drawing.Size(139, 20)
+        Me.steamAppIDTextBox.Size = New System.Drawing.Size(188, 20)
         Me.steamAppIDTextBox.TabIndex = 8
         '
         'GamePathsGroupBox
@@ -273,7 +273,7 @@ Partial Class AddNewGameForm
         Me.GamePathsGroupBox.Controls.Add(Me.normalGameRadio)
         Me.GamePathsGroupBox.Location = New System.Drawing.Point(12, 118)
         Me.GamePathsGroupBox.Name = "GamePathsGroupBox"
-        Me.GamePathsGroupBox.Size = New System.Drawing.Size(375, 139)
+        Me.GamePathsGroupBox.Size = New System.Drawing.Size(446, 139)
         Me.GamePathsGroupBox.TabIndex = 1
         Me.GamePathsGroupBox.TabStop = False
         Me.GamePathsGroupBox.Text = "Game path/Steam app ID"
@@ -290,10 +290,10 @@ Partial Class AddNewGameForm
         '
         'steamExePathTextBox
         '
-        Me.steamExePathTextBox.Location = New System.Drawing.Point(144, 114)
+        Me.steamExePathTextBox.Location = New System.Drawing.Point(166, 114)
         Me.steamExePathTextBox.Name = "steamExePathTextBox"
         Me.steamExePathTextBox.ReadOnly = True
-        Me.steamExePathTextBox.Size = New System.Drawing.Size(139, 20)
+        Me.steamExePathTextBox.Size = New System.Drawing.Size(188, 20)
         Me.steamExePathTextBox.TabIndex = 10
         '
         'Label1
@@ -307,7 +307,7 @@ Partial Class AddNewGameForm
         '
         'steamExeBrowseButton
         '
-        Me.steamExeBrowseButton.Location = New System.Drawing.Point(289, 110)
+        Me.steamExeBrowseButton.Location = New System.Drawing.Point(360, 110)
         Me.steamExeBrowseButton.Name = "steamExeBrowseButton"
         Me.steamExeBrowseButton.Size = New System.Drawing.Size(75, 23)
         Me.steamExeBrowseButton.TabIndex = 11
@@ -317,7 +317,7 @@ Partial Class AddNewGameForm
         'launcherBrowseButton
         '
         Me.launcherBrowseButton.Enabled = False
-        Me.launcherBrowseButton.Location = New System.Drawing.Point(289, 43)
+        Me.launcherBrowseButton.Location = New System.Drawing.Point(360, 43)
         Me.launcherBrowseButton.Name = "launcherBrowseButton"
         Me.launcherBrowseButton.Size = New System.Drawing.Size(75, 23)
         Me.launcherBrowseButton.TabIndex = 5
@@ -327,10 +327,10 @@ Partial Class AddNewGameForm
         'launcherPathTextBox
         '
         Me.launcherPathTextBox.Enabled = False
-        Me.launcherPathTextBox.Location = New System.Drawing.Point(131, 45)
+        Me.launcherPathTextBox.Location = New System.Drawing.Point(166, 45)
         Me.launcherPathTextBox.Name = "launcherPathTextBox"
         Me.launcherPathTextBox.ReadOnly = True
-        Me.launcherPathTextBox.Size = New System.Drawing.Size(152, 20)
+        Me.launcherPathTextBox.Size = New System.Drawing.Size(188, 20)
         Me.launcherPathTextBox.TabIndex = 4
         '
         'usesLauncherCheckBox
@@ -353,7 +353,7 @@ Partial Class AddNewGameForm
         Me.GameInfoGroupBox.Controls.Add(Me.commandLineTextBox)
         Me.GameInfoGroupBox.Location = New System.Drawing.Point(12, 12)
         Me.GameInfoGroupBox.Name = "GameInfoGroupBox"
-        Me.GameInfoGroupBox.Size = New System.Drawing.Size(375, 100)
+        Me.GameInfoGroupBox.Size = New System.Drawing.Size(446, 100)
         Me.GameInfoGroupBox.TabIndex = 0
         Me.GameInfoGroupBox.TabStop = False
         Me.GameInfoGroupBox.Text = "Game information"
@@ -366,7 +366,7 @@ Partial Class AddNewGameForm
         Me.helpTextLabel.ForeColor = System.Drawing.Color.DarkGray
         Me.helpTextLabel.Location = New System.Drawing.Point(6, 16)
         Me.helpTextLabel.Name = "helpTextLabel"
-        Me.helpTextLabel.Size = New System.Drawing.Size(358, 67)
+        Me.helpTextLabel.Size = New System.Drawing.Size(429, 67)
         Me.helpTextLabel.TabIndex = 0
         Me.helpTextLabel.Text = "Hover over an item to show help in this panel."
         '
@@ -375,7 +375,7 @@ Partial Class AddNewGameForm
         Me.HelpGroupBox.Controls.Add(Me.helpTextLabel)
         Me.HelpGroupBox.Location = New System.Drawing.Point(12, 360)
         Me.HelpGroupBox.Name = "HelpGroupBox"
-        Me.HelpGroupBox.Size = New System.Drawing.Size(375, 86)
+        Me.HelpGroupBox.Size = New System.Drawing.Size(446, 86)
         Me.HelpGroupBox.TabIndex = 3
         Me.HelpGroupBox.TabStop = False
         Me.HelpGroupBox.Text = "Help"
@@ -386,7 +386,7 @@ Partial Class AddNewGameForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.cancelAddGameButton
-        Me.ClientSize = New System.Drawing.Size(399, 490)
+        Me.ClientSize = New System.Drawing.Size(470, 490)
         Me.Controls.Add(Me.HelpGroupBox)
         Me.Controls.Add(Me.GameInfoGroupBox)
         Me.Controls.Add(Me.GamePathsGroupBox)
