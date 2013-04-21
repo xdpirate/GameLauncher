@@ -626,7 +626,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Shortlinks courtesy of is.gd.
+        '''  Looks up a localized string similar to Danke an is.gd für das URL-Kürzungsservice.
         '''</summary>
         Friend Shared ReadOnly Property EmbeddableChartFormCourtesyLabel() As String
             Get
@@ -635,7 +635,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Erfolgreich! Senden Sie den unteren Link an ihre Freunde und Verwandten, falls sie mit dem Programm zufrieden sind:.
+        '''  Looks up a localized string similar to Erfolgreich! Senden Sie den unteren Link an ihre Freunde und Verwandten:.
         '''</summary>
         Friend Shared ReadOnly Property EmbeddableChartFormFlavorTextLabel() As String
             Get

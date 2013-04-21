@@ -369,11 +369,11 @@ Special thanks to Lisa for support.</value>
     <comment>Text shown on the Copy button; The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="EmbeddableChartFormCourtesyLabel" xml:space="preserve">
-    <value>Shortlinks courtesy of is.gd</value>
+    <value>Danke an is.gd für das URL-Kürzungsservice</value>
     <comment>Text shown on the courtesy label; is.gd is a website</comment>
   </data>
   <data name="EmbeddableChartFormFlavorTextLabel" xml:space="preserve">
-    <value>Erfolgreich! Senden Sie den unteren Link an ihre Freunde und Verwandten, falls sie mit dem Programm zufrieden sind:</value>
+    <value>Erfolgreich! Senden Sie den unteren Link an ihre Freunde und Verwandten:</value>
     <comment>Text shown in the label of the linkable chart window</comment>
   </data>
   <data name="EmbeddableChartFormGTFOButton" xml:space="preserve">
