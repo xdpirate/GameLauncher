@@ -71,7 +71,7 @@ Partial Class GLOptions
         Me.GTFOButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.GTFOButton.Location = New System.Drawing.Point(243, 174)
         Me.GTFOButton.Name = "GTFOButton"
-        Me.GTFOButton.Size = New System.Drawing.Size(75, 23)
+        Me.GTFOButton.Size = New System.Drawing.Size(99, 23)
         Me.GTFOButton.TabIndex = 3
         Me.GTFOButton.Text = "&Close"
         Me.GTFOButton.UseVisualStyleBackColor = True
@@ -96,7 +96,7 @@ Partial Class GLOptions
         Me.PreferencesGroupBox.Controls.Add(Me.playTimeInSkypeNotificationsCheckBox)
         Me.PreferencesGroupBox.Location = New System.Drawing.Point(12, 12)
         Me.PreferencesGroupBox.Name = "PreferencesGroupBox"
-        Me.PreferencesGroupBox.Size = New System.Drawing.Size(306, 156)
+        Me.PreferencesGroupBox.Size = New System.Drawing.Size(330, 156)
         Me.PreferencesGroupBox.TabIndex = 5
         Me.PreferencesGroupBox.TabStop = False
         Me.PreferencesGroupBox.Text = "Preferences"
@@ -106,7 +106,7 @@ Partial Class GLOptions
         Me.LanguagePicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.LanguagePicker.FormattingEnabled = True
         Me.LanguagePicker.Items.AddRange(New Object() {"English", "German", "Norwegian"})
-        Me.LanguagePicker.Location = New System.Drawing.Point(179, 128)
+        Me.LanguagePicker.Location = New System.Drawing.Point(203, 128)
         Me.LanguagePicker.Name = "LanguagePicker"
         Me.LanguagePicker.Size = New System.Drawing.Size(121, 21)
         Me.LanguagePicker.TabIndex = 6
@@ -146,7 +146,7 @@ Partial Class GLOptions
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.GTFOButton
-        Me.ClientSize = New System.Drawing.Size(330, 209)
+        Me.ClientSize = New System.Drawing.Size(354, 209)
         Me.Controls.Add(Me.PreferencesGroupBox)
         Me.Controls.Add(Me.InfoLabel)
         Me.Controls.Add(Me.GTFOButton)
