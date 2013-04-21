@@ -54,7 +54,7 @@ Partial Class PieChartForm
         Series1.Legend = "Legend1"
         Series1.Name = "Series1"
         Me.Chart1.Series.Add(Series1)
-        Me.Chart1.Size = New System.Drawing.Size(719, 461)
+        Me.Chart1.Size = New System.Drawing.Size(834, 461)
         Me.Chart1.TabIndex = 0
         Me.Chart1.Text = "Playing time chart"
         '
@@ -73,7 +73,7 @@ Partial Class PieChartForm
         '
         Me.pieCloseButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pieCloseButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.pieCloseButton.Location = New System.Drawing.Point(632, 467)
+        Me.pieCloseButton.Location = New System.Drawing.Point(747, 467)
         Me.pieCloseButton.Name = "pieCloseButton"
         Me.pieCloseButton.Size = New System.Drawing.Size(75, 23)
         Me.pieCloseButton.TabIndex = 1
@@ -143,7 +143,7 @@ Partial Class PieChartForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.pieCloseButton
-        Me.ClientSize = New System.Drawing.Size(719, 502)
+        Me.ClientSize = New System.Drawing.Size(834, 502)
         Me.Controls.Add(Me.generateChartButton)
         Me.Controls.Add(Me.clearDataLink)
         Me.Controls.Add(Me.palettePicker)
@@ -153,7 +153,7 @@ Partial Class PieChartForm
         Me.Controls.Add(Me.saveAsImageButton)
         Me.Controls.Add(Me.Chart1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MinimumSize = New System.Drawing.Size(735, 540)
+        Me.MinimumSize = New System.Drawing.Size(850, 540)
         Me.Name = "PieChartForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Game Launcher Playtime Statistics"

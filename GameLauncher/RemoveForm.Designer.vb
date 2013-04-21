@@ -34,15 +34,15 @@ Partial Class RemoveForm
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(12, 42)
+        Me.ListBox1.Location = New System.Drawing.Point(12, 61)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended
-        Me.ListBox1.Size = New System.Drawing.Size(260, 186)
+        Me.ListBox1.Size = New System.Drawing.Size(260, 225)
         Me.ListBox1.TabIndex = 0
         '
         'buttonOK
         '
-        Me.buttonOK.Location = New System.Drawing.Point(12, 234)
+        Me.buttonOK.Location = New System.Drawing.Point(12, 292)
         Me.buttonOK.Name = "buttonOK"
         Me.buttonOK.Size = New System.Drawing.Size(105, 23)
         Me.buttonOK.TabIndex = 1
@@ -52,7 +52,7 @@ Partial Class RemoveForm
         'buttonCancel
         '
         Me.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.buttonCancel.Location = New System.Drawing.Point(167, 234)
+        Me.buttonCancel.Location = New System.Drawing.Point(167, 292)
         Me.buttonCancel.Name = "buttonCancel"
         Me.buttonCancel.Size = New System.Drawing.Size(105, 23)
         Me.buttonCancel.TabIndex = 1
@@ -63,7 +63,7 @@ Partial Class RemoveForm
         '
         Me.FlavorTextLabel.Location = New System.Drawing.Point(9, 9)
         Me.FlavorTextLabel.Name = "FlavorTextLabel"
-        Me.FlavorTextLabel.Size = New System.Drawing.Size(263, 30)
+        Me.FlavorTextLabel.Size = New System.Drawing.Size(263, 49)
         Me.FlavorTextLabel.TabIndex = 2
         Me.FlavorTextLabel.Text = "Please select the items you wish to remove. You can hold CTRL to select several i" & _
     "tems at once."
@@ -74,7 +74,7 @@ Partial Class RemoveForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.buttonCancel
-        Me.ClientSize = New System.Drawing.Size(284, 268)
+        Me.ClientSize = New System.Drawing.Size(284, 327)
         Me.Controls.Add(Me.FlavorTextLabel)
         Me.Controls.Add(Me.buttonCancel)
         Me.Controls.Add(Me.buttonOK)
