@@ -65,10 +65,10 @@ Partial Class AddNewGameForm
         '
         Me.gamePathTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.gamePathTextBox.Location = New System.Drawing.Point(166, 19)
+        Me.gamePathTextBox.Location = New System.Drawing.Point(215, 19)
         Me.gamePathTextBox.Name = "gamePathTextBox"
         Me.gamePathTextBox.ReadOnly = True
-        Me.gamePathTextBox.Size = New System.Drawing.Size(188, 20)
+        Me.gamePathTextBox.Size = New System.Drawing.Size(139, 20)
         Me.gamePathTextBox.TabIndex = 1
         '
         'gameNameTextBox
@@ -148,10 +148,11 @@ Partial Class AddNewGameForm
         '
         'customIconPathTextBox
         '
-        Me.customIconPathTextBox.Location = New System.Drawing.Point(144, 42)
+        Me.customIconPathTextBox.Location = New System.Drawing.Point(215, 42)
+        Me.customIconPathTextBox.Multiline = True
         Me.customIconPathTextBox.Name = "customIconPathTextBox"
         Me.customIconPathTextBox.ReadOnly = True
-        Me.customIconPathTextBox.Size = New System.Drawing.Size(210, 20)
+        Me.customIconPathTextBox.Size = New System.Drawing.Size(139, 20)
         Me.customIconPathTextBox.TabIndex = 2
         '
         'gameIconPreviewBox
@@ -250,9 +251,9 @@ Partial Class AddNewGameForm
         '
         'steamAppIDTextBox
         '
-        Me.steamAppIDTextBox.Location = New System.Drawing.Point(166, 90)
+        Me.steamAppIDTextBox.Location = New System.Drawing.Point(215, 90)
         Me.steamAppIDTextBox.Name = "steamAppIDTextBox"
-        Me.steamAppIDTextBox.Size = New System.Drawing.Size(188, 20)
+        Me.steamAppIDTextBox.Size = New System.Drawing.Size(139, 20)
         Me.steamAppIDTextBox.TabIndex = 8
         '
         'GamePathsGroupBox
@@ -290,10 +291,10 @@ Partial Class AddNewGameForm
         '
         'steamExePathTextBox
         '
-        Me.steamExePathTextBox.Location = New System.Drawing.Point(166, 114)
+        Me.steamExePathTextBox.Location = New System.Drawing.Point(215, 114)
         Me.steamExePathTextBox.Name = "steamExePathTextBox"
         Me.steamExePathTextBox.ReadOnly = True
-        Me.steamExePathTextBox.Size = New System.Drawing.Size(188, 20)
+        Me.steamExePathTextBox.Size = New System.Drawing.Size(139, 20)
         Me.steamExePathTextBox.TabIndex = 10
         '
         'Label1
@@ -327,10 +328,10 @@ Partial Class AddNewGameForm
         'launcherPathTextBox
         '
         Me.launcherPathTextBox.Enabled = False
-        Me.launcherPathTextBox.Location = New System.Drawing.Point(166, 45)
+        Me.launcherPathTextBox.Location = New System.Drawing.Point(215, 45)
         Me.launcherPathTextBox.Name = "launcherPathTextBox"
         Me.launcherPathTextBox.ReadOnly = True
-        Me.launcherPathTextBox.Size = New System.Drawing.Size(188, 20)
+        Me.launcherPathTextBox.Size = New System.Drawing.Size(139, 20)
         Me.launcherPathTextBox.TabIndex = 4
         '
         'usesLauncherCheckBox
