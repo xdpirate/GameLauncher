@@ -118,7 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AboutFormAuthorNote" xml:space="preserve">
-    <value>Game Launcher\n© 2012-2013 xdpirate\nBeta testiranje uradio Kurithas.\nPosebna zahvalnost Lisi za podršku.</value>
+    <value>Game Launcher
+© 2012-2013 xdpirate
+Beta testiranje uradio Kurithas.
+Posebna zahvalnost Lisi za podršku.</value>
     <comment>The note shown on the about window, copyright and thanks</comment>
   </data>
   <data name="AboutFormCloseButtonText" xml:space="preserve">
@@ -246,7 +249,7 @@
     <comment>Label text for game display name</comment>
   </data>
   <data name="AddNewGameFormGamePathsGroupBox" xml:space="preserve">
-    <value>Staza igre/ID Steam aplikacije</value>
+    <value>Putanja igre/ID Steam aplikacije</value>
     <comment>Flavor text for the group box that contains controls for entering game paths</comment>
   </data>
   <data name="AddNewGameFormGetFromExeHelpText" xml:space="preserve">
@@ -278,7 +281,7 @@
     <comment>Help text shown while hovering over the icon preview picturebox</comment>
   </data>
   <data name="AddNewGameFormKeepIconRadio" xml:space="preserve">
-    <value>Zadržati trenutnu ikonicu</value>
+    <value>Zadržati trenutnu ikonicu.</value>
     <comment>Flavor text for the radio button that selects to keep the current icon (if editing a game)</comment>
   </data>
   <data name="AddNewGameFormLauncherBrowseHelpText" xml:space="preserve">
@@ -330,7 +333,7 @@
     <comment>The text shown in the title bar of the Add/Edit game window</comment>
   </data>
   <data name="AddNewGameFormUsesLauncherCheckBox" xml:space="preserve">
-    <value>Upotrebe za launcher</value>
+    <value>Koristi launcher</value>
     <comment>Flavor text for the check box that selects whether the game uses a launcher exe</comment>
   </data>
   <data name="AddNewGameFormUsesLauncherHelpText" xml:space="preserve">

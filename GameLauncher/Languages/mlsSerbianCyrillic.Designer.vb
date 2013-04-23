@@ -356,7 +356,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Стаза игре/ID Steam апликације.
+        '''  Looks up a localized string similar to Путанја игре/ID Steam апликације.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormGamePathsGroupBox() As String
             Get
@@ -428,7 +428,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Задржати тренутну иконицу.
+        '''  Looks up a localized string similar to Задржати тренутну иконицу..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormKeepIconRadio() As String
             Get
@@ -545,7 +545,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Употребе за launcher.
+        '''  Looks up a localized string similar to Користи launcher.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormUsesLauncherCheckBox() As String
             Get

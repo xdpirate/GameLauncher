@@ -65,7 +65,10 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Game Launcher\n© 2012-2013 xdpirate\nBeta testiranje uradio Kurithas.\nPosebna zahvalnost Lisi za podršku..
+        '''  Looks up a localized string similar to Game Launcher
+        '''© 2012-2013 xdpirate
+        '''Beta testiranje uradio Kurithas.
+        '''Posebna zahvalnost Lisi za podršku..
         '''</summary>
         Friend Shared ReadOnly Property AboutFormAuthorNote() As String
             Get
@@ -353,7 +356,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Staza igre/ID Steam aplikacije.
+        '''  Looks up a localized string similar to Putanja igre/ID Steam aplikacije.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormGamePathsGroupBox() As String
             Get
@@ -425,7 +428,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Zadržati trenutnu ikonicu.
+        '''  Looks up a localized string similar to Zadržati trenutnu ikonicu..
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormKeepIconRadio() As String
             Get
@@ -542,7 +545,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Upotrebe za launcher.
+        '''  Looks up a localized string similar to Koristi launcher.
         '''</summary>
         Friend Shared ReadOnly Property AddNewGameFormUsesLauncherCheckBox() As String
             Get
