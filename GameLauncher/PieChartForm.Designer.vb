@@ -54,7 +54,7 @@ Partial Class PieChartForm
         Series1.Legend = "Legend1"
         Series1.Name = "Series1"
         Me.Chart1.Series.Add(Series1)
-        Me.Chart1.Size = New System.Drawing.Size(834, 461)
+        Me.Chart1.Size = New System.Drawing.Size(834, 459)
         Me.Chart1.TabIndex = 0
         Me.Chart1.Text = "Playing time chart"
         '
@@ -62,9 +62,9 @@ Partial Class PieChartForm
         '
         Me.saveAsImageButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.saveAsImageButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.saveAsImageButton.Location = New System.Drawing.Point(12, 467)
+        Me.saveAsImageButton.Location = New System.Drawing.Point(12, 465)
         Me.saveAsImageButton.Name = "saveAsImageButton"
-        Me.saveAsImageButton.Size = New System.Drawing.Size(106, 23)
+        Me.saveAsImageButton.Size = New System.Drawing.Size(165, 23)
         Me.saveAsImageButton.TabIndex = 2
         Me.saveAsImageButton.Text = "&Save as image..."
         Me.saveAsImageButton.UseVisualStyleBackColor = True
@@ -73,7 +73,7 @@ Partial Class PieChartForm
         '
         Me.pieCloseButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pieCloseButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.pieCloseButton.Location = New System.Drawing.Point(747, 467)
+        Me.pieCloseButton.Location = New System.Drawing.Point(747, 491)
         Me.pieCloseButton.Name = "pieCloseButton"
         Me.pieCloseButton.Size = New System.Drawing.Size(75, 23)
         Me.pieCloseButton.TabIndex = 1
@@ -85,7 +85,7 @@ Partial Class PieChartForm
         Me.labelPicker.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.labelPicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.labelPicker.FormattingEnabled = True
-        Me.labelPicker.Location = New System.Drawing.Point(287, 469)
+        Me.labelPicker.Location = New System.Drawing.Point(183, 465)
         Me.labelPicker.Name = "labelPicker"
         Me.labelPicker.Size = New System.Drawing.Size(121, 21)
         Me.labelPicker.TabIndex = 3
@@ -96,7 +96,7 @@ Partial Class PieChartForm
         Me.legendToggleCheckBox.AutoSize = True
         Me.legendToggleCheckBox.Checked = True
         Me.legendToggleCheckBox.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.legendToggleCheckBox.Location = New System.Drawing.Point(541, 471)
+        Me.legendToggleCheckBox.Location = New System.Drawing.Point(310, 467)
         Me.legendToggleCheckBox.Name = "legendToggleCheckBox"
         Me.legendToggleCheckBox.Size = New System.Drawing.Size(88, 17)
         Me.legendToggleCheckBox.TabIndex = 4
@@ -109,7 +109,7 @@ Partial Class PieChartForm
         Me.palettePicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.palettePicker.FormattingEnabled = True
         Me.palettePicker.Items.AddRange(New Object() {"Berry", "Bright Pastel", "Bright", "Chocolate", "Earth Tones", "Excel", "Fire", "Grayscale", "Light", "Pastel", "Sea Green"})
-        Me.palettePicker.Location = New System.Drawing.Point(414, 469)
+        Me.palettePicker.Location = New System.Drawing.Point(183, 494)
         Me.palettePicker.Name = "palettePicker"
         Me.palettePicker.Size = New System.Drawing.Size(121, 21)
         Me.palettePicker.TabIndex = 5
@@ -129,9 +129,9 @@ Partial Class PieChartForm
         'generateChartButton
         '
         Me.generateChartButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.generateChartButton.Location = New System.Drawing.Point(124, 468)
+        Me.generateChartButton.Location = New System.Drawing.Point(12, 494)
         Me.generateChartButton.Name = "generateChartButton"
-        Me.generateChartButton.Size = New System.Drawing.Size(157, 23)
+        Me.generateChartButton.Size = New System.Drawing.Size(165, 23)
         Me.generateChartButton.TabIndex = 7
         Me.generateChartButton.Text = "&Generate linkable chart"
         Me.generateChartButton.UseVisualStyleBackColor = True
@@ -143,7 +143,7 @@ Partial Class PieChartForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.pieCloseButton
-        Me.ClientSize = New System.Drawing.Size(834, 502)
+        Me.ClientSize = New System.Drawing.Size(834, 526)
         Me.Controls.Add(Me.generateChartButton)
         Me.Controls.Add(Me.clearDataLink)
         Me.Controls.Add(Me.palettePicker)
