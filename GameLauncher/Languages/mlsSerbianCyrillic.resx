@@ -573,7 +573,7 @@
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainMenuOptionsRemoveGames" xml:space="preserve">
-    <value>&amp;Уклонити игре...</value>
+    <value>&amp;Уклони игре...</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainMenuOptionsStatistics" xml:space="preserve">

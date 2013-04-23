@@ -573,7 +573,7 @@ Posebna zahvalnost Lisi za podršku.</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainMenuOptionsRemoveGames" xml:space="preserve">
-    <value>&amp;Ukloniti igre...</value>
+    <value>&amp;Ukloni igre...</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainMenuOptionsStatistics" xml:space="preserve">

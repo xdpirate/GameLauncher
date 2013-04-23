@@ -1085,7 +1085,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to &amp;Уклонити игре....
+        '''  Looks up a localized string similar to &amp;Уклони игре....
         '''</summary>
         Friend Shared ReadOnly Property MainMenuOptionsRemoveGames() As String
             Get
