@@ -1,0 +1,691 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutFormAuthorNote" xml:space="preserve">
+    <value>Game Launcher
+© 2012-2013 xdpirate
+Бета тестирање урадио Kurithas.
+Посебна захвалност Лиси за подршку.</value>
+    <comment>The note shown on the about window, copyright and thanks</comment>
+  </data>
+  <data name="AboutFormCloseButtonText" xml:space="preserve">
+    <value>&amp;Затвори</value>
+    <comment>Text shown on the button that closes the about window; The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="AboutFormContactText" xml:space="preserve">
+    <value>Контакт</value>
+    <comment>Text shown on the link to contact the author</comment>
+  </data>
+  <data name="AboutFormNewVersion1" xml:space="preserve">
+    <value>Доступна је нова верзија Game Launcher-а  (v</value>
+    <comment>First part of new version available message</comment>
+  </data>
+  <data name="AboutFormNewVersion2" xml:space="preserve">
+    <value>Да ли би сте желели да је сада преузмете?</value>
+    <comment>Second part of new version available message</comment>
+  </data>
+  <data name="AboutFormUpdateCheckButtonText" xml:space="preserve">
+    <value>Провери &amp;ажурираност</value>
+    <comment>Text shown on the button that checks for a new update; The ampersand signifes a keyboard shortcut</comment>
+  </data>
+  <data name="AboutFormUpdateError1" xml:space="preserve">
+    <value>Догодила се грешка током провере ажурираности:</value>
+    <comment>Notifies the user that an error occured while checking for update, part 1 of error msg</comment>
+  </data>
+  <data name="AboutFormUpdateError2" xml:space="preserve">
+    <value>Молимо Вас покушајте касније или контактирајте аутора ако грешка настави да се јавља.</value>
+    <comment>Asks to try again later if update failed, part 2 of error msg</comment>
+  </data>
+  <data name="AboutFormUpToDate" xml:space="preserve">
+    <value>Ваша инсталација Game Launcher-а је ажурирана!</value>
+    <comment>Notifies the user that the application is up to date</comment>
+  </data>
+  <data name="AboutFormWebsiteLinkText" xml:space="preserve">
+    <value>Веб сајт</value>
+    <comment>Text shown on the link to the application's website</comment>
+  </data>
+  <data name="AddNewGameFormBrowseButtons" xml:space="preserve">
+    <value>&amp;Претражи...</value>
+    <comment>Common text for all Browse buttons on the form; The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="AddNewGameFormBrowseExeHelpText" xml:space="preserve">
+    <value>Кликните ово дугме да би сте селектовали извршни фајл који служи да би се игра покренула. Ово је типично .exe фајл.</value>
+    <comment>Help text shown while hovering over the Browse button for Normal Game</comment>
+  </data>
+  <data name="AddNewGameFormCancelButton" xml:space="preserve">
+    <value>&amp;Одустани</value>
+    <comment>Flavor text for the button that cancels the game entry; The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="AddNewGameFormCancelHelpText" xml:space="preserve">
+    <value>Кликните ово дугме ако желите да одустанете од додавања ове игре. Ако имате више игара спремних да их додате (на пример: ако користите падајући прозор или десним-кликом селектујете у Еxplorer-у), мораћете да кликнете одустајем код сваке.</value>
+    <comment>Help text shown while hovering over the Cancel button</comment>
+  </data>
+  <data name="AddNewGameFormCmdArgsHelpText" xml:space="preserve">
+    <value>Унети аргументе командне линије који ће бити кориштени при покретању игре. Ако не знате шта је ово, поље можете оставити празним.</value>
+    <comment>Help text shown while hovering over the Command-Line Arguments text box</comment>
+  </data>
+  <data name="AddNewGameFormCmdArgsLabel" xml:space="preserve">
+    <value>Аргументи командне линије:</value>
+    <comment>Label text for command line arguments</comment>
+  </data>
+  <data name="AddNewGameFormCustomIconHelpText" xml:space="preserve">
+    <value>Кликните ово дугме да би сте селектовали своју иконицу. Мора бити BMP, PNG, GIF, JPG или ICO слика и биће промењена на димензије 16x16. Можете и специфицирати и .exe фајл да би сте екстрактовали његову главну икону и користили је. Слика ће задржати своје пропорције.</value>
+    <comment>Help text shown while hovering over the Browse button for Get From Other File</comment>
+  </data>
+  <data name="AddNewGameFormDefaultHelpText" xml:space="preserve">
+    <value>Лебдите мишем преко објеката да би сте приказали помоћ у овом панелу.</value>
+    <comment>Text shown in the help pane when nothing else is hovered over.</comment>
+  </data>
+  <data name="AddNewGameFormErrorGetFromOtherFileNoIcon" xml:space="preserve">
+    <value>Морате специфицирати икону ако је  "Узети из неког другог фајла"  селектовано.</value>
+    <comment>Error message when the user didn't choose an icon when 'Get from other file' was also selected</comment>
+  </data>
+  <data name="AddNewGameFormErrorLauncherExeNotFound" xml:space="preserve">
+    <value>Извршни фајл launcher-а није пронађен: </value>
+    <comment>Error message when the launcher exe could not be found</comment>
+  </data>
+  <data name="AddNewGameFormErrorMainExeNotFound" xml:space="preserve">
+    <value>Главни извршни фајл игре није пронађен:</value>
+    <comment>Error message when the main exe could not be found</comment>
+  </data>
+  <data name="AddNewGameFormErrorNoAppId" xml:space="preserve">
+    <value>Морате унети идентификациони код Steam апликације за игру (Steam App ID).</value>
+    <comment>Error message when the user hasn't entered a Steam App ID</comment>
+  </data>
+  <data name="AddNewGameFormErrorNoLauncherPath" xml:space="preserve">
+    <value>Морате специфицирати путању фајла launcher-у.</value>
+    <comment>Error message when the user hasn't entered a launcher path</comment>
+  </data>
+  <data name="AddNewGameFormErrorNoMainPath" xml:space="preserve">
+    <value>Морате специфицирати путању фајла за главни извршни фајл.</value>
+    <comment>Error message when the user hasn't entered a path</comment>
+  </data>
+  <data name="AddNewGameFormErrorNoName" xml:space="preserve">
+    <value>Морате специфицирати име за игру.</value>
+    <comment>Error message when user hasn't entered a name</comment>
+  </data>
+  <data name="AddNewGameFormErrorNoSteamExePath" xml:space="preserve">
+    <value>Морате специфицирати путању до извршног фајла који Steam користи да би стартовао игру. </value>
+    <comment>Error message when the user hasn't entered a Steam path</comment>
+  </data>
+  <data name="AddNewGameFormErrorNoSteamExePathClickedGetFromExecutable" xml:space="preserve">
+    <value>Не можете селектовати “Узети из извршног фајла” за иконицу ако нисте специфицирали извршни фајл за Steam игру.</value>
+    <comment>Error message when the user has clicked 'Get from executable' when no Steam executable has been selected</comment>
+  </data>
+  <data name="AddNewGameFormErrorNoSteamIcon" xml:space="preserve">
+    <value>Морате специфицирати иконицу за ову Steam игру.</value>
+    <comment>Error message when the user didn't choose an icon for a Steam game</comment>
+  </data>
+  <data name="AddNewGameFormErrorSteamExeNotFound" xml:space="preserve">
+    <value>Специфицирани извршни фајл за Steam игру није пронађен:</value>
+    <comment>Error message when the selected exe for a Steam game could not be found</comment>
+  </data>
+  <data name="AddNewGameFormGameInfoGroupBox" xml:space="preserve">
+    <value>Информације о игри</value>
+    <comment>Flavor text for the group box that contains controls for entering game information</comment>
+  </data>
+  <data name="AddNewGameFormGameNameHelpText" xml:space="preserve">
+    <value>Овде унети име игре. Име може бити било шта, једино што ће знаци једнако (=) бити замењени цртицама (-) због техничких ограничења. </value>
+    <comment>Help text shown while hovering over the Game Name text box</comment>
+  </data>
+  <data name="AddNewGameFormGameNameLabel" xml:space="preserve">
+    <value>Име:</value>
+    <comment>Label text for game display name</comment>
+  </data>
+  <data name="AddNewGameFormGamePathsGroupBox" xml:space="preserve">
+    <value>Стаза игре/ID Steam апликације</value>
+    <comment>Flavor text for the group box that contains controls for entering game paths</comment>
+  </data>
+  <data name="AddNewGameFormGetFromExeHelpText" xml:space="preserve">
+    <value>Селектовати ову опцију ако желите да Game Launcher узме иконицу из изабраног извршног фајла игре.</value>
+    <comment>Help text shown while hovering over the Get From Exe radio button</comment>
+  </data>
+  <data name="AddNewGameFormGetFromExeRadio" xml:space="preserve">
+    <value>Узети из извршног фајла.</value>
+    <comment>Flavor text for the radio button that selects to get the icon from the chosen exe file</comment>
+  </data>
+  <data name="AddNewGameFormGetFromOtherFileHelpText" xml:space="preserve">
+    <value>Селектовати ову опцију ако желите да сами изаберету иконицу.</value>
+    <comment>Help text shown while hovering hover the Get From Other File radio button</comment>
+  </data>
+  <data name="AddNewGameFormGetFromOtherFileRadio" xml:space="preserve">
+    <value>Узети из неког другог фајла.</value>
+    <comment>Flavor text for the radio button that selects to get the icon from another file</comment>
+  </data>
+  <data name="AddNewGameFormHelpGroupBox" xml:space="preserve">
+    <value>Помоћ</value>
+    <comment>Flavor text for the group box that contains the help label</comment>
+  </data>
+  <data name="AddNewGameFormIconGroupBox" xml:space="preserve">
+    <value>Иконица</value>
+    <comment>Flavor text for the group box that contains controls for modifying the game's icon</comment>
+  </data>
+  <data name="AddNewGameFormIconHelpText" xml:space="preserve">
+    <value>Ово показује преглед иконице која ће бити коришћена. Ако је Game Launcher подешен да преузме иконицу из извршног фајла игре, морате специфицирати извршни фајл пре него што се овај преглед прикаже. </value>
+    <comment>Help text shown while hovering over the icon preview picturebox</comment>
+  </data>
+  <data name="AddNewGameFormKeepIconRadio" xml:space="preserve">
+    <value>Задржати тренутну иконицу</value>
+    <comment>Flavor text for the radio button that selects to keep the current icon (if editing a game)</comment>
+  </data>
+  <data name="AddNewGameFormLauncherBrowseHelpText" xml:space="preserve">
+    <value>Кликнути ово дугме да би сте селектовали launcher који ће покренути главни извршни фајл игре.</value>
+    <comment>Help text shown while hovering over the Browse button for the launcher</comment>
+  </data>
+  <data name="AddNewGameFormNormalGameHelpText" xml:space="preserve">
+    <value>Селектовати ову опцију ако је ово обична игра (на пример не користи Steam).</value>
+    <comment>Help text shown while hovering over the Normal Game radio button</comment>
+  </data>
+  <data name="AddNewGameFormNormalGameRadio" xml:space="preserve">
+    <value>Обична игра</value>
+    <comment>Flavor text for the radio button that selects the normal game mode (As opposed to Steam game mode)</comment>
+  </data>
+  <data name="AddNewGameFormOKButton" xml:space="preserve">
+    <value>&amp;Потврди</value>
+    <comment>Flavor text for the button that finalizes the game entry, the OK-button; The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="AddNewGameFormOKHelp" xml:space="preserve">
+    <value>Кликнути ово дугме када сте завршили попуњавање детаља игре коју додајете.</value>
+    <comment>Shown in the Add New Game Form.</comment>
+  </data>
+  <data name="AddNewGameFormSpecifySteamExeCheckBox" xml:space="preserve">
+    <value>Специфицирати извршни фајл.</value>
+    <comment>Flavor text for the check box that selects whether to specify an executable for a Steam game</comment>
+  </data>
+  <data name="AddNewGameFormSpecifySteamExeHelpText" xml:space="preserve">
+    <value>Откачити овде ако желите да селектујете извршни фајл који Steam користи да би стартовао игру. Ово ће омогућити праћење времена играња за Steam игре. Ако игра користи launcher, нема потребе селектовати ово, једноставно селектујте главни извршни фајл са којим се игра стартује.</value>
+    <comment>Help text shown while hovering over the Specify Steam Exe checkbox</comment>
+  </data>
+  <data name="AddNewGameFormSteamAppIdHelpText" xml:space="preserve">
+    <value>Унесите Steam апликациони идентификациони број овде (Steam App ID). Да би сте пронашли ID, лоцирајте игру у Steam продавници и копирајте ID из последњег дела URL-а (на пример, http://store.steampowered.com/app/24980/ -&gt;  ID је овде 24980)</value>
+    <comment>Help text shown while hovering over the Steam App Id text box</comment>
+  </data>
+  <data name="AddNewGameFormSteamExeBrowseHelpText" xml:space="preserve">
+    <value>Кликните овде да пронађете главни извршни фајл који Steam користи да би покренуо игру.</value>
+    <comment>Help text shown while hovering over the Browse for Steam Exe button</comment>
+  </data>
+  <data name="AddNewGameFormSteamGameRadio" xml:space="preserve">
+    <value>Steam игре</value>
+    <comment>Flavor text for the radio button that selects the Steam game mode (As opposed to the normal game mode)</comment>
+  </data>
+  <data name="AddNewGameFormSteamHelpText" xml:space="preserve">
+    <value>Селектујте ову опцију ако је ово игра која мора бити стартована преко Steam-а.</value>
+    <comment>Help text shown while hovering over the Steam Game radio</comment>
+  </data>
+  <data name="AddNewGameFormTitleBar" xml:space="preserve">
+    <value>Додати или унети промене за игре.</value>
+    <comment>The text shown in the title bar of the Add/Edit game window</comment>
+  </data>
+  <data name="AddNewGameFormUsesLauncherCheckBox" xml:space="preserve">
+    <value>Употребе за launcher</value>
+    <comment>Flavor text for the check box that selects whether the game uses a launcher exe</comment>
+  </data>
+  <data name="AddNewGameFormUsesLauncherHelpText" xml:space="preserve">
+    <value>Откачити овде ако игра коју додајете користи launcher. Launcher је извршни фајл који ће сам покренути главну игру. Ова опција ће омогућити праћење времена играња за игре које захетвају да се покрену launcher-ом.</value>
+    <comment>Help text shown while hovering over the Uses Launcher check box</comment>
+  </data>
+  <data name="DockOpacityFormHoverOpacityGroupBox" xml:space="preserve">
+    <value>Провидност дока када је у фокусу (када миш лебди изнад дока) </value>
+    <comment>Flavor text shown in the group box that contains controls to change the opacity when in focus</comment>
+  </data>
+  <data name="DockOpacityFormNormalOpacityGroupBox" xml:space="preserve">
+    <value>Провидност дока када није у фокусу</value>
+    <comment>Flavor text shown in the group box that contains controls to change the opacity when not in focus</comment>
+  </data>
+  <data name="DockOpacityFormSaveButton" xml:space="preserve">
+    <value>&amp;Сними</value>
+    <comment>Text shown on the 'Save' button; The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="DockOpacityFormTitleBar" xml:space="preserve">
+    <value>Променити провидност</value>
+    <comment>The text shown in the title bar of the Dock Opacity window</comment>
+  </data>
+  <data name="DragDropTargetFormTitleBar" xml:space="preserve">
+    <value>Убацити шорткат (скраћеницу) или извршни фајл овде!</value>
+    <comment>Text shown in the drag-and-drop window's title bar</comment>
+  </data>
+  <data name="EmbeddableChartFormCopiedToClipBoardText" xml:space="preserve">
+    <value>Линк копиран у клипборд!</value>
+    <comment>Text shown in the message box when a user clicks the copy to clipboard button</comment>
+  </data>
+  <data name="EmbeddableChartFormCopyButton" xml:space="preserve">
+    <value>&amp;Копирај</value>
+    <comment>Text shown on the Copy button; The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="EmbeddableChartFormCourtesyLabel" xml:space="preserve">
+    <value>Кратки линкови љубазношћу is.gd</value>
+    <comment>Text shown on the courtesy label; is.gd is a website</comment>
+  </data>
+  <data name="EmbeddableChartFormFlavorTextLabel" xml:space="preserve">
+    <value>Успех! Пошаљите доњи линк својим пријатељима и вољенима:</value>
+    <comment>Text shown in the label of the linkable chart window</comment>
+  </data>
+  <data name="EmbeddableChartFormGTFOButton" xml:space="preserve">
+    <value>&amp;Затвори</value>
+    <comment>Text shown on the Close button; The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="EmbeddableChartFormTitleBar" xml:space="preserve">
+    <value>Листа података са линком</value>
+    <comment>Text shown in the title bar of the linkable chart window</comment>
+  </data>
+  <data name="EmbeddableChartFormVisitLinkButton" xml:space="preserve">
+    <value>&amp;Посетити линк</value>
+    <comment>Text shown on the Visit Link button; The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="GLOptionsFormAutoUpdateCheckBox" xml:space="preserve">
+    <value>Аутоматски проверавај ажурираност</value>
+    <comment>Text shown on the 'Automatically check for updates' check box</comment>
+  </data>
+  <data name="GLOptionsFormExplorerIntegrationText" xml:space="preserve">
+    <value>Додати у &amp;Game Launcher</value>
+    <comment>This text appears in Windows Explorer, when having right-clicked a supported file; The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="GLOptionsFormGTFOButton" xml:space="preserve">
+    <value>&amp;Затвори</value>
+    <comment>Text shown on the Close button; The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="GLOptionsFormInfoLabel" xml:space="preserve">
+    <value>Промене имају одмах ефекат. </value>
+    <comment>Text shown on the Preferences form</comment>
+  </data>
+  <data name="GLOptionsFormIntegrateWithExplorerCheckBox" xml:space="preserve">
+    <value>Интегрисати у Windows Explorer</value>
+    <comment>Text shown on the 'Integrate with Windows Explorer' check box</comment>
+  </data>
+  <data name="GLOptionsFormPlayTimeInSkypeNotificationsCheckBox" xml:space="preserve">
+    <value>Показати време проведено у игрању када се изађе из игре</value>
+    <comment>Text shown on the 'Show time spent playing when exiting game' check box</comment>
+  </data>
+  <data name="GLOptionsFormPreferencesGroupBox" xml:space="preserve">
+    <value>Подешавања </value>
+    <comment>Flavor text shown in the group box that houses the preferences, in the Preferences window</comment>
+  </data>
+  <data name="GLOptionsFormSkypeNotificationsCheckBox" xml:space="preserve">
+    <value>Послати обавештења Skajp-у када почнете/престанете да се играте</value>
+    <comment>Text shown on the 'Send notifications to Skype when you start/stop playing' check box</comment>
+  </data>
+  <data name="GLOptionsFormStartOnLoginCheckBox" xml:space="preserve">
+    <value>Стартовати Game Launcher када се улогујете</value>
+    <comment>Text shown on the 'Start Game Launcher on startup' check box</comment>
+  </data>
+  <data name="GLOptionsFormTitleBar" xml:space="preserve">
+    <value>Подешавања Game Launcher-а</value>
+    <comment>This text appears in the title bar of the Preferences window</comment>
+  </data>
+  <data name="MainFormAddGameFailed1" xml:space="preserve">
+    <value>Нешто је пошло по злу! .NET Framework је рекао:</value>
+    <comment>First part of text shown when something went wrong adding a game</comment>
+  </data>
+  <data name="MainFormAddGameFailed2" xml:space="preserve">
+    <value>Ако сматрате да је ово bug, или се порука о грешци изнова понавља, молимо Вас контактирајте аутора.</value>
+    <comment>Second part of text shown when something went wrong adding a game</comment>
+  </data>
+  <data name="MainFormBalloonTipLoadedMessageText" xml:space="preserve">
+    <value>Кликните десним дугметом миша ову иконицу или притисните Windows+Г дугмад да би сте отворили листу. </value>
+    <comment>Text appears in the balloon tip body when starting the application.</comment>
+  </data>
+  <data name="MainFormBalloonTipLoadedMessageTitle" xml:space="preserve">
+    <value>Game Launcher v{0} учитан!</value>
+    <comment>Text appears in the balloon tip title when starting the application. {0} is the current version number.</comment>
+  </data>
+  <data name="MainFormClearGameList" xml:space="preserve">
+    <value>Да ли сте сигурни да желите да уклоните све елементе у листи? Ова акција се НЕ МОЖЕ накнадно оповргнути!</value>
+    <comment>Appears when the user chooses to clear all games.</comment>
+  </data>
+  <data name="MainFormEditGameItem" xml:space="preserve">
+    <value>Изменити &amp;игру...</value>
+    <comment>Shown in the main menu under every game. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainFormEditGameItemTooltip" xml:space="preserve">
+    <value>Изменити подешавања ове игре</value>
+    <comment>The tooltip shown when hovering over the 'Edit game' menu item.</comment>
+  </data>
+  <data name="MainFormLoadingMessage" xml:space="preserve">
+    <value>Game Launcher се учитава, молимо сачекајте...</value>
+    <comment>Text shown when hovering over the tray icon whilst the application is loading</comment>
+  </data>
+  <data name="MainFormNewVersionAvailable1" xml:space="preserve">
+    <value>Постоји нова верзија Game Launcher-а (v{0})! Да ли би сте желели да је сада преузмете?</value>
+    <comment>Text appears when auto-checking for updates, and an update was found. {0} is the new version number.</comment>
+  </data>
+  <data name="MainFormNewVersionAvailable2" xml:space="preserve">
+    <value>Ако одлучите да не ажурирате сада, провера ажурираности ће бити онемогућена за ову сесију.</value>
+    <comment>Text appears when auto-checking for updates.</comment>
+  </data>
+  <data name="MainFormOptionsItem" xml:space="preserve">
+    <value>&amp;Опције</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainFormQuitApplication" xml:space="preserve">
+    <value>Да ли сте сигурни да желите да изађете из Game Launcher-а?</value>
+    <comment>Appears when user chooses the 'Quit' menu item.</comment>
+  </data>
+  <data name="MainFormQuitItem" xml:space="preserve">
+    <value>&amp;Излаз</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainFormRemoveCmdArgs" xml:space="preserve">
+    <value>Да ли сте сигурни да желите да уклоните све аргументе командне линије за {0}?</value>
+    <comment>Text shown when user clears command-line arguments. {0} is the name of the game chosen.</comment>
+  </data>
+  <data name="MainFormRemoveGameItem" xml:space="preserve">
+    <value>&amp;Уклонити...</value>
+    <comment>Shown in the main menu under every game. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainFormRemoveGameItemTooltip" xml:space="preserve">
+    <value>Уклонити ову игру са листе</value>
+    <comment>The tooltip shown when hovering over the 'Remove game' menu item.</comment>
+  </data>
+  <data name="MainFormRemoveGameMsg" xml:space="preserve">
+    <value>Да ли сте сигурни да желите да уклоните {0} са листе?</value>
+    <comment>Shown when trying to remove a game. {0} is the name of the chosen game.</comment>
+  </data>
+  <data name="MainFormSelectIconText" xml:space="preserve">
+    <value>Селектовати иконицу за "{0}"</value>
+    <comment>{0} is the name of the game the user is selecting the icon for.</comment>
+  </data>
+  <data name="MainFormSkypeNowPlaying" xml:space="preserve">
+    <value>Тренутно се игра: {0}</value>
+    <comment>Shown in Skype when the user starts a non-Steam game.</comment>
+  </data>
+  <data name="MainFormSkypeNowPlayingSteam" xml:space="preserve">
+    <value>Тренутно се игра: {0} (Steam)</value>
+    <comment>Shown in Skype when user starts a Steam game</comment>
+  </data>
+  <data name="MainFormSkypePlayStopped" xml:space="preserve">
+    <value>Престао са игром: {0}</value>
+    <comment>Appears in Skype when finished playing a game. {0} is the name of the game.</comment>
+  </data>
+  <data name="MainFormSkypePlayTimeStopped" xml:space="preserve">
+    <value> (Играо: {0}</value>
+    <comment>Appears in Skype when finished playing a game and the user has chosen to display playing time. {0} is the amount of time played.</comment>
+  </data>
+  <data name="MainFormTimeHourPlural" xml:space="preserve">
+    <value>сати</value>
+    <comment>Plural form of 'hour'</comment>
+  </data>
+  <data name="MainFormTimeHourSingular" xml:space="preserve">
+    <value>сат </value>
+    <comment>Singular form of 'hour'</comment>
+  </data>
+  <data name="MainFormTimeMinutePlural" xml:space="preserve">
+    <value>минути</value>
+    <comment>Plural form of 'minute'</comment>
+  </data>
+  <data name="MainFormTimeMinuteSingular" xml:space="preserve">
+    <value>минут</value>
+    <comment>Singular form of 'minute'</comment>
+  </data>
+  <data name="MainFormTimeSecondPlural" xml:space="preserve">
+    <value>секунди</value>
+    <comment>Plural form of 'seconds'</comment>
+  </data>
+  <data name="MainFormTimeSecondSingular" xml:space="preserve">
+    <value>секунд</value>
+    <comment>Singular form of 'second'</comment>
+  </data>
+  <data name="MainMenuAboutTooltip" xml:space="preserve">
+    <value>Показује информације о апликацији и људима који су допринели раду апликације.</value>
+    <comment>Tooltip for a main menu item.</comment>
+  </data>
+  <data name="MainMenuAddGameTooltip" xml:space="preserve">
+    <value>Додати игру на листу. Можете исто тако двоструким кликом на иконицу у System Tray-у (најчешће доле десни угао у Windows-у) брзо додавати игрице превлачећи и испуштајући шорткатове (скраћенице) или извршне фајлове.</value>
+    <comment>Tooltip for a main menu item.</comment>
+  </data>
+  <data name="MainMenuClearGameListTooltip" xml:space="preserve">
+    <value>Обрисати сваки елемент у листи игара. Ова акција се не може накнадно оповргнути!</value>
+    <comment>Tooltip for a main menu item.</comment>
+  </data>
+  <data name="MainMenuOptions" xml:space="preserve">
+    <value>&amp;Опције</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsAbout" xml:space="preserve">
+    <value>О &amp;Game Launcher-у</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsAddGame" xml:space="preserve">
+    <value>&amp;Додај игре...</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsClearGameList" xml:space="preserve">
+    <value>&amp;Очисти листу игара...</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsPreferences" xml:space="preserve">
+    <value>&amp;Подешавања</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsRemoveGames" xml:space="preserve">
+    <value>&amp;Уклонити игре...</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsStatistics" xml:space="preserve">
+    <value>&amp;Статистике</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuQuit" xml:space="preserve">
+    <value>&amp;Излаз</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuRemoveGamesTooltip" xml:space="preserve">
+    <value>Уклонити једну или више игара са листе.</value>
+    <comment>Tooltip for a main menu item.</comment>
+  </data>
+  <data name="PieChartFormClearDataLinkText" xml:space="preserve">
+    <value>Очистити граф...</value>
+    <comment>Shown on the Pie Chart form</comment>
+  </data>
+  <data name="PieChartFormCloseButtonText" xml:space="preserve">
+    <value>&amp;Одустани</value>
+    <comment>Shown on the button that closes the form. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="PieChartFormGenerateChartButton" xml:space="preserve">
+    <value>&amp;Генериши податке са линком</value>
+    <comment>Shown on the Generate Chart button. The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="PieChartFormLabelPickerInside" xml:space="preserve">
+    <value>Ознаке унутра</value>
+    <comment>Shown in the label picker box</comment>
+  </data>
+  <data name="PieChartFormLabelPickerNone" xml:space="preserve">
+    <value>Без ознака</value>
+    <comment>Shown in the label picker box</comment>
+  </data>
+  <data name="PieChartFormLabelPickerOutside" xml:space="preserve">
+    <value>Ознаке споља</value>
+    <comment>Shown in the label picker box</comment>
+  </data>
+  <data name="PieChartFormNoData" xml:space="preserve">
+    <value>Ууупс! Изгледа да нема никаквих снимљених података. Играјте неке игре, па се онда вратите!</value>
+    <comment>Shown when there is no data for the form to display.</comment>
+  </data>
+  <data name="PieChartFormPleaseWait" xml:space="preserve">
+    <value>Молимо сачекајте</value>
+    <comment>Shown when generating a linkable chart</comment>
+  </data>
+  <data name="PieChartFormSaveAsImageButton" xml:space="preserve">
+    <value>&amp;Сними као слику...</value>
+    <comment>Shown on the Save As Image button. The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="PieChartFormSaveAsImageSuccess" xml:space="preserve">
+    <value>Ваша слика података је снимљена!</value>
+    <comment>Success message when user saves chart as image</comment>
+  </data>
+  <data name="PieChartFormSaveAsImageTitleBar" xml:space="preserve">
+    <value>Снимити граф као слику</value>
+    <comment>Text shown in the title bar for the file browser when user selected to save the chart as an image.</comment>
+  </data>
+  <data name="PieChartFormShowLegendCheckBox" xml:space="preserve">
+    <value>Приказати легенду</value>
+    <comment>Shown on the Show Legend checkbox, it toggles the color key/explanation on the right side</comment>
+  </data>
+  <data name="PieChartFormTimeDayShorthand" xml:space="preserve">
+    <value>д</value>
+    <comment>The one-character shorthand for "days"</comment>
+  </data>
+  <data name="PieChartFormTimeHourShorthand" xml:space="preserve">
+    <value>ч</value>
+    <comment>The one-character shorthand for "hours"</comment>
+  </data>
+  <data name="PieChartFormTimeMinuteShorthand" xml:space="preserve">
+    <value>м </value>
+    <comment>The one-character shorthand for "minutes"</comment>
+  </data>
+  <data name="PieChartFormTimeSecondShorthand" xml:space="preserve">
+    <value>с </value>
+    <comment>The one-character shorthand for "seconds"</comment>
+  </data>
+  <data name="PieChartFormTitleBar" xml:space="preserve">
+    <value>Game Launcher статистике играња</value>
+    <comment>Shown in the title bar of the Pie Chart form</comment>
+  </data>
+  <data name="PieChartFormTotalPlayingTime" xml:space="preserve">
+    <value>Укупно време играња</value>
+    <comment>Shown on the top of the pie chart form</comment>
+  </data>
+  <data name="RemoveFormCancelButton" xml:space="preserve">
+    <value>&amp;Одустани</value>
+    <comment>Shown on the Cancel button. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="RemoveFormConfirmRemoval" xml:space="preserve">
+    <value>Да ли сте сигурни да желите да уклоните селектован(е) елемент(е)?</value>
+    <comment>Shows when the user tries to remove items</comment>
+  </data>
+  <data name="RemoveFormFlavorTextLabel" xml:space="preserve">
+    <value>Молимо Вас да селектујете елементе које би сте желели да уклоните. Можете држати CTRL да би сте селектовали неколико елемената одједном.</value>
+    <comment>Shown in the Remove window</comment>
+  </data>
+  <data name="RemoveFormNoItemsSelected" xml:space="preserve">
+    <value>Ниједан елемент није селектован.</value>
+    <comment>Shown in the remove window when the user tries to remove items without having selected any.</comment>
+  </data>
+  <data name="RemoveFormRemoveItemsButton" xml:space="preserve">
+    <value>&amp;Уклони елемент(е)</value>
+    <comment>Shown on the Remove Item(s) button. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="RemoveFormTitleBar" xml:space="preserve">
+    <value>Уклонити елемент(е)</value>
+    <comment>Shown in the title bar of the Remove window</comment>
+  </data>
+  <data name="TranslationAuthor" xml:space="preserve">
+    <value>Превео на српски ћирилицом Rosenkranz</value>
+    <comment>Provide translator's name or nickname here.</comment>
+  </data>
+</root>

@@ -14,7 +14,7 @@
                 items &= element & vbNewLine
             Next
 
-            Dim response As DialogResult = MessageBox.Show("Are you sure you want to remove the selected item(s)?" & vbNewLine & vbNewLine & items, _
+            Dim response As DialogResult = MessageBox.Show(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("RemoveFormConfirmRemoval") & vbNewLine & vbNewLine & items, _
                                                            My.Application.Info.AssemblyName, MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
 
             If response = Windows.Forms.DialogResult.Yes Then

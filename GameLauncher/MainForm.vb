@@ -326,7 +326,7 @@ Public Class MainForm
         Dim currentLanguage As String = languageKey.GetValue("currentLanguage", Nothing)
 
         If currentLanguage Is Nothing Then
-            'Defaults to English
+            ' Language not set, default to English
             languageKey.SetValue("currentLanguage", "English")
             CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsEnglish.ResourceManager
         Else
@@ -337,6 +337,14 @@ Public Class MainForm
                     CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsNorwegian.ResourceManager
                 Case "German"
                     CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsGerman.ResourceManager
+                Case "Serbian (Cyrillic)"
+                    CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsSerbianCyrillic.ResourceManager
+                Case "Serbian (Latin)"
+                    CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsSerbianLatin.ResourceManager
+                Case Else
+                    ' Language set not valid, default to English
+                    languageKey.SetValue("currentLanguage", "English")
+                    CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsEnglish.ResourceManager
             End Select
         End If
 
@@ -1229,7 +1237,7 @@ Public Class MainForm
 
     Public Sub removeGame(ByVal sender As Object, e As System.EventArgs)
         Dim daddy As ToolStripMenuItem = sender.OwnerItem
-        If MessageBox.Show(String.Format("Are you sure you want to remove {0} from the list?", daddy.Text), "Game Launcher", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes Then
+        If MessageBox.Show(String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormRemoveGameMsg"), daddy.Text), "Game Launcher", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes Then
             Dim name As String = daddy.Text
             MainContextMenu.Items.Remove(daddy)
             daddy.Dispose()
