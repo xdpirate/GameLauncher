@@ -630,87 +630,93 @@ Public Class MainForm
     End Function
 
     Private Sub AddGameMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles AddGameMenuItem.Click
-        If AddNewGameForm.ShowDialog = Windows.Forms.DialogResult.OK Then
-            Dim gameName, cmdArgs, gamePath, launcherPath As String
-            Dim gameType As gameTypes
-            Dim img As Bitmap
+        If AddNewGameForm.Visible Then
+            AppActivate(AddNewGameForm.Text)
+            AddNewGameForm.WindowState = FormWindowState.Normal
+            AddNewGameForm.Focus()
+        Else
+            If AddNewGameForm.ShowDialog = Windows.Forms.DialogResult.OK Then
+                Dim gameName, cmdArgs, gamePath, launcherPath As String
+                Dim gameType As gameTypes
+                Dim img As Bitmap
 
-            gamePath = Nothing
-            launcherPath = Nothing
+                gamePath = Nothing
+                launcherPath = Nothing
 
-            'Determine type of game to be added
-            If AddNewGameForm.normalGameRadio.Checked Then
-                gamePath = AddNewGameForm.gamePathTextBox.Text.Trim
-                If AddNewGameForm.usesLauncherCheckBox.Checked Then
-                    launcherPath = AddNewGameForm.launcherPathTextBox.Text.Trim
-                    gameType = gameTypes.normalWithLauncher
+                'Determine type of game to be added
+                If AddNewGameForm.normalGameRadio.Checked Then
+                    gamePath = AddNewGameForm.gamePathTextBox.Text.Trim
+                    If AddNewGameForm.usesLauncherCheckBox.Checked Then
+                        launcherPath = AddNewGameForm.launcherPathTextBox.Text.Trim
+                        gameType = gameTypes.normalWithLauncher
+                    Else
+                        gameType = gameTypes.normal
+                    End If
                 Else
-                    gameType = gameTypes.normal
+                    gamePath = AddNewGameForm.steamAppIDTextBox.Text.Trim
+                    If AddNewGameForm.specifySteamExeCheckBox.Checked Then
+                        launcherPath = AddNewGameForm.steamExePathTextBox.Text.Trim
+                        gameType = gameTypes.steamWithExe
+                    Else
+                        gameType = gameTypes.steam
+                    End If
                 End If
-            Else
-                gamePath = AddNewGameForm.steamAppIDTextBox.Text.Trim
-                If AddNewGameForm.specifySteamExeCheckBox.Checked Then
-                    launcherPath = AddNewGameForm.steamExePathTextBox.Text.Trim
-                    gameType = gameTypes.steamWithExe
-                Else
-                    gameType = gameTypes.steam
-                End If
-            End If
 
-            gameName = AddNewGameForm.gameNameTextBox.Text.Trim.Replace("="c, "-"c).Replace("&", "&&")
-            cmdArgs = AddNewGameForm.commandLineTextBox.Text.Trim.Replace("=", "|||")
+                gameName = AddNewGameForm.gameNameTextBox.Text.Trim.Replace("="c, "-"c).Replace("&", "&&")
+                cmdArgs = AddNewGameForm.commandLineTextBox.Text.Trim.Replace("=", "|||")
 
-            If AddNewGameForm.getFromExeRadio.Checked Then ' From EXE
-                If AddNewGameForm.normalGameRadio.Checked Then ' From EXE and normal game
-                    Dim fileName As String = AddNewGameForm.gamePathTextBox.Text
-                    Dim extension As String = Path.GetExtension(fileName).ToLower
-                    img = New Bitmap(GetSmallIcon(fileName).ToBitmap)
-                Else ' From EXE and Steam game
-                    Dim fileName As String = AddNewGameForm.steamExePathTextBox.Text
-                    Dim extension As String = Path.GetExtension(fileName).ToLower
-                    img = New Bitmap(GetSmallIcon(fileName).ToBitmap)
-                End If
-            Else ' From other file
-                Select Case Path.GetExtension(AddNewGameForm.customIconPathTextBox.Text)
-                    Case ".exe" ' The other file is an application
-                        Dim fileName As String = AddNewGameForm.customIconPathTextBox.Text
+                If AddNewGameForm.getFromExeRadio.Checked Then ' From EXE
+                    If AddNewGameForm.normalGameRadio.Checked Then ' From EXE and normal game
+                        Dim fileName As String = AddNewGameForm.gamePathTextBox.Text
                         Dim extension As String = Path.GetExtension(fileName).ToLower
                         img = New Bitmap(GetSmallIcon(fileName).ToBitmap)
+                    Else ' From EXE and Steam game
+                        Dim fileName As String = AddNewGameForm.steamExePathTextBox.Text
+                        Dim extension As String = Path.GetExtension(fileName).ToLower
+                        img = New Bitmap(GetSmallIcon(fileName).ToBitmap)
+                    End If
+                Else ' From other file
+                    Select Case Path.GetExtension(AddNewGameForm.customIconPathTextBox.Text)
+                        Case ".exe" ' The other file is an application
+                            Dim fileName As String = AddNewGameForm.customIconPathTextBox.Text
+                            Dim extension As String = Path.GetExtension(fileName).ToLower
+                            img = New Bitmap(GetSmallIcon(fileName).ToBitmap)
 
-                        If img.Width > 16 Or img.Height > 16 Then 'If the image isn't 16x16, resize it
+                            If img.Width > 16 Or img.Height > 16 Then 'If the image isn't 16x16, resize it
+                                img = ResizeImage(img, New Size(16, 16), Drawing2D.InterpolationMode.HighQualityBicubic, True)
+                            End If
+                        Case Else REM The other file is an image
+                            img = New Bitmap(AddNewGameForm.customIconPathTextBox.Text)
                             img = ResizeImage(img, New Size(16, 16), Drawing2D.InterpolationMode.HighQualityBicubic, True)
-                        End If
-                    Case Else REM The other file is an image
-                        img = New Bitmap(AddNewGameForm.customIconPathTextBox.Text)
-                        img = ResizeImage(img, New Size(16, 16), Drawing2D.InterpolationMode.HighQualityBicubic, True)
+                    End Select
+                End If
+
+                Dim errorMsg As String = Nothing
+                Select Case gameType
+                    Case gameTypes.normal
+                        errorMsg = newAddGame(gameTypes.normal, gameName, gamePath, img, Nothing, cmdArgs)
+                    Case gameTypes.normalWithLauncher
+                        errorMsg = newAddGame(gameTypes.normal, gameName, gamePath, img, launcherPath, cmdArgs)
+                    Case gameTypes.steam
+                        errorMsg = newAddGame(gameTypes.steam, gameName, gamePath, img, Nothing, cmdArgs)
+                    Case gameTypes.steamWithExe
+                        errorMsg = newAddGame(gameTypes.steam, gameName, gamePath, img, launcherPath, cmdArgs)
                 End Select
+
+                If errorMsg <> "Success" Then
+                    MessageBox.Show(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormAddGameFailed1") & vbNewLine & errorMsg & vbNewLine & vbNewLine & _
+                                    CURRENT_LANGUAGE_RESOURCE.GetString("MainFormAddGameFailed2"), _
+                                    My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Else
+                    populateDock()
+                    clearMenu()
+                    rebuildMenu()
+                    commitChanges()
+                End If
             End If
 
-            Dim errorMsg As String = Nothing
-            Select Case gameType
-                Case gameTypes.normal
-                    errorMsg = newAddGame(gameTypes.normal, gameName, gamePath, img, Nothing, cmdArgs)
-                Case gameTypes.normalWithLauncher
-                    errorMsg = newAddGame(gameTypes.normal, gameName, gamePath, img, launcherPath, cmdArgs)
-                Case gameTypes.steam
-                    errorMsg = newAddGame(gameTypes.steam, gameName, gamePath, img, Nothing, cmdArgs)
-                Case gameTypes.steamWithExe
-                    errorMsg = newAddGame(gameTypes.steam, gameName, gamePath, img, launcherPath, cmdArgs)
-            End Select
-
-            If errorMsg <> "Success" Then
-                MessageBox.Show(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormAddGameFailed1") & vbNewLine & errorMsg & vbNewLine & vbNewLine & _
-                                CURRENT_LANGUAGE_RESOURCE.GetString("MainFormAddGameFailed2"), _
-                                My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Else
-                populateDock()
-                clearMenu()
-                rebuildMenu()
-                commitChanges()
-            End If
+            AddNewGameForm.resetForm()
         End If
-
-        AddNewGameForm.resetForm()
     End Sub
 
     Sub commitChanges()
