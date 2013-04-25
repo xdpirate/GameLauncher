@@ -68,8 +68,9 @@ Partial Class GLOptions
         '
         'GTFOButton
         '
+        Me.GTFOButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GTFOButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.GTFOButton.Location = New System.Drawing.Point(243, 174)
+        Me.GTFOButton.Location = New System.Drawing.Point(299, 174)
         Me.GTFOButton.Name = "GTFOButton"
         Me.GTFOButton.Size = New System.Drawing.Size(99, 23)
         Me.GTFOButton.TabIndex = 3
@@ -78,6 +79,7 @@ Partial Class GLOptions
         '
         'InfoLabel
         '
+        Me.InfoLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.InfoLabel.AutoSize = True
         Me.InfoLabel.Location = New System.Drawing.Point(9, 179)
         Me.InfoLabel.Name = "InfoLabel"
@@ -87,6 +89,9 @@ Partial Class GLOptions
         '
         'PreferencesGroupBox
         '
+        Me.PreferencesGroupBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PreferencesGroupBox.Controls.Add(Me.LanguagePicker)
         Me.PreferencesGroupBox.Controls.Add(Me.Label1)
         Me.PreferencesGroupBox.Controls.Add(Me.autoUpdateCheckBox)
@@ -96,17 +101,18 @@ Partial Class GLOptions
         Me.PreferencesGroupBox.Controls.Add(Me.playTimeInSkypeNotificationsCheckBox)
         Me.PreferencesGroupBox.Location = New System.Drawing.Point(12, 12)
         Me.PreferencesGroupBox.Name = "PreferencesGroupBox"
-        Me.PreferencesGroupBox.Size = New System.Drawing.Size(330, 156)
+        Me.PreferencesGroupBox.Size = New System.Drawing.Size(386, 156)
         Me.PreferencesGroupBox.TabIndex = 5
         Me.PreferencesGroupBox.TabStop = False
         Me.PreferencesGroupBox.Text = "Preferences"
         '
         'LanguagePicker
         '
+        Me.LanguagePicker.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LanguagePicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.LanguagePicker.FormattingEnabled = True
         Me.LanguagePicker.Items.AddRange(New Object() {"Catalan", "English", "German", "Norwegian", "Serbian (Cyrillic)", "Serbian (Latin)", "Spanish"})
-        Me.LanguagePicker.Location = New System.Drawing.Point(203, 128)
+        Me.LanguagePicker.Location = New System.Drawing.Point(259, 128)
         Me.LanguagePicker.Name = "LanguagePicker"
         Me.LanguagePicker.Size = New System.Drawing.Size(121, 21)
         Me.LanguagePicker.TabIndex = 6
@@ -146,7 +152,7 @@ Partial Class GLOptions
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.GTFOButton
-        Me.ClientSize = New System.Drawing.Size(354, 209)
+        Me.ClientSize = New System.Drawing.Size(410, 209)
         Me.Controls.Add(Me.PreferencesGroupBox)
         Me.Controls.Add(Me.InfoLabel)
         Me.Controls.Add(Me.GTFOButton)
