@@ -152,6 +152,11 @@
     <Compile Include="GLOptions.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Languages\mlsCatalan.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mlsCatalan.resx</DependentUpon>
+    </Compile>
     <Compile Include="Languages\mlsGerman.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -238,6 +243,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GLOptions.resx">
       <DependentUpon>GLOptions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Languages\mlsCatalan.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>mlsCatalan.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Languages\mlsGerman.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>

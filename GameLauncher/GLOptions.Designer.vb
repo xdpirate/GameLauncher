@@ -105,7 +105,7 @@ Partial Class GLOptions
         '
         Me.LanguagePicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.LanguagePicker.FormattingEnabled = True
-        Me.LanguagePicker.Items.AddRange(New Object() {"English", "German", "Norwegian", "Serbian (Cyrillic)", "Serbian (Latin)", "Spanish"})
+        Me.LanguagePicker.Items.AddRange(New Object() {"Catalan", "English", "German", "Norwegian", "Serbian (Cyrillic)", "Serbian (Latin)", "Spanish"})
         Me.LanguagePicker.Location = New System.Drawing.Point(203, 128)
         Me.LanguagePicker.Name = "LanguagePicker"
         Me.LanguagePicker.Size = New System.Drawing.Size(121, 21)
