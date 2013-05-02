@@ -167,6 +167,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>mlsPirate.resx</DependentUpon>
     </Compile>
+    <Compile Include="Languages\mlsPortuguese.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mlsPortuguese.resx</DependentUpon>
+    </Compile>
     <Compile Include="Languages\mlsSerbianCyrillic.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -263,6 +268,11 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>mlsPirate.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Languages\mlsPortuguese.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>mlsPortuguese.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Languages\mlsSerbianCyrillic.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
