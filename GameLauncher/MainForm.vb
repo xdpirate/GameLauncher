@@ -152,12 +152,6 @@ Public Class MainForm
         End If
     End Sub
 
-    'Public Declare Function FindWindow Lib "user32.dll" Alias "FindWindowA" (ByVal lpClassName As String, ByVal lpWindowName As String) As Long
-    'Public Declare Function SetFocusAPI Lib "user32.dll" Alias "SetFocus" (ByVal hWnd As Long) As Long
-    'Dim hWnd As Long
-    'hWnd = FindWindow(vbNullString, "window name")
-    'SetFocusAPI(hWnd)
-
     Public Sub takeGameViaCommandLine(ByVal args As String)
         Dim skip As Boolean = False
         Dim currentFile As String = args
@@ -347,6 +341,8 @@ Public Class MainForm
                     CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsCatalan.ResourceManager
                 Case "Portuguese"
                     CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsPortuguese.ResourceManager
+                Case "Swedish"
+                    CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsSwedish.ResourceManager
                 Case "Pirate"
                     CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsPirate.ResourceManager
                 Case Else
@@ -599,7 +595,7 @@ Public Class MainForm
         End With
     End Sub
 
-    Public Sub checkForUpdates()
+    Public Function checkForUpdates() As String
         If skipUpdateThisSession = False Then
             Try
                 Dim webVersion As String = phoneHome()
@@ -607,18 +603,18 @@ Public Class MainForm
                 If CInt(webVersion) > GL_VERSION Then
                     skipUpdateThisSession = True
                     UpdateChecker.Enabled = False
-                    If MessageBox.Show(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormNewVersionAvailable1") & vbNewLine & vbNewLine & _
-                                       CURRENT_LANGUAGE_RESOURCE.GetString("MainFormNewVersionAvailable2"), _
-                                        My.Application.Info.AssemblyName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, _
-                                        MessageBoxDefaultButton.Button1) = Windows.Forms.DialogResult.Yes Then
-                        System.Diagnostics.Process.Start("http://code.google.com/p/game-launcher/downloads/detail?name=GameLauncher-v" & newVersion.ToString & ".rar")
-                    End If
+                    Return newVersion.ToString
+                Else
+                    Return Nothing
                 End If
             Catch ex As Exception
                 'An error occured while checking for updates. Ignore it and continue checking for updates.
+                Return Nothing
             End Try
+        Else
+            Return Nothing
         End If
-    End Sub
+    End Function
 
     Public Function phoneHome() As String
         Dim fileReader As New WebClient()
@@ -1626,7 +1622,7 @@ Public Class MainForm
     End Sub
 
     Private Sub updateWorker_DoWork(sender As System.Object, e As System.ComponentModel.DoWorkEventArgs) Handles updateWorker.DoWork
-        checkForUpdates()
+        e.Result = checkForUpdates()
     End Sub
 
     Private Sub PreferencesToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles PreferencesToolStripMenuItem.Click
@@ -1757,4 +1753,12 @@ Public Class MainForm
         My.Computer.FileSystem.CurrentDirectory = Application.StartupPath
     End Sub
 
+    Private Sub updateWorker_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles updateWorker.RunWorkerCompleted
+        Dim newVersion As String = DirectCast(e.Result, String)
+
+        If newVersion IsNot Nothing Then 'If new version was found
+            NotificationForm.newVersion = DirectCast(e.Result, String)
+            NotificationForm.Show()
+        End If
+    End Sub
 End Class

@@ -120,12 +120,12 @@
   <data name="AboutFormAuthorNote" xml:space="preserve">
     <value>Game Launcher
 © 2012-2013 xdpirate
-Betatesting av Kurithas.
-Mange takk til Lisa for hennes støtte.</value>
+Betatestning av Kurithas.
+Särskilt tack till Lisa för hennes stöd.</value>
     <comment>The note shown on the about window, copyright and thanks</comment>
   </data>
   <data name="AboutFormCloseButtonText" xml:space="preserve">
-    <value>&amp;Lukk</value>
+    <value>St&amp;äng</value>
     <comment>Text shown on the button that closes the about window; The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="AboutFormContactText" xml:space="preserve">
@@ -133,39 +133,39 @@ Mange takk til Lisa for hennes støtte.</value>
     <comment>Text shown on the link to contact the author</comment>
   </data>
   <data name="AboutFormNewVersion1" xml:space="preserve">
-    <value>En ny versjon av Game Launcher er tilgjengelig (v</value>
+    <value>En ny version av Game Launcher är tillgänglig (v</value>
     <comment>First part of new version available message</comment>
   </data>
   <data name="AboutFormNewVersion2" xml:space="preserve">
-    <value>Vil du laste ned denne versjonen nå?</value>
+    <value>Vill du hämta den nu?</value>
     <comment>Second part of new version available message</comment>
   </data>
   <data name="AboutFormUpdateCheckButtonText" xml:space="preserve">
-    <value>&amp;Sjekk etter oppdateringer</value>
+    <value>Sök efter &amp;uppdateringar</value>
     <comment>Text shown on the button that checks for a new update; The ampersand signifes a keyboard shortcut</comment>
   </data>
   <data name="AboutFormUpdateError1" xml:space="preserve">
-    <value>Det oppstod en feil ved sjekk av programoppdateringer:</value>
+    <value>Ett fel inträffade under sökningen efter uppdateringar:</value>
     <comment>Notifies the user that an error occured while checking for update, part 1 of error msg</comment>
   </data>
   <data name="AboutFormUpdateError2" xml:space="preserve">
-    <value>Vennligst prøv igjen senere, eller ta kontakt med forfatteren av dette programmet om problemet ikke løser seg.</value>
+    <value>Var god försök igen senare, eller kontakta utgivaren om problemet kvarstår.</value>
     <comment>Asks to try again later if update failed, part 2 of error msg</comment>
   </data>
   <data name="AboutFormUpToDate" xml:space="preserve">
-    <value>Du har allerede nyeste versjon av Game Launcher!</value>
+    <value>Du använder den senaste versionen av Game Launcher.</value>
     <comment>Notifies the user that the application is up to date</comment>
   </data>
   <data name="AboutFormWebsiteLinkText" xml:space="preserve">
-    <value>Hjemmeside</value>
+    <value>Webbsida</value>
     <comment>Text shown on the link to the application's website</comment>
   </data>
   <data name="AddNewGameFormBrowseButtons" xml:space="preserve">
-    <value>&amp;Søk...</value>
+    <value>&amp;Bläddra...</value>
     <comment>Common text for all Browse buttons on the form; The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="AddNewGameFormBrowseExeHelpText" xml:space="preserve">
-    <value>Trykk denne knappen for å velge programmet som kjører spillet. Dette er som regel en .exe-fil.</value>
+    <value>Klicka på den här knappen för att välja programfilen för att starta spelet. Detta är oftast en .exe-fil.</value>
     <comment>Help text shown while hovering over the Browse button for Normal Game</comment>
   </data>
   <data name="AddNewGameFormCancelButton" xml:space="preserve">
@@ -173,103 +173,103 @@ Mange takk til Lisa for hennes støtte.</value>
     <comment>Flavor text for the button that cancels the game entry; The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="AddNewGameFormCancelHelpText" xml:space="preserve">
-    <value>Trykk denne knappen om du vil avbryte. Om du har flere spill i kø for å bli lagt til, må du avbryte alle.</value>
+    <value>Klicka på den här knappen om du vill avbryta att lägga till spelet. Om du har har fler spel i kö för att läggas till (t.ex. om du högerklickat på flera filer i Explorer), så kommer du avbryta samtliga.</value>
     <comment>Help text shown while hovering over the Cancel button</comment>
   </data>
   <data name="AddNewGameFormCmdArgsHelpText" xml:space="preserve">
-    <value>Skriv inn kommandlineargumenter som brukes når du kjører spillet. Om du ikke vet hva dette er, kan du la feltet stå tomt.</value>
+    <value>Ange kommandorads-argumenten för spelet. Om du inte vet vad det här är så kan du låta det vara tomt.</value>
     <comment>Help text shown while hovering over the Command-Line Arguments text box</comment>
   </data>
   <data name="AddNewGameFormCmdArgsLabel" xml:space="preserve">
-    <value>Kommandolinjeargumenter:</value>
+    <value>Kommandorads-argument:</value>
     <comment>Label text for command line arguments</comment>
   </data>
   <data name="AddNewGameFormCustomIconHelpText" xml:space="preserve">
-    <value>Trykk denne knappen for å velge et tilpasset ikon. Ikonet må være BMP, PNG, GIF, JPG eller ICO, og vil bli skalert til 16x16. Du kan også velge en EXE-fil for å bruke dets ikon. Forholdene i bildet vil bli bevart.</value>
+    <value>Klicka på den här knappen för att välja en egen ikon. En ikon måste vara en bild i formaten BMP, PNG, GIF, JPG eller ICO, och kommer skalas om till 16x16. Du kan även välja en EXE-fil för att använda dess ikon. Bildens höjd-bredd-förhållande kommer att bevaras.</value>
     <comment>Help text shown while hovering over the Browse button for Get From Other File</comment>
   </data>
   <data name="AddNewGameFormDefaultHelpText" xml:space="preserve">
-    <value>Hold pekeren over et element for å vise hjelp i dette panelet.</value>
+    <value>När muspekaren förs över ett val så visas ytterligare information här.</value>
     <comment>Text shown in the help pane when nothing else is hovered over.</comment>
   </data>
   <data name="AddNewGameFormErrorGetFromOtherFileNoIcon" xml:space="preserve">
-    <value>Du må spesifisere et ikon hvis "Hent fra annen fil" er valgt.</value>
+    <value>Du måste ange en ikon om "Hämta från annan fil" är vald.</value>
     <comment>Error message when the user didn't choose an icon when 'Get from other file' was also selected</comment>
   </data>
   <data name="AddNewGameFormErrorLauncherExeNotFound" xml:space="preserve">
-    <value>Launcher-programmet ble ikke funnet: </value>
+    <value>Spelets launcherprogramfil kunde inte hittas: </value>
     <comment>Error message when the launcher exe could not be found</comment>
   </data>
   <data name="AddNewGameFormErrorMainExeNotFound" xml:space="preserve">
-    <value>Hovedprogrammet ble ikke funnet:</value>
+    <value>Huvudprogramfilen kunde inte hittas: </value>
     <comment>Error message when the main exe could not be found</comment>
   </data>
   <data name="AddNewGameFormErrorNoAppId" xml:space="preserve">
-    <value>Du må skrive inn Steam App ID for spillet.</value>
+    <value>Du måste ange ett Steam App ID för spelet.</value>
     <comment>Error message when the user hasn't entered a Steam App ID</comment>
   </data>
   <data name="AddNewGameFormErrorNoLauncherPath" xml:space="preserve">
-    <value>Du må spesifisere en sti for launcher-programmet.</value>
+    <value>Du måste ange en sökväg till spelets launcher.</value>
     <comment>Error message when the user hasn't entered a launcher path</comment>
   </data>
   <data name="AddNewGameFormErrorNoMainPath" xml:space="preserve">
-    <value>Du må spesifisere en sti for hovedprogrammet. </value>
+    <value>Du måste ange en sökväg till huvudprogramfilen.</value>
     <comment>Error message when the user hasn't entered a path</comment>
   </data>
   <data name="AddNewGameFormErrorNoName" xml:space="preserve">
-    <value>Du må spesifisere et navn for spillet.</value>
+    <value>Du måste ange ett namn för spelet.</value>
     <comment>Error message when user hasn't entered a name</comment>
   </data>
   <data name="AddNewGameFormErrorNoSteamExePath" xml:space="preserve">
-    <value>Du må spesifisere en sti til programmet Steam bruker for å kjøre spillet.</value>
+    <value>Du måste ange en sökväg till programfilen som Steam använder för att starta spelet.</value>
     <comment>Error message when the user hasn't entered a Steam path</comment>
   </data>
   <data name="AddNewGameFormErrorNoSteamExePathClickedGetFromExecutable" xml:space="preserve">
-    <value>Du kan ikke velge "Hent fra program" hvis du ikke har spesifisert et program for et Steam-spill.</value>
+    <value>Du kan inte välja "Hämta från programfil" som ikon om du inte har angett en programfil för det Steam-baserade spelet.</value>
     <comment>Error message when the user has clicked 'Get from executable' when no Steam executable has been selected</comment>
   </data>
   <data name="AddNewGameFormErrorNoSteamIcon" xml:space="preserve">
-    <value>Du må spesifisere et ikon for dette Steam-spillet.</value>
+    <value>Du måste ange en ikon för detta Steam-baserade spel.</value>
     <comment>Error message when the user didn't choose an icon for a Steam game</comment>
   </data>
   <data name="AddNewGameFormErrorSteamExeNotFound" xml:space="preserve">
-    <value>Det spesifiserte programmet for Steam-spillet ble ikke funnet:</value>
+    <value>Den valda programfilen för det Steam-baserade spelet kunde inte hittas: </value>
     <comment>Error message when the selected exe for a Steam game could not be found</comment>
   </data>
   <data name="AddNewGameFormGameInfoGroupBox" xml:space="preserve">
-    <value>Spillinformasjon</value>
+    <value>Spelinformation</value>
     <comment>Flavor text for the group box that contains controls for entering game information</comment>
   </data>
   <data name="AddNewGameFormGameNameHelpText" xml:space="preserve">
-    <value>Skriv in navnet på spillet her. Det kan hete hva som helst, men lik-tegnet (=) vil bli erstattet med bindestrek (-) pga. tekniske limitasjoner.</value>
+    <value>Ange ett namn för spelet som läggs till här. Det kan heta vad som helst, men likamedstecken (=) kommer ersättas av bindestreck (-) på grund av tekniska begränsningar.</value>
     <comment>Help text shown while hovering over the Game Name text box</comment>
   </data>
   <data name="AddNewGameFormGameNameLabel" xml:space="preserve">
-    <value>Navn:</value>
+    <value>Namn:</value>
     <comment>Label text for game display name</comment>
   </data>
   <data name="AddNewGameFormGamePathsGroupBox" xml:space="preserve">
-    <value>Stier til spillet/Steam App ID</value>
+    <value>Spelsökväg/Steam app ID</value>
     <comment>Flavor text for the group box that contains controls for entering game paths</comment>
   </data>
   <data name="AddNewGameFormGetFromExeHelpText" xml:space="preserve">
-    <value>Velg dette valget om du vil at Game Launcher skal hente ikonet fra spillprogrammet.</value>
+    <value>Välj detta om du vill att Game Launcher ska hämta spelikonen från det valda spelets programfil.</value>
     <comment>Help text shown while hovering over the Get From Exe radio button</comment>
   </data>
   <data name="AddNewGameFormGetFromExeRadio" xml:space="preserve">
-    <value>Hent fra program</value>
+    <value>Hämta från programfil</value>
     <comment>Flavor text for the radio button that selects to get the icon from the chosen exe file</comment>
   </data>
   <data name="AddNewGameFormGetFromOtherFileHelpText" xml:space="preserve">
-    <value>Velg dette valget om du vil spesifisere ikonet selv.</value>
+    <value>Välj detta om du vill själv ange en ikon.</value>
     <comment>Help text shown while hovering hover the Get From Other File radio button</comment>
   </data>
   <data name="AddNewGameFormGetFromOtherFileRadio" xml:space="preserve">
-    <value>Hent fra annen fil</value>
+    <value>Hämta från annan fil</value>
     <comment>Flavor text for the radio button that selects to get the icon from another file</comment>
   </data>
   <data name="AddNewGameFormHelpGroupBox" xml:space="preserve">
-    <value>Hjelp</value>
+    <value>Hjälp</value>
     <comment>Flavor text for the group box that contains the help label</comment>
   </data>
   <data name="AddNewGameFormIconGroupBox" xml:space="preserve">
@@ -277,255 +277,259 @@ Mange takk til Lisa for hennes støtte.</value>
     <comment>Flavor text for the group box that contains controls for modifying the game's icon</comment>
   </data>
   <data name="AddNewGameFormIconHelpText" xml:space="preserve">
-    <value>Denne forhåndsviser ikonet som blir brukt. Om Game Launcher er satt til å hente ikonet fra spillprogrammet, må du spesifisere programmet før denne oppdaterer.</value>
+    <value>Här förhandsvisas ikonen som kommer användas. Om Game Launcher är inställd på att hämta ikonen från spelet programfil så måste du ange programfilen innan ikonen syns här.</value>
     <comment>Help text shown while hovering over the icon preview picturebox</comment>
   </data>
   <data name="AddNewGameFormKeepIconRadio" xml:space="preserve">
-    <value>Behold nåværende ikon</value>
+    <value>Behåll nuvarande ikon</value>
     <comment>Flavor text for the radio button that selects to keep the current icon (if editing a game)</comment>
   </data>
   <data name="AddNewGameFormLauncherBrowseHelpText" xml:space="preserve">
-    <value>Trykk denne knappen for å velge launcheren som brukes til å kjøre hovedspillprogrammet.</value>
+    <value>Klicka på den här knappen för att välja launcher som används för att starta spelets huvudprogramfil.</value>
     <comment>Help text shown while hovering over the Browse button for the launcher</comment>
   </data>
   <data name="AddNewGameFormNormalGameHelpText" xml:space="preserve">
-    <value>Velg dette valget om dette er et vanlig spill (dvs. at det ikke bruker Steam).</value>
+    <value>Välj detta om spelet är ett vanligt spel (alltså att det inte använder Steam).</value>
     <comment>Help text shown while hovering over the Normal Game radio button</comment>
   </data>
   <data name="AddNewGameFormNormalGameRadio" xml:space="preserve">
-    <value>Vanlig spill</value>
+    <value>Vanligt spel</value>
     <comment>Flavor text for the radio button that selects the normal game mode (As opposed to Steam game mode)</comment>
   </data>
   <data name="AddNewGameFormOKButton" xml:space="preserve">
     <value>&amp;OK</value>
     <comment>Flavor text for the button that finalizes the game entry, the OK-button; The ampersand signifies a keyboard shortcut</comment>
   </data>
+  <data name="AddNewGameFormOKHelp" xml:space="preserve">
+    <value>Klicka på den här knappen när du har fyllt i alla detaljer för spelet.</value>
+    <comment>Shown in the Add New Game Form.</comment>
+  </data>
   <data name="AddNewGameFormSpecifySteamExeCheckBox" xml:space="preserve">
-    <value>Velg program</value>
+    <value>Ange programfil</value>
     <comment>Flavor text for the check box that selects whether to specify an executable for a Steam game</comment>
   </data>
   <data name="AddNewGameFormSpecifySteamExeHelpText" xml:space="preserve">
-    <value>Trykk denne boksen om du vil velge programmet Steam bruker til å kjøre spillet, Game Launcher vil da føre statistikk over Steam-spillet. Om spillet bruker en launcher, trenger du ikke velge den, bare velg hovedprogrammet spillet kjører fra.from.</value>
+    <value>Klicka i denna kryssruta om du vill välja programfil som Steam använder för att köra spelet. Om anger detta så aktiverar du sparning av speltidsdata för Steam-baserade spel. Om spelet använder en launcher så behöver du inte välja den, utan välj huvudprogramfil spelet körs från.</value>
     <comment>Help text shown while hovering over the Specify Steam Exe checkbox</comment>
   </data>
   <data name="AddNewGameFormSteamAppIdHelpText" xml:space="preserve">
-    <value>Skriv inn Steam App ID her. For å finne IDen, finn spillet i Steam-butikken, og kopier IDen fra den siste delen av addressen (f.eks http://store.steampowered.com/app/24980/ -&gt; IDen her er 24980)</value>
+    <value>Ange Steam App ID här. För att hitta detta, hitta spelet i Steam Store och kopiera det från den sista delen av URLen (t.ex. http://store.steampowered.com/app/24980/ -&gt; IDt här är 24980)</value>
     <comment>Help text shown while hovering over the Steam App Id text box</comment>
   </data>
   <data name="AddNewGameFormSteamExeBrowseHelpText" xml:space="preserve">
-    <value>Trykk her for å finne hovedprogrammet Steam bruker for å kjøre spillet.</value>
+    <value>Klicka här för att bläddra efter huvudprogramfilen Steam använder för att köra spelet.</value>
     <comment>Help text shown while hovering over the Browse for Steam Exe button</comment>
   </data>
   <data name="AddNewGameFormSteamGameRadio" xml:space="preserve">
-    <value>Steam-spill</value>
+    <value>Steam-baserat spel</value>
     <comment>Flavor text for the radio button that selects the Steam game mode (As opposed to the normal game mode)</comment>
   </data>
   <data name="AddNewGameFormSteamHelpText" xml:space="preserve">
-    <value>Velg dette valge om dette er et spill som må kjøres via Steam.</value>
+    <value>Välj detta om spelet måste köras genom Steam.</value>
     <comment>Help text shown while hovering over the Steam Game radio</comment>
   </data>
   <data name="AddNewGameFormTitleBar" xml:space="preserve">
-    <value>Legg til eller endre spill</value>
+    <value>Lägg till eller redigera spel</value>
     <comment>The text shown in the title bar of the Add/Edit game window</comment>
   </data>
   <data name="AddNewGameFormUsesLauncherCheckBox" xml:space="preserve">
-    <value>Bruker en launcher</value>
+    <value>Använder en launcher</value>
     <comment>Flavor text for the check box that selects whether the game uses a launcher exe</comment>
   </data>
   <data name="AddNewGameFormUsesLauncherHelpText" xml:space="preserve">
-    <value>Trykk denne boksen om spillet du legger til bruker en launcher. En launcher er et program som kreves for å så kjøre hovedprogrammet, Game Launcher vil da føre statistikk over spillet som trenger en launcher.</value>
+    <value>Klicka i denna kryssruta om spelet du lägger till använder en launcher. En launcher är en programfil som i sin tur startar huvudprogramfilen för spelet. Om du anger detta så aktiverar du sparning av speltidsdata för spel som måste startas med en launcher.</value>
     <comment>Help text shown while hovering over the Uses Launcher check box</comment>
   </data>
   <data name="DockOpacityFormHoverOpacityGroupBox" xml:space="preserve">
-    <value>Sidepanelets gjennomsiktighet når i fokus (pekeren hviler over docken)</value>
+    <value>Sidpanelens genomskinlighet (i fokus, när muspekaren är ovanpå panelen)</value>
     <comment>Flavor text shown in the group box that contains controls to change the opacity when in focus</comment>
   </data>
   <data name="DockOpacityFormNormalOpacityGroupBox" xml:space="preserve">
-    <value>Sidepanelets gjennomsiktighet når ikke i fokus</value>
+    <value>Sidpanelens genomskinlighet (ej i fokus)</value>
     <comment>Flavor text shown in the group box that contains controls to change the opacity when not in focus</comment>
   </data>
   <data name="DockOpacityFormSaveButton" xml:space="preserve">
-    <value>&amp;Lagre</value>
+    <value>&amp;Spara</value>
     <comment>Text shown on the 'Save' button; The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="DockOpacityFormTitleBar" xml:space="preserve">
-    <value>Endre gjennomsiktighet</value>
+    <value>Ändra genomskinlighet</value>
     <comment>The text shown in the title bar of the Dock Opacity window</comment>
   </data>
   <data name="DragDropTargetFormTitleBar" xml:space="preserve">
-    <value>Slipp snarvei eller program her!</value>
+    <value>Drag och släpp en genväg eller programfil här!</value>
     <comment>Text shown in the drag-and-drop window's title bar</comment>
   </data>
   <data name="EmbeddableChartFormCopiedToClipBoardText" xml:space="preserve">
-    <value>Lenke kopiert!</value>
+    <value>Länk kopierad till urklipp!</value>
     <comment>Text shown in the message box when a user clicks the copy to clipboard button</comment>
   </data>
   <data name="EmbeddableChartFormCopyButton" xml:space="preserve">
-    <value>&amp;Kopier</value>
+    <value>&amp;Kopiera</value>
     <comment>Text shown on the Copy button; The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="EmbeddableChartFormCourtesyLabel" xml:space="preserve">
-    <value>Takk til is.gd for korte lenker</value>
+    <value>Kortlänkar från is.gd</value>
     <comment>Text shown on the courtesy label; is.gd is a website</comment>
   </data>
   <data name="EmbeddableChartFormFlavorTextLabel" xml:space="preserve">
-    <value>Suksess! Send lenken under til dine venner og elskede:</value>
+    <value>Lyckades! Skicka länken nedan till dina vänner:</value>
     <comment>Text shown in the label of the linkable chart window</comment>
   </data>
   <data name="EmbeddableChartFormGTFOButton" xml:space="preserve">
-    <value>&amp;Lukk</value>
+    <value>St&amp;äng</value>
     <comment>Text shown on the Close button; The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="EmbeddableChartFormTitleBar" xml:space="preserve">
-    <value>Linkbart diagram</value>
+    <value>Länkbart diagram</value>
     <comment>Text shown in the title bar of the linkable chart window</comment>
   </data>
   <data name="EmbeddableChartFormVisitLinkButton" xml:space="preserve">
-    <value>&amp;Besøk</value>
+    <value>&amp;Följ länk</value>
     <comment>Text shown on the Visit Link button; The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="GLOptionsFormAutoUpdateCheckBox" xml:space="preserve">
-    <value>Sjekk automatisk for oppdateringer</value>
+    <value>Sök efter uppdateringar automatiskt</value>
     <comment>Text shown on the 'Automatically check for updates' check box</comment>
   </data>
   <data name="GLOptionsFormExplorerIntegrationText" xml:space="preserve">
-    <value>Legg til i &amp;Game Launcher</value>
+    <value>Lägg till i &amp;Game Launcher</value>
     <comment>This text appears in Windows Explorer, when having right-clicked a supported file; The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="GLOptionsFormGTFOButton" xml:space="preserve">
-    <value>&amp;Lukk</value>
+    <value>St&amp;äng</value>
     <comment>Text shown on the Close button; The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="GLOptionsFormInfoLabel" xml:space="preserve">
-    <value>Endringer trer i kraft med en gang.</value>
+    <value>Ändringarna träder i kraft direkt.</value>
     <comment>Text shown on the Preferences form</comment>
   </data>
   <data name="GLOptionsFormIntegrateWithExplorerCheckBox" xml:space="preserve">
-    <value>Integrer med Windows Explorer</value>
+    <value>Integrera med Windows Explorer</value>
     <comment>Text shown on the 'Integrate with Windows Explorer' check box</comment>
   </data>
   <data name="GLOptionsFormPlayTimeInSkypeNotificationsCheckBox" xml:space="preserve">
-    <value>Vis tid spilt når du avslutter et spill</value>
+    <value>Visa tid spelat när spelet avslutas</value>
     <comment>Text shown on the 'Show time spent playing when exiting game' check box</comment>
   </data>
   <data name="GLOptionsFormPreferencesGroupBox" xml:space="preserve">
-    <value>Innstillinger</value>
+    <value>Inställningar</value>
     <comment>Flavor text shown in the group box that houses the preferences, in the Preferences window</comment>
   </data>
   <data name="GLOptionsFormSkypeNotificationsCheckBox" xml:space="preserve">
-    <value>Send notifikasjoner til Skype når du starter/slutter et spill</value>
+    <value>Skicka notifieringar till Skype när du börjar / slutar spela</value>
     <comment>Text shown on the 'Send notifications to Skype when you start/stop playing' check box</comment>
   </data>
   <data name="GLOptionsFormStartOnLoginCheckBox" xml:space="preserve">
-    <value>Start Game Launcher når du logger inn</value>
+    <value>Starta Game Launcher när du loggar in</value>
     <comment>Text shown on the 'Start Game Launcher on startup' check box</comment>
   </data>
   <data name="GLOptionsFormTitleBar" xml:space="preserve">
-    <value>Game Launcher-innstillinger</value>
+    <value>Inställningar för Game Launcher</value>
     <comment>This text appears in the title bar of the Preferences window</comment>
   </data>
   <data name="MainFormAddGameFailed1" xml:space="preserve">
-    <value>Noe gikk gærent! .NET Framework sier:</value>
+    <value>Någonting gick fel! Meddelande från .NET Framework:</value>
     <comment>First part of text shown when something went wrong adding a game</comment>
   </data>
   <data name="MainFormAddGameFailed2" xml:space="preserve">
-    <value>Om du mener dette er en bug, eller om feilmeldingen ikke forsvinner, kontakt forfatteren.</value>
+    <value>Om du tror att det här är ett bugg, eller att felmeddelandet kvarstår, var god kontakta utgivaren.</value>
     <comment>Second part of text shown when something went wrong adding a game</comment>
   </data>
   <data name="MainFormBalloonTipLoadedMessageText" xml:space="preserve">
-    <value>Høyreklikk dette ikonet eller trykk Windows+G for å åpne listen</value>
+    <value>Höger-klicka på den här ikonen eller tryck på Windows+G för att öppna listan</value>
     <comment>Text appears in the balloon tip body when starting the application.</comment>
   </data>
   <data name="MainFormBalloonTipLoadedMessageTitle" xml:space="preserve">
-    <value>Game Launcher v{0} lastet!</value>
+    <value>Game Launcher v{0} laddad!</value>
     <comment>Text appears in the balloon tip title when starting the application. {0} is the current version number.</comment>
   </data>
   <data name="MainFormClearGameList" xml:space="preserve">
-    <value>Er du sikker på at du vil fjerne alle elementene i listen? Denne handlingen kan IKKE gjøres om!</value>
+    <value>Är du säker på att du vill ta bort alla spel i listan? Detta går inte att ångra!</value>
     <comment>Appears when the user chooses to clear all games.</comment>
   </data>
   <data name="MainFormEditGameItem" xml:space="preserve">
-    <value>Endre &amp;spill...</value>
+    <value>Redigera &amp;spel...</value>
     <comment>Shown in the main menu under every game. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainFormEditGameItemTooltip" xml:space="preserve">
-    <value>Endre detaljene for dette spillet</value>
+    <value>Redigera egenskaperna för detta spel</value>
     <comment>The tooltip shown when hovering over the 'Edit game' menu item.</comment>
   </data>
   <data name="MainFormLoadingMessage" xml:space="preserve">
-    <value>Game Launcher starter opp, vennligst vent...</value>
+    <value>Game Launcher laddar, var god vänta...</value>
     <comment>Text shown when hovering over the tray icon whilst the application is loading</comment>
   </data>
   <data name="MainFormNewVersionAvailable1" xml:space="preserve">
-    <value>En oppdatering til Game Launcher er tilgjengelig (v{0})! Vil du laste ned oppdateringen nå?</value>
+    <value>Det finns en ny version av Game Launcher tillgänglig (v{0})! Vill du hämta den nu?</value>
     <comment>Text appears when auto-checking for updates, and an update was found. {0} is the new version number.</comment>
   </data>
   <data name="MainFormNewVersionAvailable2" xml:space="preserve">
-    <value>Om du velger å ikke oppdatere nå, vil oppdateringssjekken bli suspendert for denne sesjonen.</value>
+    <value>Om du väljer att inte uppdatera nu så kommer Game Launcher inte söka efter nya uppdateringar igen under den här sessionen.</value>
     <comment>Text appears when auto-checking for updates.</comment>
   </data>
   <data name="MainFormOptionsItem" xml:space="preserve">
-    <value>&amp;Innstillinger</value>
+    <value>A&amp;lternativ</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainFormQuitApplication" xml:space="preserve">
-    <value>Er du sikker på at du vil avslutte Game Launcher?</value>
+    <value>Är du säker på att du vill avsluta Game Launcher?</value>
     <comment>Appears when user chooses the 'Quit' menu item.</comment>
   </data>
   <data name="MainFormQuitItem" xml:space="preserve">
-    <value>&amp;Avslutt</value>
+    <value>&amp;Avsluta</value>
     <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainFormRemoveCmdArgs" xml:space="preserve">
-    <value>Er du sikker på at du vil fjerne alle kommandolinjeargumenter for {0}?</value>
+    <value>Är du säker på att du vill ta bort alla kommandorads-argument för {0}?</value>
     <comment>Text shown when user clears command-line arguments. {0} is the name of the game chosen.</comment>
   </data>
   <data name="MainFormRemoveGameItem" xml:space="preserve">
-    <value>&amp;Fjern...</value>
+    <value>&amp;Ta bort...</value>
     <comment>Shown in the main menu under every game. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="MainFormRemoveGameItemTooltip" xml:space="preserve">
-    <value>Fjern dette spillet fra listen</value>
+    <value>Ta bort det här spelet från listan</value>
     <comment>The tooltip shown when hovering over the 'Remove game' menu item.</comment>
   </data>
   <data name="MainFormRemoveGameMsg" xml:space="preserve">
-    <value>Er du sikker på at du vil fjerne {0} fra listen?</value>
+    <value>Är du säker på att du vill ta bort {0} från listan?</value>
     <comment>Shown when trying to remove a game. {0} is the name of the chosen game.</comment>
   </data>
   <data name="MainFormSelectIconText" xml:space="preserve">
-    <value>Velg ikon for "{0}"</value>
+    <value>Välj ikon för "{0}"</value>
     <comment>{0} is the name of the game the user is selecting the icon for.</comment>
   </data>
   <data name="MainFormSkypeNowPlaying" xml:space="preserve">
-    <value>Spiller nå: {0}</value>
+    <value>Spelar nu: {0}</value>
     <comment>Shown in Skype when the user starts a non-Steam game.</comment>
   </data>
   <data name="MainFormSkypeNowPlayingSteam" xml:space="preserve">
-    <value>Spiller nå: {0} (Steam)</value>
+    <value>Spelar nu: {0} (Steam)</value>
     <comment>Shown in Skype when user starts a Steam game</comment>
   </data>
   <data name="MainFormSkypePlayStopped" xml:space="preserve">
-    <value>Stoppet spill: {0}</value>
+    <value>Slutade spela: {0}</value>
     <comment>Appears in Skype when finished playing a game. {0} is the name of the game.</comment>
   </data>
   <data name="MainFormSkypePlayTimeStopped" xml:space="preserve">
-    <value> (Spilte: {0}</value>
+    <value> (Spelat: {0}</value>
     <comment>Appears in Skype when finished playing a game and the user has chosen to display playing time. {0} is the amount of time played.</comment>
   </data>
   <data name="MainFormTimeHourPlural" xml:space="preserve">
-    <value>timer</value>
+    <value>timmar</value>
     <comment>Plural form of 'hour'</comment>
   </data>
   <data name="MainFormTimeHourSingular" xml:space="preserve">
-    <value>time</value>
+    <value>timme</value>
     <comment>Singular form of 'hour'</comment>
   </data>
   <data name="MainFormTimeMinutePlural" xml:space="preserve">
-    <value>minutter</value>
+    <value>minuter</value>
     <comment>Plural form of 'minute'</comment>
   </data>
   <data name="MainFormTimeMinuteSingular" xml:space="preserve">
-    <value>minutt</value>
+    <value>minut</value>
     <comment>Singular form of 'minute'</comment>
   </data>
   <data name="MainFormTimeSecondPlural" xml:space="preserve">
@@ -536,52 +540,100 @@ Mange takk til Lisa for hennes støtte.</value>
     <value>sekund</value>
     <comment>Singular form of 'second'</comment>
   </data>
+  <data name="MainMenuAboutTooltip" xml:space="preserve">
+    <value>Visa information om applikationen och alla som bidragit till den.</value>
+    <comment>Tooltip for a main menu item.</comment>
+  </data>
+  <data name="MainMenuAddGameTooltip" xml:space="preserve">
+    <value>Lägg till ett spel till listan. Du kan också dubbelklicka på ikonen i meddelandefältet för att lägga till spel genom att dra genvägar eller programfiler direkt.</value>
+    <comment>Tooltip for a main menu item.</comment>
+  </data>
+  <data name="MainMenuClearGameListTooltip" xml:space="preserve">
+    <value>Ta bort alla spel i listan. Detta går inte att ångra!</value>
+    <comment>Tooltip for a main menu item.</comment>
+  </data>
+  <data name="MainMenuOptions" xml:space="preserve">
+    <value>&amp;Alternativ</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsAbout" xml:space="preserve">
+    <value>Om &amp;Game Launcher</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsAddGame" xml:space="preserve">
+    <value>&amp;Lägg till spel</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsClearGameList" xml:space="preserve">
+    <value>&amp;Rensa listan med spel...</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsPreferences" xml:space="preserve">
+    <value>&amp;Inställningar</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsRemoveGames" xml:space="preserve">
+    <value>&amp;Ta bort spel...</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsStatistics" xml:space="preserve">
+    <value>&amp;Statistik</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuQuit" xml:space="preserve">
+    <value>&amp;Avsluta</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuRemoveGamesTooltip" xml:space="preserve">
+    <value>Ta bort en eller flera spel från listan.</value>
+    <comment>Tooltip for a main menu item.</comment>
+  </data>
   <data name="PieChartFormClearDataLinkText" xml:space="preserve">
-    <value>Fjern data...</value>
+    <value>Rensa data...</value>
     <comment>Shown on the Pie Chart form</comment>
   </data>
   <data name="PieChartFormCloseButtonText" xml:space="preserve">
-    <value>&amp;Lukk</value>
+    <value>St&amp;äng</value>
     <comment>Shown on the button that closes the form. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="PieChartFormGenerateChartButton" xml:space="preserve">
-    <value>&amp;Generate linkbart diagram</value>
+    <value>&amp;Generera länkbart diagram</value>
     <comment>Shown on the Generate Chart button. The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="PieChartFormLabelPickerInside" xml:space="preserve">
-    <value>Etiketter innenfor</value>
+    <value>Etiketter innanför</value>
     <comment>Shown in the label picker box</comment>
   </data>
   <data name="PieChartFormLabelPickerNone" xml:space="preserve">
-    <value>Ingen etiketter</value>
+    <value>Inga etiketter</value>
     <comment>Shown in the label picker box</comment>
   </data>
   <data name="PieChartFormLabelPickerOutside" xml:space="preserve">
-    <value>Etiketter utenfor</value>
+    <value>Etiketter utanför</value>
     <comment>Shown in the label picker box</comment>
   </data>
   <data name="PieChartFormNoData" xml:space="preserve">
-    <value>Oops! Det ser ikke ut til som om det finnes noe data å vise. Spill noen spill, og kom så tilbake!</value>
+    <value>Oops! Det verkar inte finnas någon data sparad. Spela några spel och kom tillbaka senare!</value>
     <comment>Shown when there is no data for the form to display.</comment>
   </data>
   <data name="PieChartFormPleaseWait" xml:space="preserve">
-    <value>Vent</value>
+    <value>Var god vänta</value>
     <comment>Shown when generating a linkable chart</comment>
   </data>
   <data name="PieChartFormSaveAsImageButton" xml:space="preserve">
-    <value>&amp;Lagre som bilde...</value>
+    <value>&amp;Spara som bild…</value>
     <comment>Shown on the Save As Image button. The ampersand signifies a keyboard shortcut</comment>
   </data>
   <data name="PieChartFormSaveAsImageSuccess" xml:space="preserve">
-    <value>Diagrambildet ble lagret!</value>
+    <value>Ditt diagram har sparats!</value>
     <comment>Success message when user saves chart as image</comment>
   </data>
   <data name="PieChartFormSaveAsImageTitleBar" xml:space="preserve">
-    <value>Lagre diagram som bilde</value>
+    <value>Spara tårtdiagram som bild</value>
     <comment>Text shown in the title bar for the file browser when user selected to save the chart as an image.</comment>
   </data>
   <data name="PieChartFormShowLegendCheckBox" xml:space="preserve">
-    <value>Vis forklaring</value>
+    <value>Visa beskrivning</value>
     <comment>Shown on the Show Legend checkbox, it toggles the color key/explanation on the right side</comment>
   </data>
   <data name="PieChartFormTimeDayShorthand" xml:space="preserve">
@@ -601,11 +653,11 @@ Mange takk til Lisa for hennes støtte.</value>
     <comment>The one-character shorthand for "seconds"</comment>
   </data>
   <data name="PieChartFormTitleBar" xml:space="preserve">
-    <value>Game Launcher Statistikk</value>
+    <value>Game Launcher statistik för speltid</value>
     <comment>Shown in the title bar of the Pie Chart form</comment>
   </data>
   <data name="PieChartFormTotalPlayingTime" xml:space="preserve">
-    <value>Total spilltid</value>
+    <value>Total speltid</value>
     <comment>Shown on the top of the pie chart form</comment>
   </data>
   <data name="RemoveFormCancelButton" xml:space="preserve">
@@ -613,79 +665,27 @@ Mange takk til Lisa for hennes støtte.</value>
     <comment>Shown on the Cancel button. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="RemoveFormConfirmRemoval" xml:space="preserve">
-    <value>Er du sikker på at du vil fjerne de valgte elementene?</value>
+    <value>Är du säker på att du vill ta bort de markerade objekten?</value>
     <comment>Shows when the user tries to remove items</comment>
   </data>
   <data name="RemoveFormFlavorTextLabel" xml:space="preserve">
-    <value>Vennligst velg elementene du vil fjerne. Du kan holde CTRL for å velge flere.</value>
+    <value>Var god välj de objekt du vill ta bort. Du kan hålla inne CTRL för att markera flera objekt samtidigt.</value>
     <comment>Shown in the Remove window</comment>
   </data>
   <data name="RemoveFormNoItemsSelected" xml:space="preserve">
-    <value>Ingen elementer valgt.</value>
+    <value>Inga markerade objekt.</value>
     <comment>Shown in the remove window when the user tries to remove items without having selected any.</comment>
   </data>
   <data name="RemoveFormRemoveItemsButton" xml:space="preserve">
-    <value>&amp;Fjern elementer</value>
+    <value>&amp;Ta bort objekt</value>
     <comment>Shown on the Remove Item(s) button. The ampersand signifies a keyboard shortcut.</comment>
   </data>
   <data name="RemoveFormTitleBar" xml:space="preserve">
-    <value>Fjern element(er)</value>
+    <value>Ta bort objekt</value>
     <comment>Shown in the title bar of the Remove window</comment>
   </data>
   <data name="TranslationAuthor" xml:space="preserve">
-    <value>Norsk oversettelse av xdpirate</value>
+    <value>Svensk översättning av Harteex</value>
     <comment>Provide translator's name or nickname here.</comment>
-  </data>
-  <data name="AddNewGameFormOKHelp" xml:space="preserve">
-    <value>Trykk denne knappen når du er ferdig å fylle ut detaljene for spillet som skal legges til.</value>
-    <comment>Shown in the Add New Game Form.</comment>
-  </data>
-  <data name="MainMenuAboutTooltip" xml:space="preserve">
-    <value>Vis informasjon om programmet og de som har bidratt til det.</value>
-    <comment>Tooltip for a main menu item.</comment>
-  </data>
-  <data name="MainMenuAddGameTooltip" xml:space="preserve">
-    <value>Legg til et spill i listen. Du kan også dobbelklikke ikonet ved klokken for å legge til spill kjapt ved å dra og slippe programmer eller snarveier.</value>
-    <comment>Tooltip for a main menu item.</comment>
-  </data>
-  <data name="MainMenuClearGameListTooltip" xml:space="preserve">
-    <value>Slett alle spillene i listen. Denne handligen kan ikke angres!</value>
-    <comment>Tooltip for a main menu item.</comment>
-  </data>
-  <data name="MainMenuOptions" xml:space="preserve">
-    <value>&amp;Innstillinger</value>
-    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
-  </data>
-  <data name="MainMenuOptionsAbout" xml:space="preserve">
-    <value>Om &amp;Game Launcher</value>
-    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
-  </data>
-  <data name="MainMenuOptionsAddGame" xml:space="preserve">
-    <value>&amp;Legg til spill...</value>
-    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
-  </data>
-  <data name="MainMenuOptionsClearGameList" xml:space="preserve">
-    <value>&amp;Tøm spilliste...</value>
-    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
-  </data>
-  <data name="MainMenuOptionsPreferences" xml:space="preserve">
-    <value>&amp;Innstillinger</value>
-    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
-  </data>
-  <data name="MainMenuOptionsRemoveGames" xml:space="preserve">
-    <value>&amp;Fjern spill...</value>
-    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
-  </data>
-  <data name="MainMenuOptionsStatistics" xml:space="preserve">
-    <value>&amp;Statistikk</value>
-    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
-  </data>
-  <data name="MainMenuQuit" xml:space="preserve">
-    <value>&amp;Avslutt</value>
-    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
-  </data>
-  <data name="MainMenuRemoveGamesTooltip" xml:space="preserve">
-    <value>Fjern ett eller flere spill fra listen.</value>
-    <comment>Tooltip for a main menu item.</comment>
   </data>
 </root>

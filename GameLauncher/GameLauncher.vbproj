@@ -187,6 +187,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>mlsSpanish.resx</DependentUpon>
     </Compile>
+    <Compile Include="Languages\mlsSwedish.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mlsSwedish.resx</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +203,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>mlsNorwegian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationForm.Designer.vb">
+      <DependentUpon>NotificationForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationForm.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="PieChartForm.Designer.vb">
       <DependentUpon>PieChartForm.vb</DependentUpon>
@@ -289,6 +300,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>mlsSpanish.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Languages\mlsSwedish.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>mlsSwedish.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -296,6 +312,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>mlsNorwegian.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationForm.resx">
+      <DependentUpon>NotificationForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PieChartForm.resx">
       <DependentUpon>PieChartForm.vb</DependentUpon>
@@ -330,6 +349,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\GL Notification.png" />
     <None Include="Resources\icon_32.png" />
     <None Include="Resources\icon.png" />
   </ItemGroup>
