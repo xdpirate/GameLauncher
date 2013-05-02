@@ -688,4 +688,16 @@ Mange takk til Lisa for hennes støtte.</value>
     <value>Fjern ett eller flere spill fra listen.</value>
     <comment>Tooltip for a main menu item.</comment>
   </data>
+  <data name="DockFormMenuAlwaysOnTop" xml:space="preserve">
+    <value>Alltid på toppen av andre vinduer</value>
+    <comment>Text shown in the context menu of the Dock form.</comment>
+  </data>
+  <data name="DockFormMenuChangeOpacity" xml:space="preserve">
+    <value>Endre gjennomsiktighet</value>
+    <comment>Text shown in the context menu of the Dock form.</comment>
+  </data>
+  <data name="DockFormMenuClose" xml:space="preserve">
+    <value>Lukk sidepanelet</value>
+    <comment>Text shown in the context menu of the Dock form.</comment>
+  </data>
 </root>

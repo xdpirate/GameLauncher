@@ -688,4 +688,16 @@ Special thanks t' Lisa fer her support.</value>
     <value>Pirate translation by xdpirate</value>
     <comment>Provide translator's name or nickname here.</comment>
   </data>
+  <data name="DockFormMenuAlwaysOnTop" xml:space="preserve">
+    <value>Always be on top</value>
+    <comment>Text shown in the context menu of the Dock form.</comment>
+  </data>
+  <data name="DockFormMenuChangeOpacity" xml:space="preserve">
+    <value>Change throughshine</value>
+    <comment>Text shown in the context menu of the Dock form.</comment>
+  </data>
+  <data name="DockFormMenuClose" xml:space="preserve">
+    <value>Avast th' dock</value>
+    <comment>Text shown in the context menu of the Dock form.</comment>
+  </data>
 </root>

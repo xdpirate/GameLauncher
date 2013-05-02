@@ -70,6 +70,11 @@ Public Class DockForm
             Me.TopMost = True
             AlwaysOnTopToolStripMenuItem.Checked = True
         End If
+
+        AlwaysOnTopToolStripMenuItem.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("DockFormMenuAlwaysOnTop")
+        ChangeOpacityToolStripMenuItem.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("DockFormMenuChangeOpacity")
+        CloseTheDockToolStripMenuItem.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("DockFormMenuClose")
+
     End Sub
     Private Sub frmMain_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Me.Closing
         RegisterBar()

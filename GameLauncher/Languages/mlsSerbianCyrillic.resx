@@ -688,4 +688,16 @@
     <value>Превео на српски ћирилицом Rosenkranz</value>
     <comment>Provide translator's name or nickname here.</comment>
   </data>
+  <data name="DockFormMenuAlwaysOnTop" xml:space="preserve">
+    <value>Always on top</value>
+    <comment>Text shown in the context menu of the Dock form.</comment>
+  </data>
+  <data name="DockFormMenuChangeOpacity" xml:space="preserve">
+    <value>Change opacity</value>
+    <comment>Text shown in the context menu of the Dock form.</comment>
+  </data>
+  <data name="DockFormMenuClose" xml:space="preserve">
+    <value>Close the dock</value>
+    <comment>Text shown in the context menu of the Dock form.</comment>
+  </data>
 </root>

@@ -563,6 +563,33 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Alltid på toppen av andre vinduer.
+        '''</summary>
+        Friend Shared ReadOnly Property DockFormMenuAlwaysOnTop() As String
+            Get
+                Return ResourceManager.GetString("DockFormMenuAlwaysOnTop", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Endre gjennomsiktighet.
+        '''</summary>
+        Friend Shared ReadOnly Property DockFormMenuChangeOpacity() As String
+            Get
+                Return ResourceManager.GetString("DockFormMenuChangeOpacity", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Lukk sidepanelet.
+        '''</summary>
+        Friend Shared ReadOnly Property DockFormMenuClose() As String
+            Get
+                Return ResourceManager.GetString("DockFormMenuClose", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Sidepanelets gjennomsiktighet når i fokus (pekeren hviler over docken).
         '''</summary>
         Friend Shared ReadOnly Property DockOpacityFormHoverOpacityGroupBox() As String

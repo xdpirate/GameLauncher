@@ -563,6 +563,33 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Always on top.
+        '''</summary>
+        Friend Shared ReadOnly Property DockFormMenuAlwaysOnTop() As String
+            Get
+                Return ResourceManager.GetString("DockFormMenuAlwaysOnTop", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Change opacity.
+        '''</summary>
+        Friend Shared ReadOnly Property DockFormMenuChangeOpacity() As String
+            Get
+                Return ResourceManager.GetString("DockFormMenuChangeOpacity", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Close the dock.
+        '''</summary>
+        Friend Shared ReadOnly Property DockFormMenuClose() As String
+            Get
+                Return ResourceManager.GetString("DockFormMenuClose", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Opacidad cuando está activo.
         '''</summary>
         Friend Shared ReadOnly Property DockOpacityFormHoverOpacityGroupBox() As String
@@ -1333,6 +1360,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property RemoveFormTitleBar() As String
             Get
                 Return ResourceManager.GetString("RemoveFormTitleBar", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to .
+        '''</summary>
+        Friend Shared ReadOnly Property String1() As String
+            Get
+                Return ResourceManager.GetString("String1", resourceCulture)
             End Get
         End Property
         

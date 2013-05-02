@@ -688,4 +688,19 @@ Agradecimientos especiales a Lisa por su apoyo.</value>
     <value>Traducción al español por Dan0.</value>
     <comment>Provide translator's name or nickname here.</comment>
   </data>
+  <data name="DockFormMenuAlwaysOnTop" xml:space="preserve">
+    <value>Always on top</value>
+    <comment>Text shown in the context menu of the Dock form.</comment>
+  </data>
+  <data name="DockFormMenuChangeOpacity" xml:space="preserve">
+    <value>Change opacity</value>
+    <comment>Text shown in the context menu of the Dock form.</comment>
+  </data>
+  <data name="DockFormMenuClose" xml:space="preserve">
+    <value>Close the dock</value>
+    <comment>Text shown in the context menu of the Dock form.</comment>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
 </root>
