@@ -157,6 +157,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>mlsCatalan.resx</DependentUpon>
     </Compile>
+    <Compile Include="Languages\mlsFrench.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mlsFrench.resx</DependentUpon>
+    </Compile>
     <Compile Include="Languages\mlsGerman.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -269,6 +274,11 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>mlsCatalan.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Languages\mlsFrench.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>mlsFrench.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Languages\mlsGerman.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
