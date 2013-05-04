@@ -133,7 +133,7 @@ Merci tout particulièrement à Lisa pour son support.</value>
     <comment>Text shown on the link to contact the author</comment>
   </data>
   <data name="AboutFormNewVersion1" xml:space="preserve">
-    <value>Une nouvelle version de Game Launcher disponible(v</value>
+    <value>Une nouvelle version de Game Launcher est disponible (v</value>
     <comment>First part of new version available message</comment>
   </data>
   <data name="AboutFormNewVersion2" xml:space="preserve">

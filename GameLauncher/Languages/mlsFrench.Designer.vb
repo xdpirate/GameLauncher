@@ -95,7 +95,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Une nouvelle version de Game Launcher disponible(v.
+        '''  Looks up a localized string similar to Une nouvelle version de Game Launcher est disponible (v.
         '''</summary>
         Friend Shared ReadOnly Property AboutFormNewVersion1() As String
             Get
