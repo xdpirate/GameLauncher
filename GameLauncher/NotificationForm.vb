@@ -49,16 +49,12 @@
             Dim drawBrush As New System.Drawing.SolidBrush(System.Drawing.Color.Black)
             Dim x As Single = 5
             Dim y As Single = 30
+            Dim drawArea As New RectangleF(5, 55, 290, 88)
             Dim drawFormat As New System.Drawing.StringFormat
             formGraphics.DrawString(drawString, drawFont, drawBrush, x, y, drawFormat)
 
-            x = 5
-            y = 50
             drawFont = New System.Drawing.Font("Verdana", 9)
-
             drawString = String.Format(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("MainFormNewVersionAvailable1"), Me.newVersion)
-
-            Dim drawArea As New RectangleF(5, 55, 290, 88)
             formGraphics.DrawString(drawString, drawFont, drawBrush, drawArea, drawFormat)
 
             drawFont.Dispose()
