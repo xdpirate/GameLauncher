@@ -56,8 +56,7 @@
             y = 50
             drawFont = New System.Drawing.Font("Verdana", 9)
 
-            drawString = String.Format(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AboutFormNewVersion1") & "{0})!" & vbNewLine & _
-                                        MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AboutFormNewVersion2"), Me.newVersion)
+            drawString = String.Format(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("MainFormNewVersionAvailable1"), Me.newVersion)
 
             Dim drawArea As New RectangleF(5, 55, 290, 88)
             formGraphics.DrawString(drawString, drawFont, drawBrush, drawArea, drawFormat)
