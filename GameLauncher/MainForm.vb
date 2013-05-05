@@ -437,6 +437,7 @@ Public Class MainForm
 
         Dim autoUpdateKey As RegistryKey = My.Computer.Registry.CurrentUser.CreateSubKey("Software\GameLauncher", RegistryKeyPermissionCheck.ReadWriteSubTree)
         Dim value As Integer = CInt(autoUpdateKey.GetValue("autoUpdate", 9001))
+
         If value = 9001 Then
             'Doesn't exist, create it and set it to be enabled
             autoUpdateKey.SetValue("autoUpdate", 1, RegistryValueKind.DWord)
@@ -456,7 +457,6 @@ Public Class MainForm
         Dim timeNow As Date = Date.Now
         Dim difference As TimeSpan = timeNow - timeThen
         Dim returnValue As String = Nothing
-
         Dim hourString, minuteString, secondString As String
         Dim hourPluralString, minutePluralString, secondPluralString As String
 
@@ -645,7 +645,6 @@ Public Class MainForm
                 Dim gameName, cmdArgs, gamePath, launcherPath As String
                 Dim gameType As gameTypes
                 Dim img As Bitmap
-
                 gamePath = Nothing
                 launcherPath = Nothing
 
@@ -736,6 +735,7 @@ Public Class MainForm
 
         inifile.Save("settings.ini")
 
+
         Dim argsINI As New IniFile.IniFile(Path.Combine(My.Application.Info.DirectoryPath, "args.ini"))
         argsINI.DeleteSection("entries") 'Flush it
         argsINI.AddSection("entries")
@@ -746,6 +746,7 @@ Public Class MainForm
 
         argsINI.Save("args.ini")
 
+
         Dim iconsINI As New IniFile.IniFile(Path.Combine(My.Application.Info.DirectoryPath, "icons.ini"))
         iconsINI.DeleteSection("entries") 'Flush it
         iconsINI.AddSection("entries")
@@ -755,6 +756,7 @@ Public Class MainForm
         Next
 
         iconsINI.Save("icons.ini")
+
 
         Dim launchersINI As New IniFile.IniFile(Path.Combine(My.Application.Info.DirectoryPath, "launchers.ini"))
         launchersINI.DeleteSection("entries") 'Flush it
@@ -887,10 +889,14 @@ Public Class MainForm
 
     Public Function addGame(ByVal path As String, ByVal caption As String, ByVal skipGetSteamIcon As Boolean) As String
         Try
-            PathContainer.Add(caption, path)
             Dim tsi As New ToolStripMenuItem()
-            tsi.Text = caption
-            tsi.Image = getIcon(path, skipGetSteamIcon, caption)
+            PathContainer.Add(caption, path)
+
+            With tsi
+                .Text = caption
+                .Image = getIcon(path, skipGetSteamIcon, caption)
+            End With
+            
             MainContextMenu.Items.Add(tsi)
             Return " "
         Catch ex As Exception
@@ -904,8 +910,8 @@ Public Class MainForm
         Dim saveNewIcon As Boolean = False
 
         If path.StartsWith("steam") Then
-
             Dim result As Bitmap = getSteamIcon(path.Remove(0, 18))
+
             If IsNothing(result) Then
                 If skipSteam Then
                     sourceBitmap = Icon.ExtractAssociatedIcon(getSteamExe()).ToBitmap
@@ -1054,6 +1060,7 @@ Public Class MainForm
             Dim tsi As New ToolStripMenuItem
             Dim removeItem As ToolStripMenuItem
             Dim editGameItem As ToolStripMenuItem
+
             tsi.Text = element
             tsi.Image = getIcon(PathContainer(element), True, element)
             editGameItem = tsi.DropDownItems.Add(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormEditGameItem"))
@@ -1426,9 +1433,7 @@ Public Class MainForm
     Private Sub TrayIcon_MouseDoubleClick(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles TrayIcon.MouseDoubleClick
         If e.Button = Windows.Forms.MouseButtons.Right Then
             dockToggle()
-            Exit Sub
-        End If
-        If DragDropTargetForm.Visible Then
+        ElseIf DragDropTargetForm.Visible Then
             DragDropTargetForm.Close()
         Else
             If DragDropTargetForm.ShowDialog() = Windows.Forms.DialogResult.OK Then
