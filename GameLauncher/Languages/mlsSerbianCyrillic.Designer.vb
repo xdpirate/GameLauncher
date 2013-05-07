@@ -1256,6 +1256,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Сортирај по абецедном реду.
+        '''</summary>
+        Friend Shared ReadOnly Property PieChartFormSortingPickerAlphabetically() As String
+            Get
+                Return ResourceManager.GetString("PieChartFormSortingPickerAlphabetically", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Сортирај по броју мечева.
+        '''</summary>
+        Friend Shared ReadOnly Property PieChartFormSortingPickerByMostPlayed() As String
+            Get
+                Return ResourceManager.GetString("PieChartFormSortingPickerByMostPlayed", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to д.
         '''</summary>
         Friend Shared ReadOnly Property PieChartFormTimeDayShorthand() As String

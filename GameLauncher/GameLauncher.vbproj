@@ -152,6 +152,7 @@
     <Compile Include="GLOptions.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Include\NaturalComparer.vb" />
     <Compile Include="Languages\mlsCatalan.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

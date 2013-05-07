@@ -700,4 +700,12 @@ Särskilt tack till Lisa för hennes stöd.</value>
     <value>St&amp;äng sidpanelen</value>
     <comment>Text shown in the context menu of the Dock form.</comment>
   </data>
+  <data name="PieChartFormSortingPickerAlphabetically" xml:space="preserve">
+    <value>Sortera alfabetiskt</value>
+    <comment>Shown in the sorting box</comment>
+  </data>
+  <data name="PieChartFormSortingPickerByMostPlayed" xml:space="preserve">
+    <value>Sortera efter tid spelat</value>
+    <comment>Shown in the sorting box</comment>
+  </data>
 </root>

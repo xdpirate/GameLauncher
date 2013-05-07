@@ -700,4 +700,12 @@ Un agraïment especial a la Llisa pel seu suport.</value>
     <value>Close the dock</value>
     <comment>Text shown in the context menu of the Dock form.</comment>
   </data>
+  <data name="PieChartFormSortingPickerAlphabetically" xml:space="preserve">
+    <value>Ordena alfabèticament</value>
+    <comment>Shown in the sorting box</comment>
+  </data>
+  <data name="PieChartFormSortingPickerByMostPlayed" xml:space="preserve">
+    <value>Ordenar per més jugat</value>
+    <comment>Shown in the sorting box</comment>
+  </data>
 </root>

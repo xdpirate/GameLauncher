@@ -20,6 +20,9 @@ Public Class PieChartForm
     Dim pltGrayscale As Color() = {Color.FromArgb(&H2E, &H2E, &H2E), Color.FromArgb(&H3D, &H3D, &H3D), Color.FromArgb(&H4D, &H4D, &H4D), Color.FromArgb(&H5C, &H5C, &H5C), Color.FromArgb(&H69, &H69, &H69), Color.FromArgb(&H78, &H78, &H78), Color.FromArgb(&H80, &H80, &H80), Color.FromArgb(&H82, &H82, &H82), Color.FromArgb(&H91, &H91, &H91), Color.FromArgb(&HA1, &HA1, &HA1), Color.FromArgb(&HAB, &HAB, &HAB), Color.FromArgb(&HB8, &HB8, &HB8), Color.FromArgb(&HC2, &HC2, &HC2), Color.FromArgb(&HCF, &HCF, &HCF), Color.FromArgb(&HD9, &HD9, &HD9), Color.FromArgb(&HE5, &HE5, &HE5)}
 #End Region
 
+    Dim sortByPlayTime As Boolean = True
+    Dim skipLoop As Boolean = False
+
     Private Sub PieChartForm_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         InitializeChartForm()
 
@@ -41,7 +44,19 @@ Public Class PieChartForm
         labelPicker.Items.Add(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormLabelPickerInside"))
         labelPicker.Items.Add(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormLabelPickerNone"))
 
+        Dim sortingPrevious As Integer = sortingComboBox.SelectedIndex
+        If sortingPrevious = -1 Then sortingPrevious = 0
+
+        sortingComboBox.Items.Clear()
+        sortingComboBox.Items.Add(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormSortingPickerByMostPlayed"))
+        sortingComboBox.Items.Add(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormSortingPickerAlphabetically"))
+
         labelPicker.SelectedIndex = 0
+
+        skipLoop = True
+        sortingComboBox.SelectedIndex = sortingPrevious
+        skipLoop = False
+
         palettePicker.SelectedItem = "Bright Pastel"
 
         With Chart1
@@ -54,13 +69,28 @@ Public Class PieChartForm
 
         Dim statsKey As RegistryKey = My.Computer.Registry.CurrentUser.CreateSubKey("Software\GameLauncher\stats", RegistryKeyPermissionCheck.ReadWriteSubTree)
         Dim values As String() = statsKey.GetValueNames()
-        Array.Sort(values)
 
-        If values.Length = 0 Then
+        'Make a dictionary depending on sort mode
+        Dim i As Integer = 0
+        Dim newDict As New SortedDictionary(Of String, String)(New NaturalComparer)
+        If sortByPlayTime Then
+            While i < values.Length
+                newDict.Add(CStr(statsKey.GetValue(values(i))), values(i))
+                i += 1
+            End While
+        Else
+            While i < values.Length
+                newDict.Add(values(i), CStr(statsKey.GetValue(values(i))))
+                i += 1
+            End While
+        End If
+
+        If newDict.Count = 0 Then
             MessageBox.Show(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormNoData"), "Game Launcher", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Close()
         Else
-            Dim value As Int64 = 0
+            Dim gameName As String = Nothing
+            Dim gamePlayTime As Int64 = 0
             Dim total As Int64 = 0
             Dim dataPt As DataPoint = Nothing
             Dim days, hours, mins, secs As Integer
@@ -71,16 +101,25 @@ Public Class PieChartForm
             shortM = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormTimeMinuteShorthand")
             shortS = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormTimeSecondShorthand")
 
-            For Each game As String In values
-                value = statsKey.GetValue(game, Nothing)
-                If value <> Nothing Then
-                    total += value
-                    dataPt = Chart1.Series(0).Points.Add(value)
-                    days = TimeSpan.FromSeconds(value).Days
-                    hours = TimeSpan.FromSeconds(value).Hours
-                    mins = TimeSpan.FromSeconds(value).Minutes
-                    secs = TimeSpan.FromSeconds(value).Seconds
-                    dataPt.Label = String.Format("{1}{0}({2}{3} {4}{5} {6}{7} {8}{9}, #PERCENT)", vbNewLine, game.Replace("&&", "&"), days, shortD, hours, shortH, mins, shortM, secs, shortS)
+            For Each kvp As KeyValuePair(Of String, String) In newDict
+                If sortByPlayTime Then
+                    gamePlayTime = kvp.Key
+                    gameName = kvp.Value
+                Else
+                    gamePlayTime = kvp.Value
+                    gameName = kvp.Key
+                End If
+
+                gameName = gameName.Replace("&&", "&")
+
+                If gamePlayTime <> Nothing Then
+                    total += gamePlayTime
+                    dataPt = Chart1.Series(0).Points.Add(gamePlayTime)
+                    days = TimeSpan.FromSeconds(gamePlayTime).Days
+                    hours = TimeSpan.FromSeconds(gamePlayTime).Hours
+                    mins = TimeSpan.FromSeconds(gamePlayTime).Minutes
+                    secs = TimeSpan.FromSeconds(gamePlayTime).Seconds
+                    dataPt.Label = String.Format("{1}{0}({2}{3} {4}{5} {6}{7} {8}{9}, #PERCENT)", vbNewLine, gameName, days, shortD, hours, shortH, mins, shortM, secs, shortS)
                 End If
             Next
 
@@ -291,5 +330,17 @@ Public Class PieChartForm
         generateGoogleChartLink()
         generateChartButton.Enabled = True
         generateChartButton.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormGenerateChartButton")
+    End Sub
+
+    Private Sub sortingComboBox_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles sortingComboBox.SelectedIndexChanged
+        If sortingComboBox.SelectedIndex = 0 Then
+            sortByPlayTime = True
+        Else
+            sortByPlayTime = False
+        End If
+
+        If Not skipLoop Then
+            InitializeChartForm()
+        End If
     End Sub
 End Class

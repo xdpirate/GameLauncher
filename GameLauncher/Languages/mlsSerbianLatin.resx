@@ -700,4 +700,12 @@ Posebna zahvalnost Lisi za podršku.</value>
     <value>Close the dock</value>
     <comment>Text shown in the context menu of the Dock form.</comment>
   </data>
+  <data name="PieChartFormSortingPickerAlphabetically" xml:space="preserve">
+    <value>Sortiraj po abecednom redu</value>
+    <comment>Shown in the sorting box</comment>
+  </data>
+  <data name="PieChartFormSortingPickerByMostPlayed" xml:space="preserve">
+    <value>Sortiraj po broju mečeva</value>
+    <comment>Shown in the sorting box</comment>
+  </data>
 </root>

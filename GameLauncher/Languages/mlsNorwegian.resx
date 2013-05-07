@@ -700,4 +700,12 @@ Mange takk til Lisa for hennes støtte.</value>
     <value>Lukk sidepanelet</value>
     <comment>Text shown in the context menu of the Dock form.</comment>
   </data>
+  <data name="PieChartFormSortingPickerAlphabetically" xml:space="preserve">
+    <value>Sorter alfabetisk</value>
+    <comment>Shown in the sorting box</comment>
+  </data>
+  <data name="PieChartFormSortingPickerByMostPlayed" xml:space="preserve">
+    <value>Sorter etter tid spilt</value>
+    <comment>Shown in the sorting box</comment>
+  </data>
 </root>

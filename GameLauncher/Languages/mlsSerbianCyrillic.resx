@@ -700,4 +700,12 @@
     <value>Close the dock</value>
     <comment>Text shown in the context menu of the Dock form.</comment>
   </data>
+  <data name="PieChartFormSortingPickerAlphabetically" xml:space="preserve">
+    <value>Сортирај по абецедном реду</value>
+    <comment>Shown in the sorting box</comment>
+  </data>
+  <data name="PieChartFormSortingPickerByMostPlayed" xml:space="preserve">
+    <value>Сортирај по броју мечева</value>
+    <comment>Shown in the sorting box</comment>
+  </data>
 </root>

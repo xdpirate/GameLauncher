@@ -700,4 +700,12 @@ Um Obrigado Especial para a Lisa pelo suporte.</value>
     <value>Close the dock</value>
     <comment>Text shown in the context menu of the Dock form.</comment>
   </data>
+  <data name="PieChartFormSortingPickerAlphabetically" xml:space="preserve">
+    <value>Classificar em ordem alfabética</value>
+    <comment>Shown in the sorting box</comment>
+  </data>
+  <data name="PieChartFormSortingPickerByMostPlayed" xml:space="preserve">
+    <value>Ordenar por mais tocadas</value>
+    <comment>Shown in the sorting box</comment>
+  </data>
 </root>

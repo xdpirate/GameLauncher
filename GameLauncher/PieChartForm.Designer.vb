@@ -34,6 +34,7 @@ Partial Class PieChartForm
         Me.palettePicker = New System.Windows.Forms.ComboBox()
         Me.clearDataLink = New System.Windows.Forms.LinkLabel()
         Me.generateChartButton = New System.Windows.Forms.Button()
+        Me.sortingComboBox = New System.Windows.Forms.ComboBox()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -54,7 +55,7 @@ Partial Class PieChartForm
         Series1.Legend = "Legend1"
         Series1.Name = "Series1"
         Me.Chart1.Series.Add(Series1)
-        Me.Chart1.Size = New System.Drawing.Size(834, 459)
+        Me.Chart1.Size = New System.Drawing.Size(784, 495)
         Me.Chart1.TabIndex = 0
         Me.Chart1.Text = "Playing time chart"
         '
@@ -62,9 +63,9 @@ Partial Class PieChartForm
         '
         Me.saveAsImageButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.saveAsImageButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.saveAsImageButton.Location = New System.Drawing.Point(12, 465)
+        Me.saveAsImageButton.Location = New System.Drawing.Point(12, 501)
         Me.saveAsImageButton.Name = "saveAsImageButton"
-        Me.saveAsImageButton.Size = New System.Drawing.Size(165, 23)
+        Me.saveAsImageButton.Size = New System.Drawing.Size(224, 23)
         Me.saveAsImageButton.TabIndex = 2
         Me.saveAsImageButton.Text = "&Save as image..."
         Me.saveAsImageButton.UseVisualStyleBackColor = True
@@ -73,7 +74,7 @@ Partial Class PieChartForm
         '
         Me.pieCloseButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pieCloseButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.pieCloseButton.Location = New System.Drawing.Point(747, 491)
+        Me.pieCloseButton.Location = New System.Drawing.Point(697, 527)
         Me.pieCloseButton.Name = "pieCloseButton"
         Me.pieCloseButton.Size = New System.Drawing.Size(75, 23)
         Me.pieCloseButton.TabIndex = 1
@@ -85,9 +86,9 @@ Partial Class PieChartForm
         Me.labelPicker.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.labelPicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.labelPicker.FormattingEnabled = True
-        Me.labelPicker.Location = New System.Drawing.Point(183, 465)
+        Me.labelPicker.Location = New System.Drawing.Point(242, 503)
         Me.labelPicker.Name = "labelPicker"
-        Me.labelPicker.Size = New System.Drawing.Size(121, 21)
+        Me.labelPicker.Size = New System.Drawing.Size(175, 21)
         Me.labelPicker.TabIndex = 3
         '
         'legendToggleCheckBox
@@ -96,7 +97,7 @@ Partial Class PieChartForm
         Me.legendToggleCheckBox.AutoSize = True
         Me.legendToggleCheckBox.Checked = True
         Me.legendToggleCheckBox.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.legendToggleCheckBox.Location = New System.Drawing.Point(310, 467)
+        Me.legendToggleCheckBox.Location = New System.Drawing.Point(423, 534)
         Me.legendToggleCheckBox.Name = "legendToggleCheckBox"
         Me.legendToggleCheckBox.Size = New System.Drawing.Size(88, 17)
         Me.legendToggleCheckBox.TabIndex = 4
@@ -109,9 +110,9 @@ Partial Class PieChartForm
         Me.palettePicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.palettePicker.FormattingEnabled = True
         Me.palettePicker.Items.AddRange(New Object() {"Berry", "Bright Pastel", "Bright", "Chocolate", "Earth Tones", "Excel", "Fire", "Grayscale", "Light", "Pastel", "Sea Green"})
-        Me.palettePicker.Location = New System.Drawing.Point(183, 494)
+        Me.palettePicker.Location = New System.Drawing.Point(242, 532)
         Me.palettePicker.Name = "palettePicker"
-        Me.palettePicker.Size = New System.Drawing.Size(121, 21)
+        Me.palettePicker.Size = New System.Drawing.Size(175, 21)
         Me.palettePicker.TabIndex = 5
         '
         'clearDataLink
@@ -129,12 +130,22 @@ Partial Class PieChartForm
         'generateChartButton
         '
         Me.generateChartButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.generateChartButton.Location = New System.Drawing.Point(12, 494)
+        Me.generateChartButton.Location = New System.Drawing.Point(12, 530)
         Me.generateChartButton.Name = "generateChartButton"
-        Me.generateChartButton.Size = New System.Drawing.Size(165, 23)
+        Me.generateChartButton.Size = New System.Drawing.Size(224, 23)
         Me.generateChartButton.TabIndex = 7
         Me.generateChartButton.Text = "&Generate linkable chart"
         Me.generateChartButton.UseVisualStyleBackColor = True
+        '
+        'sortingComboBox
+        '
+        Me.sortingComboBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.sortingComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.sortingComboBox.FormattingEnabled = True
+        Me.sortingComboBox.Location = New System.Drawing.Point(423, 503)
+        Me.sortingComboBox.Name = "sortingComboBox"
+        Me.sortingComboBox.Size = New System.Drawing.Size(175, 21)
+        Me.sortingComboBox.TabIndex = 8
         '
         'PieChartForm
         '
@@ -143,7 +154,8 @@ Partial Class PieChartForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.pieCloseButton
-        Me.ClientSize = New System.Drawing.Size(834, 526)
+        Me.ClientSize = New System.Drawing.Size(784, 562)
+        Me.Controls.Add(Me.sortingComboBox)
         Me.Controls.Add(Me.generateChartButton)
         Me.Controls.Add(Me.clearDataLink)
         Me.Controls.Add(Me.palettePicker)
@@ -153,7 +165,7 @@ Partial Class PieChartForm
         Me.Controls.Add(Me.saveAsImageButton)
         Me.Controls.Add(Me.Chart1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MinimumSize = New System.Drawing.Size(850, 540)
+        Me.MinimumSize = New System.Drawing.Size(800, 600)
         Me.Name = "PieChartForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Game Launcher Playtime Statistics"
@@ -170,4 +182,5 @@ Partial Class PieChartForm
     Friend WithEvents palettePicker As System.Windows.Forms.ComboBox
     Friend WithEvents clearDataLink As System.Windows.Forms.LinkLabel
     Friend WithEvents generateChartButton As System.Windows.Forms.Button
+    Friend WithEvents sortingComboBox As System.Windows.Forms.ComboBox
 End Class

@@ -700,4 +700,12 @@ Merci tout particulièrement à Lisa pour son support.</value>
     <value>Traduction Française par Sanic</value>
     <comment>Provide translator's name or nickname here.</comment>
   </data>
+  <data name="PieChartFormSortingPickerAlphabetically" xml:space="preserve">
+    <value>Classer par ordre alphabétique</value>
+    <comment>Shown in the sorting box</comment>
+  </data>
+  <data name="PieChartFormSortingPickerByMostPlayed" xml:space="preserve">
+    <value>Trier par le plus joué</value>
+    <comment>Shown in the sorting box</comment>
+  </data>
 </root>

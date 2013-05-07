@@ -1256,6 +1256,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Ordenar alfabéticamente.
+        '''</summary>
+        Friend Shared ReadOnly Property PieChartFormSortingPickerAlphabetically() As String
+            Get
+                Return ResourceManager.GetString("PieChartFormSortingPickerAlphabetically", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Ordenar por más jugados.
+        '''</summary>
+        Friend Shared ReadOnly Property PieChartFormSortingPickerByMostPlayed() As String
+            Get
+                Return ResourceManager.GetString("PieChartFormSortingPickerByMostPlayed", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to d.
         '''</summary>
         Friend Shared ReadOnly Property PieChartFormTimeDayShorthand() As String
@@ -1360,15 +1378,6 @@ Namespace My.Resources
         Friend Shared ReadOnly Property RemoveFormTitleBar() As String
             Get
                 Return ResourceManager.GetString("RemoveFormTitleBar", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to .
-        '''</summary>
-        Friend Shared ReadOnly Property String1() As String
-            Get
-                Return ResourceManager.GetString("String1", resourceCulture)
             End Get
         End Property
         

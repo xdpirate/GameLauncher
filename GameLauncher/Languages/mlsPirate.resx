@@ -700,4 +700,12 @@ Special thanks t' Lisa fer her support.</value>
     <value>Avast th' dock</value>
     <comment>Text shown in the context menu of the Dock form.</comment>
   </data>
+  <data name="PieChartFormSortingPickerAlphabetically" xml:space="preserve">
+    <value>Sort by letters, matey!</value>
+    <comment>Shown in the sorting box</comment>
+  </data>
+  <data name="PieChartFormSortingPickerByMostPlayed" xml:space="preserve">
+    <value>Sort by most played, matey!</value>
+    <comment>Shown in the sorting box</comment>
+  </data>
 </root>
