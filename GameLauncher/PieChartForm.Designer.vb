@@ -110,7 +110,7 @@ Partial Class PieChartForm
         Me.palettePicker.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.palettePicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.palettePicker.FormattingEnabled = True
-        Me.palettePicker.Items.AddRange(New Object() {"Berry", "Bright Pastel", "Bright", "Cake", "Chocolate", "Earth Tones", "Excel", "Fire", "Goldfish", "Grayscale", "Light", "Pastel", "Sea Green"})
+        Me.palettePicker.Items.AddRange(New Object() {"Berry", "Bright Pastel", "Bright", "Cake", "Chewing Gum", "Chocolate", "Earth Tones", "Excel", "Fire", "Fruit", "Goldfish", "Grayscale", "Light", "Pastel", "Sea Green"})
         Me.palettePicker.Location = New System.Drawing.Point(242, 532)
         Me.palettePicker.Name = "palettePicker"
         Me.palettePicker.Size = New System.Drawing.Size(175, 21)

@@ -23,7 +23,8 @@ Public Class PieChartForm
     'Custom palettes
     Dim pltGoldfish As Color() = {Color.FromArgb(105, 210, 231), Color.FromArgb(136, 215, 224), Color.FromArgb(167, 219, 216), Color.FromArgb(196, 224, 210), Color.FromArgb(224, 228, 204), Color.FromArgb(234, 181, 126), Color.FromArgb(243, 134, 48), Color.FromArgb(247, 120, 24), Color.FromArgb(250, 105, 0)}
     Dim pltCake As Color() = {Color.FromArgb(119, 79, 56), Color.FromArgb(172, 111, 89), Color.FromArgb(224, 142, 121), Color.FromArgb(233, 177, 148), Color.FromArgb(241, 212, 175), Color.FromArgb(239, 221, 191), Color.FromArgb(236, 229, 206), Color.FromArgb(217, 227, 213), Color.FromArgb(197, 224, 220)}
-
+    Dim pltChewingGum As Color() = {Color.FromArgb(255, 0, 255), Color.FromArgb(255, 28, 227), Color.FromArgb(255, 57, 198), Color.FromArgb(255, 85, 170), Color.FromArgb(255, 113, 142), Color.FromArgb(255, 142, 113), Color.FromArgb(255, 170, 85), Color.FromArgb(255, 198, 57), Color.FromArgb(255, 227, 28), Color.FromArgb(255, 255, 0)}
+    Dim pltFruit As Color() = {Color.FromArgb(209, 242, 165), Color.FromArgb(224, 246, 173), Color.FromArgb(239, 250, 180), Color.FromArgb(247, 223, 160), Color.FromArgb(255, 196, 140), Color.FromArgb(255, 178, 134), Color.FromArgb(255, 159, 128), Color.FromArgb(250, 132, 137), Color.FromArgb(245, 105, 145)}
 #End Region
 
     Dim sortByPlayTime As Boolean = True
@@ -206,6 +207,8 @@ Public Class PieChartForm
                 Chart1.PaletteCustomColors = pltBright
             Case "Cake"
                 Chart1.PaletteCustomColors = pltCake
+            Case "Chewing Gum"
+                Chart1.PaletteCustomColors = pltChewingGum
             Case "Chocolate"
                 Chart1.PaletteCustomColors = pltChocolate
             Case "Earth Tones"
@@ -214,6 +217,8 @@ Public Class PieChartForm
                 Chart1.PaletteCustomColors = pltExcel
             Case "Fire"
                 Chart1.PaletteCustomColors = pltFire
+            Case "Fruit"
+                Chart1.PaletteCustomColors = pltFruit
             Case "Goldfish"
                 Chart1.PaletteCustomColors = pltGoldfish
             Case "Grayscale"
