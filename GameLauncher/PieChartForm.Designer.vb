@@ -35,6 +35,7 @@ Partial Class PieChartForm
         Me.clearDataLink = New System.Windows.Forms.LinkLabel()
         Me.generateChartButton = New System.Windows.Forms.Button()
         Me.sortingComboBox = New System.Windows.Forms.ComboBox()
+        Me.enable3DCheckBox = New System.Windows.Forms.CheckBox()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -109,7 +110,7 @@ Partial Class PieChartForm
         Me.palettePicker.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.palettePicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.palettePicker.FormattingEnabled = True
-        Me.palettePicker.Items.AddRange(New Object() {"Berry", "Bright Pastel", "Bright", "Chocolate", "Earth Tones", "Excel", "Fire", "Grayscale", "Light", "Pastel", "Sea Green"})
+        Me.palettePicker.Items.AddRange(New Object() {"Berry", "Bright Pastel", "Bright", "Cake", "Chocolate", "Earth Tones", "Excel", "Fire", "Goldfish", "Grayscale", "Light", "Pastel", "Sea Green"})
         Me.palettePicker.Location = New System.Drawing.Point(242, 532)
         Me.palettePicker.Name = "palettePicker"
         Me.palettePicker.Size = New System.Drawing.Size(175, 21)
@@ -147,6 +148,19 @@ Partial Class PieChartForm
         Me.sortingComboBox.Size = New System.Drawing.Size(175, 21)
         Me.sortingComboBox.TabIndex = 8
         '
+        'enable3DCheckBox
+        '
+        Me.enable3DCheckBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.enable3DCheckBox.AutoSize = True
+        Me.enable3DCheckBox.Checked = True
+        Me.enable3DCheckBox.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.enable3DCheckBox.Location = New System.Drawing.Point(604, 505)
+        Me.enable3DCheckBox.Name = "enable3DCheckBox"
+        Me.enable3DCheckBox.Size = New System.Drawing.Size(40, 17)
+        Me.enable3DCheckBox.TabIndex = 9
+        Me.enable3DCheckBox.Text = "3D"
+        Me.enable3DCheckBox.UseVisualStyleBackColor = True
+        '
         'PieChartForm
         '
         Me.AcceptButton = Me.pieCloseButton
@@ -155,6 +169,7 @@ Partial Class PieChartForm
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.pieCloseButton
         Me.ClientSize = New System.Drawing.Size(784, 562)
+        Me.Controls.Add(Me.enable3DCheckBox)
         Me.Controls.Add(Me.sortingComboBox)
         Me.Controls.Add(Me.generateChartButton)
         Me.Controls.Add(Me.clearDataLink)
@@ -183,4 +198,5 @@ Partial Class PieChartForm
     Friend WithEvents clearDataLink As System.Windows.Forms.LinkLabel
     Friend WithEvents generateChartButton As System.Windows.Forms.Button
     Friend WithEvents sortingComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents enable3DCheckBox As System.Windows.Forms.CheckBox
 End Class

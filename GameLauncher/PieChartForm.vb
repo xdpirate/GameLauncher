@@ -7,6 +7,7 @@ Imports System.IO
 Public Class PieChartForm
 
 #Region "Color Palettes"
+    '.NET default chart palettes
     Dim pltBerry As Color() = {Color.BlueViolet, Color.MediumOrchid, Color.RoyalBlue, Color.MediumVioletRed, Color.Blue, Color.BlueViolet, Color.Orchid, Color.MediumSlateBlue, Color.FromArgb(&HC0, 0, &HC0), Color.MediumBlue, Color.Purple}
     Dim pltBrightPastel As Color() = {Color.FromArgb(&H41, 140, 240), Color.FromArgb(&HFC, 180, &H41), Color.FromArgb(&HE0, &H40, 10), Color.FromArgb(5, 100, &H92), Color.FromArgb(&H1A, &H3B, &H69), Color.FromArgb(&HFF, &HE3, 130), Color.FromArgb(&H12, &H9C, &HDD), Color.FromArgb(&HCA, &H6B, &H4B), Color.FromArgb(0, &H5C, &HDB), Color.FromArgb(&HF3, 210, &H88), Color.FromArgb(80, &H63, &H81), Color.FromArgb(&HF1, &HB9, &HA8), Color.FromArgb(&HE0, &H83, 10), Color.FromArgb(120, &H93, 190)}
     Dim pltBright As Color() = {Color.Green, Color.Blue, Color.Purple, Color.Lime, Color.Fuchsia, Color.Teal, Color.Yellow, Color.Gray, Color.Aqua, Color.Navy, Color.Maroon, Color.Red, Color.Olive, Color.Silver, Color.Tomato, Color.Moccasin}
@@ -18,6 +19,11 @@ Public Class PieChartForm
     Dim pltPastel As Color() = {Color.SkyBlue, Color.LimeGreen, Color.MediumOrchid, Color.LightCoral, Color.SteelBlue, Color.YellowGreen, Color.Turquoise, Color.HotPink, Color.Khaki, Color.Tan, Color.DarkSeaGreen, Color.CornflowerBlue, Color.Plum, Color.CadetBlue, Color.PeachPuff, Color.LightSalmon}
     Dim pltSeaGreen As Color() = {Color.SeaGreen, Color.MediumAquamarine, Color.SteelBlue, Color.DarkCyan, Color.CadetBlue, Color.MediumSeaGreen, Color.MediumTurquoise, Color.LightSteelBlue, Color.DarkSeaGreen, Color.SkyBlue}
     Dim pltGrayscale As Color() = {Color.FromArgb(&H2E, &H2E, &H2E), Color.FromArgb(&H3D, &H3D, &H3D), Color.FromArgb(&H4D, &H4D, &H4D), Color.FromArgb(&H5C, &H5C, &H5C), Color.FromArgb(&H69, &H69, &H69), Color.FromArgb(&H78, &H78, &H78), Color.FromArgb(&H80, &H80, &H80), Color.FromArgb(&H82, &H82, &H82), Color.FromArgb(&H91, &H91, &H91), Color.FromArgb(&HA1, &HA1, &HA1), Color.FromArgb(&HAB, &HAB, &HAB), Color.FromArgb(&HB8, &HB8, &HB8), Color.FromArgb(&HC2, &HC2, &HC2), Color.FromArgb(&HCF, &HCF, &HCF), Color.FromArgb(&HD9, &HD9, &HD9), Color.FromArgb(&HE5, &HE5, &HE5)}
+
+    'Custom palettes
+    Dim pltGoldfish As Color() = {Color.FromArgb(105, 210, 231), Color.FromArgb(136, 215, 224), Color.FromArgb(167, 219, 216), Color.FromArgb(196, 224, 210), Color.FromArgb(224, 228, 204), Color.FromArgb(234, 181, 126), Color.FromArgb(243, 134, 48), Color.FromArgb(247, 120, 24), Color.FromArgb(250, 105, 0)}
+    Dim pltCake As Color() = {Color.FromArgb(119, 79, 56), Color.FromArgb(172, 111, 89), Color.FromArgb(224, 142, 121), Color.FromArgb(233, 177, 148), Color.FromArgb(241, 212, 175), Color.FromArgb(239, 221, 191), Color.FromArgb(236, 229, 206), Color.FromArgb(217, 227, 213), Color.FromArgb(197, 224, 220)}
+
 #End Region
 
     Dim sortByPlayTime As Boolean = True
@@ -38,29 +44,32 @@ Public Class PieChartForm
         Chart1.Series(0).Points.Clear()
         Chart1.Titles.Clear()
 
+        Dim labelPrevious As Integer = labelPicker.SelectedIndex
+        If labelPrevious = -1 Then labelPrevious = 0
         labelPicker.Items.Clear()
         labelPicker.Items.Add(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormLabelPickerOutside"))
         labelPicker.Items.Add(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormLabelPickerInside"))
         labelPicker.Items.Add(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormLabelPickerNone"))
+        labelPicker.SelectedIndex = labelPrevious
 
         Dim sortingPrevious As Integer = sortingComboBox.SelectedIndex
         If sortingPrevious = -1 Then sortingPrevious = 0
-
         sortingComboBox.Items.Clear()
         sortingComboBox.Items.Add(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormSortingPickerByMostPlayed"))
         sortingComboBox.Items.Add(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormSortingPickerAlphabetically"))
-
-        labelPicker.SelectedIndex = 0
         sortingComboBox.SelectedIndex = sortingPrevious
 
-        palettePicker.SelectedItem = "Bright Pastel"
+        If palettePicker.SelectedIndex = -1 Then
+            palettePicker.SelectedItem = "Bright Pastel"
+        Else
+            palettePicker.SelectedIndex = palettePicker.SelectedIndex
+        End If
+
 
         With Chart1
             .Palette = ChartColorPalette.None
-            .PaletteCustomColors = pltBrightPastel
-            .Series(0).CustomProperties() = "PieLabelStyle=Outside"
             .Series(0).BorderColor = Color.Black
-            .ChartAreas(0).Area3DStyle.Enable3D = True
+            .ChartAreas(0).Area3DStyle.Enable3D = enable3DCheckBox.Checked
         End With
 
         Dim statsKey As RegistryKey = My.Computer.Registry.CurrentUser.CreateSubKey("Software\GameLauncher\stats", RegistryKeyPermissionCheck.ReadWriteSubTree)
@@ -195,6 +204,8 @@ Public Class PieChartForm
                 Chart1.PaletteCustomColors = pltBrightPastel
             Case "Bright"
                 Chart1.PaletteCustomColors = pltBright
+            Case "Cake"
+                Chart1.PaletteCustomColors = pltCake
             Case "Chocolate"
                 Chart1.PaletteCustomColors = pltChocolate
             Case "Earth Tones"
@@ -203,6 +214,8 @@ Public Class PieChartForm
                 Chart1.PaletteCustomColors = pltExcel
             Case "Fire"
                 Chart1.PaletteCustomColors = pltFire
+            Case "Goldfish"
+                Chart1.PaletteCustomColors = pltGoldfish
             Case "Grayscale"
                 Chart1.PaletteCustomColors = pltGrayscale
             Case "Light"
@@ -335,6 +348,10 @@ Public Class PieChartForm
             sortByPlayTime = False
         End If
 
+        InitializeChartForm()
+    End Sub
+
+    Private Sub enable3DCheckBox_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles enable3DCheckBox.CheckedChanged
         InitializeChartForm()
     End Sub
 End Class
