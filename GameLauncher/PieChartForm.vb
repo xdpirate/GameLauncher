@@ -21,7 +21,6 @@ Public Class PieChartForm
 #End Region
 
     Dim sortByPlayTime As Boolean = True
-    Dim skipLoop As Boolean = False
 
     Private Sub PieChartForm_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         InitializeChartForm()
@@ -52,10 +51,7 @@ Public Class PieChartForm
         sortingComboBox.Items.Add(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormSortingPickerAlphabetically"))
 
         labelPicker.SelectedIndex = 0
-
-        skipLoop = True
         sortingComboBox.SelectedIndex = sortingPrevious
-        skipLoop = False
 
         palettePicker.SelectedItem = "Bright Pastel"
 
@@ -332,15 +328,13 @@ Public Class PieChartForm
         generateChartButton.Text = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormGenerateChartButton")
     End Sub
 
-    Private Sub sortingComboBox_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles sortingComboBox.SelectedIndexChanged
+    Private Sub sortingComboBox_SelectedIndexCommitted(sender As System.Object, e As System.EventArgs) Handles sortingComboBox.SelectionChangeCommitted
         If sortingComboBox.SelectedIndex = 0 Then
             sortByPlayTime = True
         Else
             sortByPlayTime = False
         End If
 
-        If Not skipLoop Then
-            InitializeChartForm()
-        End If
+        InitializeChartForm()
     End Sub
 End Class
