@@ -122,6 +122,7 @@
     <Compile Include="AboutForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CustomToolStripRenderer.vb" />
     <Compile Include="DockOpacity.Designer.vb">
       <DependentUpon>DockOpacity.vb</DependentUpon>
     </Compile>
@@ -248,6 +249,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>mlsEnglish.resx</DependentUpon>
     </Compile>
+    <Compile Include="ThemeChanger.Designer.vb">
+      <DependentUpon>ThemeChanger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ThemeChanger.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AboutForm.resx">
@@ -343,6 +350,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>mlsEnglish.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemeChanger.resx">
+      <DependentUpon>ThemeChanger.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

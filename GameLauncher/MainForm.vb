@@ -435,12 +435,12 @@ Public Class MainForm
             showBalloonTip()
         End If
 
-        Dim autoUpdateKey As RegistryKey = My.Computer.Registry.CurrentUser.CreateSubKey("Software\GameLauncher", RegistryKeyPermissionCheck.ReadWriteSubTree)
-        Dim value As Integer = CInt(autoUpdateKey.GetValue("autoUpdate", 9001))
+        Dim regKey As RegistryKey = My.Computer.Registry.CurrentUser.CreateSubKey("Software\GameLauncher", RegistryKeyPermissionCheck.ReadWriteSubTree)
+        Dim value As Integer = CInt(regKey.GetValue("autoUpdate", 9001))
 
         If value = 9001 Then
             'Doesn't exist, create it and set it to be enabled
-            autoUpdateKey.SetValue("autoUpdate", 1, RegistryValueKind.DWord)
+            regKey.SetValue("autoUpdate", 1, RegistryValueKind.DWord)
         ElseIf value = 1 Then
             'AutoUpdate is enabled, do nothing
         ElseIf value = 0 Then
@@ -450,6 +450,14 @@ Public Class MainForm
         End If
 
         TrayIcon.Text = "Game Launcher"
+
+        Dim isThemed As Integer = CInt(regKey.GetValue("isThemed", Nothing))
+        If isThemed = 1 Then
+            MainContextMenu.Renderer = New CustomToolStripRenderer()
+        ElseIf isThemed = Nothing Then
+            'Set the key
+            regKey.SetValue("isThemed", 0, RegistryValueKind.DWord)
+        End If
     End Sub
 
     Public Function calculateTime() As String
@@ -896,7 +904,7 @@ Public Class MainForm
                 .Text = caption
                 .Image = getIcon(path, skipGetSteamIcon, caption)
             End With
-            
+
             MainContextMenu.Items.Add(tsi)
             Return " "
         Catch ex As Exception
@@ -1767,5 +1775,9 @@ Public Class MainForm
             NotificationForm.newVersion = DirectCast(e.Result, String)
             NotificationForm.Show()
         End If
+    End Sub
+
+    Private Sub ThemeToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ThemeToolStripMenuItem.Click
+        ThemeChanger.Show()
     End Sub
 End Class
