@@ -49,6 +49,11 @@ Protected Overrides Sub OnRenderToolStripBackground(e As System.Windows.Forms.To
         End If
         e.Graphics.FillRectangle(Me.backgroundBrush, e.AffectedBounds)
     End Sub
+
+    Protected Overrides Sub OnRenderArrow(e As System.Windows.Forms.ToolStripArrowRenderEventArgs)
+        e.ArrowColor = Color.FromArgb(regKey.GetValue("foreColor", Nothing))
+        MyBase.OnRenderArrow(e)
+    End Sub
 End Class
 
 Class AwesomeColors
