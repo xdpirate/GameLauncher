@@ -65,7 +65,10 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Game Launcher\n© 2012-2013 bởi xdpirate\nĐược test bởi Kurithas.\nCám ơn Lisa đã hỗ trợ..
+        '''  Looks up a localized string similar to Game Launcher
+        '''© 2012-2013 bởi xdpirate
+        '''Được test bởi Kurithas.
+        '''Cám ơn Lisa đã hỗ trợ..
         '''</summary>
         Friend Shared ReadOnly Property AboutFormAuthorNote() As String
             Get

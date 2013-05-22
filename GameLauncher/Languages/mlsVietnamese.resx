@@ -118,7 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AboutFormAuthorNote" xml:space="preserve">
-    <value>Game Launcher\n© 2012-2013 bởi xdpirate\nĐược test bởi Kurithas.\nCám ơn Lisa đã hỗ trợ.</value>
+    <value>Game Launcher
+© 2012-2013 bởi xdpirate
+Được test bởi Kurithas.
+Cám ơn Lisa đã hỗ trợ.</value>
     <comment>The note shown on the about window, copyright and thanks</comment>
   </data>
   <data name="AboutFormCloseButtonText" xml:space="preserve">
