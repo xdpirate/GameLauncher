@@ -460,6 +460,74 @@ Public Class MainForm
             'Set the key
             regKey.SetValue("isThemed", 0, RegistryValueKind.DWord)
         End If
+
+        checkForDeadLinks()
+    End Sub
+
+    Private Sub checkForDeadLinks()
+        'Check for dead links (i.e. when a game has been uninstalled)
+        Dim deadGames As New Dictionary(Of String, String)
+        For Each kvp As KeyValuePair(Of String, String) In PathContainer
+            If Not My.Computer.FileSystem.FileExists(kvp.Value) Then
+                deadGames.Add(kvp.Key, kvp.Value)
+            End If
+        Next
+
+        If deadGames.Count > 0 Then
+            Dim deadGameString As String = Nothing
+            For Each game As String In deadGames.Keys
+                deadGameString &= game & vbNewLine
+            Next
+
+            Dim response As DialogResult = MessageBox.Show("Game Launcher has detected that the following games no longer exist on your computer: " & _
+                                                        vbNewLine & vbNewLine & deadGameString & vbNewLine & _
+                                                        "Do you want to remove them from your game list?", Application.ProductName, MessageBoxButtons.YesNo, _
+                                                        MessageBoxIcon.Question)
+
+            If response = Windows.Forms.DialogResult.Yes Then
+                For Each item As String In deadGames.Keys
+                    Dim success As Boolean
+                    Dim elementToRemove As Object = Nothing
+                    For Each element As Object In MainContextMenu.Items
+                        If element.Text = item Then
+                            success = True
+                            elementToRemove = element
+                            Exit For
+                        End If
+                    Next
+                    If success Then
+                        MainContextMenu.Items.Remove(elementToRemove)
+
+                        If PathContainer(item).StartsWith("steam://") Then
+                            Dim bmpName As String = Path.Combine(steamIconPath, PathContainer(item).Remove(0, 18) & ".bmp")
+                            If File.Exists(bmpName) Then
+                                My.Computer.FileSystem.DeleteFile(bmpName)
+                            End If
+                        End If
+
+                        If ArgsContainer.ContainsKey(item) Then
+                            ArgsContainer.Remove(item)
+                        End If
+
+                        If IconsContainer.ContainsKey(item) Then
+                            Dim imageName As String = Path.Combine(iconPath, IconsContainer(item) & ".png")
+                            If File.Exists(imageName) Then
+                                My.Computer.FileSystem.DeleteFile(imageName)
+                            End If
+                            IconsContainer.Remove(item)
+                        End If
+
+                        If LaunchersContainer.ContainsKey(item) Then
+                            LaunchersContainer.Remove(item)
+                        End If
+
+                        PathContainer.Remove(item)
+                    End If
+                Next
+                populateDock()
+                commitChanges()
+            End If
+        End If
     End Sub
 
     Public Function calculateTime() As String
