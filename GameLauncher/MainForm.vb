@@ -304,6 +304,31 @@ Public Class MainForm
         End If
     End Sub
 
+    Private Sub MainForm_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        AddHandler My.Application.StartupNextInstance, AddressOf CallingNewInstance
+
+        setLanguage()
+        setMenuLanguageStrings()
+        addHotKey()
+        loadINIs()
+        commitChanges()
+        clearMenu()
+        rebuildMenu()
+        togglePlayTimeInSkypeNotifications(playTimeToggleType.check)
+        skypeNotificationRegistryValueCheck()
+        skypeWorker.RunWorkerAsync()
+        restoreDock()
+        checkGameLauncherCmdArgs()
+        autoUpdater()
+        enableTheme()
+        checkForDeadLinks()
+
+        Me.Visible = False
+        Me.Hide()
+        My.Computer.FileSystem.CurrentDirectory = My.Application.Info.DirectoryPath
+        TrayIcon.Text = "Game Launcher"
+    End Sub
+
     Private Sub CallingNewInstance(ByVal sender As Object, ByVal e As Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)
         If e.CommandLine.Count > 0 Then
             For Each cmdLineArg As String In e.CommandLine
@@ -312,9 +337,7 @@ Public Class MainForm
         End If
     End Sub
 
-    Private Sub MainForm_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        AddHandler My.Application.StartupNextInstance, AddressOf CallingNewInstance
-
+    Private Sub setLanguage()
         'Get or set language
         Dim languageKey As RegistryKey = My.Computer.Registry.CurrentUser.CreateSubKey("Software\GameLauncher", RegistryKeyPermissionCheck.ReadWriteSubTree)
         Dim currentLanguage As String = languageKey.GetValue("currentLanguage", Nothing)
@@ -355,7 +378,9 @@ Public Class MainForm
                     CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsEnglish.ResourceManager
             End Select
         End If
+    End Sub
 
+    Private Sub setMenuLanguageStrings()
         ' Multi-language stuff
         QuitToolStripMenuItem.Text = CURRENT_LANGUAGE_RESOURCE.GetString("MainMenuQuit")
         OptionsMenuItem.Text = CURRENT_LANGUAGE_RESOURCE.GetString("MainMenuOptions")
@@ -372,16 +397,17 @@ Public Class MainForm
         AboutGameLauncherToolStripMenuItem.ToolTipText = CURRENT_LANGUAGE_RESOURCE.GetString("MainMenuAboutTooltip")
 
         TrayIcon.Text = CURRENT_LANGUAGE_RESOURCE.GetString("MainFormLoadingMessage")
+    End Sub
 
-        Me.Visible = False
-        Me.Hide()
-
+    Private Sub addHotKey()
         With hotKeyComp
             .WinKey = True
             .HotKey = Keys.G
         End With
         AddHandler hotKeyComp.HotkeyPressed, AddressOf HotKey
+    End Sub
 
+    Private Sub loadINIs()
         Dim settingsINIPath As String = Path.Combine(My.Application.Info.DirectoryPath, "settings.ini")
         Dim argsINIPath As String = Path.Combine(My.Application.Info.DirectoryPath, "args.ini")
         Dim iconsINIPath As String = Path.Combine(My.Application.Info.DirectoryPath, "icons.ini")
@@ -391,21 +417,9 @@ Public Class MainForm
         createOrLoadINI(launchersINIPath, iniTypes.launchers)
         createOrLoadINI(settingsINIPath, iniTypes.settings)
         createOrLoadINI(argsINIPath, iniTypes.arguments)
+    End Sub
 
-        commitChanges()
-        clearMenu()
-        rebuildMenu()
-
-        ' This is ugly but a quick and surefire 
-        ' way to load the form into memory
-        DragDropTargetForm.Show()
-        DragDropTargetForm.Hide()
-
-        togglePlayTimeInSkypeNotifications(playTimeToggleType.check)
-        skypeNotificationRegistryValueCheck()
-
-        skypeWorker.RunWorkerAsync()
-
+    Private Sub restoreDock()
         Dim dockShown As RegistryKey = My.Computer.Registry.CurrentUser.CreateSubKey("Software\GameLauncher", RegistryKeyPermissionCheck.ReadWriteSubTree)
         Dim dockShownVar As Integer = dockShown.GetValue("dockShown", Nothing)
         If dockShownVar = 0 Then
@@ -417,9 +431,9 @@ Public Class MainForm
                 dockToggle()
             End If
         End If
+    End Sub
 
-        My.Computer.FileSystem.CurrentDirectory = My.Application.Info.DirectoryPath
-
+    Private Sub checkGameLauncherCmdArgs()
         Dim showTip As Boolean = True
         If My.Application.CommandLineArgs.Count > 0 Then
             For Each cmdLineArg As String In My.Application.CommandLineArgs
@@ -436,7 +450,20 @@ Public Class MainForm
         If showTip Then
             showBalloonTip()
         End If
+    End Sub
 
+    Private Sub enableTheme()
+        Dim regKey As RegistryKey = My.Computer.Registry.CurrentUser.CreateSubKey("Software\GameLauncher", RegistryKeyPermissionCheck.ReadWriteSubTree)
+        Dim isThemed As Integer = CInt(regKey.GetValue("isThemed", Nothing))
+        If isThemed = 1 Then
+            MainContextMenu.Renderer = New CustomToolStripRenderer()
+        ElseIf isThemed = Nothing Then
+            'Set the key
+            regKey.SetValue("isThemed", 0, RegistryValueKind.DWord)
+        End If
+    End Sub
+
+    Private Sub autoUpdater()
         Dim regKey As RegistryKey = My.Computer.Registry.CurrentUser.CreateSubKey("Software\GameLauncher", RegistryKeyPermissionCheck.ReadWriteSubTree)
         Dim value As Integer = CInt(regKey.GetValue("autoUpdate", 9001))
 
@@ -450,18 +477,6 @@ Public Class MainForm
             skipUpdateThisSession = True
             UpdateChecker.Enabled = False
         End If
-
-        TrayIcon.Text = "Game Launcher"
-
-        Dim isThemed As Integer = CInt(regKey.GetValue("isThemed", Nothing))
-        If isThemed = 1 Then
-            MainContextMenu.Renderer = New CustomToolStripRenderer()
-        ElseIf isThemed = Nothing Then
-            'Set the key
-            regKey.SetValue("isThemed", 0, RegistryValueKind.DWord)
-        End If
-
-        checkForDeadLinks()
     End Sub
 
     Private Sub checkForDeadLinks()
