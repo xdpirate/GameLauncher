@@ -491,7 +491,7 @@ Public Class MainForm
         If deadGames.Count > 0 Then
             Dim deadGameString As String = Nothing
             For Each game As String In deadGames.Keys
-                deadGameString &= game & vbNewLine
+                deadGameString &= game.Replace("&&", "&") & vbNewLine
             Next
 
             Dim response As DialogResult = MessageBox.Show("Game Launcher has detected that the following games no longer exist on your computer: " & _
