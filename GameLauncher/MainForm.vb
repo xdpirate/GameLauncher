@@ -370,6 +370,8 @@ Public Class MainForm
                     CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsFrench.ResourceManager
                 Case "Vietnamese"
                     CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsVietnamese.ResourceManager
+                Case "Finnish"
+                    CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsFinnish.ResourceManager
                 Case "Pirate"
                     CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsPirate.ResourceManager
                 Case Else

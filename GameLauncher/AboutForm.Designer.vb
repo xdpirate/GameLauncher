@@ -57,24 +57,24 @@ Partial Class AboutForm
         'WebsiteLink
         '
         Me.WebsiteLink.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.WebsiteLink.AutoSize = True
-        Me.WebsiteLink.Location = New System.Drawing.Point(12, 425)
+        Me.WebsiteLink.Location = New System.Drawing.Point(12, 420)
         Me.WebsiteLink.Name = "WebsiteLink"
-        Me.WebsiteLink.Size = New System.Drawing.Size(46, 13)
+        Me.WebsiteLink.Size = New System.Drawing.Size(121, 26)
         Me.WebsiteLink.TabIndex = 3
         Me.WebsiteLink.TabStop = True
         Me.WebsiteLink.Text = "Website"
+        Me.WebsiteLink.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'ContactLink
         '
         Me.ContactLink.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ContactLink.AutoSize = True
-        Me.ContactLink.Location = New System.Drawing.Point(298, 425)
+        Me.ContactLink.Location = New System.Drawing.Point(220, 420)
         Me.ContactLink.Name = "ContactLink"
-        Me.ContactLink.Size = New System.Drawing.Size(44, 13)
+        Me.ContactLink.Size = New System.Drawing.Size(122, 26)
         Me.ContactLink.TabIndex = 4
         Me.ContactLink.TabStop = True
         Me.ContactLink.Text = "Contact"
+        Me.ContactLink.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'PictureBox1
         '
@@ -130,7 +130,6 @@ Partial Class AboutForm
         Me.Text = "About Game Launcher"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents CloseButton As System.Windows.Forms.Button
