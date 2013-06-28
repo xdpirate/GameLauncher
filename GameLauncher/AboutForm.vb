@@ -1,4 +1,7 @@
-﻿Public Class AboutForm
+﻿Imports System.Net
+Imports System.IO
+
+Public Class AboutForm
 
     Private Sub WebsiteLink_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles WebsiteLink.LinkClicked
         System.Diagnostics.Process.Start("http://gamelauncher.pvpsucks.com/")
@@ -33,7 +36,22 @@
             Dim webVersion As String = MainForm.phoneHome()
             Dim newVersion As New Version(Val(webVersion(0)), Val(webVersion(1)), Val(webVersion(2)), Val(webVersion(3)))
             If CInt(webVersion) > MainForm.GL_VERSION Then
-                If MessageBox.Show(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AboutFormNewVersion1") & newVersion.ToString & ")!" & vbNewLine & _
+
+                Dim fileReader As New WebClient()
+                Dim data As Stream
+                Dim sr As StreamReader
+                Dim changeLog As String
+                Try
+                    data = fileReader.OpenRead("http://gamelauncher.pvpsucks.com/changelog")
+                    sr = New StreamReader(data)
+                    changeLog = sr.ReadToEnd
+                    data.Close()
+                Catch ex As Exception
+                    changeLog = String.Format("[Fetching the change log failed: {0}]", ex.Message)
+                End Try
+
+                If MessageBox.Show(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AboutFormNewVersion1") & newVersion.ToString & ")!" & vbNewLine & vbNewLine & _
+                                   changeLog & vbNewLine & vbNewLine & _
                                    MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AboutFormNewVersion2"), _
                                     My.Application.Info.AssemblyName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, _
                                     MessageBoxDefaultButton.Button1) = Windows.Forms.DialogResult.Yes Then

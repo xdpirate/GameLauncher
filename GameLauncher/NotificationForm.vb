@@ -1,4 +1,7 @@
-﻿Public Class NotificationForm
+﻿Imports System.Net
+Imports System.IO
+
+Public Class NotificationForm
     Private isDrawn As Boolean = False
     Private strNewVersion As String = Nothing
 
@@ -72,7 +75,25 @@
 
     Private Sub btnYes_Click(sender As System.Object, e As System.EventArgs) Handles btnYes.Click
         'Yes clicked
-        System.Diagnostics.Process.Start("http://sourceforge.net/projects/game-launcher/files/binary/GameLauncher-v" & Me.newVersion & ".rar/download")
+        Dim fileReader As New WebClient()
+        Dim data As Stream
+        Dim sr As StreamReader
+        Dim changeLog As String
+        Try
+            data = fileReader.OpenRead("http://gamelauncher.pvpsucks.com/changelog")
+            sr = New StreamReader(data)
+            changeLog = sr.ReadToEnd
+            data.Close()
+        Catch ex As Exception
+            changeLog = String.Format("[Fetching the change log failed: {0}]", ex.Message)
+        End Try
+
+        Dim response As DialogResult = MessageBox.Show(changeLog & vbNewLine & vbNewLine & MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AboutFormNewVersion2"), _
+                                                       "Game Launcher", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+
+        If response = Windows.Forms.DialogResult.Yes Then
+            System.Diagnostics.Process.Start("http://sourceforge.net/projects/game-launcher/files/binary/GameLauncher-v" & Me.newVersion & ".rar/download")
+        End If
         Me.Dispose()
     End Sub
 End Class
