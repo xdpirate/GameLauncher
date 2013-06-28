@@ -1734,7 +1734,11 @@ Public Class MainForm
     End Sub
 
     Private Sub StatisticsToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles StatisticsToolStripMenuItem.Click
-        PieChartForm.Show()
+        Try
+            PieChartForm.Show()
+        Catch ex As ObjectDisposedException
+            ' No data, do nada
+        End Try
     End Sub
 
     Private Sub processMonitorTimer_Tick(sender As System.Object, e As System.EventArgs) Handles processMonitorTimer.Tick
