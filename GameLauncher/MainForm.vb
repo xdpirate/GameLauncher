@@ -485,8 +485,10 @@ Public Class MainForm
         'Check for dead links (i.e. when a game has been uninstalled)
         Dim deadGames As New Dictionary(Of String, String)
         For Each kvp As KeyValuePair(Of String, String) In PathContainer
-            If Not My.Computer.FileSystem.FileExists(kvp.Value) Then
-                deadGames.Add(kvp.Key, kvp.Value)
+            If Not kvp.Key.StartsWith("steam:///") Then
+                If Not My.Computer.FileSystem.FileExists(kvp.Value) Then
+                    deadGames.Add(kvp.Key, kvp.Value)
+                End If
             End If
         Next
 
