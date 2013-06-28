@@ -72,7 +72,7 @@
 
     Private Sub btnYes_Click(sender As System.Object, e As System.EventArgs) Handles btnYes.Click
         'Yes clicked
-        System.Diagnostics.Process.Start("http://code.google.com/p/game-launcher/downloads/detail?name=GameLauncher-v" & Me.newVersion & ".rar")
+        System.Diagnostics.Process.Start("http://sourceforge.net/projects/game-launcher/files/binary/GameLauncher-v" & Me.newVersion & ".rar/download")
         Me.Dispose()
     End Sub
 End Class
