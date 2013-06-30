@@ -92,7 +92,8 @@ Public Class NotificationForm
                                                        "Game Launcher", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
 
         If response = Windows.Forms.DialogResult.Yes Then
-            System.Diagnostics.Process.Start("http://sourceforge.net/projects/game-launcher/files/binary/GameLauncher-v" & Me.newVersion & ".rar/download")
+            System.Diagnostics.Process.Start("http://gamelauncher.pvpsucks.com/?q=dl")
+            End
         End If
         Me.Dispose()
     End Sub

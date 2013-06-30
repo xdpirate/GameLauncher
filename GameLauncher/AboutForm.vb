@@ -55,7 +55,8 @@ Public Class AboutForm
                                    MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AboutFormNewVersion2"), _
                                     My.Application.Info.AssemblyName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, _
                                     MessageBoxDefaultButton.Button1) = Windows.Forms.DialogResult.Yes Then
-                    System.Diagnostics.Process.Start("http://sourceforge.net/projects/game-launcher/files/binary/GameLauncher-v" & newVersion.ToString & ".rar/download")
+                    System.Diagnostics.Process.Start("http://gamelauncher.pvpsucks.com/?q=dl")
+                    End
                 End If
             Else
                 MessageBox.Show(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AboutFormUpToDate"), _
