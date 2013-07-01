@@ -833,6 +833,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to There doesn&apos;t seem to be a path defined for this game..
+        '''</summary>
+        Friend Shared ReadOnly Property MainFormBrowseItemFolderNoPath() As String
+            Get
+                Return ResourceManager.GetString("MainFormBrowseItemFolderNoPath", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Åpne dette spillets mappe i Explorer.
         '''</summary>
         Friend Shared ReadOnly Property MainFormBrowseItemFolderTooltip() As String
