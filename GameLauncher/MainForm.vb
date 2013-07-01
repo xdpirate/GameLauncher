@@ -1157,6 +1157,7 @@ Public Class MainForm
             Dim tsi As New ToolStripMenuItem
             Dim removeItem As ToolStripMenuItem
             Dim editGameItem As ToolStripMenuItem
+            Dim browseGameFolderItem As ToolStripMenuItem
 
             tsi.Text = element
             tsi.Image = getIcon(PathContainer(element), True, element)
@@ -1164,26 +1165,35 @@ Public Class MainForm
             editGameItem.ToolTipText = CURRENT_LANGUAGE_RESOURCE.GetString("MainFormEditGameItemTooltip")
             removeItem = tsi.DropDownItems.Add(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormRemoveGameItem"))
             removeItem.ToolTipText = CURRENT_LANGUAGE_RESOURCE.GetString("MainFormRemoveGameItemTooltip")
+            browseGameFolderItem = tsi.DropDownItems.Add(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormBrowseItemFolder"))
+            browseGameFolderItem.ToolTipText = CURRENT_LANGUAGE_RESOURCE.GetString("MainFormBrowseItemFolderTooltip")
 
             MainContextMenu.Items.Add(tsi)
 
             AddHandler tsi.Click, AddressOf runGame
             AddHandler removeItem.Click, AddressOf removeGame
             AddHandler editGameItem.Click, AddressOf editGame
+            AddHandler browseGameFolderItem.Click, AddressOf browseGameFolder
         Next
     End Sub
 
-    Public Sub delCmdLineArgs(sender As Object, e As System.EventArgs)
+    Public Sub browseGameFolder(ByVal sender As Object, ByVal e As System.EventArgs)
         Dim daddy As ToolStripMenuItem = sender.OwnerItem
+        Dim gameName As String = daddy.Text
+        Dim gamePath As String
 
-        If MessageBox.Show(String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormRemoveCmdArgs"), daddy.Text), _
-                           My.Application.Info.ProductName, _
-                           MessageBoxButtons.YesNo, _
-                           MessageBoxIcon.Question, _
-                           MessageBoxDefaultButton.Button1) = Windows.Forms.DialogResult.Yes Then
-            ArgsContainer.Remove(daddy.Text)
-            commitChanges()
-        End If
+        Try
+            gamePath = PathContainer(gameName)
+
+            If PathContainer(gameName).StartsWith("steam://rungameid/") Then
+                gamePath = LaunchersContainer(gameName)
+            End If
+
+            Process.Start(Path.GetDirectoryName(gamePath))
+        Catch ex As Exception
+            MessageBox.Show(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormBrowseItemFolderNoPath") & vbNewLine & vbNewLine & ex.Message, _
+                            "Game Launcher", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
     End Sub
 
     Public Sub editGame(ByVal sender As Object, ByVal e As System.EventArgs)
