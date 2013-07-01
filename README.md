@@ -10,12 +10,11 @@ It even includes a dock!
 NOTE:
 -----
 This is the public git repo for Game Launcher. If you don't know what this is and you're
-looking for the latest version, just head over to Google Code to download the latest stable
-installer: https://code.google.com/p/game-launcher/downloads/list
+looking for the latest version, just head over to SourceForge to download the latest stable
+installer: https://sourceforge.net/projects/game-launcher/
 
 I'm quite new to git (and version control systems in general), so any pull requests etc. can
-take time while I get comfortable working with git. I will gradually phase out the source code
-packages posted on Google Code and replace it with git.
+take time while I get comfortable working with git.
 
-For general help with the application please visit its website:
+For general info and help with the application please visit its website:
 http://gamelauncher.pvpsucks.com/
