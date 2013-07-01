@@ -708,4 +708,12 @@ Special thanks to Lisa for support.</value>
     <value>Suomenkielisen käännöksen teki Hakkapeliitta</value>
     <comment>Provide translator's name or nickname here.</comment>
   </data>
+  <data name="MainFormBrowseItemFolder" xml:space="preserve">
+    <value>Explore Game Folder</value>
+    <comment>Shown beneath each item in the game list</comment>
+  </data>
+  <data name="MainFormBrowseItemFolderTooltip" xml:space="preserve">
+    <value>Opens this game's folder in Windows Explorer</value>
+    <comment>Shown when hovering over the Browse Game Folder option beneath each game</comment>
+  </data>
 </root>

@@ -312,6 +312,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>mlsPirate.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Languages\mlsPortuguese.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
@@ -342,6 +343,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>mlsVietnamese.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
@@ -370,6 +372,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>mlsEnglish.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemeChanger.resx">
       <DependentUpon>ThemeChanger.vb</DependentUpon>

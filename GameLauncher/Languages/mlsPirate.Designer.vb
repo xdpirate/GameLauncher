@@ -824,6 +824,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Explore Game Folderrrr.
+        '''</summary>
+        Friend Shared ReadOnly Property MainFormBrowseItemFolder() As String
+            Get
+                Return ResourceManager.GetString("MainFormBrowseItemFolder", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Openin&apos; this game&apos;s folderrrr in Windows Explorerrr.
+        '''</summary>
+        Friend Shared ReadOnly Property MainFormBrowseItemFolderTooltip() As String
+            Get
+                Return ResourceManager.GetString("MainFormBrowseItemFolderTooltip", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Be ye sure ye want t&apos; remove all items in th&apos; list? Ye cannae regret this later!.
         '''</summary>
         Friend Shared ReadOnly Property MainFormClearGameList() As String

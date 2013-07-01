@@ -708,4 +708,12 @@ Mange takk til Lisa for hennes støtte.</value>
     <value>Sorter etter tid spilt</value>
     <comment>Shown in the sorting box</comment>
   </data>
+  <data name="MainFormBrowseItemFolder" xml:space="preserve">
+    <value>Utforsk spillmappe</value>
+    <comment>Shown beneath each item in the game list</comment>
+  </data>
+  <data name="MainFormBrowseItemFolderTooltip" xml:space="preserve">
+    <value>Åpne dette spillets mappe i Explorer</value>
+    <comment>Shown when hovering over the Browse Game Folder option beneath each game</comment>
+  </data>
 </root>

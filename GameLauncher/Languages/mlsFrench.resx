@@ -708,4 +708,12 @@ Merci tout particulièrement à Lisa pour son support.</value>
     <value>Trier par le plus joué</value>
     <comment>Shown in the sorting box</comment>
   </data>
+  <data name="MainFormBrowseItemFolder" xml:space="preserve">
+    <value>Explore Game Folder</value>
+    <comment>Shown beneath each item in the game list</comment>
+  </data>
+  <data name="MainFormBrowseItemFolderTooltip" xml:space="preserve">
+    <value>Opens this game's folder in Windows Explorer</value>
+    <comment>Shown when hovering over the Browse Game Folder option beneath each game</comment>
+  </data>
 </root>
