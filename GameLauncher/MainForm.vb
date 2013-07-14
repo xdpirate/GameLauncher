@@ -1093,7 +1093,7 @@ Public Class MainForm
         Try
             If sendSkypeNotification Then
                 If isProcessRunning("skype") Then
-                    Dim moodText As String = String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypePlayStopped"), currentRunningGame)
+                    Dim moodText As String = String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypePlayStopped"), currentRunningGame.Replace("&&", "&"))
                     If playTimeInSkypeNotifications Then
                         moodText &= String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypePlayTimeStopped"), calculateTime() & ")")
                     End If
@@ -1218,7 +1218,7 @@ Public Class MainForm
         Dim arguments As String = Nothing
         Dim gameIsSteam As Boolean = False
 
-        AddNewGameForm.gameNameTextBox.Text = gameName
+        AddNewGameForm.gameNameTextBox.Text = gameName.Replace("&&", "&")
 
         If ArgsContainer.ContainsKey(gameName) Then
             arguments = ArgsContainer(gameName).Replace("|||", "=")
