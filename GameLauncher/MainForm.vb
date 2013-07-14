@@ -489,6 +489,10 @@ Public Class MainForm
                 If Not My.Computer.FileSystem.FileExists(kvp.Value) Then
                     deadGames.Add(kvp.Key, kvp.Value)
                 End If
+            Else
+                If Not My.Computer.FileSystem.FileExists(LaunchersContainer(kvp.Key)) Then
+                    deadGames.Add(kvp.Key, LaunchersContainer(kvp.Key))
+                End If
             End If
         Next
 
@@ -1086,7 +1090,7 @@ Public Class MainForm
             If isProcessRunning("skype") Then
                 Dim moodText As String = String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypePlayStopped"), currentRunningGame)
                 If playTimeInSkypeNotifications Then
-                    moodText &= String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypePlayTimeStopped"), calculateTime())
+                    moodText &= String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypePlayTimeStopped"), calculateTime() & ")")
                 End If
                 oSkype.Profile("Mood_Text") = moodText
             End If
