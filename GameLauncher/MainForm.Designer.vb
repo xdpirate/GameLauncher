@@ -33,6 +33,7 @@ Partial Class MainForm
         Me.ClearGameListMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.PreferencesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ThemeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatisticsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.AboutGameLauncherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -40,10 +41,8 @@ Partial Class MainForm
         Me.UpdateChecker = New System.Windows.Forms.Timer(Me.components)
         Me.skypeWorker = New System.ComponentModel.BackgroundWorker()
         Me.updateWorker = New System.ComponentModel.BackgroundWorker()
-        Me.processMonitorTimer = New System.Windows.Forms.Timer(Me.components)
         Me.processMonitorWorker = New System.ComponentModel.BackgroundWorker()
         Me.runGameWorker = New System.ComponentModel.BackgroundWorker()
-        Me.ThemeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MainContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -109,6 +108,12 @@ Partial Class MainForm
         Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.PreferencesToolStripMenuItem.Text = "&Preferences"
         '
+        'ThemeToolStripMenuItem
+        '
+        Me.ThemeToolStripMenuItem.Name = "ThemeToolStripMenuItem"
+        Me.ThemeToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.ThemeToolStripMenuItem.Text = "&Theme"
+        '
         'StatisticsToolStripMenuItem
         '
         Me.StatisticsToolStripMenuItem.Name = "StatisticsToolStripMenuItem"
@@ -144,21 +149,11 @@ Partial Class MainForm
         'updateWorker
         '
         '
-        'processMonitorTimer
-        '
-        Me.processMonitorTimer.Interval = 1000
-        '
         'processMonitorWorker
         '
         '
         'runGameWorker
         '
-        '
-        'ThemeToolStripMenuItem
-        '
-        Me.ThemeToolStripMenuItem.Name = "ThemeToolStripMenuItem"
-        Me.ThemeToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
-        Me.ThemeToolStripMenuItem.Text = "&Theme"
         '
         'MainForm
         '
@@ -195,7 +190,6 @@ Partial Class MainForm
     Friend WithEvents updateWorker As System.ComponentModel.BackgroundWorker
     Friend WithEvents PreferencesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StatisticsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents processMonitorTimer As System.Windows.Forms.Timer
     Friend WithEvents processMonitorWorker As System.ComponentModel.BackgroundWorker
     Friend WithEvents runGameWorker As System.ComponentModel.BackgroundWorker
     Friend WithEvents ThemeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

@@ -17,7 +17,6 @@ Public Class MainForm
     Public GL_VERSION As Integer = getNumericVersion()
     Public CURRENT_LANGUAGE_RESOURCE As Resources.ResourceManager = My.Resources.mlsEnglish.ResourceManager
 
-
     Public PathContainer As New SortedDictionary(Of String, String)
     Public ArgsContainer As New SortedDictionary(Of String, String)
     Public IconsContainer As New SortedDictionary(Of String, String)
@@ -34,6 +33,7 @@ Public Class MainForm
     Public currentRunningGameProcess As Process = Nothing
     Public CurrentRunningGameProcessName As String = Nothing
 
+    Public processMonitorTimer As New System.Threading.Timer(AddressOf processMonitorTimer_Tick, Nothing, System.Threading.Timeout.Infinite, 1000)
     Public processMonitorCounter As Integer = 0
 
     Dim skypeThread As New Thread(New ThreadStart(AddressOf skypeConnect))
@@ -1755,20 +1755,20 @@ Public Class MainForm
         End Try
     End Sub
 
-    Private Sub processMonitorTimer_Tick(sender As System.Object, e As System.EventArgs) Handles processMonitorTimer.Tick
-        If processMonitorCounter >= 300 Then
-            processMonitorCounter = 0
-            processMonitorTimer.Enabled = False
-        Else
+    Private Sub processMonitorTimer_Tick(ByVal state As Object)
+        If processMonitorCounter < 300 Then
             processMonitorWorker.RunWorkerAsync(CurrentRunningGameProcessName)
             processMonitorCounter += 1
+        Else
+            processMonitorCounter = 0
+            processMonitorTimer.Change(Timeout.Infinite, Timeout.Infinite)
         End If
     End Sub
 
     Private Sub processMonitorWorker_DoWork(sender As System.Object, e As System.ComponentModel.DoWorkEventArgs) Handles processMonitorWorker.DoWork
         For Each clsProcess As Process In Process.GetProcesses()
             If clsProcess.ProcessName = e.Argument Then
-                processMonitorTimer.Enabled = False
+                processMonitorTimer.Change(Timeout.Infinite, Timeout.Infinite) ' Stop the timer
                 currentRunningGameProcess = clsProcess
                 currentRunningGameTimeStamp = currentRunningGameProcess.StartTime
                 currentRunningGameProcess.EnableRaisingEvents = True
@@ -1778,7 +1778,7 @@ Public Class MainForm
     End Sub
 
     Private Sub runGameWorker_DoWork(sender As System.Object, e As System.ComponentModel.DoWorkEventArgs) Handles runGameWorker.DoWork
-        Dim tsi As ToolStripItem = e.Argument
+        Dim tsi As ToolStripMenuItem = DirectCast(e.Argument, ToolStripMenuItem)
         currentRunningGame = tsi.Text
 
         If sendSkypeNotification Then
@@ -1801,7 +1801,8 @@ Public Class MainForm
                     My.Computer.FileSystem.CurrentDirectory = Path.GetDirectoryName(LaunchersContainer(currentRunningGame))
                     CurrentRunningGameProcessName = Path.GetFileNameWithoutExtension(PathContainer(currentRunningGame))
                     processMonitorCounter = 0
-                    processMonitorTimer.Enabled = True
+                    processMonitorTimer.Change(0, 1000)
+
                     Dim proc As New Process()
                     Dim startInfo As New ProcessStartInfo
                     startInfo.FileName = LaunchersContainer(currentRunningGame)
@@ -1824,7 +1825,7 @@ Public Class MainForm
                     'Steam game with specified EXE
                     CurrentRunningGameProcessName = Path.GetFileNameWithoutExtension(LaunchersContainer(currentRunningGame))
                     processMonitorCounter = 0
-                    processMonitorTimer.Enabled = True
+                    processMonitorTimer.Change(0, 1000)
 
                     If ArgsContainer.ContainsKey(currentRunningGame) Then ' If the game has arguments...
                         If PathContainer(currentRunningGame).StartsWith("steam") Then ' If it's a Steam game, launch it from the Steam EXE rather via the Steam protocol!
