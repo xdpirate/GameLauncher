@@ -1090,15 +1090,20 @@ Public Class MainForm
     End Sub
 
     Sub stoppedPlaying()
-        If sendSkypeNotification Then
-            If isProcessRunning("skype") Then
-                Dim moodText As String = String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypePlayStopped"), currentRunningGame)
-                If playTimeInSkypeNotifications Then
-                    moodText &= String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypePlayTimeStopped"), calculateTime() & ")")
+        Try
+            If sendSkypeNotification Then
+                If isProcessRunning("skype") Then
+                    Dim moodText As String = String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypePlayStopped"), currentRunningGame)
+                    If playTimeInSkypeNotifications Then
+                        moodText &= String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypePlayTimeStopped"), calculateTime() & ")")
+                    End If
+                    oSkype.Profile("Mood_Text") = moodText
                 End If
-                oSkype.Profile("Mood_Text") = moodText
             End If
-        End If
+        Catch ex As COMException
+            ' Skype connection failed
+        End Try
+
 
         saveStats()
         currentRunningGame = Nothing
