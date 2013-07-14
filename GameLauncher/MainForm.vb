@@ -490,9 +490,13 @@ Public Class MainForm
                     deadGames.Add(kvp.Key, kvp.Value)
                 End If
             Else
-                If Not My.Computer.FileSystem.FileExists(LaunchersContainer(kvp.Key)) Then
-                    deadGames.Add(kvp.Key, LaunchersContainer(kvp.Key))
-                End If
+                Try
+                    If Not My.Computer.FileSystem.FileExists(LaunchersContainer(kvp.Key)) Then
+                        deadGames.Add(kvp.Key, LaunchersContainer(kvp.Key))
+                    End If
+                Catch ex As KeyNotFoundException
+                    ' Do nothing
+                End Try
             End If
         Next
 
@@ -1781,18 +1785,24 @@ Public Class MainForm
         Dim tsi As ToolStripMenuItem = DirectCast(e.Argument, ToolStripMenuItem)
         currentRunningGame = tsi.Text
 
-        If sendSkypeNotification Then
-            If isProcessRunning("skype") Then
-                oSkype.Attach(8, True)
-                If oSkype.AttachmentStatus() = SKYPE4COMLib.TAttachmentStatus.apiAttachSuccess Then
-                    If PathContainer(currentRunningGame).StartsWith("steam") Then
-                        oSkype.Profile("Mood_Text") = String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypeNowPlayingSteam"), currentRunningGame.Replace("&&", "&"))
-                    Else
-                        oSkype.Profile("Mood_Text") = String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypeNowPlaying"), currentRunningGame.Replace("&&", "&"))
+        Try
+            If sendSkypeNotification Then
+                If isProcessRunning("skype") Then
+                    oSkype.Attach(8, True)
+                    If oSkype.AttachmentStatus() = SKYPE4COMLib.TAttachmentStatus.apiAttachSuccess Then
+                        If PathContainer(currentRunningGame).StartsWith("steam") Then
+                            oSkype.Profile("Mood_Text") = String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypeNowPlayingSteam"), currentRunningGame.Replace("&&", "&"))
+                        Else
+                            oSkype.Profile("Mood_Text") = String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypeNowPlaying"), currentRunningGame.Replace("&&", "&"))
+                        End If
                     End If
                 End If
             End If
-        End If
+        Catch ex As COMException
+            'Skype connection FAILED D:
+            TrayIcon.ShowBalloonTip(5000, "Skype connection failed", "Please check your allowed applications in Skype settings", ToolTipIcon.Info)
+        End Try
+
 
         If PathContainer.ContainsKey(currentRunningGame) Then
             If PathContainer(currentRunningGame).StartsWith("steam://rungameid/") = False Then
