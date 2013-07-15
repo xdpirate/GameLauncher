@@ -43,6 +43,8 @@ Partial Class MainForm
         Me.updateWorker = New System.ComponentModel.BackgroundWorker()
         Me.processMonitorWorker = New System.ComponentModel.BackgroundWorker()
         Me.runGameWorker = New System.ComponentModel.BackgroundWorker()
+        Me.ScanForDeadGamesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.MainContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -70,7 +72,7 @@ Partial Class MainForm
         '
         'OptionsMenuItem
         '
-        Me.OptionsMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddGameMenuItem, Me.RemoveGameMenuItem, Me.ClearGameListMenuItem, Me.ToolStripSeparator2, Me.PreferencesToolStripMenuItem, Me.ThemeToolStripMenuItem, Me.StatisticsToolStripMenuItem, Me.ToolStripSeparator3, Me.AboutGameLauncherToolStripMenuItem})
+        Me.OptionsMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddGameMenuItem, Me.RemoveGameMenuItem, Me.ClearGameListMenuItem, Me.ToolStripSeparator2, Me.PreferencesToolStripMenuItem, Me.ThemeToolStripMenuItem, Me.StatisticsToolStripMenuItem, Me.ToolStripSeparator4, Me.ScanForDeadGamesToolStripMenuItem, Me.ToolStripSeparator3, Me.AboutGameLauncherToolStripMenuItem})
         Me.OptionsMenuItem.Name = "OptionsMenuItem"
         Me.OptionsMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.OptionsMenuItem.Text = "&Options"
@@ -155,6 +157,17 @@ Partial Class MainForm
         'runGameWorker
         '
         '
+        'ScanForDeadGamesToolStripMenuItem
+        '
+        Me.ScanForDeadGamesToolStripMenuItem.Name = "ScanForDeadGamesToolStripMenuItem"
+        Me.ScanForDeadGamesToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.ScanForDeadGamesToolStripMenuItem.Text = "&Scan for dead games"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(190, 6)
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -193,5 +206,7 @@ Partial Class MainForm
     Friend WithEvents processMonitorWorker As System.ComponentModel.BackgroundWorker
     Friend WithEvents runGameWorker As System.ComponentModel.BackgroundWorker
     Friend WithEvents ThemeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ScanForDeadGamesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

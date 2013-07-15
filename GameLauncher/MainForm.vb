@@ -481,7 +481,7 @@ Public Class MainForm
         End If
     End Sub
 
-    Private Sub checkForDeadLinks()
+    Private Function checkForDeadLinks() As Boolean
         'Check for dead links (i.e. when a game has been uninstalled)
         Dim deadGames As New Dictionary(Of String, String)
         For Each kvp As KeyValuePair(Of String, String) In PathContainer
@@ -554,8 +554,12 @@ Public Class MainForm
                 populateDock()
                 commitChanges()
             End If
+
+            Return True
+        Else
+            Return False
         End If
-    End Sub
+    End Function
 
     Public Function calculateTime() As String
         Dim timeThen As Date = currentRunningGameTimeStamp
@@ -1902,5 +1906,11 @@ Public Class MainForm
 
     Private Sub ThemeToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ThemeToolStripMenuItem.Click
         ThemeChanger.Show()
+    End Sub
+
+    Private Sub ScanForDeadGamesToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ScanForDeadGamesToolStripMenuItem.Click
+        If checkForDeadLinks() = False Then
+            MessageBox.Show("No dead games were detected.", "Game Launcher", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
 End Class
