@@ -1791,7 +1791,7 @@ Public Class MainForm
     End Sub
 
     Private Sub runGameWorker_DoWork(sender As System.Object, e As System.ComponentModel.DoWorkEventArgs) Handles runGameWorker.DoWork
-        Dim tsi As ToolStripMenuItem = DirectCast(e.Argument, ToolStripMenuItem)
+        Dim tsi As Object = e.Argument
         currentRunningGame = tsi.Text
 
         Try
