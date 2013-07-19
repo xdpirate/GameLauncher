@@ -41,6 +41,8 @@ Public Class MainForm
     Dim steamIconPath As String = Path.Combine(My.Application.Info.DirectoryPath, "steamicons\")
     Dim iconPath As String = Path.Combine(My.Application.Info.DirectoryPath, "icons\")
 
+    Dim gameRandomizer As New Random
+
     Public Structure SHFILEINFO
         Public hIcon As IntPtr
         Public iIcon As Integer
@@ -490,13 +492,11 @@ Public Class MainForm
                     deadGames.Add(kvp.Key, kvp.Value)
                 End If
             Else
-                Try
+                If LaunchersContainer.ContainsKey(kvp.Key) Then
                     If Not My.Computer.FileSystem.FileExists(LaunchersContainer(kvp.Key)) Then
                         deadGames.Add(kvp.Key, LaunchersContainer(kvp.Key))
                     End If
-                Catch ex As KeyNotFoundException
-                    ' Do nothing
-                End Try
+                End If
             End If
         Next
 
@@ -1107,7 +1107,6 @@ Public Class MainForm
         Catch ex As COMException
             ' Skype connection failed
         End Try
-
 
         saveStats()
         currentRunningGame = Nothing
@@ -1911,6 +1910,44 @@ Public Class MainForm
     Private Sub ScanForDeadGamesToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ScanForDeadGamesToolStripMenuItem.Click
         If checkForDeadLinks() = False Then
             MessageBox.Show("No dead games were detected.", "Game Launcher", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+    End Sub
+
+    Private Sub PlayRandomGameToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles PlayRandomGameToolStripMenuItem.Click
+        runRandomGame()
+    End Sub
+
+    Public Sub runRandomGame()
+        Dim randomNum As Integer = gameRandomizer.Next(0, PathContainer.Count - 1)
+        Dim randomGame As String = Nothing
+        Dim counter As Integer = 0
+        For Each game As String In PathContainer.Keys
+            If counter = randomNum Then
+                randomGame = game
+                Exit For
+            Else
+                counter += 1
+            End If
+        Next
+        Dim displayString As String = "Your randomly chosen game is ""{0}""." & vbNewLine & vbNewLine & "Do you want to launch it now? Click 'No' to generate a new random pick."
+        Dim response As DialogResult = MessageBox.Show(String.Format(displayString, randomGame.Replace("&&", "&")), "Game Launcher", MessageBoxButtons.YesNoCancel, _
+                                                       MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification)
+
+        If response = Windows.Forms.DialogResult.Yes Then
+            ' Launch it
+            Dim senderItem As ToolStripItem = Nothing
+            For Each item As ToolStripItem In MainContextMenu.Items
+                If item.Text = randomGame Then
+                    senderItem = item
+                    Exit For
+                End If
+            Next
+
+            runGame(senderItem, Nothing)
+        ElseIf response = Windows.Forms.DialogResult.No Then
+            runRandomGame()
+        ElseIf response = Windows.Forms.DialogResult.Cancel Then
+            ' Do nothing
         End If
     End Sub
 End Class

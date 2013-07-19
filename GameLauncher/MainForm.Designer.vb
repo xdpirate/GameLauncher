@@ -45,6 +45,7 @@ Partial Class MainForm
         Me.updateWorker = New System.ComponentModel.BackgroundWorker()
         Me.processMonitorWorker = New System.ComponentModel.BackgroundWorker()
         Me.runGameWorker = New System.ComponentModel.BackgroundWorker()
+        Me.PlayRandomGameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MainContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -60,21 +61,21 @@ Partial Class MainForm
         Me.MainContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QuitToolStripMenuItem, Me.OptionsMenuItem, Me.ToolStripSeparator1})
         Me.MainContextMenu.Name = "ContextMenuStrip1"
         Me.MainContextMenu.ShowItemToolTips = False
-        Me.MainContextMenu.Size = New System.Drawing.Size(117, 54)
+        Me.MainContextMenu.Size = New System.Drawing.Size(153, 76)
         '
         'QuitToolStripMenuItem
         '
         Me.QuitToolStripMenuItem.Name = "QuitToolStripMenuItem"
-        Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.QuitToolStripMenuItem.Text = "&Quit"
         Me.QuitToolStripMenuItem.ToolTipText = "Exit Game Launcher. Note that if you have GL registered as a startup application," & _
     " it will show up on next login."
         '
         'OptionsMenuItem
         '
-        Me.OptionsMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddGameMenuItem, Me.RemoveGameMenuItem, Me.ClearGameListMenuItem, Me.ToolStripSeparator2, Me.PreferencesToolStripMenuItem, Me.ThemeToolStripMenuItem, Me.StatisticsToolStripMenuItem, Me.ToolStripSeparator4, Me.ScanForDeadGamesToolStripMenuItem, Me.ToolStripSeparator3, Me.AboutGameLauncherToolStripMenuItem})
+        Me.OptionsMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddGameMenuItem, Me.RemoveGameMenuItem, Me.ClearGameListMenuItem, Me.ToolStripSeparator2, Me.PreferencesToolStripMenuItem, Me.ThemeToolStripMenuItem, Me.StatisticsToolStripMenuItem, Me.ToolStripSeparator4, Me.ScanForDeadGamesToolStripMenuItem, Me.PlayRandomGameToolStripMenuItem, Me.ToolStripSeparator3, Me.AboutGameLauncherToolStripMenuItem})
         Me.OptionsMenuItem.Name = "OptionsMenuItem"
-        Me.OptionsMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.OptionsMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.OptionsMenuItem.Text = "&Options"
         '
         'AddGameMenuItem
@@ -149,7 +150,7 @@ Partial Class MainForm
         '
         Me.ToolStripSeparator1.ForeColor = System.Drawing.Color.Blue
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(113, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
         '
         'UpdateChecker
         '
@@ -167,6 +168,12 @@ Partial Class MainForm
         '
         'runGameWorker
         '
+        '
+        'PlayRandomGameToolStripMenuItem
+        '
+        Me.PlayRandomGameToolStripMenuItem.Name = "PlayRandomGameToolStripMenuItem"
+        Me.PlayRandomGameToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.PlayRandomGameToolStripMenuItem.Text = "P&lay random game"
         '
         'MainForm
         '
@@ -208,5 +215,6 @@ Partial Class MainForm
     Friend WithEvents ThemeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ScanForDeadGamesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PlayRandomGameToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
