@@ -54,7 +54,7 @@ Public Class PieChartForm
         labelPicker.SelectedIndex = labelPrevious
 
         Dim sortingPrevious As Integer = sortingComboBox.SelectedIndex
-        If sortingPrevious = -1 Then sortingPrevious = 0
+        If sortingPrevious = -1 Then sortingPrevious = 1
         sortingComboBox.Items.Clear()
         sortingComboBox.Items.Add(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormSortingPickerByMostPlayed"))
         sortingComboBox.Items.Add(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormSortingPickerAlphabetically"))
@@ -79,17 +79,17 @@ Public Class PieChartForm
         'Make a dictionary depending on sort mode
         Dim i As Integer = 0
         Dim newDict As New SortedDictionary(Of String, String)(New NaturalComparer)
-        If sortByPlayTime Then
-            While i < values.Length
-                newDict.Add(CStr(statsKey.GetValue(values(i))), values(i))
-                i += 1
-            End While
-        Else
-            While i < values.Length
-                newDict.Add(values(i), CStr(statsKey.GetValue(values(i))))
-                i += 1
-            End While
-        End If
+        'If sortByPlayTime Then
+        '    While i < values.Length
+        '        newDict.Add(CStr(statsKey.GetValue(values(i))), values(i))
+        '        i += 1
+        '    End While
+        'Else
+        While i < values.Length
+            newDict.Add(values(i), CStr(statsKey.GetValue(values(i))))
+            i += 1
+        End While
+        'End If
 
         If newDict.Count = 0 Then
             MessageBox.Show(MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormNoData"), "Game Launcher", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -108,13 +108,13 @@ Public Class PieChartForm
             shortS = MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("PieChartFormTimeSecondShorthand")
 
             For Each kvp As KeyValuePair(Of String, String) In newDict
-                If sortByPlayTime Then
-                    gamePlayTime = kvp.Key
-                    gameName = kvp.Value
-                Else
-                    gamePlayTime = kvp.Value
-                    gameName = kvp.Key
-                End If
+                'If sortByPlayTime Then
+                '    gamePlayTime = kvp.Key
+                '    gameName = kvp.Value
+                'Else
+                gamePlayTime = kvp.Value
+                gameName = kvp.Key
+                'End If
 
                 gameName = gameName.Replace("&&", "&")
 

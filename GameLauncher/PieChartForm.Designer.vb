@@ -142,6 +142,7 @@ Partial Class PieChartForm
         '
         Me.sortingComboBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.sortingComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.sortingComboBox.Enabled = False
         Me.sortingComboBox.FormattingEnabled = True
         Me.sortingComboBox.Location = New System.Drawing.Point(423, 503)
         Me.sortingComboBox.Name = "sortingComboBox"
