@@ -1929,7 +1929,7 @@ Public Class MainForm
                 counter += 1
             End If
         Next
-        Dim displayString As String = "Your randomly chosen game is ""{0}""." & vbNewLine & vbNewLine & "Do you want to launch it now? Click 'No' to generate a new random pick."
+        Dim displayString As String = "Your randomly chosen game is ""{0}""." & vbNewLine & vbNewLine & "Do you want to launch it now? Click 'No' to choose another game."
         Dim response As DialogResult = MessageBox.Show(String.Format(displayString, randomGame.Replace("&&", "&")), "Game Launcher", MessageBoxButtons.YesNoCancel, _
                                                        MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification)
 
