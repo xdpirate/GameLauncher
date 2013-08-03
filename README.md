@@ -17,4 +17,4 @@ I'm quite new to git (and version control systems in general), so any pull reque
 take time while I get comfortable working with git.
 
 For general info and help with the application please visit its website:
-http://gamelauncher.pvpsucks.com/
+http://gamelauncher.info/
