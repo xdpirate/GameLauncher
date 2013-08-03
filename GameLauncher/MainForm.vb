@@ -733,7 +733,7 @@ Public Class MainForm
         Dim sr As StreamReader
         Dim currentLine As String
         Try
-            data = fileReader.OpenRead("http://gamelauncher.pvpsucks.com/version")
+            data = fileReader.OpenRead("http://gamelauncher.info/version")
             sr = New StreamReader(data)
             currentLine = sr.ReadLine()
             data.Close()

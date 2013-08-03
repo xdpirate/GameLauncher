@@ -4,7 +4,7 @@ Imports System.IO
 Public Class AboutForm
 
     Private Sub WebsiteLink_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles WebsiteLink.LinkClicked
-        System.Diagnostics.Process.Start("http://gamelauncher.pvpsucks.com/")
+        System.Diagnostics.Process.Start("http://gamelauncher.info/")
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles ContactLink.LinkClicked
@@ -42,7 +42,7 @@ Public Class AboutForm
                 Dim sr As StreamReader
                 Dim changeLog As String
                 Try
-                    data = fileReader.OpenRead("http://gamelauncher.pvpsucks.com/changelog")
+                    data = fileReader.OpenRead("http://gamelauncher.info/changelog")
                     sr = New StreamReader(data)
                     changeLog = sr.ReadToEnd
                     data.Close()
@@ -55,7 +55,7 @@ Public Class AboutForm
                                    MainForm.CURRENT_LANGUAGE_RESOURCE.GetString("AboutFormNewVersion2"), _
                                     My.Application.Info.AssemblyName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, _
                                     MessageBoxDefaultButton.Button1) = Windows.Forms.DialogResult.Yes Then
-                    System.Diagnostics.Process.Start("http://gamelauncher.pvpsucks.com/?q=dl")
+                    System.Diagnostics.Process.Start("http://gamelauncher.info/?q=dl")
                     End
                 End If
             Else
