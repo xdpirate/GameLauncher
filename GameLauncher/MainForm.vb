@@ -1043,7 +1043,9 @@ Public Class MainForm
                 sourceBitmap = New Bitmap(result)
             End If
 
-            result.Dispose()
+            If result IsNot Nothing Then
+                result.Dispose()
+            End If
         Else
             If IconsContainer.ContainsKey(gameName) Then
                 'The icons file has an entry on this game
