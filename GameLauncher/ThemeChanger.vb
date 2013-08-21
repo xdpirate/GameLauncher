@@ -10,6 +10,14 @@ Public Class ThemeChanger
             themingOptionsGroupBox.Enabled = True
             MainForm.MainContextMenu.Renderer = New CustomToolStripRenderer()
             regKey.SetValue("isThemed", 1)
+
+            Dim foreColor As Color = Color.FromArgb(regKey.GetValue("foreColor", Nothing))
+            Dim backColor As Color = Color.FromArgb(regKey.GetValue("backColor", Nothing))
+
+            If foreColor <> Nothing And backColor <> Nothing Then
+                foreColorPreview.BackColor = foreColor
+                backColorPreview.BackColor = backColor
+            End If
         Else
             themingOptionsGroupBox.Enabled = False
             MainForm.MainContextMenu.RenderMode = ToolStripRenderMode.ManagerRenderMode
@@ -19,6 +27,15 @@ Public Class ThemeChanger
             Next
 
             regKey.SetValue("isThemed", 0)
+
+            If MessageBox.Show("It is recommended that you restart Game Launcher after disabling themes. Restart now?", "Game Launcher", MessageBoxButtons.YesNo, _
+                            MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = Windows.Forms.DialogResult.Yes Then
+                MainForm.commitChanges()
+                MainForm.TrayIcon.Dispose()
+
+                Application.Restart()
+                Environment.Exit(0)
+            End If
         End If
     End Sub
 
