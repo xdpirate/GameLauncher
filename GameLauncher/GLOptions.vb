@@ -6,9 +6,9 @@ Public Class GLOptions
 
     Private Sub GLOptions_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         runOnStartUpCheckBox.Checked = MainForm.toggleRunOnStartup(True)
-        sendSkypeNotificationsCheckBox.Checked = MainForm.toggleSkypeNotifications(True)
-        playTimeInSkypeNotificationsCheckBox.Checked = MainForm.togglePlayTimeInSkypeNotifications(MainForm.playTimeToggleType.check)
-        playTimeInSkypeNotificationsCheckBox.Enabled = sendSkypeNotificationsCheckBox.Checked
+        'sendSkypeNotificationsCheckBox.Checked = MainForm.toggleSkypeNotifications(True)
+        'playTimeInSkypeNotificationsCheckBox.Checked = MainForm.togglePlayTimeInSkypeNotifications(MainForm.playTimeToggleType.check)
+        'playTimeInSkypeNotificationsCheckBox.Enabled = sendSkypeNotificationsCheckBox.Checked
         integrateWithExplorerCheckBox.Checked = toggleShellExtension(True)
 
         Dim autoUpdateKey As RegistryKey = My.Computer.Registry.CurrentUser.CreateSubKey("Software\GameLauncher", RegistryKeyPermissionCheck.ReadWriteSubTree)
@@ -53,14 +53,14 @@ Public Class GLOptions
         runOnStartUpCheckBox.Checked = MainForm.toggleRunOnStartup(False)
     End Sub
 
-    Private Sub sendSkypeNotificationsCheckBox_Click(sender As Object, e As System.EventArgs) Handles sendSkypeNotificationsCheckBox.Click
-        sendSkypeNotificationsCheckBox.Checked = MainForm.toggleSkypeNotifications(False)
-        playTimeInSkypeNotificationsCheckBox.Enabled = sendSkypeNotificationsCheckBox.Checked
-    End Sub
+    'Private Sub sendSkypeNotificationsCheckBox_Click(sender As Object, e As System.EventArgs) Handles sendSkypeNotificationsCheckBox.Click
+    '    sendSkypeNotificationsCheckBox.Checked = MainForm.toggleSkypeNotifications(False)
+    '    playTimeInSkypeNotificationsCheckBox.Enabled = sendSkypeNotificationsCheckBox.Checked
+    'End Sub
 
-    Private Sub playTimeInSkypeNotificationsCheckBox_Click(sender As Object, e As System.EventArgs) Handles playTimeInSkypeNotificationsCheckBox.Click
-        playTimeInSkypeNotificationsCheckBox.Checked = MainForm.togglePlayTimeInSkypeNotifications(MainForm.playTimeToggleType.toggle)
-    End Sub
+    'Private Sub playTimeInSkypeNotificationsCheckBox_Click(sender As Object, e As System.EventArgs) Handles playTimeInSkypeNotificationsCheckBox.Click
+    '    playTimeInSkypeNotificationsCheckBox.Checked = MainForm.togglePlayTimeInSkypeNotifications(MainForm.playTimeToggleType.toggle)
+    'End Sub
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles GTFOButton.Click
         Me.Close()

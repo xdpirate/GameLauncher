@@ -49,6 +49,7 @@ Partial Class GLOptions
         'sendSkypeNotificationsCheckBox
         '
         Me.sendSkypeNotificationsCheckBox.AutoSize = True
+        Me.sendSkypeNotificationsCheckBox.Enabled = False
         Me.sendSkypeNotificationsCheckBox.Location = New System.Drawing.Point(6, 65)
         Me.sendSkypeNotificationsCheckBox.Name = "sendSkypeNotificationsCheckBox"
         Me.sendSkypeNotificationsCheckBox.Size = New System.Drawing.Size(288, 17)
@@ -59,6 +60,7 @@ Partial Class GLOptions
         'playTimeInSkypeNotificationsCheckBox
         '
         Me.playTimeInSkypeNotificationsCheckBox.AutoSize = True
+        Me.playTimeInSkypeNotificationsCheckBox.Enabled = False
         Me.playTimeInSkypeNotificationsCheckBox.Location = New System.Drawing.Point(15, 88)
         Me.playTimeInSkypeNotificationsCheckBox.Name = "playTimeInSkypeNotificationsCheckBox"
         Me.playTimeInSkypeNotificationsCheckBox.Size = New System.Drawing.Size(231, 17)

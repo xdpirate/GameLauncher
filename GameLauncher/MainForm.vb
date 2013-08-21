@@ -12,7 +12,7 @@ Imports MCLHotkey
 
 Public Class MainForm
 #Region "Declarations"
-    Public WithEvents oSkype As New SKYPE4COMLib.Skype
+    'Public WithEvents oSkype As New SKYPE4COMLib.Skype
 
     Public GL_VERSION As Integer = getNumericVersion()
     Public CURRENT_LANGUAGE_RESOURCE As Resources.ResourceManager = My.Resources.mlsEnglish.ResourceManager
@@ -36,7 +36,7 @@ Public Class MainForm
     Public processMonitorTimer As New System.Threading.Timer(AddressOf processMonitorTimer_Tick, Nothing, System.Threading.Timeout.Infinite, 1000)
     Public processMonitorCounter As Integer = 0
 
-    Dim skypeThread As New Thread(New ThreadStart(AddressOf skypeConnect))
+    'Dim skypeThread As New Thread(New ThreadStart(AddressOf skypeConnect))
 
     Dim steamIconPath As String = Path.Combine(My.Application.Info.DirectoryPath, "steamicons\")
     Dim iconPath As String = Path.Combine(My.Application.Info.DirectoryPath, "icons\")
@@ -623,17 +623,17 @@ Public Class MainForm
     End Function
 
 #Region "Skype Functions"
-    Sub skypeConnect()
-        Try
-            If sendSkypeNotification Then
-                If isProcessRunning("skype") Then
-                    oSkype.Attach(8, False)
-                End If
-            End If
-        Catch ex As Exception
-            'User didn't respond to access request or isn't logged in to Skype, don't notify the user
-        End Try
-    End Sub
+    'Sub skypeConnect()
+    '    Try
+    '        If sendSkypeNotification Then
+    '            If isProcessRunning("skype") Then
+    '                oSkype.Attach(8, False)
+    '            End If
+    '        End If
+    '    Catch ex As Exception
+    '        'User didn't respond to access request or isn't logged in to Skype, don't notify the user
+    '    End Try
+    'End Sub
 
     Public Function toggleSkypeNotifications(ByVal check As Boolean) As Boolean
         Dim skypeNotificationKey As RegistryKey = My.Computer.Registry.CurrentUser.CreateSubKey("Software\GameLauncher", RegistryKeyPermissionCheck.ReadWriteSubTree)
@@ -1098,19 +1098,19 @@ Public Class MainForm
     End Sub
 
     Sub stoppedPlaying()
-        Try
-            If sendSkypeNotification Then
-                If isProcessRunning("skype") Then
-                    Dim moodText As String = String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypePlayStopped"), currentRunningGame.Replace("&&", "&"))
-                    If playTimeInSkypeNotifications Then
-                        moodText &= String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypePlayTimeStopped"), calculateTime() & ")")
-                    End If
-                    oSkype.Profile("Mood_Text") = moodText
-                End If
-            End If
-        Catch ex As COMException
-            ' Skype connection failed
-        End Try
+        'Try
+        '    If sendSkypeNotification Then
+        '        If isProcessRunning("skype") Then
+        '            Dim moodText As String = String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypePlayStopped"), currentRunningGame.Replace("&&", "&"))
+        '            If playTimeInSkypeNotifications Then
+        '                moodText &= String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypePlayTimeStopped"), calculateTime() & ")")
+        '            End If
+        '            oSkype.Profile("Mood_Text") = moodText
+        '        End If
+        '    End If
+        'Catch ex As COMException
+        '    ' Skype connection failed
+        'End Try
 
         saveStats()
         currentRunningGame = Nothing
@@ -1752,7 +1752,7 @@ Public Class MainForm
     End Function
 
     Private Sub skypeWorker_DoWork(sender As System.Object, e As System.ComponentModel.DoWorkEventArgs) Handles skypeWorker.DoWork
-        skypeConnect()
+        'skypeConnect()
     End Sub
 
     Private Sub updateWorker_DoWork(sender As System.Object, e As System.ComponentModel.DoWorkEventArgs) Handles updateWorker.DoWork
@@ -1797,23 +1797,23 @@ Public Class MainForm
         Dim tsi As Object = e.Argument
         currentRunningGame = tsi.Text
 
-        Try
-            If sendSkypeNotification Then
-                If isProcessRunning("skype") Then
-                    oSkype.Attach(8, True)
-                    If oSkype.AttachmentStatus() = SKYPE4COMLib.TAttachmentStatus.apiAttachSuccess Then
-                        If PathContainer(currentRunningGame).StartsWith("steam") Then
-                            oSkype.Profile("Mood_Text") = String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypeNowPlayingSteam"), currentRunningGame.Replace("&&", "&"))
-                        Else
-                            oSkype.Profile("Mood_Text") = String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypeNowPlaying"), currentRunningGame.Replace("&&", "&"))
-                        End If
-                    End If
-                End If
-            End If
-        Catch ex As COMException
-            'Skype connection FAILED D:
-            TrayIcon.ShowBalloonTip(5000, "Skype connection failed", "Please check your allowed applications in Skype settings", ToolTipIcon.Info)
-        End Try
+        'Try
+        '    'If sendSkypeNotification Then
+        '    '    If isProcessRunning("skype") Then
+        '    '        oSkype.Attach(8, True)
+        '    '        'If oSkype.AttachmentStatus() = SKYPE4COMLib.TAttachmentStatus.apiAttachSuccess Then
+        '    '        '    If PathContainer(currentRunningGame).StartsWith("steam") Then
+        '    '        '        oSkype.Profile("Mood_Text") = String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypeNowPlayingSteam"), currentRunningGame.Replace("&&", "&"))
+        '    '        '    Else
+        '    '        '        oSkype.Profile("Mood_Text") = String.Format(CURRENT_LANGUAGE_RESOURCE.GetString("MainFormSkypeNowPlaying"), currentRunningGame.Replace("&&", "&"))
+        '    '        '    End If
+        '    '        'End If
+        '    '    End If
+        '    'End If
+        'Catch ex As COMException
+        '    'Skype connection FAILED D:
+        '    TrayIcon.ShowBalloonTip(5000, "Skype connection failed", "Please check your allowed applications in Skype settings", ToolTipIcon.Info)
+        'End Try
 
 
         If PathContainer.ContainsKey(currentRunningGame) Then
