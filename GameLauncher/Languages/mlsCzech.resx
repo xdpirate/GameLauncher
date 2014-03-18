@@ -1,0 +1,722 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutFormAuthorNote" xml:space="preserve">
+    <value>Game Launcher
+© 2012-2013 xdpirate
+Beta testy: Kurithas. Zvláštní poděkování patří Lise. Překlad do češtiny: Ararak</value>
+    <comment>The note shown on the about window, copyright and thanks</comment>
+  </data>
+  <data name="AboutFormCloseButtonText" xml:space="preserve">
+    <value>Zavřít</value>
+    <comment>Text shown on the button that closes the about window; The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="AboutFormContactText" xml:space="preserve">
+    <value>Kontakt</value>
+    <comment>Text shown on the link to contact the author</comment>
+  </data>
+  <data name="AboutFormNewVersion1" xml:space="preserve">
+    <value>Je k dispozici nová verze Game launcheru (v</value>
+    <comment>First part of new version available message</comment>
+  </data>
+  <data name="AboutFormNewVersion2" xml:space="preserve">
+    <value>Přejete si ji stáhnout nyní?</value>
+    <comment>Second part of new version available message</comment>
+  </data>
+  <data name="AboutFormUpdateCheckButtonText" xml:space="preserve">
+    <value>Zkontrolovat &amp;aktualizace.</value>
+    <comment>Text shown on the button that checks for a new update; The ampersand signifes a keyboard shortcut</comment>
+  </data>
+  <data name="AboutFormUpdateError1" xml:space="preserve">
+    <value>Při kontrole aktualizace došlo k chybě.</value>
+    <comment>Notifies the user that an error occured while checking for update, part 1 of error msg</comment>
+  </data>
+  <data name="AboutFormUpdateError2" xml:space="preserve">
+    <value>Prosím, zkuste to později. Pokud problém přetrvává, kontaktuje autora.</value>
+    <comment>Asks to try again later if update failed, part 2 of error msg</comment>
+  </data>
+  <data name="AboutFormUpToDate" xml:space="preserve">
+    <value>Vaše verze Game Launcheru je aktuální.</value>
+    <comment>Notifies the user that the application is up to date</comment>
+  </data>
+  <data name="AboutFormWebsiteLinkText" xml:space="preserve">
+    <value>Webové stránky:</value>
+    <comment>Text shown on the link to the application's website</comment>
+  </data>
+  <data name="AddNewGameFormBrowseButtons" xml:space="preserve">
+    <value>&amp;Procházet...</value>
+    <comment>Common text for all Browse buttons on the form; The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="AddNewGameFormBrowseExeHelpText" xml:space="preserve">
+    <value>Klikněte zde, pro zvolení spustitelného souboru ke spuštění hry, Obvykle jím bývá .exe soubor.</value>
+    <comment>Help text shown while hovering over the Browse button for Normal Game</comment>
+  </data>
+  <data name="AddNewGameFormCancelButton" xml:space="preserve">
+    <value>&amp;Zrušit</value>
+    <comment>Flavor text for the button that cancels the game entry; The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="AddNewGameFormCancelHelpText" xml:space="preserve">
+    <value>Klikněte zde, pokud si přejete zrušit přidávání této hry, Pokud máte ve frontě přidávání více her (například pokud jste použili Prohlížeč nebo jste přesunuli hru do okna), budete je muset zrušit všechny.</value>
+    <comment>Help text shown while hovering over the Cancel button</comment>
+  </data>
+  <data name="AddNewGameFormCmdArgsHelpText" xml:space="preserve">
+    <value>Zde pište parametry příkazové řádky, které budou použity při spouštění hry. Pokud nevíte, co to je, můžete pole nechat volné,</value>
+    <comment>Help text shown while hovering over the Command-Line Arguments text box</comment>
+  </data>
+  <data name="AddNewGameFormCmdArgsLabel" xml:space="preserve">
+    <value>Parametry příkazové řádky:</value>
+    <comment>Label text for command line arguments</comment>
+  </data>
+  <data name="AddNewGameFormCustomIconHelpText" xml:space="preserve">
+    <value>Klikněte zde pro zvolení vlastní ikony. Musí to být BMP, PNG, GIF, JPG či ICO soubor. Obrázek bude změněn na velikost 16x16. Můžete také zvolit .exe soubor a vyextrahovat z něj jeho ikonu. Poměry stran obrázku zůstanou nezměněny.</value>
+    <comment>Help text shown while hovering over the Browse button for Get From Other File</comment>
+  </data>
+  <data name="AddNewGameFormDefaultHelpText" xml:space="preserve">
+    <value>Přejeďte myší na položku, aby se vám zde zobrazila nápověda.</value>
+    <comment>Text shown in the help pane when nothing else is hovered over.</comment>
+  </data>
+  <data name="AddNewGameFormErrorGetFromOtherFileNoIcon" xml:space="preserve">
+    <value>Musíte specifikovat ikonu, pokud jste zvolili vlastní.</value>
+    <comment>Error message when the user didn't choose an icon when 'Get from other file' was also selected</comment>
+  </data>
+  <data name="AddNewGameFormErrorLauncherExeNotFound" xml:space="preserve">
+    <value>Spustitelný soubor launcheru se nepodařilo nalézt</value>
+    <comment>Error message when the launcher exe could not be found</comment>
+  </data>
+  <data name="AddNewGameFormErrorMainExeNotFound" xml:space="preserve">
+    <value>Spustitelný soubor hry se nepodařilo nalézt:</value>
+    <comment>Error message when the main exe could not be found</comment>
+  </data>
+  <data name="AddNewGameFormErrorNoAppId" xml:space="preserve">
+    <value>Musíte vložit Steam App ID hry.</value>
+    <comment>Error message when the user hasn't entered a Steam App ID</comment>
+  </data>
+  <data name="AddNewGameFormErrorNoLauncherPath" xml:space="preserve">
+    <value>Musíte specifikovat cestu ke spustitelnému souboru launcheru.</value>
+    <comment>Error message when the user hasn't entered a launcher path</comment>
+  </data>
+  <data name="AddNewGameFormErrorNoMainPath" xml:space="preserve">
+    <value>Musíte specifikovat cestu k hlavnímu spustitelnému souboru hry.</value>
+    <comment>Error message when the user hasn't entered a path</comment>
+  </data>
+  <data name="AddNewGameFormErrorNoName" xml:space="preserve">
+    <value>Musíte specifikovat název hry.</value>
+    <comment>Error message when user hasn't entered a name</comment>
+  </data>
+  <data name="AddNewGameFormErrorNoSteamExePath" xml:space="preserve">
+    <value>Musíte specifikovat cestu k souboru, který používá ke spouštění hry Steam.</value>
+    <comment>Error message when the user hasn't entered a Steam path</comment>
+  </data>
+  <data name="AddNewGameFormErrorNoSteamExePathClickedGetFromExecutable" xml:space="preserve">
+    <value>Nelze zvolit "Získat ze spustitelného souboru" pro ikonu, dokud nespecifikujete dotyčný soubor.</value>
+    <comment>Error message when the user has clicked 'Get from executable' when no Steam executable has been selected</comment>
+  </data>
+  <data name="AddNewGameFormErrorNoSteamIcon" xml:space="preserve">
+    <value>Pro tuto Steam hru je nutno vybrat ikonu.</value>
+    <comment>Error message when the user didn't choose an icon for a Steam game</comment>
+  </data>
+  <data name="AddNewGameFormErrorSteamExeNotFound" xml:space="preserve">
+    <value>Specifikovaný spustitelný soubor pro Steam hru nebyl nalezen.</value>
+    <comment>Error message when the selected exe for a Steam game could not be found</comment>
+  </data>
+  <data name="AddNewGameFormGameInfoGroupBox" xml:space="preserve">
+    <value>Informace o hře:</value>
+    <comment>Flavor text for the group box that contains controls for entering game information</comment>
+  </data>
+  <data name="AddNewGameFormGameNameHelpText" xml:space="preserve">
+    <value>Zvolte název hry pro přidání. Název může být libovolný, ale z technických důvodů budou všechna rovnítka ("=") nahrazena pomlčkami ("-").</value>
+    <comment>Help text shown while hovering over the Game Name text box</comment>
+  </data>
+  <data name="AddNewGameFormGameNameLabel" xml:space="preserve">
+    <value>Název:</value>
+    <comment>Label text for game display name</comment>
+  </data>
+  <data name="AddNewGameFormGamePathsGroupBox" xml:space="preserve">
+    <value>Cesta ke hře/Steam App ID</value>
+    <comment>Flavor text for the group box that contains controls for entering game paths</comment>
+  </data>
+  <data name="AddNewGameFormGetFromExeHelpText" xml:space="preserve">
+    <value>Zvolte tuto možnost, pokud chcete, aby Game Launcher získal ikonu ze sputitelného souboru.</value>
+    <comment>Help text shown while hovering over the Get From Exe radio button</comment>
+  </data>
+  <data name="AddNewGameFormGetFromExeRadio" xml:space="preserve">
+    <value>Získat ze spustitelného souboru</value>
+    <comment>Flavor text for the radio button that selects to get the icon from the chosen exe file</comment>
+  </data>
+  <data name="AddNewGameFormGetFromOtherFileHelpText" xml:space="preserve">
+    <value>Zvolte tuto možnost, pokud si chcete zvolit ikonu sami.</value>
+    <comment>Help text shown while hovering hover the Get From Other File radio button</comment>
+  </data>
+  <data name="AddNewGameFormGetFromOtherFileRadio" xml:space="preserve">
+    <value>Získat z jiného souboru.</value>
+    <comment>Flavor text for the radio button that selects to get the icon from another file</comment>
+  </data>
+  <data name="AddNewGameFormHelpGroupBox" xml:space="preserve">
+    <value>Pomoc</value>
+    <comment>Flavor text for the group box that contains the help label</comment>
+  </data>
+  <data name="AddNewGameFormIconGroupBox" xml:space="preserve">
+    <value>Ikona</value>
+    <comment>Flavor text for the group box that contains controls for modifying the game's icon</comment>
+  </data>
+  <data name="AddNewGameFormIconHelpText" xml:space="preserve">
+    <value>Toho zobrazuje náhled ikon, která bude použita. Pokud je GL nastaven k zíkávání ikony ze spustitelného soboru, musíte specifikovat dotyčný soubor, než bude náhled aktualizován.</value>
+    <comment>Help text shown while hovering over the icon preview picturebox</comment>
+  </data>
+  <data name="AddNewGameFormKeepIconRadio" xml:space="preserve">
+    <value>Ponechat současnou ikonu.</value>
+    <comment>Flavor text for the radio button that selects to keep the current icon (if editing a game)</comment>
+  </data>
+  <data name="AddNewGameFormLauncherBrowseHelpText" xml:space="preserve">
+    <value>Klikněte zde pro výběr launcheru který spustí hlavní spustitelný soubor hry.</value>
+    <comment>Help text shown while hovering over the Browse button for the launcher</comment>
+  </data>
+  <data name="AddNewGameFormNormalGameHelpText" xml:space="preserve">
+    <value>Vyberte tuto možnost, pokud je to normální hra (tedy nepožívá Steam).</value>
+    <comment>Help text shown while hovering over the Normal Game radio button</comment>
+  </data>
+  <data name="AddNewGameFormNormalGameRadio" xml:space="preserve">
+    <value>Normání hra</value>
+    <comment>Flavor text for the radio button that selects the normal game mode (As opposed to Steam game mode)</comment>
+  </data>
+  <data name="AddNewGameFormOKButton" xml:space="preserve">
+    <value>&amp;OK</value>
+    <comment>Flavor text for the button that finalizes the game entry, the OK-button; The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="AddNewGameFormOKHelp" xml:space="preserve">
+    <value>Klikněte zde, pokud jste již vyplnili detaily o přidávané hře.</value>
+    <comment>Shown in the Add New Game Form.</comment>
+  </data>
+  <data name="AddNewGameFormSpecifySteamExeCheckBox" xml:space="preserve">
+    <value>Specifikovat spustitelný soubor-</value>
+    <comment>Flavor text for the check box that selects whether to specify an executable for a Steam game</comment>
+  </data>
+  <data name="AddNewGameFormSpecifySteamExeHelpText" xml:space="preserve">
+    <value>Zaškrtněte toto políčko, pokud hra kterou přidávate používá launcher (spustitelný soubor, který spustí hru). Zapnutím tohoto bude možné měřit odehraný čas pro hry na Steamu. Pokud hra používá launcher, není nutné ho zvolit, stačí vybrat soubor, kterým se hra spouští.</value>
+    <comment>Help text shown while hovering over the Specify Steam Exe checkbox</comment>
+  </data>
+  <data name="AddNewGameFormSteamAppIdHelpText" xml:space="preserve">
+    <value>Zde vepište Steam ID hry. Abyste nalezli ID, najděte hru ve Steam Store a zkopírujte ID z poslední části URL (např. při "http://store.steampowered.com/app/24980/" je ID 24980)</value>
+    <comment>Help text shown while hovering over the Steam App Id text box</comment>
+  </data>
+  <data name="AddNewGameFormSteamExeBrowseHelpText" xml:space="preserve">
+    <value>Klikněte zde pro ruční nalezení spustitelného souboru, který používá ke spuštění hry Steam.</value>
+    <comment>Help text shown while hovering over the Browse for Steam Exe button</comment>
+  </data>
+  <data name="AddNewGameFormSteamGameRadio" xml:space="preserve">
+    <value>Hra na Steamu</value>
+    <comment>Flavor text for the radio button that selects the Steam game mode (As opposed to the normal game mode)</comment>
+  </data>
+  <data name="AddNewGameFormSteamHelpText" xml:space="preserve">
+    <value>Zvolte tuto možnost, pokud je ke spuštění aplikace zapotřebí Steam.</value>
+    <comment>Help text shown while hovering over the Steam Game radio</comment>
+  </data>
+  <data name="AddNewGameFormTitleBar" xml:space="preserve">
+    <value>Přidat či upravit hru</value>
+    <comment>The text shown in the title bar of the Add/Edit game window</comment>
+  </data>
+  <data name="AddNewGameFormUsesLauncherCheckBox" xml:space="preserve">
+    <value>Využívá launcher</value>
+    <comment>Flavor text for the check box that selects whether the game uses a launcher exe</comment>
+  </data>
+  <data name="AddNewGameFormUsesLauncherHelpText" xml:space="preserve">
+    <value>Zaškrtněte toto políčko, pokud hra kterou přidávate používá launcher (spustitelný soubor, který spustí hru). Zapnutím tohoto bude možné měřit odehraný čas.</value>
+    <comment>Help text shown while hovering over the Uses Launcher check box</comment>
+  </data>
+  <data name="DockFormMenuAlwaysOnTop" xml:space="preserve">
+    <value>Vždy na vrchu.</value>
+    <comment>Text shown in the context menu of the Dock form.</comment>
+  </data>
+  <data name="DockFormMenuChangeOpacity" xml:space="preserve">
+    <value>Změnit neprůsvitnost.</value>
+    <comment>Text shown in the context menu of the Dock form.</comment>
+  </data>
+  <data name="DockFormMenuClose" xml:space="preserve">
+    <value>Zavřít dock.</value>
+    <comment>Text shown in the context menu of the Dock form.</comment>
+  </data>
+  <data name="DockOpacityFormHoverOpacityGroupBox" xml:space="preserve">
+    <value>Neprůhlednost doku, když je nad ním myš.</value>
+    <comment>Flavor text shown in the group box that contains controls to change the opacity when in focus</comment>
+  </data>
+  <data name="DockOpacityFormNormalOpacityGroupBox" xml:space="preserve">
+    <value>Neprůhlednost doku, když není zaměřen.</value>
+    <comment>Flavor text shown in the group box that contains controls to change the opacity when not in focus</comment>
+  </data>
+  <data name="DockOpacityFormSaveButton" xml:space="preserve">
+    <value>&amp;Uložit</value>
+    <comment>Text shown on the 'Save' button; The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="DockOpacityFormTitleBar" xml:space="preserve">
+    <value>Změnit neprůhlednost.</value>
+    <comment>The text shown in the title bar of the Dock Opacity window</comment>
+  </data>
+  <data name="DragDropTargetFormTitleBar" xml:space="preserve">
+    <value>Přsuňte sem zkratku či spustitelný soubor!</value>
+    <comment>Text shown in the drag-and-drop window's title bar</comment>
+  </data>
+  <data name="EmbeddableChartFormCopiedToClipBoardText" xml:space="preserve">
+    <value>Odkaz byl zkopírován do schránky.</value>
+    <comment>Text shown in the message box when a user clicks the copy to clipboard button</comment>
+  </data>
+  <data name="EmbeddableChartFormCopyButton" xml:space="preserve">
+    <value>&amp;Kopírovat</value>
+    <comment>Text shown on the Copy button; The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="EmbeddableChartFormCourtesyLabel" xml:space="preserve">
+    <value>Za zkrácené odkazy děkuji .gd</value>
+    <comment>Text shown on the courtesy label; is.gd is a website</comment>
+  </data>
+  <data name="EmbeddableChartFormFlavorTextLabel" xml:space="preserve">
+    <value>Úspěch! Pošlete odkaz níže svým přátelům a svým milovaným!</value>
+    <comment>Text shown in the label of the linkable chart window</comment>
+  </data>
+  <data name="EmbeddableChartFormGTFOButton" xml:space="preserve">
+    <value>Zavřít</value>
+    <comment>Text shown on the Close button; The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="EmbeddableChartFormTitleBar" xml:space="preserve">
+    <value>Graf s odkazem</value>
+    <comment>Text shown in the title bar of the linkable chart window</comment>
+  </data>
+  <data name="EmbeddableChartFormVisitLinkButton" xml:space="preserve">
+    <value>&amp;Navštívit odkaz.</value>
+    <comment>Text shown on the Visit Link button; The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="GLOptionsFormAutoUpdateCheckBox" xml:space="preserve">
+    <value>Automaticky kontrolovat aktualizace.</value>
+    <comment>Text shown on the 'Automatically check for updates' check box</comment>
+  </data>
+  <data name="GLOptionsFormExplorerIntegrationText" xml:space="preserve">
+    <value>Přidat do &amp;Game Launcheru</value>
+    <comment>This text appears in Windows Explorer, when having right-clicked a supported file; The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="GLOptionsFormGTFOButton" xml:space="preserve">
+    <value>&amp;Zavřít</value>
+    <comment>Text shown on the Close button; The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="GLOptionsFormInfoLabel" xml:space="preserve">
+    <value>Změny se projeví okamžitě.</value>
+    <comment>Text shown on the Preferences form</comment>
+  </data>
+  <data name="GLOptionsFormIntegrateWithExplorerCheckBox" xml:space="preserve">
+    <value>Integrovat s Windows Explorerem.</value>
+    <comment>Text shown on the 'Integrate with Windows Explorer' check box</comment>
+  </data>
+  <data name="GLOptionsFormPlayTimeInSkypeNotificationsCheckBox" xml:space="preserve">
+    <value>Ukazovat strávený čas při vypínání hry.</value>
+    <comment>Text shown on the 'Show time spent playing when exiting game' check box</comment>
+  </data>
+  <data name="GLOptionsFormPreferencesGroupBox" xml:space="preserve">
+    <value>Nastavení</value>
+    <comment>Flavor text shown in the group box that houses the preferences, in the Preferences window</comment>
+  </data>
+  <data name="GLOptionsFormSkypeNotificationsCheckBox" xml:space="preserve">
+    <value>Odesílat notifikace do Skype, když začnete/skončite s hraním.</value>
+    <comment>Text shown on the 'Send notifications to Skype when you start/stop playing' check box</comment>
+  </data>
+  <data name="GLOptionsFormStartOnLoginCheckBox" xml:space="preserve">
+    <value>Spustit Game Luncher při přihlášení.</value>
+    <comment>Text shown on the 'Start Game Launcher on startup' check box</comment>
+  </data>
+  <data name="GLOptionsFormTitleBar" xml:space="preserve">
+    <value>Předvolby Game Launcheru</value>
+    <comment>This text appears in the title bar of the Preferences window</comment>
+  </data>
+  <data name="MainFormAddGameFailed1" xml:space="preserve">
+    <value>Chyba! .NET Framework píše:</value>
+    <comment>First part of text shown when something went wrong adding a game</comment>
+  </data>
+  <data name="MainFormAddGameFailed2" xml:space="preserve">
+    <value>Pokud si myslíte, že je toto chyba, či problém přetrvává, kontaktuje prosím autora programu.</value>
+    <comment>Second part of text shown when something went wrong adding a game</comment>
+  </data>
+  <data name="MainFormBalloonTipLoadedMessageText" xml:space="preserve">
+    <value>Klikněte na tuto ikonu pravým tlačítkem nebo stiskněte Win+G, abyste otevřeli seznam.</value>
+    <comment>Text appears in the balloon tip body when starting the application.</comment>
+  </data>
+  <data name="MainFormBalloonTipLoadedMessageTitle" xml:space="preserve">
+    <value>Game Launcher v{0} načten!</value>
+    <comment>Text appears in the balloon tip title when starting the application. {0} is the current version number.</comment>
+  </data>
+  <data name="MainFormBrowseItemFolder" xml:space="preserve">
+    <value>Prohlížet složku hry.</value>
+    <comment>Shown beneath each item in the game list</comment>
+  </data>
+  <data name="MainFormBrowseItemFolderNoPath" xml:space="preserve">
+    <value>Pro tuto hru není definována žádná cesta.</value>
+    <comment>Error shown if there is no path defined.</comment>
+  </data>
+  <data name="MainFormBrowseItemFolderTooltip" xml:space="preserve">
+    <value>Otevře složku se hrou v Exploreru.</value>
+    <comment>Shown when hovering over the Browse Game Folder option beneath each game</comment>
+  </data>
+  <data name="MainFormClearGameList" xml:space="preserve">
+    <value>Jste si jisti, že chcete odstranit všechny položky ze seznamu? Tato akce je NEVRATNÁ!</value>
+    <comment>Appears when the user chooses to clear all games.</comment>
+  </data>
+  <data name="MainFormEditGameItem" xml:space="preserve">
+    <value>Upravit &amp;hru...</value>
+    <comment>Shown in the main menu under every game. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainFormEditGameItemTooltip" xml:space="preserve">
+    <value>Upravit vlastnosti této hry.</value>
+    <comment>The tooltip shown when hovering over the 'Edit game' menu item.</comment>
+  </data>
+  <data name="MainFormLoadingMessage" xml:space="preserve">
+    <value>Game Launcher se načítá... Prosím, čekejte.</value>
+    <comment>Text shown when hovering over the tray icon whilst the application is loading</comment>
+  </data>
+  <data name="MainFormNewVersionAvailable1" xml:space="preserve">
+    <value>Je k dispozici nová verze Game Launcheru (v{0})! Přejete si ji nyní stáhnout?</value>
+    <comment>Text appears when auto-checking for updates, and an update was found. {0} is the new version number.</comment>
+  </data>
+  <data name="MainFormNewVersionAvailable2" xml:space="preserve">
+    <value>Pokud si nyní zvolíte neaktualizovat, kontrola aktualizací bude pro toto sezení vypnuta.</value>
+    <comment>Text appears when auto-checking for updates.</comment>
+  </data>
+  <data name="MainFormOptionsItem" xml:space="preserve">
+    <value>&amp;Možnosti</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainFormQuitApplication" xml:space="preserve">
+    <value>Jste si jistí, že chcete vypnout Game Launcher?</value>
+    <comment>Appears when user chooses the 'Quit' menu item.</comment>
+  </data>
+  <data name="MainFormQuitItem" xml:space="preserve">
+    <value>&amp;Vypnout</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainFormRemoveCmdArgs" xml:space="preserve">
+    <value>Jste si jistí, že chcete odstranit všechny argumenty příkazového řádku pro {0}?</value>
+    <comment>Text shown when user clears command-line arguments. {0} is the name of the game chosen.</comment>
+  </data>
+  <data name="MainFormRemoveGameItem" xml:space="preserve">
+    <value>Odstranit.</value>
+    <comment>Shown in the main menu under every game. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainFormRemoveGameItemTooltip" xml:space="preserve">
+    <value>Odstranit hru ze seznamu.</value>
+    <comment>The tooltip shown when hovering over the 'Remove game' menu item.</comment>
+  </data>
+  <data name="MainFormRemoveGameMsg" xml:space="preserve">
+    <value>Jste si jistí, že chcete odstranit {0} ze seznamu?</value>
+    <comment>Shown when trying to remove a game. {0} is the name of the chosen game.</comment>
+  </data>
+  <data name="MainFormSelectIconText" xml:space="preserve">
+    <value>Vybrat ikonu pro "{0}"</value>
+    <comment>{0} is the name of the game the user is selecting the icon for.</comment>
+  </data>
+  <data name="MainFormSkypeNowPlaying" xml:space="preserve">
+    <value>Nyní hraji: {0}</value>
+    <comment>Shown in Skype when the user starts a non-Steam game.</comment>
+  </data>
+  <data name="MainFormSkypeNowPlayingSteam" xml:space="preserve">
+    <value>Nyní hraji: {0} (Steam)</value>
+    <comment>Shown in Skype when user starts a Steam game</comment>
+  </data>
+  <data name="MainFormSkypePlayStopped" xml:space="preserve">
+    <value>Přestal jsem hrát: {0}</value>
+    <comment>Appears in Skype when finished playing a game. {0} is the name of the game.</comment>
+  </data>
+  <data name="MainFormSkypePlayTimeStopped" xml:space="preserve">
+    <value> (Odehráno: {0}</value>
+    <comment>Appears in Skype when finished playing a game and the user has chosen to display playing time. {0} is the amount of time played.</comment>
+  </data>
+  <data name="MainFormTimeHourPlural" xml:space="preserve">
+    <value>hodiny</value>
+    <comment>Plural form of 'hour'</comment>
+  </data>
+  <data name="MainFormTimeHourSingular" xml:space="preserve">
+    <value>hodina</value>
+    <comment>Singular form of 'hour'</comment>
+  </data>
+  <data name="MainFormTimeMinutePlural" xml:space="preserve">
+    <value>minuty</value>
+    <comment>Plural form of 'minute'</comment>
+  </data>
+  <data name="MainFormTimeMinuteSingular" xml:space="preserve">
+    <value>minuta</value>
+    <comment>Singular form of 'minute'</comment>
+  </data>
+  <data name="MainFormTimeSecondPlural" xml:space="preserve">
+    <value>vteřiny</value>
+    <comment>Plural form of 'seconds'</comment>
+  </data>
+  <data name="MainFormTimeSecondSingular" xml:space="preserve">
+    <value>vteřina</value>
+    <comment>Singular form of 'second'</comment>
+  </data>
+  <data name="MainMenuAboutTooltip" xml:space="preserve">
+    <value>Zobrazit informace o aplikaci a přispěvatelích.</value>
+    <comment>Tooltip for a main menu item.</comment>
+  </data>
+  <data name="MainMenuAddGameTooltip" xml:space="preserve">
+    <value>Přidat hru do seznamu. Můžete také poklikat na ikonu v trayi a přidat hry přesunutím zkratek či spusitelných souborů.</value>
+    <comment>Tooltip for a main menu item.</comment>
+  </data>
+  <data name="MainMenuClearGameListTooltip" xml:space="preserve">
+    <value>Odstranit všechny položky v seznamu her. Tato akce je nevratná!</value>
+    <comment>Tooltip for a main menu item.</comment>
+  </data>
+  <data name="MainMenuOptions" xml:space="preserve">
+    <value>&amp;Možnosti</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsAbout" xml:space="preserve">
+    <value>O &amp;Game Launcheru</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsAddGame" xml:space="preserve">
+    <value>&amp;Přidat hru...</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsClearGameList" xml:space="preserve">
+    <value>&amp;Odstranit seznam her</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsPreferences" xml:space="preserve">
+    <value>&amp;Nastavení</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsRemoveGames" xml:space="preserve">
+    <value>&amp;Odstranit hry</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuOptionsStatistics" xml:space="preserve">
+    <value>&amp;Statistiky</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuQuit" xml:space="preserve">
+    <value>&amp;Zavřít</value>
+    <comment>Shown in the main menu. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="MainMenuRemoveGamesTooltip" xml:space="preserve">
+    <value>Odstranit ze seznamu jednu či více her.</value>
+    <comment>Tooltip for a main menu item.</comment>
+  </data>
+  <data name="PieChartFormClearDataLinkText" xml:space="preserve">
+    <value>Smazat data...</value>
+    <comment>Shown on the Pie Chart form</comment>
+  </data>
+  <data name="PieChartFormCloseButtonText" xml:space="preserve">
+    <value>&amp;Zavřít</value>
+    <comment>Shown on the button that closes the form. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="PieChartFormGenerateChartButton" xml:space="preserve">
+    <value>&amp;Vygenerovat korelujíci graf</value>
+    <comment>Shown on the Generate Chart button. The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="PieChartFormLabelPickerInside" xml:space="preserve">
+    <value>Vnitřní štítky</value>
+    <comment>Shown in the label picker box</comment>
+  </data>
+  <data name="PieChartFormLabelPickerNone" xml:space="preserve">
+    <value>Žádné štítky</value>
+    <comment>Shown in the label picker box</comment>
+  </data>
+  <data name="PieChartFormLabelPickerOutside" xml:space="preserve">
+    <value>Vnější štítky</value>
+    <comment>Shown in the label picker box</comment>
+  </data>
+  <data name="PieChartFormNoData" xml:space="preserve">
+    <value>Aj! Vypadá to, že zatím nemáme žádná data. Zahrajte si nějaké hry a vraťte se prosím později!</value>
+    <comment>Shown when there is no data for the form to display.</comment>
+  </data>
+  <data name="PieChartFormPleaseWait" xml:space="preserve">
+    <value>Prosím, čekejte.</value>
+    <comment>Shown when generating a linkable chart</comment>
+  </data>
+  <data name="PieChartFormSaveAsImageButton" xml:space="preserve">
+    <value>&amp;Uložit jako obrázek...</value>
+    <comment>Shown on the Save As Image button. The ampersand signifies a keyboard shortcut</comment>
+  </data>
+  <data name="PieChartFormSaveAsImageSuccess" xml:space="preserve">
+    <value>Obrázek grafu byl uložen.</value>
+    <comment>Success message when user saves chart as image</comment>
+  </data>
+  <data name="PieChartFormSaveAsImageTitleBar" xml:space="preserve">
+    <value>Uložit vysečový graf jako obrázek</value>
+    <comment>Text shown in the title bar for the file browser when user selected to save the chart as an image.</comment>
+  </data>
+  <data name="PieChartFormShowLegendCheckBox" xml:space="preserve">
+    <value>Zobrazit legendu</value>
+    <comment>Shown on the Show Legend checkbox, it toggles the color key/explanation on the right side</comment>
+  </data>
+  <data name="PieChartFormSortingPickerAlphabetically" xml:space="preserve">
+    <value>Seřadit abecedně.</value>
+    <comment>Shown in the sorting box</comment>
+  </data>
+  <data name="PieChartFormSortingPickerByMostPlayed" xml:space="preserve">
+    <value>Seřadit podle počtu spuštění.</value>
+    <comment>Shown in the sorting box</comment>
+  </data>
+  <data name="PieChartFormTimeDayShorthand" xml:space="preserve">
+    <value>d</value>
+    <comment>The one-character shorthand for "days"</comment>
+  </data>
+  <data name="PieChartFormTimeHourShorthand" xml:space="preserve">
+    <value>h</value>
+    <comment>The one-character shorthand for "hours"</comment>
+  </data>
+  <data name="PieChartFormTimeMinuteShorthand" xml:space="preserve">
+    <value>m</value>
+    <comment>The one-character shorthand for "minutes"</comment>
+  </data>
+  <data name="PieChartFormTimeSecondShorthand" xml:space="preserve">
+    <value>s</value>
+    <comment>The one-character shorthand for "seconds"</comment>
+  </data>
+  <data name="PieChartFormTitleBar" xml:space="preserve">
+    <value>Statistiky odehraného času</value>
+    <comment>Shown in the title bar of the Pie Chart form</comment>
+  </data>
+  <data name="PieChartFormTotalPlayingTime" xml:space="preserve">
+    <value>Celkový odehraný čas:</value>
+    <comment>Shown on the top of the pie chart form</comment>
+  </data>
+  <data name="RemoveFormCancelButton" xml:space="preserve">
+    <value>&amp;Zrušit</value>
+    <comment>Shown on the Cancel button. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="RemoveFormConfirmRemoval" xml:space="preserve">
+    <value>Jste si jistí, že chce odstranit zvolené položky?</value>
+    <comment>Shows when the user tries to remove items</comment>
+  </data>
+  <data name="RemoveFormFlavorTextLabel" xml:space="preserve">
+    <value>Prosím, zvolte položky, které si přejete odstranit. Můžete podržet CTRL a vybrat více položek najednou.</value>
+    <comment>Shown in the Remove window</comment>
+  </data>
+  <data name="RemoveFormNoItemsSelected" xml:space="preserve">
+    <value>Nebyly vybrány žádné položky.</value>
+    <comment>Shown in the remove window when the user tries to remove items without having selected any.</comment>
+  </data>
+  <data name="RemoveFormRemoveItemsButton" xml:space="preserve">
+    <value>Odstranit položku/y</value>
+    <comment>Shown on the Remove Item(s) button. The ampersand signifies a keyboard shortcut.</comment>
+  </data>
+  <data name="RemoveFormTitleBar" xml:space="preserve">
+    <value>Odstranit položku/y</value>
+    <comment>Shown in the title bar of the Remove window</comment>
+  </data>
+  <data name="TranslationAuthor" xml:space="preserve">
+    <value>Překlad do češtiny: Ararak</value>
+    <comment>Provide translator's name or nickname here.</comment>
+  </data>
+</root>

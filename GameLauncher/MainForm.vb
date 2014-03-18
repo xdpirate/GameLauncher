@@ -376,6 +376,8 @@ Public Class MainForm
                     CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsFinnish.ResourceManager
                 Case "Pirate"
                     CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsPirate.ResourceManager
+                Case "Czech"
+                    CURRENT_LANGUAGE_RESOURCE = My.Resources.mlsCzech.ResourceManager
                 Case Else
                     ' Language set not valid, default to English
                     languageKey.SetValue("currentLanguage", "English")

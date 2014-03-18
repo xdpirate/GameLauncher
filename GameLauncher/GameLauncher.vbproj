@@ -209,6 +209,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>mlsVietnamese.resx</DependentUpon>
     </Compile>
+    <Compile Include="Languages\mlsCzech.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mlsCzech.resx</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -344,6 +349,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>mlsVietnamese.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Languages\mlsCzech.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>mlsCzech.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
